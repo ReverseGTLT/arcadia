@@ -1,0 +1,11 @@
+
+@use "../../presets/index" as *;
+
+.general {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/butl.png'), url('../images/main.png');
+  background-size:vw(415) vw(639), cover;
+  background-repeat: no-repeat;
+  background-position: 16% bottom, center;
+}

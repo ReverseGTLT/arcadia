@@ -1,0 +1,29 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: vw(20);
+}
+
+.container {
+  max-width: vw(1728);
+  margin-inline: auto;
+}
+
+a, button, img {
+  text-decoration: none;
+  display: block;
+}
+
+ul, ol, li {
+  text-decoration: none;
+  list-style: none;
+}
+
