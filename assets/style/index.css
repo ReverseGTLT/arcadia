@@ -207,4 +207,11 @@ ul, ol, li {
   background-position: 16% bottom, center;
 }
 
+.benefits {
+  height: 100vh;
+  width: 100vw;
+  background-color: indigo;
+  background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=index.css.map */
