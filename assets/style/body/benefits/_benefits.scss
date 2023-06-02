@@ -2,11 +2,110 @@
 @use "../../presets/index" as *;
 
 .benefits {
+  padding-top: vw(139);
+  padding-bottom: vw(139);
+  margin-left: vw(94);
+  margin-right: vw(94);
 
-  height: 100vh;
-  width: 100vw;
-  background-color: indigo;
-  //background-size:vw(415) vw(639), cover;
-  background-repeat: no-repeat;
-  //background-position: 16% bottom, center;
+
+  &-content {
+    z-index: -3;
+    position: relative;
+    background-color: $background-light;
+    border-radius: vw(30);
+    height: vw(652);
+    display: flex;
+    align-items: center;
+      &__img {
+        width: vw(435);
+        margin-left: vw(32);
+        margin-right: vw(127);
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    &__text {
+      width: vw(702);
+      div {
+        width: vw(306);
+        padding-bottom: vw(42);
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        padding-bottom: vw(28);
+      }
+
+    }
+    &__btn {
+      position: absolute;
+      top: vw(56);
+      right: vw(82);
+      display: flex;
+
+      //span {
+      //  position: relative;
+      //  display: block;
+
+      //}
+      .btn {
+        //z-index: 10;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        background: none;
+        border: 1px solid $color-red-border;
+        text-transform: none;
+        color: $color-red;
+        font-weight: 400;
+        font-size: vw(24);
+        line-height: vw(25);
+        padding: vw(20) vw(31) vw(19) vw(57);
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          //color: red;
+          height: vw(16);
+          width: vw(12);
+          left: vw(29);
+          background: url("../../../../assets/images/arrow_red.png") no-repeat;
+          background-size: cover;
+        }
+      }
+
+
+    }
+  }
+
+  &-carts {
+    bottom: 0;
+    height: vw(144);
+    margin-left: vw(55);
+    margin-right: vw(55);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__item {
+      z-index: -2;
+      height: 100%;
+      width: vw(337);
+      background: $color-white;
+      border: 1px solid $color-grey-border-light;
+      border-radius: vw(30);
+
+      padding-left: vw(25);
+      margin-top: vw(-150);
+      display: flex;
+      align-items: center;
+
+
+    }
+  }
 }
