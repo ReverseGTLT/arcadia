@@ -2,8 +2,8 @@
 @use "../../presets/index" as *;
 
 .header {
-  background-color: $color-white;
-  padding: vw(30) vw(67) vw(136) vw(78);
+  background-color: transparent;
+  padding: vw(30) vw(67) vw(30) vw(78);
   display: flex;
   align-items: center;
   gap: vw(25);
