@@ -4,8 +4,72 @@
 .general {
   height: 100vh;
   width: 100vw;
-  background-image: url('../images/butl.png'), url('../images/main.png');
-  background-size:vw(415) vw(639), cover;
+  background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
+  background-size: cover, cover;
   background-repeat: no-repeat;
-  background-position: 16% bottom, center;
+  background-position: center, center;
+  display: flex;
+
+  &-wrapper {
+    flex-basis: 100%;
+    position: relative;
+    background-image: url('../images/butl.png');
+    background-size: vw(800) vw(640);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    &__price {
+      position: absolute;
+      bottom: vw(420);
+      left: vw(170);
+      padding: vw(35) vw(30) vw(35);
+      width: vw(145);
+      height: vw(145);
+      transform: rotateZ(-11deg);
+      color: $color-white;
+      background-color: $color-btn;
+      border-radius: 50%;
+      p {
+        line-height: vw(24);
+        color: $color-white;
+        display: block;
+        font-size: vw(20);
+        i {
+          font-weight: 700;
+          font-size: vw(30);
+          text-align: center;
+          font-style: normal;
+        }
+      }
+    }
+    &__info {
+      margin-top: vw(362);
+      margin-left: vw(825);
+    }
+    &__title {
+      font-weight: 700;
+      font-size: vw(55);
+      line-height: vw(58);
+      color: $color-btn;
+      max-width: vw(670);
+    }
+    &__description {
+      font-weight: 500;
+      font-size: vw(36);
+      line-height: vw(38);
+      color: $color-link;
+    }
+    &__btn {
+      background: $color-btn;
+      border-radius: vw(100);
+      color: $color-white;
+      font-weight: 700;
+      font-size: vw(20);
+      line-height: 100%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      padding: vw(30) vw(50);
+      margin-top: vw(65);
+    }
+  }
 }
