@@ -45,7 +45,7 @@
         font-weight: 700;
         font-size: vw(24);
         line-height: vw(25);
-        color: $color-link;
+        color: $color-h-txt-link;
       }
     }
     &__telegram {
@@ -68,7 +68,7 @@
         color: $color-opacity;
         transition: 0.2s;
         &:hover {
-          color: $color-cart;
+          color: $color-green;
         }
       }
     }
@@ -87,7 +87,7 @@
         width: vw(267);
         height: vw(56);
 
-        background: $color-btn;
+        background: $color-red;
         border-radius: vw(100);
         border: none;
       }
@@ -99,7 +99,7 @@
       width: vw(115);
       height: vw(56);
       background-color: transparent;
-      border: vw(1) solid $color-cart;
+      border: vw(1) solid $color-green;
       border-radius: vw(100);
       display: flex;
       justify-content: space-between;
@@ -113,7 +113,7 @@
         font-size: vw(13);
         line-height: 100%;
         text-align: center;
-        color: $color-cart;
+        color: $color-green;
       }
       i {
         font-style: normal;
@@ -128,7 +128,7 @@
       font-weight: 700;
       font-size: vw(14);
       line-height: vw(15);
-      color: $color-link;
+      color: $color-h-txt-link;
     }
   }
   &-box {
