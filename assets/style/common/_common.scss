@@ -1,3 +1,4 @@
+@use "../presets/index" as *;
 
 *,
 *::before,
@@ -25,5 +26,19 @@ a, button, img {
 ul, ol, li {
   text-decoration: none;
   list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  background: $color-red;
+  border-radius: vw(100);
+  color: $color-white;
+  font-weight: 700;
+  font-size: vw(20);
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  padding: vw(30) vw(50);
 }
 

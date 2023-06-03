@@ -2,6 +2,7 @@
 @use "../../presets/index" as *;
 
 .header {
+  z-index: 100;
   background-color: transparent;
   padding: vw(30) vw(67) vw(30) vw(78);
   display: flex;
