@@ -26,7 +26,7 @@
       height: vw(145);
       transform: rotateZ(-11deg);
       color: $color-white;
-      background-color: $color-btn;
+      background-color: $color-red;
       border-radius: 50%;
       p {
         line-height: vw(24);
@@ -49,17 +49,17 @@
       font-weight: 700;
       font-size: vw(55);
       line-height: vw(58);
-      color: $color-btn;
+      color: $color-red;
       max-width: vw(670);
     }
     &__description {
       font-weight: 500;
       font-size: vw(36);
       line-height: vw(38);
-      color: $color-link;
+      color: $color-h-txt-link;
     }
     &__btn {
-      background: $color-btn;
+      background: $color-red;
       border-radius: vw(100);
       color: $color-white;
       font-weight: 700;
