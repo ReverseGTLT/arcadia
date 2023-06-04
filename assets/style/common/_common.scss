@@ -12,15 +12,16 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: vw(20);
   font-weight: 400;
+  font-style: normal;
   line-height: vw(30);
   color: $color-h-txt-link;
-  }
+}
 
 h2 {
   font-size: vw(40);
   font-weight: 700;
   line-height: vw(33.63);
- }
+}
 
 h3 {
   font-size: vw(32);
@@ -36,6 +37,33 @@ h3 {
 a, button, img {
   text-decoration: none;
   display: block;
+  color: $color-h-txt-link;
+  cursor: pointer;
+}
+
+.a-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: vw(2) solid $color-h-txt-link;
+  }
+
+  &:hover {
+    transition: 0.2s all;
+    color: $color-red;
+
+    &::after {
+      transition: 0.2s all;
+      border-bottom: vw(2) solid $color-red-border;
+    }
+  }
 }
 
 ul, ol, li {
@@ -53,7 +81,7 @@ ul, ol, li {
   line-height: 100%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: none;
+  border: vw(1) solid $color-white;
   padding: vw(30) vw(50);
 }
 
