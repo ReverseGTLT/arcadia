@@ -34,13 +34,24 @@ h3 {
   margin-inline: auto;
 }
 
+.container-1360 {
+  max-width: vw(1360);
+  margin-inline: auto;
+}
+
+.container-1540 {
+  max-width: vw(1540);
+  margin-inline: auto;
+}
+
 a, button, img {
   text-decoration: none;
   display: block;
   color: $color-h-txt-link;
+}
+a, button {
   cursor: pointer;
 }
-
 .a-link {
   text-decoration: none;
   position: relative;
@@ -73,15 +84,39 @@ ul, ol, li {
 
 .btn {
   cursor: pointer;
+  transition: 0.2s all;
   background: $color-red;
   border-radius: vw(100);
+  border: vw(1) solid $color-white;
   color: $color-white;
   font-weight: 700;
   font-size: vw(20);
   line-height: 100%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: vw(1) solid $color-white;
   padding: vw(30) vw(50);
+
+  &:hover {
+    background: $color-white;
+    border: vw(1) solid $color-red;
+    border-radius: vw(100);
+  }
 }
 
+.btn-light {
+  background: none;
+  border: 1px solid $color-red-border;
+  text-transform: none;
+  color: $color-red;
+  font-weight: 400;
+  font-size: vw(24);
+  line-height: vw(25);
+  padding: vw(20) vw(31) vw(19) vw(57);
+
+  &:hover {
+    background: $color-red-border;
+    border-radius: vw(100);
+    border: vw(1) solid $color-red-border;
+
+  }
+}

@@ -3,8 +3,8 @@
 .benefits {
   padding-top: vw(139);
   padding-bottom: vw(139);
-  margin-left: vw(94);
-  margin-right: vw(94);
+  //margin-left: vw(94);
+  //margin-right: vw(94);
 
 
   &-content {
@@ -55,32 +55,26 @@
     }
 
     &__btn {
-      cursor: pointer;
-      transition: 0.2s;
-
       position: absolute;
       top: vw(56);
       right: vw(82);
       display: flex;
 
-      &:hover {
-        background: $color-red-border;
-        border-radius: inherit;
-      }
+
 
       .btn {
         position: relative;
         display: flex;
         align-items: center;
 
-        background: none;
-        border: 1px solid $color-red-border;
-        text-transform: none;
-        color: $color-red;
-        font-weight: 400;
-        font-size: vw(24);
-        line-height: vw(25);
-        padding: vw(20) vw(31) vw(19) vw(57);
+        //background: none;
+        //border: 1px solid $color-red-border;
+        //text-transform: none;
+        //color: $color-red;
+        //font-weight: 400;
+        //font-size: vw(24);
+        //line-height: vw(25);
+        //padding: vw(20) vw(31) vw(19) vw(57);
 
         &::before {
           position: absolute;
