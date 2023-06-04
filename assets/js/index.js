@@ -1,4 +1,11 @@
 
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        // Настройки карусели
+    });
+});
+
+
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');
 const headerLanguageArrow = document.querySelector('.arrow');
