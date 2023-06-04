@@ -11,6 +11,21 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: vw(20);
+  font-weight: 400;
+  line-height: vw(30);
+  color: $color-h-txt-link;
+  }
+
+h2 {
+  font-size: vw(40);
+  font-weight: 700;
+  line-height: vw(33.63);
+ }
+
+h3 {
+  font-size: vw(32);
+  font-weight: 700;
+  line-height: vw(42);
 }
 
 .container {
