@@ -1,2 +1,157 @@
 @use "../../presets/index" as *;
 
+.goods {
+  padding-bottom: vw(131);
+
+  &-content {
+    position: relative;
+    //width: vw(1160);
+    margin-left: vw(183);
+    //margin-right: vw(202);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &__text {
+      width: vw(755);
+      text-align: left;
+      padding-bottom: vw(38);
+      //margin-right: vw(156);
+
+
+      h2 {
+        padding-bottom: vw(50);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: vw(82);
+      display: flex;
+
+      .btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        //background: none;
+        //border: 1px solid $color-red-border;
+        //text-transform: none;
+        //color: $color-red;
+        //font-weight: 400;
+        //font-size: vw(24);
+        //line-height: vw(25);
+        //padding: vw(20) vw(31) vw(19) vw(57);
+
+        &::before {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          height: vw(29.12);
+          width: vw(29.12);
+          left: vw(20);
+          background: url("../../../../assets/images/punkt.svg") no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  &-carousel {
+    //margin-left: vw(58);
+    //margin-right: vw(49);
+    //background-color: #0879E0;
+    width: vw(1621);
+    height: vw(564);
+    position: relative;
+    margin: 0 auto;
+
+
+
+    &__item {
+      width: vw(326);
+      height: vw(654);
+      background: $color-white;
+      border: vw(1) solid $color-grey-border;
+      border-radius: vw(30);
+      //margin-right: vw(20);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        background: $background-light;
+        box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
+        border-radius: vw(30);
+      }
+
+      .good-image {
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px 10px 0 0;
+        }
+      }
+
+      .good-title {
+
+      }
+
+      .good-counter {
+
+      }
+
+      .good-price {
+
+      }
+
+      .btn {
+        background-color: $color-green;
+        width: 285px;
+        height: 64px;
+        border-radius: 100px;
+        border: vw(1) solid $color-green;
+      }
+    }
+  }
+}
+
+
+.carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1621px;
+}
+
+.carousel .owl-prev,
+.carousel .owl-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 42px;
+  height: 42px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carousel .owl-prev {
+  left: -42px;
+}
+
+.carousel .owl-next {
+  right: -42px;
+}
+
