@@ -76,13 +76,14 @@
     &__item {
       width: vw(326);
       height: vw(654);
+      padding: vw(41) vw(20) vw(22) vw(21);
       background: $color-white;
       border: vw(1) solid $color-grey-border;
       border-radius: vw(30);
       //margin-right: vw(20);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       transition: box-shadow 0.3s;
 
       &:hover {
@@ -92,31 +93,58 @@
       }
 
       .good-image {
+        width: vw(173);
+        height: vw(262);
+        //justify-content: center;
+        align-items: end;
+        padding-bottom: vw(25);
+        //margin: vw(41) vw(76) vw(25) vw(76);
+
         img {
           width: 100%;
           height: auto;
-          border-radius: 10px 10px 0 0;
+          text-align: center;
+          border-radius: vw(10) vw(10) 0 0;
         }
       }
 
       .good-title {
-
+        display: block;
+        font-size: vw(20);
+        font-weight: $font-weight-accent;
+        line-height: vw(26);
+        text-align: left;
+        padding-bottom: vw(17);
       }
 
-      .good-counter {
+      .good-counter-price-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: vw(17);
 
+        .good-counter {
+
+        }
+        .good-price {
+
+        }
       }
 
-      .good-price {
-
-      }
 
       .btn {
+        display: inline-block;
         background-color: $color-green;
-        width: 285px;
-        height: 64px;
-        border-radius: 100px;
+        width: vw(285);
+        height: vw(64);
+        border-radius: vw(100);
         border: vw(1) solid $color-green;
+        font-size: vw(18);
+        font-weight: $font-weight-accent;
+        line-height: vw(18);
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: vw(23) vw(30) vw(23) vw(29);
+
       }
     }
   }
