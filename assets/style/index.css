@@ -539,7 +539,6 @@ ul, ol, li {
 }
 .goods-carousel__item {
   width: 16.9791666667vw;
-  height: 34.0625vw;
   padding: 2.1354166667vw 1.0416666667vw 1.1458333333vw 1.09375vw;
   background: #ffffff;
   border: 0.0520833333vw solid #D4D8EB;
@@ -557,7 +556,9 @@ ul, ol, li {
 .goods-carousel__item .good-image {
   width: 9.0104166667vw;
   height: 13.6458333333vw;
-  align-items: end;
+  display: flex;
+  margin-inline: auto;
+  align-items: flex-end;
   padding-bottom: 1.3020833333vw;
 }
 .goods-carousel__item .good-image img {
@@ -580,13 +581,12 @@ ul, ol, li {
   padding-bottom: 0.8854166667vw;
 }
 .goods-carousel__item .btn {
-  display: inline-block;
   background-color: #30A23C;
-  width: 14.84375vw;
-  height: 3.3333333333vw;
+  width: 100%;
+  height: 100%;
   border-radius: 5.2083333333vw;
   border: 0.0520833333vw solid #30A23C;
-  font-size: 0.9375vw;
+  font-size: 0.8333333333vw;
   font-weight: 700;
   line-height: 0.9375vw;
   letter-spacing: 0.1em;
