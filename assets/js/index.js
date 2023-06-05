@@ -6,6 +6,7 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         margin: 20,
         nav: true,
+        dots: false,
         mouseDrag: true,
         touchDrag: true,
         responsive: {
