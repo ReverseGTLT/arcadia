@@ -421,7 +421,7 @@ ul, ol, li {
   height: 0.8333333333vw;
   width: 0.625vw;
   left: 1.5104166667vw;
-  background: url("../../../../assets/images/arrow_red.png") no-repeat;
+  background: url("../../assets/images/arrow_red.png") no-repeat;
   background-size: cover;
 }
 .benefits-carts {
@@ -464,25 +464,25 @@ ul, ol, li {
   height: 3.4015625vw;
   width: 3.4015625vw;
   left: -4.4270833333vw;
-  background: url("../../../../assets/images/01_benefits.svg") no-repeat;
+  background: url("../../assets/images/01_benefits.svg") no-repeat;
   background-size: cover;
   padding-right: 1.3020833333vw;
 }
 .benefits-carts__item .item2::before {
-  background: url("../../../../assets/images/02_benefits.svg") no-repeat;
+  background: url("../../assets/images/02_benefits.svg") no-repeat;
   background-size: cover;
   height: 3.690625vw;
   width: 2.4145833333vw;
   left: -3.3854166667vw;
 }
 .benefits-carts__item .item3::before {
-  background: url("../../../../assets/images/03_benefits.svg") no-repeat;
+  background: url("../../assets/images/03_benefits.svg") no-repeat;
   background-size: cover;
   height: 3.3697916667vw;
   width: 3.4338541667vw;
 }
 .benefits-carts__item .item4::before {
-  background: url("../../../../assets/images/04_benefits.svg") no-repeat;
+  background: url("../../assets/images/04_benefits.svg") no-repeat;
   background-size: cover;
   height: 2.2005208333vw;
   width: 4.1078125vw;
