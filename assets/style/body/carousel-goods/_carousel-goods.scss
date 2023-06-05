@@ -66,7 +66,12 @@
     position: relative;
     max-width: vw(1364);
     margin: auto;
-    height: vw(564);
+    //height: vw(564);
+    @include lg() {
+      //height: 100%;
+      //width: 100%;
+      background: green;
+    }
 
     display: flex;
     justify-content: space-between;
@@ -75,7 +80,6 @@
     &__item {
       max-width: vw(326);
       margin: auto;
-      //height: vw(654);
       padding: vw(41) vw(20) vw(22) vw(21);
       background: $color-white;
       border: vw(1) solid $color-grey-border;
@@ -86,6 +90,12 @@
       flex-direction: column;
       justify-content: center;
       transition: box-shadow 0.3s;
+
+      @include lg() {
+        //max-width: 100%;
+        //height: inherit;
+        background: #0879E0;
+      }
 
       &:hover {
         background: $background-light;
@@ -102,10 +112,15 @@
         padding-bottom: vw(25);
         //margin: vw(41) vw(76) vw(25) vw(76);
 
+          @include lg() {
+            //width: vw(173);
+            //height: vw(262);
+          }
+
         img {
           display: block;
           width: 100%;
-          height: auto;
+          height: content-box;
           text-align: center;
           border-radius: vw(10) vw(10) 0 0;
         }
@@ -157,6 +172,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include md() {
+        display: none;
+      }
     }
 
     .owl-prev,

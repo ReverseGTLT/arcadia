@@ -535,10 +535,14 @@ ul, ol, li {
   position: relative;
   max-width: 71.0416666667vw;
   margin: auto;
-  height: 29.375vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 991.8px) {
+  .goods-carousel {
+    background: green;
+  }
 }
 .goods-carousel__item {
   max-width: 16.9791666667vw;
@@ -552,6 +556,11 @@ ul, ol, li {
   flex-direction: column;
   justify-content: center;
   transition: box-shadow 0.3s;
+}
+@media (max-width: 991.8px) {
+  .goods-carousel__item {
+    background: #0879E0;
+  }
 }
 .goods-carousel__item:hover {
   background: #F2F9FF;
@@ -569,7 +578,7 @@ ul, ol, li {
 .goods-carousel__item .good-image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: content-box;
   text-align: center;
   border-radius: 0.5208333333vw 0.5208333333vw 0 0;
 }
@@ -604,6 +613,11 @@ ul, ol, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 767.8px) {
+  .goods .goods-carousel .owl-nav {
+    display: none;
+  }
 }
 .goods .goods-carousel .owl-prev,
 .goods .goods-carousel .owl-next {
