@@ -11,10 +11,11 @@ $(document).ready(function () {
         touchDrag: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false
             },
             768: {
-                items: 2
+                items: 3
             },
             992: {
                 items: 4
