@@ -540,12 +540,13 @@ ul, ol, li {
 .goods-carousel__item {
   width: 16.9791666667vw;
   height: 34.0625vw;
+  padding: 2.1354166667vw 1.0416666667vw 1.1458333333vw 1.09375vw;
   background: #ffffff;
   border: 0.0520833333vw solid #D4D8EB;
   border-radius: 1.5625vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   transition: box-shadow 0.3s;
 }
 .goods-carousel__item:hover {
@@ -553,17 +554,44 @@ ul, ol, li {
   box-shadow: 0.7291666667vw 0.8854166667vw 2.03125vw rgba(216, 225, 236, 0.94);
   border-radius: 1.5625vw;
 }
+.goods-carousel__item .good-image {
+  width: 9.0104166667vw;
+  height: 13.6458333333vw;
+  align-items: end;
+  padding-bottom: 1.3020833333vw;
+}
 .goods-carousel__item .good-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  text-align: center;
+  border-radius: 0.5208333333vw 0.5208333333vw 0 0;
+}
+.goods-carousel__item .good-title {
+  display: block;
+  font-size: 1.0416666667vw;
+  font-weight: 700;
+  line-height: 1.3541666667vw;
+  text-align: left;
+  padding-bottom: 0.8854166667vw;
+}
+.goods-carousel__item .good-counter-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.8854166667vw;
 }
 .goods-carousel__item .btn {
+  display: inline-block;
   background-color: #30A23C;
-  width: 285px;
-  height: 64px;
-  border-radius: 100px;
+  width: 14.84375vw;
+  height: 3.3333333333vw;
+  border-radius: 5.2083333333vw;
   border: 0.0520833333vw solid #30A23C;
+  font-size: 0.9375vw;
+  font-weight: 700;
+  line-height: 0.9375vw;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 1.1979166667vw 1.5625vw 1.1979166667vw 1.5104166667vw;
 }
 
 .carousel .owl-nav {
