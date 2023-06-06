@@ -3,22 +3,49 @@
 .benefits {
   padding-top: vw(139);
   padding-bottom: vw(139);
-  //margin-left: vw(94);
-  //margin-right: vw(94);
 
+  @include lg {
+    //height: 80vh;
+  }
 
   &-content {
     position: relative;
+    max-width: vw(1540);
+    margin: auto;
     background-color: $background-light;
     border-radius: vw(30);
     height: vw(652);
     display: flex;
     align-items: center;
 
+    @include lg {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 100%;
+      padding: vw(20) vw(10);
+    }
+
+    @include md {
+      //height: auto;
+    }
+
     &__img {
+      order: 1;
       width: vw(435);
       margin-left: vw(32);
       margin-right: vw(127);
+
+      @include lg {
+        order: 3;
+        margin: 0;
+        padding: vw(10) vw(5);
+      }
+
+      @include md {
+        //visibility: hidden;
+        display: none;
+      }
 
       img {
         display: block;
@@ -27,7 +54,15 @@
     }
 
     &__text {
+      order: 2;
       width: vw(702);
+
+      @include lg {
+        order: 1;
+        width: 80%;
+        margin-inline: auto;
+        padding-top: vw(60);
+      }
 
       div {
         width: vw(306);
@@ -55,26 +90,24 @@
     }
 
     &__btn {
+      order: 3;
       position: absolute;
       top: vw(56);
       right: vw(82);
       display: flex;
 
-
+      @include md {
+        order: 2;
+        position: initial;
+        justify-content: center;
+        padding-top: vw(20);
+        padding-bottom: vw(70);
+      }
 
       .btn {
         position: relative;
         display: flex;
         align-items: center;
-
-        //background: none;
-        //border: 1px solid $color-red-border;
-        //text-transform: none;
-        //color: $color-red;
-        //font-weight: 400;
-        //font-size: vw(24);
-        //line-height: vw(25);
-        //padding: vw(20) vw(31) vw(19) vw(57);
 
         &::before {
           position: absolute;
@@ -91,23 +124,31 @@
   }
 
   &-carts {
-    bottom: 0;
+    max-width: vw(1431);
+    margin: auto;
     height: vw(144);
-    margin-left: vw(55);
-    margin-right: vw(55);
+    bottom: 0;
+    //margin-left: vw(55);
+    //margin-right: vw(55);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    //gap: vw(28);
 
     font-size: $font-size-accent;
     font-weight: $font-weight-accent;
     line-height: vw(25.44);
 
+    @include lg {
+      width: 100%;
+      height: vw(350);
+      //flex-direction: column;
+      box-sizing: border-box;
+    }
+
     &__item {
       z-index: 1;
-      height: 100%;
+      height: vw(144);
       width: vw(337);
       background: $color-white;
       border: 1px solid $color-grey-border-light;
@@ -118,6 +159,12 @@
       display: flex;
       align-items: center;
       justify-content: end;
+      box-sizing: border-box;
+
+      @include lg {
+        width: 49%;
+        justify-content: center;
+      }
 
       p {
         position: relative;
@@ -125,6 +172,15 @@
         width: vw(200);
         height: vw(75);
         align-items: center;
+
+        @include lg {
+          width: vw(200);
+          height: vw(75);
+        }
+        @include md {
+          width: vw(200);
+          height: vw(75);
+        }
 
         &::before {
           position: absolute;

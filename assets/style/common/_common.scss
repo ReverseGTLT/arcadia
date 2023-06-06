@@ -15,18 +15,28 @@ body {
   font-style: normal;
   line-height: vw(30);
   color: $color-h-txt-link;
+
+  @include lg {
+  }
 }
 
 h2 {
   font-size: vw(40);
   font-weight: 700;
   line-height: vw(33.63);
+
+  @include lg-xs {
+  }
 }
 
 h3 {
   font-size: vw(32);
   font-weight: 700;
   line-height: vw(42);
+
+  @include md {
+    //font-size: vm(32);
+  }
 }
 
 .container {
