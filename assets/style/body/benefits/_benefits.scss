@@ -75,13 +75,7 @@
 
       p {
         padding-bottom: vw(28);
-        line-height: vw(26);
-      }
-
-      .accent {
-        font-size: vw(24);
-        font-weight: $font-weight-accent;
-        line-height: vw(36);
+        line-height: 1.3;
       }
 
       a {
@@ -137,7 +131,7 @@
 
     font-size: $font-size-accent;
     font-weight: $font-weight-accent;
-    line-height: vw(25.44);
+    line-height: 1.06;
 
     @include lg {
       width: 100%;

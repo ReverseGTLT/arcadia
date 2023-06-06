@@ -16,20 +16,89 @@ body {
   font-size: 1.0416666667vw;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.5625vw;
+  line-height: 1.5;
   color: #0A0E20;
   overflow-x: hidden;
 }
+@media (max-width: 991.8px) {
+  body {
+    font-size: 1.5625vw;
+  }
+}
+@media (max-width: 767.8px) {
+  body {
+    font-size: 1.5625vw;
+  }
+}
+@media (max-width: 575.8px) {
+  body {
+    font-size: 1.875vw;
+  }
+}
+
+.accent {
+  font-size: 1.25vw;
+  font-weight: 700;
+  line-height: 1.08;
+}
+@media (max-width: 991.8px) {
+  .accent {
+    font-size: 1.875vw;
+  }
+}
+@media (max-width: 767.8px) {
+  .accent {
+    font-size: 2.1875vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .accent {
+    font-size: 2.1875vw;
+  }
+}
+
 h2 {
-  font-size: 2.0833333333vw;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 1.7515625vw;
+  line-height: 1.05;
 }
+@media (max-width: 991.8px) {
+  h2 {
+    font-size: 3.75vw;
+  }
+}
+@media (max-width: 767.8px) {
+  h2 {
+    font-size: 3.75vw;
+  }
+}
+@media (max-width: 575.8px) {
+  h2 {
+    font-size: 4.375vw;
+  }
+}
+
 h3 {
-  font-size: 1.6666666667vw;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 2.1875vw;
+  line-height: 1.05;
 }
+@media (max-width: 991.8px) {
+  h3 {
+    font-size: 3.125vw;
+  }
+}
+@media (max-width: 767.8px) {
+  h3 {
+    font-size: 3.125vw;
+  }
+}
+@media (max-width: 575.8px) {
+  h3 {
+    font-size: 3.75vw;
+  }
+}
+
 .container {
   max-width: 90vw;
   margin-inline: auto;
@@ -499,12 +568,7 @@ ul, ol, li {
 }
 .benefits-content__text p {
   padding-bottom: 1.4583333333vw;
-  line-height: 1.3541666667vw;
-}
-.benefits-content__text .accent {
-  font-size: 1.25vw;
-  font-weight: 700;
-  line-height: 1.875vw;
+  line-height: 1.3;
 }
 .benefits-content__text a {
   font-weight: 700;
@@ -551,7 +615,7 @@ ul, ol, li {
   flex-wrap: wrap;
   font-size: vw(24);
   font-weight: 700;
-  line-height: 1.325vw;
+  line-height: 1.06;
 }
 @media (max-width: 991.8px) {
   .benefits-carts {
