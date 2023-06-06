@@ -34,19 +34,34 @@ body {
   }
 }
 
-.accent {
-  font-size: vw(24);
+.text-accent {
+  font-size: vw(23);
   font-weight: $font-weight-accent;
-  line-height: 1.08;
+  line-height: 1.06;
 
   @include lg {
     font-size: vm(6);
   }
   @include md {
-    font-size: vm(7);
+    font-size: vm(6);
   }
   @include sm {
-    font-size: vm(7);
+    font-size: vm(6);
+  }
+}
+
+.text-little {
+  font-size: vw(16);
+  line-height: 1.08;
+
+  @include lg {
+    font-size: vm(4);
+  }
+  @include md {
+    font-size: vm(4);
+  }
+  @include sm {
+    font-size: vm(5);
   }
 }
 

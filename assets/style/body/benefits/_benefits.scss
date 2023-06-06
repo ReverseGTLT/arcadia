@@ -72,7 +72,9 @@
           width: 100%;
         }
       }
-
+      .text-accent {
+        line-height: 1.5;
+      }
       p {
         padding-bottom: vw(28);
         line-height: 1.3;
@@ -128,9 +130,6 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-    font-size: $font-size-accent;
-    font-weight: $font-weight-accent;
     line-height: 1.06;
 
     @include lg {
@@ -166,14 +165,10 @@
         width: vw(200);
         height: vw(75);
         align-items: center;
+        margin: vw(35) vw(13) vw(34) vw(25);
 
         @include lg {
-          width: vw(200);
-          height: vw(75);
-        }
-        @include md {
-          width: vw(200);
-          height: vw(75);
+          width: auto;
         }
 
         &::before {
