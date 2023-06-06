@@ -1,0 +1,85 @@
+
+@use "../../presets/index" as *;
+
+.point {
+  padding-bottom: vw(93);
+  &__title {
+    max-width: vw(650);
+    font-weight: 700;
+    font-size: vw(40);
+    line-height: vw(42);
+    color: $color-red;
+    padding-bottom: vw(56);
+    margin-left: vw(570);
+  }
+  &-info {
+    padding: vw(40);
+    margin-left: vw(530);
+  }
+  &-wrapper {
+    background: $background-light;
+    border-radius: vw(30);
+    display: flex;
+    gap: vw(20);
+    position: relative;
+  }
+  &-img {
+    width: vw(430);
+    height: vw(375);
+    top: vw(-175);
+    left: vw(20);
+    position: absolute;
+    img {
+      width: 100%;
+    }
+  }
+  &-text {
+    display: flex;
+    gap: vw(30);
+    &__wrapper {
+      display: flex;
+      gap: vw(20);
+    }
+    &__num {
+      border: vw(1) solid rgba(48, 162, 60, 0.2);
+      width: vw(82);
+      height: vw(82);
+      font-weight: 700;
+      font-size: vw(20);
+      line-height: 150%;
+      color: $color-green;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__description {
+      max-width: vw(250);
+      font-size: vw(16);
+      line-height: 130%;
+      color: $color-h-txt-link;
+      padding-top: vw(20);
+    }
+  }
+  &-btns {
+    padding-top: vw(38);
+    display: flex;
+    gap: vw(30);
+    align-items: center;
+    &__btn {
+      color: $color-white;
+      font-size: vw(18);
+      background-color: $color-green;
+      transition: 0.2s;
+      &:hover {
+        background-color: lighten($color-green, 30%);
+        border: vw(1) solid $color-green;
+      }
+    }
+    &__text {
+      font-size: vw(16);
+      line-height: 130%;
+      color: $color-h-txt-link;
+    }
+  }
+}
