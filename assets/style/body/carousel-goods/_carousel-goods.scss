@@ -1,0 +1,214 @@
+@use "../../presets/index" as *;
+
+.goods {
+  padding-bottom: vw(131);
+
+  &-content {
+    position: relative;
+    //width: vw(1160);
+    margin-left: vw(183);
+    //margin-right: vw(202);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &__text {
+      width: vw(755);
+      text-align: left;
+      padding-bottom: vw(38);
+      //margin-right: vw(156);
+
+
+      h2 {
+        padding-bottom: vw(50);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: vw(82);
+      display: flex;
+
+      .btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        //background: none;
+        //border: 1px solid $color-red-border;
+        //text-transform: none;
+        //color: $color-red;
+        //font-weight: 400;
+        //font-size: vw(24);
+        //line-height: vw(25);
+        //padding: vw(20) vw(31) vw(19) vw(57);
+
+        &::before {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          height: vw(29.12);
+          width: vw(29.12);
+          left: vw(20);
+          background: url("../../assets/images/punkt.svg") no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  &-carousel {
+    position: relative;
+    max-width: vw(1364);
+    margin: auto;
+    //height: vw(564);
+    @include lg() {
+      //height: 100%;
+      //width: 100%;
+      background: green;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      max-width: vw(326);
+      margin: auto;
+      padding: vw(41) vw(20) vw(22) vw(21);
+      background: $color-white;
+      border: vw(1) solid $color-grey-border;
+      border-radius: vw(30);
+      //margin-right: vw(20);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      transition: box-shadow 0.3s;
+
+      @include lg() {
+        //max-width: 100%;
+        //height: inherit;
+        background: #0879E0;
+      }
+
+      &:hover {
+        background: $background-light;
+        box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
+        border-radius: vw(30);
+      }
+
+      .good-image {
+        max-width: vw(173);
+        height: vw(262);
+        margin-inline: auto;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: vw(25);
+        //margin: vw(41) vw(76) vw(25) vw(76);
+
+          @include lg() {
+            //width: vw(173);
+            //height: vw(262);
+          }
+
+        img {
+          display: block;
+          width: 100%;
+          height: content-box;
+          text-align: center;
+          border-radius: vw(10) vw(10) 0 0;
+        }
+      }
+
+      .good-title {
+        display: block;
+        font-size: vw(20);
+        font-weight: $font-weight-accent;
+        line-height: vw(26);
+        text-align: left;
+        padding-bottom: vw(17);
+      }
+
+      .good-counter-price-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: vw(17);
+
+        .good-counter {
+
+        }
+
+        .good-price {
+
+        }
+      }
+
+
+      .btn {
+        background-color: $color-green;
+        width: 100%;
+        height: 100%;
+        border-radius: vw(100);
+        border: vw(1) solid $color-green;
+        font-size: vw(15);
+        font-weight: $font-weight-accent;
+        line-height: vw(18);
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: vw(23) vw(30) vw(23) vw(29);
+      }
+    }
+  }
+
+  .goods-carousel {
+    .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include md() {
+        display: none;
+      }
+    }
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .owl-prev {
+      left: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+
+      &:active {
+          content: url("../../assets/images/arrow_active.png");
+        }
+    }
+
+    .owl-next {
+      right: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+      transform: rotate(180deg);
+
+      &:active {
+        content: url("../../assets/images/arrow_active.png");
+      }
+    }
+  }
+}

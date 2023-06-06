@@ -1,111 +1,222 @@
-
 @use "../../presets/index" as *;
 
 .benefits {
   padding-top: vw(139);
   padding-bottom: vw(139);
-  margin-left: vw(94);
-  margin-right: vw(94);
 
+  @include lg {
+    //height: 80vh;
+  }
 
   &-content {
-    z-index: -3;
     position: relative;
+    max-width: vw(1540);
+    margin: auto;
     background-color: $background-light;
     border-radius: vw(30);
     height: vw(652);
     display: flex;
     align-items: center;
-      &__img {
-        width: vw(435);
-        margin-left: vw(32);
-        margin-right: vw(127);
-        img {
-          display: block;
-          width: 100%;
-        }
+
+    @include lg {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 100%;
+      padding: vw(20) vw(10);
+    }
+
+    @include md {
+      //height: auto;
+    }
+
+    &__img {
+      order: 1;
+      width: vw(435);
+      margin-left: vw(32);
+      margin-right: vw(127);
+
+      @include lg {
+        order: 3;
+        margin: 0;
+        padding: vw(10) vw(5);
       }
+
+      @include md {
+        //visibility: hidden;
+        display: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
     &__text {
+      order: 2;
       width: vw(702);
+
+      @include lg {
+        order: 1;
+        width: 80%;
+        margin-inline: auto;
+        padding-top: vw(60);
+      }
+
       div {
         width: vw(306);
         padding-bottom: vw(42);
+
         img {
           width: 100%;
         }
       }
+
       p {
         padding-bottom: vw(28);
+        line-height: vw(26);
       }
 
+      .accent {
+        font-size: vw(24);
+        font-weight: $font-weight-accent;
+        line-height: vw(36);
+      }
+
+      a {
+        font-weight: $font-weight-accent;
+      }
     }
+
     &__btn {
+      order: 3;
       position: absolute;
       top: vw(56);
       right: vw(82);
       display: flex;
 
-      //span {
-      //  position: relative;
-      //  display: block;
+      @include md {
+        order: 2;
+        position: initial;
+        justify-content: center;
+        padding-top: vw(20);
+        padding-bottom: vw(70);
+      }
 
-      //}
       .btn {
-        //z-index: 10;
         position: relative;
         display: flex;
         align-items: center;
 
-        background: none;
-        border: 1px solid $color-red-border;
-        text-transform: none;
-        color: $color-red;
-        font-weight: 400;
-        font-size: vw(24);
-        line-height: vw(25);
-        padding: vw(20) vw(31) vw(19) vw(57);
-
         &::before {
+          position: absolute;
           content: "";
           display: inline-block;
-          position: absolute;
-          //color: red;
           height: vw(16);
           width: vw(12);
           left: vw(29);
-          background: url("../../../../assets/images/arrow_red.png") no-repeat;
+          background: url("../../assets/images/arrow_red.png") no-repeat;
           background-size: cover;
         }
       }
-
-
     }
   }
 
   &-carts {
-    bottom: 0;
+    max-width: vw(1431);
+    margin: auto;
     height: vw(144);
-    margin-left: vw(55);
-    margin-right: vw(55);
+    bottom: 0;
+    //margin-left: vw(55);
+    //margin-right: vw(55);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
+    font-size: $font-size-accent;
+    font-weight: $font-weight-accent;
+    line-height: vw(25.44);
+
+    @include lg {
+      width: 100%;
+      height: vw(350);
+      //flex-direction: column;
+      box-sizing: border-box;
+    }
+
     &__item {
-      z-index: -2;
-      height: 100%;
+      z-index: 1;
+      height: vw(144);
       width: vw(337);
       background: $color-white;
       border: 1px solid $color-grey-border-light;
       border-radius: vw(30);
 
-      padding-left: vw(25);
+      padding-right: vw(13);
       margin-top: vw(-150);
       display: flex;
       align-items: center;
+      justify-content: end;
+      box-sizing: border-box;
 
+      @include lg {
+        width: 49%;
+        justify-content: center;
+      }
 
+      p {
+        position: relative;
+        display: flex;
+        width: vw(200);
+        height: vw(75);
+        align-items: center;
+
+        @include lg {
+          width: vw(200);
+          height: vw(75);
+        }
+        @include md {
+          width: vw(200);
+          height: vw(75);
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          height: vw(65.31);
+          width: vw(65.31);
+          left: vw(-85);
+          background: url("../../assets/images/01_benefits.svg") no-repeat;
+          background-size: cover;
+          padding-right: vw(25);
+        }
+      }
+
+      .item2::before {
+        background: url("../../assets/images/02_benefits.svg") no-repeat;
+        background-size: cover;
+        height: vw(70.86);
+        width: vw(46.36);
+        left: vw(-65);
+      }
+
+      .item3::before {
+        background: url("../../assets/images/03_benefits.svg") no-repeat;
+        background-size: cover;
+        height: vw(64.7);
+        width: vw(65.93);
+      }
+
+      .item4::before {
+        background: url("../../assets/images/04_benefits.svg") no-repeat;
+        background-size: cover;
+        height: vw(42.25);
+        width: vw(78.87);
+        left: vw(-100);
+      }
     }
   }
 }
