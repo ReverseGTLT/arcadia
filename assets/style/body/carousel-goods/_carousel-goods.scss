@@ -3,6 +3,14 @@
 .goods {
   padding-bottom: vw(131);
 
+  @include md {
+    //height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &-content {
     position: relative;
     //width: vw(1160);
@@ -12,12 +20,23 @@
     justify-content: space-between;
     align-items: start;
 
+    @include md {
+      width: 100%;
+      flex-direction: column;
+      margin: vw(5);
+      padding: vw(20);
+    }
+
     &__text {
       width: vw(755);
       text-align: left;
       padding-bottom: vw(38);
       //margin-right: vw(156);
 
+      @include md {
+        width: 100%;
+        margin: vw(5);
+      }
 
       h2 {
         padding-bottom: vw(50);
@@ -34,19 +53,15 @@
       right: vw(82);
       display: flex;
 
+      @include md {
+        position: initial;
+        padding: vw(20);
+      }
+
       .btn {
         position: relative;
         display: flex;
         align-items: center;
-
-        //background: none;
-        //border: 1px solid $color-red-border;
-        //text-transform: none;
-        //color: $color-red;
-        //font-weight: 400;
-        //font-size: vw(24);
-        //line-height: vw(25);
-        //padding: vw(20) vw(31) vw(19) vw(57);
 
         &::before {
           position: absolute;
@@ -67,15 +82,22 @@
     max-width: vw(1364);
     margin: auto;
     //height: vw(564);
-    @include lg() {
-      //height: 100%;
-      //width: 100%;
-      background: green;
-    }
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include lg() {
+      //height: 100%;
+      //width: 100%;
+      //background: green;
+    }
+
+    @include md {
+      max-width: 98%;
+      margin: auto;
+      height: auto;
+      //background: #8edd96;
+    }
 
     &__item {
       max-width: vw(326);
@@ -84,6 +106,7 @@
       background: $color-white;
       border: vw(1) solid $color-grey-border;
       border-radius: vw(30);
+      box-shadow: 0;
       //margin-right: vw(20);
       display: flex;
       flex-wrap: wrap;
@@ -94,7 +117,14 @@
       @include lg() {
         //max-width: 100%;
         //height: inherit;
-        background: #0879E0;
+        //background: #0879E0;
+      }
+
+      @include md {
+        max-width: initial;
+        margin: auto;
+        height: auto;
+        padding: vm(10);
       }
 
       &:hover {
@@ -117,6 +147,12 @@
             //height: vw(262);
           }
 
+        @include md {
+          max-width: initial;
+          margin: auto;
+          height: auto;
+        }
+
         img {
           display: block;
           width: 100%;
@@ -130,9 +166,20 @@
         display: block;
         font-size: vw(20);
         font-weight: $font-weight-accent;
-        line-height: vw(26);
+        line-height: 1.3;
         text-align: left;
         padding-bottom: vw(17);
+
+        @include lg {
+          font-size: vm(6);
+        }
+        @include md {
+          font-size: vm(6);
+          text-align: center;
+        }
+        @include sm {
+          font-size: vm(6);
+        }
       }
 
       .good-counter-price-wrapper {
@@ -140,6 +187,11 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: vw(17);
+        gap: vw(10);
+
+        @include md {
+          justify-content: center;
+        }
 
         .good-counter {
 
@@ -150,7 +202,6 @@
         }
       }
 
-
       .btn {
         background-color: $color-green;
         width: 100%;
@@ -159,10 +210,22 @@
         border: vw(1) solid $color-green;
         font-size: vw(15);
         font-weight: $font-weight-accent;
-        line-height: vw(18);
+        line-height: 1.2;
         letter-spacing: 0.1em;
         text-align: center;
         padding: vw(23) vw(30) vw(23) vw(29);
+
+        @include lg {
+          font-size: vm(4);
+        }
+        @include md {
+          font-size: vm(4);
+          width: 50%;
+          margin: auto;
+        }
+        @include sm {
+          font-size: vm(5);
+        }
       }
     }
   }
