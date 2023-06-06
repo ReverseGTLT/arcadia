@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: vw(20);
@@ -15,6 +19,7 @@ body {
   font-style: normal;
   line-height: vw(30);
   color: $color-h-txt-link;
+  overflow-x: hidden;
 
   @include lg {
   }

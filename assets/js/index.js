@@ -36,3 +36,28 @@ function onOpenLanguageList(e) {
     headerLanguageArrow.classList.toggle('rotate')
     headerLanguageList.classList.toggle('block');
 }
+
+window.addEventListener('scroll', onScrollWindow);
+
+function onScrollWindow() {
+    const header = document.querySelector('.header');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= 1) {
+        header.classList.add('bgcolor-white');
+        localStorage.setItem('scrollPresent', 'true'); // Сохраняем информацию о наличии скролла в Local Storage
+    } else {
+        header.classList.remove('bgcolor-white');
+        localStorage.removeItem('scrollPresent'); // Удаляем информацию о наличии скролла из Local Storage
+    }
+}
+
+// Проверяем наличие скролла после обновления страницы
+window.addEventListener('load', function() {
+    const header = document.querySelector('.header');
+    const scrollPresent = localStorage.getItem('scrollPresent');
+
+    if (scrollPresent) {
+        header.classList.add('bgcolor-white');
+    }
+});

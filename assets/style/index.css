@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.0416666667vw;
@@ -14,6 +18,7 @@ body {
   font-style: normal;
   line-height: 1.5625vw;
   color: #0A0E20;
+  overflow-x: hidden;
 }
 h2 {
   font-size: 2.0833333333vw;
@@ -116,6 +121,7 @@ ul, ol, li {
 .header {
   z-index: 100;
   background-color: transparent;
+  transition: 0.1s;
   padding: 1.5625vw 3.4895833333vw 1.5625vw 4.0625vw;
   display: flex;
   align-items: center;
@@ -285,6 +291,10 @@ ul, ol, li {
   fill: #30A23C;
 }
 
+.bgcolor-white {
+  background-color: #ffffff;
+}
+
 .general {
   height: 100vh;
   width: 100vw;
@@ -327,6 +337,7 @@ ul, ol, li {
   font-style: normal;
 }
 .general-wrapper__info {
+  position: relative;
   margin-top: 18.8541666667vw;
   margin-left: 42.96875vw;
 }
@@ -357,6 +368,71 @@ ul, ol, li {
   margin-top: 3.3854166667vw;
 }
 
+.circle-text {
+  width: 11.6666666667vw;
+  height: 11.6666666667vw;
+  position: absolute;
+  top: -6.7708333333vw;
+  left: -2.6041666667vw;
+}
+.circle-text img {
+  width: 100%;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+.sale {
+  height: 5.9375vw;
+  background-color: #F80505;
+  overflow: hidden;
+  position: sticky;
+  top: 5.9895833333vw;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+.sale-wrapper {
+  height: 5.9375vw;
+  background-color: #F80505;
+  display: flex;
+  align-items: center;
+  gap: 1.5625vw;
+  width: 100%;
+  padding-left: 1.0416666667vw;
+  animation: scroll 15s linear infinite;
+}
+.sale-wrapper__description {
+  font-size: 1.25vw;
+  line-height: 110.3%;
+  color: #ffffff;
+  min-width: 18.2291666667vw;
+}
+.sale-wrapper__title {
+  font-weight: 700;
+  font-size: 3.3333333333vw;
+  line-height: 3.3333333333vw;
+  color: #ffffff;
+  transform: rotate(-10deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-31.25vw);
+  }
+  50% {
+    transform: translateX(-10.4166666667vw);
+  }
+  100% {
+    transform: translateX(-31.25vw);
+  }
+}
 .benefits {
   padding-top: 7.2395833333vw;
   padding-bottom: 7.2395833333vw;
@@ -713,6 +789,89 @@ ul, ol, li {
 }
 .goods .goods-carousel .owl-next:active {
   content: url("../../assets/images/arrow_active.png");
+}
+
+.point {
+  padding-bottom: 4.84375vw;
+}
+.point__title {
+  max-width: 33.8541666667vw;
+  font-weight: 700;
+  font-size: 2.0833333333vw;
+  line-height: 2.1875vw;
+  color: #F80505;
+  padding-bottom: 2.9166666667vw;
+  margin-left: 29.6875vw;
+}
+.point-info {
+  padding: 2.0833333333vw;
+  margin-left: 27.6041666667vw;
+}
+.point-wrapper {
+  background: #F2F9FF;
+  border-radius: 1.5625vw;
+  display: flex;
+  gap: 1.0416666667vw;
+  position: relative;
+}
+.point-img {
+  width: 22.3958333333vw;
+  height: 19.53125vw;
+  top: -9.1145833333vw;
+  left: 1.0416666667vw;
+  position: absolute;
+}
+.point-img img {
+  width: 100%;
+}
+.point-text {
+  display: flex;
+  gap: 1.5625vw;
+}
+.point-text__wrapper {
+  display: flex;
+  gap: 1.0416666667vw;
+}
+.point-text__num {
+  border: 0.0520833333vw solid rgba(48, 162, 60, 0.2);
+  width: 4.2708333333vw;
+  height: 4.2708333333vw;
+  font-weight: 700;
+  font-size: 1.0416666667vw;
+  line-height: 150%;
+  color: #30A23C;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.point-text__description {
+  max-width: 13.0208333333vw;
+  font-size: 0.8333333333vw;
+  line-height: 130%;
+  color: #0A0E20;
+  padding-top: 1.0416666667vw;
+}
+.point-btns {
+  padding-top: 1.9791666667vw;
+  display: flex;
+  gap: 1.5625vw;
+  align-items: center;
+}
+.point-btns__btn {
+  color: #ffffff;
+  font-size: 0.9375vw;
+  background-color: #30A23C;
+  transition: 0.2s;
+}
+.point-btns__btn:hover {
+  background-color: #8edd96;
+  border: 0.0520833333vw solid #30A23C;
+}
+.point-btns__text {
+  font-size: 0.8333333333vw;
+  line-height: 130%;
+  color: #0A0E20;
 }
 
 /*# sourceMappingURL=index.css.map */
