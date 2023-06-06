@@ -13,31 +13,70 @@ body {
   font-size: vw(20);
   font-weight: 400;
   font-style: normal;
-  line-height: vw(30);
+  line-height: 1.5;
   color: $color-h-txt-link;
 
   @include lg {
+    font-size: vm(5);
+  }
+
+  @include md {
+    font-size: vm(5);
+  }
+
+  @include sm {
+    font-size: vm(6);
+  }
+}
+
+.accent {
+  font-size: vw(24);
+  font-weight: $font-weight-accent;
+  line-height: 1.08;
+
+  @include lg {
+    font-size: vm(6);
+  }
+  @include md {
+    font-size: vm(7);
+  }
+  @include sm {
+    font-size: vm(7);
   }
 }
 
 h2 {
-  font-size: vw(40);
+  font-size: 40px;
   font-weight: 700;
-  line-height: vw(33.63);
+  line-height: 1.05;
 
-  @include lg-xs {
+  @include lg {
+    font-size: vm(12);
+  }
+  @include md {
+    font-size: vm(12);
+  }
+  @include sm {
+    font-size: vm(14);
   }
 }
 
 h3 {
-  font-size: vw(32);
+  font-size: 32px;
   font-weight: 700;
-  line-height: vw(42);
+  line-height: 1.05;
 
+  @include lg {
+    font-size: vm(10);
+  }
   @include md {
-    //font-size: vm(32);
+    font-size: vm(10);
+  }
+  @include sm {
+    font-size: vm(12);
   }
 }
+
 
 .container {
   max-width: vw(1728);
