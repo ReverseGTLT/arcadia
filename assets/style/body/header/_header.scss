@@ -4,6 +4,7 @@
 .header {
   z-index: 100;
   background-color: transparent;
+  transition: 0.1s;
   padding: vw(30) vw(67) vw(30) vw(78);
   display: flex;
   align-items: center;
@@ -182,3 +183,10 @@
     fill: #30A23C;
   }
 }
+
+.bgcolor-white {
+  background-color: $color-white;
+}
+
+
+

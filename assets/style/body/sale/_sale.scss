@@ -1,0 +1,48 @@
+
+@use "../../presets/index" as *;
+
+.sale {
+  height: vw(114);
+  background-color: $color-red;
+  overflow: hidden;
+  position: sticky;
+  top: vw(115);
+  right: 0;
+  left: 0;
+  z-index: 999;
+  &-wrapper {
+    height: vw(114);
+    background-color: $color-red;
+    display: flex;
+    align-items: center;
+    gap: vw(30);
+    width: 100%;
+    padding-left: vw(20);
+    animation: scroll 15s linear infinite;
+    &__description {
+      font-size: vw(24);
+      line-height: 110.3%;
+      color: $color-white;
+      min-width: vw(350);
+    }
+    &__title {
+      font-weight: 700;
+      font-size: vw(64);
+      line-height: vw(64);
+      color: $color-white;
+      transform: rotate(-10deg);
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(vw(-600));
+  }
+  50% {
+    transform: translateX(vw(-200));
+  }
+  100% {
+    transform: translateX(vw(-600));
+  }
+}

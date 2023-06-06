@@ -42,6 +42,7 @@
       }
     }
     &__info {
+      position: relative;
       margin-top: vw(362);
       margin-left: vw(825);
     }
@@ -71,5 +72,26 @@
       padding: vw(30) vw(50);
       margin-top: vw(65);
     }
+  }
+}
+
+.circle-text {
+  width: vw(224);
+  height: vw(224);
+  position: absolute;
+  top: vw(-130);
+  left: vw(-50);
+  img {
+    width: 100%;
+    animation: rotate 20s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
   }
 }
