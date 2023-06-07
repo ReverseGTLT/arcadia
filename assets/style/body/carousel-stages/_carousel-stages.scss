@@ -75,7 +75,7 @@
       .stages-image {
         width: vw(200);
         //width: 25%;
-        //margin: auto;
+        margin: auto;
         overflow: hidden;
 
         img {
@@ -108,48 +108,66 @@
   }
 
   .stages-carousel {
+      //position: relative;
+    .stage-text {
+      position: relative;
+    }
+
     .owl-nav {
+      position: absolute;
       display: flex;
-      //justify-content: space-between;
-      //align-items: center;
-      @include md() {
-        display: none;
-      }
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(-50%);
+      left: vw(20);
+      right: vw(20);
+      z-index: 1;
+
+        @include md() {
+          display: none;
+        }
     }
 
     .owl-prev,
     .owl-next {
-      position: absolute;
+      //position: absolute;
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
     }
 
-    .owl-prev {
-      left: vw(-100);
-      top: 30%;
-      width: vw(82);
-      height: vw(82);
-      content: url("../../assets/images/arrow_light.png");
+      .owl-prev {
+        width: vw(82);
+        height: vw(82);
+        content: url("../../assets/images/arrow_light.png");
 
-      &:active {
-        content: url("../../assets/images/arrow_active.png");
+        &:active {
+          content: url("../../assets/images/arrow_active.png");
+        }
+      }
+
+      .owl-next {
+        width: vw(82);
+        height: vw(82);
+        content: url("../../assets/images/arrow_light.png");
+        transform: rotate(180deg);
+
+        &:active {
+          content: url("../../assets/images/arrow_active.png");
+        }
+      }
+    .owl-dot{
+      display: inline-block;
+      margin: 0 vw(5);
+      width: vw(10);
+      height: vw(10);
+      border-radius: 50%;
+      background-color: $color-red-border;
+
+      &.active {
+        background-color: $color-red;
       }
     }
-
-    .owl-next {
-      right: vw(-100);
-      top: 30%;
-      width: vw(82);
-      height: vw(82);
-      content: url("../../assets/images/arrow_light.png");
-      transform: rotate(180deg);
-
-      &:active {
-        content: url("../../assets/images/arrow_active.png");
-      }
-    }
-  }
-
+   }
 }
