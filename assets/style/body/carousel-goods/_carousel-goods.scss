@@ -20,6 +20,12 @@
     justify-content: space-between;
     align-items: start;
 
+    //@include lg {
+    //  width: 100%;
+    //  margin: vw(5);
+    //  padding: vw(20);
+    //}
+
     @include md {
       width: 100%;
       flex-direction: column;
@@ -87,9 +93,9 @@
     align-items: center;
 
     @include lg() {
-      //height: 100%;
-      //width: 100%;
-      //background: green;
+      //max-width: 98%;
+      //margin: auto;
+      //height: auto;
     }
 
     @include md {
@@ -118,6 +124,10 @@
         //max-width: 100%;
         //height: inherit;
         //background: #0879E0;
+        max-width: initial;
+        margin: auto;
+        height: auto;
+        padding: vm(5);
       }
 
       @include md {
@@ -139,8 +149,8 @@
         margin-inline: auto;
         display: flex;
         align-items: flex-end;
-        padding-bottom: vw(25);
-        //margin: vw(41) vw(76) vw(25) vw(76);
+        margin-bottom: vw(25);
+        overflow: hidden;
 
           @include lg() {
             //width: vw(173);
@@ -151,6 +161,7 @@
           max-width: initial;
           margin: auto;
           height: auto;
+          padding-bottom: vm(10);
         }
 
         img {
@@ -174,11 +185,12 @@
           font-size: vm(6);
         }
         @include md {
-          font-size: vm(6);
+          font-size: vm(7);
           text-align: center;
+          padding-bottom: vm(10);
         }
         @include sm {
-          font-size: vm(6);
+          font-size: vm(7);
         }
       }
 
@@ -187,17 +199,88 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: vw(17);
-        gap: vw(10);
+        //gap: vw(10);
 
         @include md {
           justify-content: center;
+          gap: vm(10);
+          padding-bottom: vm(7);
         }
 
         .good-counter {
+          p {
+            display: inline-block;
+          }
+          &.btn-light {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+            background: $color-white;
+            border-color: $color-grey-border;
+            color: $color-grey-increase;
+            width: vw(138);
+            height: wv(64);
+
+            padding: vw(22) vw(50) vw(21) vw(51);
+
+            @include lg {
+              width: 50%;
+              height: auto;
+              //padding: vm(10) vw(24) vw(9) vw(25);
+            }
+            @include md {
+              width: 15%;
+            }
+              // @include sm {
+            //  padding: vm(10) vw(24) vw(9) vw(25);
+            //}
+
+            &::after,
+            &::before {
+              position: absolute;
+              display: inline-block;
+              height: vw(34);
+              width: vw(16);
+
+              @include lg {
+                height: vw(34);
+                width: vw(16);
+              }
+              @include md {
+                height: vw(34);
+                width: vw(16);
+
+              }
+              @include sm {
+                height: vm(6);
+                width: vw(5);
+              }
+            }
+
+            &::after {
+              content: "+";
+              right: vw(25);
+            }
+
+            &::before {
+              content: "-";
+              left: vw(25);
+            }
+          }
         }
 
         .good-price {
+          display: flex;
+
+          p {
+            font-weight: 500;
+
+            span {
+              font-weight: 400;
+            }
+          }
 
         }
       }
@@ -220,7 +303,8 @@
         }
         @include md {
           font-size: vm(4);
-          width: 50%;
+          width: 30%;
+          height: auto;
           margin: auto;
         }
         @include sm {

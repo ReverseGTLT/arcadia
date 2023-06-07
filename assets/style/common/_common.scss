@@ -158,12 +158,24 @@ ul, ol, li {
   border-radius: vw(100);
   border: vw(1) solid $color-white;
   color: $color-white;
-  font-weight: 700;
-  font-size: vw(20);
-  line-height: 100%;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-size: vw(20);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
   padding: vw(30) vw(50);
+
+  @include lg {
+    font-size: vm(5);
+  }
+
+  @include md {
+    font-size: vm(5);
+  }
+
+  @include sm {
+    font-size: vm(6);
+  }
 
   &:hover {
     background: $color-white;
@@ -173,14 +185,27 @@ ul, ol, li {
 }
 
 .btn-light {
+  cursor: pointer;
+  transition: 0.2s all;
   background: none;
+  border-radius: vw(100);
   border: 1px solid $color-red-border;
-  text-transform: none;
   color: $color-red;
+  text-transform: none;
+  font-size: vw(23);
   font-weight: 400;
-  font-size: vw(24);
-  line-height: vw(25);
+  line-height: 1.04;
   padding: vw(20) vw(31) vw(19) vw(57);
+
+  @include lg {
+    font-size: vm(6);
+  }
+  @include md {
+    font-size: vm(6);
+  }
+  @include sm {
+    font-size: vm(6);
+  }
 
   &:hover {
     background: $color-red-border;
@@ -188,3 +213,4 @@ ul, ol, li {
     border: vw(1) solid $color-red-border;
   }
 }
+
