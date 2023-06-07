@@ -1,5 +1,18 @@
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
+    $('.stages-carousel').owlCarousel({
+        items:1,
+        loop: true,
+        // autoplay: true,
+        autoplaySpeed: 50,
+        autoplayHoverPause: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        mouseDrag: true,
+        touchDrag: true,
+    });
+
+    $('.goods-carousel').owlCarousel({
         loop: true,
         // autoplay: true,
         autoplaySpeed: 50,

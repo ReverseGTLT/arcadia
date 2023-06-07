@@ -1,0 +1,155 @@
+@use "../../presets/index" as *;
+
+.stages {
+  padding-bottom: vw(160);
+
+  @include md {
+    //height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-content {
+    margin-left: vw(183);
+    text-align: start;
+
+    //@include lg {
+    //  width: 100%;
+    //  margin: vw(5);
+    //  padding: vw(20);
+    //}
+
+    @include md {
+      width: 100%;
+      flex-direction: column;
+      margin: vw(5);
+      padding: vw(20);
+    }
+
+    &__text {
+      width: vw(1100);
+      text-align: left;
+      padding-bottom: vw(52);
+
+      @include md {
+        width: 100%;
+        margin: vw(5);
+      }
+
+      h2 {
+        padding-bottom: vw(50);
+
+        span {
+          font-weight: 400;
+          line-height: 1.27;
+        }
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  &-carousel {
+    position: relative;
+    max-width: vw(1083);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &__item {
+      width: 100%;
+      //margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: vw(5);
+
+      @include md {
+        padding: vm(10);
+      }
+
+      .stages-image {
+        width: vw(200);
+        //width: 25%;
+        //margin: auto;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .stage-text {
+        width: vw(743);
+        //width: 75%;
+        //margin: auto;
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: space-between;
+
+        .stage-title {
+          position: relative;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          padding-bottom: vw(37);
+        }
+
+        p {
+          padding-bottom: vw(37);
+        }
+      }
+    }
+  }
+
+  .stages-carousel {
+    .owl-nav {
+      display: flex;
+      //justify-content: space-between;
+      //align-items: center;
+      @include md() {
+        display: none;
+      }
+    }
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .owl-prev {
+      left: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+
+      &:active {
+        content: url("../../assets/images/arrow_active.png");
+      }
+    }
+
+    .owl-next {
+      right: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+      transform: rotate(180deg);
+
+      &:active {
+        content: url("../../assets/images/arrow_active.png");
+      }
+    }
+  }
+
+}
