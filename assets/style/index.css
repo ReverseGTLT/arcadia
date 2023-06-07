@@ -808,6 +808,7 @@ ul, ol, li {
 }
 .stages-carousel__item .stages-image {
   width: 10.4166666667vw;
+  margin: auto;
   overflow: hidden;
 }
 .stages-carousel__item .stages-image img {
@@ -827,8 +828,18 @@ ul, ol, li {
 .stages-carousel__item .stage-text p {
   padding-bottom: 1.9270833333vw;
 }
+.stages .stages-carousel .stage-text {
+  position: relative;
+}
 .stages .stages-carousel .owl-nav {
+  position: absolute;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  left: 1.0416666667vw;
+  right: 1.0416666667vw;
+  z-index: 1;
 }
 @media (max-width: 767.8px) {
   .stages .stages-carousel .owl-nav {
@@ -837,15 +848,12 @@ ul, ol, li {
 }
 .stages .stages-carousel .owl-prev,
 .stages .stages-carousel .owl-next {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 .stages .stages-carousel .owl-prev {
-  left: -5.2083333333vw;
-  top: 30%;
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
@@ -854,8 +862,6 @@ ul, ol, li {
   content: url("../../assets/images/arrow_active.png");
 }
 .stages .stages-carousel .owl-next {
-  right: -5.2083333333vw;
-  top: 30%;
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
@@ -863,6 +869,17 @@ ul, ol, li {
 }
 .stages .stages-carousel .owl-next:active {
   content: url("../../assets/images/arrow_active.png");
+}
+.stages .stages-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 0.2604166667vw;
+  width: 0.5208333333vw;
+  height: 0.5208333333vw;
+  border-radius: 50%;
+  background-color: #FFBBBB;
+}
+.stages .stages-carousel .owl-dot.active {
+  background-color: #F80505;
 }
 
 .goods {
