@@ -152,10 +152,10 @@
         margin-bottom: vw(25);
         overflow: hidden;
 
-          @include lg() {
-            //width: vw(173);
-            //height: vw(262);
-          }
+        @include lg() {
+          //width: vw(173);
+          //height: vw(262);
+        }
 
         @include md {
           max-width: initial;
@@ -211,6 +211,7 @@
           p {
             display: inline-block;
           }
+
           &.btn-light {
             position: relative;
             display: flex;
@@ -233,7 +234,7 @@
             @include md {
               width: 15%;
             }
-              // @include sm {
+            // @include sm {
             //  padding: vm(10) vw(24) vw(9) vw(25);
             //}
 
@@ -341,8 +342,8 @@
       content: url("../../assets/images/arrow_light.png");
 
       &:active {
-          content: url("../../assets/images/arrow_active.png");
-        }
+        content: url("../../assets/images/arrow_active.png");
+      }
     }
 
     .owl-next {
