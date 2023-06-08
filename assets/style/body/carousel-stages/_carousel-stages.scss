@@ -14,6 +14,8 @@
   &-content {
     margin-left: vw(183);
     text-align: start;
+    display: flex;
+    flex-direction: column;
 
     //@include lg {
     //  width: 100%;
@@ -51,9 +53,36 @@
         width: 100%;
       }
     }
+
+    &__img-carousel-wrapper {
+      //position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+
+      .stage-image {
+        //position: absolute;
+        width: vw(160);
+        height: vw(415);
+        //left: -5%;
+        //width: vw(200);
+        //width: 25%;
+        //padding-right: vw(133);
+        margin-right: vw(133);
+        //overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+          //height: auto;
+        }
+      }
+    }
   }
 
-  &-carousel {
+  .stages-carousel {
+    //position: relative;
     position: relative;
     max-width: vw(1083);
     display: flex;
@@ -71,71 +100,52 @@
       @include md {
         padding: vm(10);
       }
-
-      .stages-image {
-        width: vw(200);
-        //width: 25%;
-        margin: auto;
-        overflow: hidden;
-
-        img {
-          display: block;
-          width: 100%;
-        }
-      }
-
-      .stage-text {
-        width: vw(743);
-        //width: 75%;
-        //margin: auto;
-        //display: flex;
-        //flex-direction: column;
-        //justify-content: space-between;
-
-        .stage-title {
-          position: relative;
-          display: flex;
-          justify-content: start;
-          align-items: center;
-          padding-bottom: vw(37);
-        }
-
-        p {
-          padding-bottom: vw(37);
-        }
-      }
     }
-  }
 
-  .stages-carousel {
-      //position: relative;
     .stage-text {
       position: relative;
-    }
+      width: vw(743);
+      //width: 75%;
+      //margin: auto;
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: space-between;
 
-    .owl-nav {
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transform: translateY(-50%);
-      left: vw(20);
-      right: vw(20);
-      z-index: 1;
+      .stage-title {
+        position: relative;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-bottom: vw(37);
+      }
+
+      p {
+        padding-bottom: vw(37);
+      }
+
+      .owl-nav {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(-50%);
+        left: vw(20);
+        right: vw(20);
+        z-index: 1;
 
         @include md() {
           display: none;
         }
-    }
+      }
 
-    .owl-prev,
-    .owl-next {
-      //position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-    }
+      .owl-prev,
+      .owl-next {
+        //position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      }
 
       .owl-prev {
         width: vw(82);
@@ -157,17 +167,19 @@
           content: url("../../assets/images/arrow_active.png");
         }
       }
-    .owl-dot{
-      display: inline-block;
-      margin: 0 vw(5);
-      width: vw(10);
-      height: vw(10);
-      border-radius: 50%;
-      background-color: $color-red-border;
 
-      &.active {
-        background-color: $color-red;
+      .owl-dot {
+        display: inline-block;
+        margin: 0 vw(5);
+        width: vw(10);
+        height: vw(10);
+        border-radius: 50%;
+        background-color: $color-red-border;
+
+        &.active {
+          background-color: $color-red;
+        }
       }
     }
-   }
+  }
 }
