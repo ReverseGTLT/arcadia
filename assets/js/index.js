@@ -1,28 +1,27 @@
 $(document).ready(function () {
     $('.stages-carousel').owlCarousel({
         loop: true,
-        // autoplay: true,
-        autoplaySpeed: 50,
-        autoplayHoverPause: true,
-        margin: 20,
-        dots: true,
-        dotsEach: 4,
-        nav: true,
         items: 1,
+        autoplay: 1000,
+        margin: 10,
+        dots: true,
+        // dotsEach: 4,
+        slideBy: 1,
+        nav: true,
         mouseDrag: true,
         touchDrag: true,
     });
 
     $('.goods-carousel').owlCarousel({
         loop: true,
-        // autoplay: true,
-        autoplaySpeed: 50,
+        autoplay: 1000,
         autoplayHoverPause: true,
         margin: 20,
         nav: true,
         dots: false,
         mouseDrag: true,
         touchDrag: true,
+        responsiveClass:true,
         responsive: {
             0: {
                 items: 1,

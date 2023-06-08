@@ -3,8 +3,11 @@
 .stages {
   padding-bottom: vw(160);
 
+  @include lg {
+    padding-bottom: vw(200);
+  }
+
   @include md {
-    //height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,22 +20,8 @@
     display: flex;
     flex-direction: column;
 
-    //@include lg {
-    //  width: 100%;
-    //  margin: vw(5);
-    //  padding: vw(20);
-    //}
-
-    @include md {
-      width: 100%;
-      flex-direction: column;
-      margin: vw(5);
-      padding: vw(20);
-    }
-
     &__text {
       width: vw(1100);
-      text-align: left;
       padding-bottom: vw(52);
 
       @include md {
@@ -55,47 +44,40 @@
     }
 
     &__img-carousel-wrapper {
-      //position: relative;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      margin: auto;
+
+      @include lg {
+      align-items: center;
+    }
 
       .stage-image {
-        //position: absolute;
         width: vw(160);
         height: vw(415);
-        //left: -5%;
-        //width: vw(200);
-        //width: 25%;
-        //padding-right: vw(133);
-        margin-right: vw(133);
-        //overflow: hidden;
+        align-items: end;
 
         img {
           display: block;
           width: 100%;
-          //height: auto;
         }
       }
     }
   }
 
   .stages-carousel {
-    //position: relative;
     position: relative;
     max-width: vw(1083);
     display: flex;
-    margin: auto;
-    align-items: center;
+    margin-inline: auto;
     justify-content: space-between;
+    //flex-direction: column;
+    align-items: center;
 
     &__item {
-      width: 100%;
-      //margin: auto;
       display: flex;
       justify-content: space-between;
-      padding: vw(5);
+      flex-direction: column;
 
       @include md {
         padding: vm(10);
@@ -105,42 +87,72 @@
     .stage-text {
       position: relative;
       width: vw(743);
-      //width: 75%;
-      //margin: auto;
-      //display: flex;
-      //flex-direction: column;
-      //justify-content: space-between;
+      margin-top: vw(100);
+      margin-left: vw(133);
+      display: flex;
+      flex-direction: column;
+
 
       .stage-title {
         position: relative;
-        display: flex;
+        display: inline-block;
         justify-content: start;
         align-items: center;
         padding-bottom: vw(37);
+
+        &::before {
+          z-index: -1;
+          position: absolute;
+          content: "3";
+          color: $color-red-border;
+          top: -0.3em;
+          left: -0.22em;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: vw(197);
+          text-align: left;
+
+          @include lg {
+            font-size: vm(65);
+          }
+          @include md {
+            font-size: vm(65);
+          }
+          @include sm {
+            font-size: vm(67);
+          }
+        }
       }
 
       p {
         padding-bottom: vw(37);
+        display: inline-block;
       }
+    }
 
-      .owl-nav {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transform: translateY(-50%);
-        left: vw(20);
-        right: vw(20);
-        z-index: 1;
 
-        @include md() {
-          display: none;
-        }
+  }
+
+  .owl-carousel {
+    .owl-nav {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      margin-left: vw(120);
+      width: vw(531);
+      bottom: 0;
+      left: vw(20);
+      right: vw(20);
+      z-index: 1;
+
+      @include lg {
+        bottom: vw(-60);
+      }
+      @include md() {
+        display: none;
       }
 
       .owl-prev,
       .owl-next {
-        //position: absolute;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -167,10 +179,31 @@
           content: url("../../assets/images/arrow_active.png");
         }
       }
+    }
 
-      .owl-dot {
-        display: inline-block;
-        margin: 0 vw(5);
+    .owl-dots {
+      z-index: 1;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: vw(120);
+      left: vw(140);
+      bottom: vw(35);
+
+      @include lg() {
+        bottom: vw(-20);
+      }
+
+      @include md() {
+        bottom: 0;
+      }
+
+      .owl-dot{
+        display: inline-block!important;
+        justify-content: center;
+        margin: 0 vw(15);
+        //margin: 0 vw(40);
         width: vw(10);
         height: vw(10);
         border-radius: 50%;
@@ -180,6 +213,7 @@
           background-color: $color-red;
         }
       }
+
     }
   }
 }
