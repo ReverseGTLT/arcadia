@@ -1649,4 +1649,43 @@ ul, ol, li {
   transform: rotateZ(16deg);
 }
 
+.contacts {
+  padding-bottom: 0;
+  border-radius: 1.5625vw 1.5625vw 0 0;
+  background-color: #F2F9FF;
+}
+.contacts-content {
+  margin-left: 9.53125vw;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.contacts-content__text {
+  width: 37.65625vw;
+  padding-bottom: 1.71875vw;
+}
+.contacts-content__text h2 {
+  padding-bottom: 2.1875vw;
+}
+.contacts-content__text p {
+  width: 100%;
+}
+.contacts-info {
+  display: flex;
+  margin: auto;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 4.5833333333vw;
+}
+.contacts-info__map {
+  display: block;
+  width: 25.2083333333vw;
+  height: 18.4895833333vw;
+  margin-right: 3.125vw;
+  border: 1px solid gray;
+}
+.contacts-info__address {
+  padding-right: 7.4479166667vw;
+}
+
 /*# sourceMappingURL=index.css.map */

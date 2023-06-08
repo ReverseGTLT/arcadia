@@ -1,0 +1,58 @@
+@use "../../presets/index" as *;
+
+.contacts {
+  padding-bottom: 0;
+  border-radius: vw(30) vw(30) 0 0;
+  background-color: $background-light;
+
+  @include md {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+  }
+
+  &-content {
+    margin-left: vw(183);
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      width: vw(723);
+      padding-bottom: vw(33);
+
+      //@include md {
+      //  width: 100%;
+      //  margin: vw(5);
+      //}
+
+      h2 {
+        padding-bottom: vw(42);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    margin: auto;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: vw(88);
+
+    &__map {
+      display: block;
+      width: vw(484);
+      height: vw(355);
+      margin-right: vw(60);
+      border: 1px solid gray;
+    }
+    &__address {
+      padding-right: vw(143);
+    }
+  }
+}
