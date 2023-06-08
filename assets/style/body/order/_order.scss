@@ -1,0 +1,72 @@
+
+@use "../../presets" as *;
+
+.order {
+  display: flex;
+  align-items: center;
+  gap: vw(100);
+  width: 100%;
+  border: 1px solid #949CBE;
+  border-radius: 30px;
+  &__img {
+    width: vw(410);
+    border-top-left-radius: vw(30);
+    border-bottom-left-radius: vw(30);
+    overflow: hidden;
+    height: vw(441);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-info {
+    padding-top: vw(80);
+    &__title {
+      font-weight: 700;
+      font-size: vw(40);
+      line-height: vw(42);
+      color: $color-red;
+      padding-bottom: vw(29);
+    }
+    &__description {
+      line-height: 150%;
+      color: $color-h-txt-link;
+    }
+  }
+  &-form {
+
+    button {
+      flex: 1;
+    }
+    &__wrapper {
+      padding-top: vw(50);
+      padding-bottom: vw(35);
+      display: flex;
+      gap: vw(20);
+      justify-content: space-between;
+      margin-left: vw(-450);
+      input {
+        padding: vw(28) vw(50);
+        line-height: vw(21);
+        color: $color-h-txt-link;
+        background: $color-white;
+        border: vw(1) solid $color-grey-border;
+        border-radius: vw(30);
+        flex: 1;
+      }
+    }
+    &__label-wrapper {
+      display: flex;
+      align-items: baseline;
+      gap: vw(7);
+    }
+    label {
+      flex: 1;
+      display: block;
+      font-size: vw(16);
+      line-height: vw(17);
+      color: $color-h-txt-link;
+      max-width: vw(520);
+    }
+  }
+}
