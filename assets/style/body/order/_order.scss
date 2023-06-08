@@ -21,6 +21,8 @@
   }
   &-info {
     padding-top: vw(80);
+    padding-right: vw(50);
+    flex: 1;
     &__title {
       font-weight: 700;
       font-size: vw(40);
@@ -34,9 +36,13 @@
     }
   }
   &-form {
-
     button {
       flex: 1;
+      width: vw(298);
+      &:hover {
+        color: $color-white;
+        background-color: lighten($color-red, 30);
+      }
     }
     &__wrapper {
       padding-top: vw(50);
@@ -52,7 +58,6 @@
         background: $color-white;
         border: vw(1) solid $color-grey-border;
         border-radius: vw(30);
-        flex: 1;
       }
     }
     &__label-wrapper {
@@ -68,5 +73,13 @@
       color: $color-h-txt-link;
       max-width: vw(520);
     }
+  }
+  &__input-name {
+    width: vw(450);
+    flex: 1;
+  }
+  &__input-tel {
+    width: vw(520);
+    flex: 1.5;
   }
 }
