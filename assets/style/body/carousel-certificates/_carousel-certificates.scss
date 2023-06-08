@@ -1,10 +1,9 @@
 @use "../../presets/index" as *;
 
-.goods {
-  padding-bottom: vw(131);
+.certificates {
+  padding-bottom: vw(192);
 
   @include md {
-    //height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,32 +11,14 @@
   }
 
   &-content {
-    position: relative;
-    //width: vw(1160);
     margin-left: vw(183);
-    //margin-right: vw(202);
+    text-align: start;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-
-    //@include lg {
-    //  width: 100%;
-    //  margin: vw(5);
-    //  padding: vw(20);
-    //}
-
-    @include md {
-      width: 100%;
-      flex-direction: column;
-      margin: vw(5);
-      padding: vw(20);
-    }
+    flex-direction: column;
 
     &__text {
-      width: vw(755);
-      text-align: left;
-      padding-bottom: vw(38);
-      //margin-right: vw(156);
+      width: vw(1100);
+      padding-bottom: vw(54);
 
       @include md {
         width: 100%;
@@ -45,40 +26,11 @@
       }
 
       h2 {
-        padding-bottom: vw(50);
+        padding-bottom: vw(43);
       }
 
       p {
         width: 100%;
-      }
-    }
-
-    &__btn {
-      position: absolute;
-      top: 0;
-      right: vw(82);
-      display: flex;
-
-      @include md {
-        position: initial;
-        padding: vw(20);
-      }
-
-      .btn {
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        &::before {
-          position: absolute;
-          content: "";
-          display: inline-block;
-          height: vw(29.12);
-          width: vw(29.12);
-          left: vw(20);
-          background: url("../../assets/images/punkt.svg") no-repeat;
-          background-size: cover;
-        }
       }
     }
   }
@@ -86,10 +38,10 @@
   &-carousel {
     position: relative;
     max-width: vw(1364);
-    margin: auto;
-    //height: vw(564);
+    margin-inline: auto;
+    height: vw(564);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     @include lg() {
@@ -106,51 +58,50 @@
     }
 
     &__item {
-      max-width: vw(326);
-      margin: auto;
-      padding: vw(41) vw(20) vw(22) vw(21);
+      width: vw(250);
+      height: vw(450);
+      text-align: left;
+      //margin: auto;
+      padding: vw(10);
       background: $color-white;
-      border: vw(1) solid $color-grey-border;
-      border-radius: vw(30);
+      border: none;
       box-shadow: 0;
-      //margin-right: vw(20);
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
       transition: box-shadow 0.3s;
+      //display: flex;
+      //flex-direction: column;
+      //gap: vw(20);
+      margin-right: 0;
+      margin-left: 0;
 
       @include lg() {
-        //max-width: 100%;
+        width: 100%;
         //height: inherit;
         //background: #0879E0;
-        max-width: initial;
-        margin: auto;
+        //max-width: initial;
+        margin: 0;
         height: auto;
-        padding: vm(5);
+        padding: vm(2);
       }
 
       @include md {
-        max-width: initial;
-        margin: auto;
-        height: auto;
+        //max-width: initial;
+        //margin: vm(10);
+        //height: auto;
         padding: vm(10);
       }
 
       &:hover {
-        background: $background-light;
-        box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
-        border-radius: vw(30);
+        box-shadow: vw(7) vw(8) vw(15) rgba(216, 225, 236, 0.94);
       }
 
-      .good-image {
-        max-width: vw(173);
-        height: vw(262);
-        margin-inline: auto;
+      .certificate-image {
+        width: vw(219);
+        height: auto;
         display: flex;
-        align-items: flex-end;
-        margin-bottom: vw(25);
-        overflow: hidden;
+        align-items: flex-start;
+        margin-right: vw(26);
+        margin-bottom: vw(23);
+        //overflow: inherit;
 
         @include lg() {
           //width: vw(173);
@@ -158,8 +109,8 @@
         }
 
         @include md {
-          max-width: initial;
-          margin: auto;
+          max-width: 100%;
+          margin: vm(10);
           height: auto;
           padding-bottom: vm(10);
         }
@@ -167,155 +118,19 @@
         img {
           display: block;
           width: 100%;
-          height: content-box;
-          text-align: center;
-          border-radius: vw(10) vw(10) 0 0;
+          overflow: hidden;
+          //height: content-box;
+          text-align: start;
         }
       }
 
-      .good-title {
-        display: block;
-        font-size: vw(20);
+      a {
         font-weight: $font-weight-accent;
-        line-height: 1.3;
-        text-align: left;
-        padding-bottom: vw(17);
-
-        @include lg {
-          font-size: vm(6);
-        }
-        @include md {
-          font-size: vm(7);
-          text-align: center;
-          padding-bottom: vm(10);
-        }
-        @include sm {
-          font-size: vm(7);
-        }
-      }
-
-      .good-counter-price-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: vw(17);
-        //gap: vw(10);
-
-        @include md {
-          justify-content: center;
-          gap: vm(10);
-          padding-bottom: vm(7);
-        }
-
-        .good-counter {
-          p {
-            display: inline-block;
-          }
-
-          &.btn-light {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background: $color-white;
-            border-color: $color-grey-border;
-            color: $color-grey-increase;
-            width: vw(138);
-            height: wv(64);
-
-            padding: vw(22) vw(50) vw(21) vw(51);
-
-            @include lg {
-              width: 50%;
-              height: auto;
-              //padding: vm(10) vw(24) vw(9) vw(25);
-            }
-            @include md {
-              width: 15%;
-            }
-            // @include sm {
-            //  padding: vm(10) vw(24) vw(9) vw(25);
-            //}
-
-            &::after,
-            &::before {
-              position: absolute;
-              display: inline-block;
-              height: vw(34);
-              width: vw(16);
-
-              @include lg {
-                height: vw(34);
-                width: vw(16);
-              }
-              @include md {
-                height: vw(34);
-                width: vw(16);
-
-              }
-              @include sm {
-                height: vm(6);
-                width: vw(5);
-              }
-            }
-
-            &::after {
-              content: "+";
-              right: vw(25);
-            }
-
-            &::before {
-              content: "-";
-              left: vw(25);
-            }
-          }
-        }
-
-        .good-price {
-          display: flex;
-
-          p {
-            font-weight: 500;
-
-            span {
-              font-weight: 400;
-            }
-          }
-
-        }
-      }
-
-      .btn {
-        background-color: $color-green;
-        width: 100%;
-        height: 100%;
-        border-radius: vw(100);
-        border: vw(1) solid $color-green;
-        font-size: vw(15);
-        font-weight: $font-weight-accent;
-        line-height: 1.2;
-        letter-spacing: 0.1em;
-        text-align: center;
-        padding: vw(23) vw(30) vw(23) vw(29);
-
-        @include lg {
-          font-size: vm(4);
-        }
-        @include md {
-          font-size: vm(4);
-          width: 30%;
-          height: auto;
-          margin: auto;
-        }
-        @include sm {
-          font-size: vm(5);
-        }
       }
     }
   }
 
-  .goods-carousel {
+  .certificates-carousel {
     .owl-nav {
       display: flex;
       justify-content: space-between;
