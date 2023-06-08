@@ -1,0 +1,177 @@
+@use "../../presets/index" as *;
+
+.certificates {
+  padding-bottom: vw(192);
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-content {
+    margin-left: vw(183);
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      width: vw(1100);
+      padding-bottom: vw(54);
+
+      @include md {
+        width: 100%;
+        margin: vw(5);
+      }
+
+      h2 {
+        padding-bottom: vw(43);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  &-carousel {
+    position: relative;
+    max-width: vw(1364);
+    margin-inline: auto;
+    height: vw(564);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include lg() {
+      //max-width: 98%;
+      //margin: auto;
+      //height: auto;
+    }
+
+    @include md {
+      max-width: 98%;
+      margin: auto;
+      height: auto;
+      //background: #8edd96;
+    }
+
+    &__item {
+      width: vw(250);
+      height: vw(450);
+      text-align: left;
+      //margin: auto;
+      padding: vw(10);
+      background: $color-white;
+      border: none;
+      box-shadow: 0;
+      transition: box-shadow 0.3s;
+      //display: flex;
+      //flex-direction: column;
+      //gap: vw(20);
+      margin-right: 0;
+      margin-left: 0;
+
+      @include lg() {
+        width: 100%;
+        //height: inherit;
+        //background: #0879E0;
+        //max-width: initial;
+        margin: 0;
+        height: auto;
+        padding: vm(2);
+      }
+
+      @include md {
+        //max-width: initial;
+        //margin: vm(10);
+        //height: auto;
+        padding: vm(10);
+      }
+
+      &:hover {
+        box-shadow: vw(7) vw(8) vw(15) rgba(216, 225, 236, 0.94);
+      }
+
+      .certificate-image {
+        width: vw(219);
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        margin-right: vw(26);
+        margin-bottom: vw(23);
+        //overflow: inherit;
+
+        @include lg() {
+          //width: vw(173);
+          //height: vw(262);
+        }
+
+        @include md {
+          max-width: 100%;
+          margin: vm(10);
+          height: auto;
+          padding-bottom: vm(10);
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          //height: content-box;
+          text-align: start;
+        }
+      }
+
+      a {
+        font-weight: $font-weight-accent;
+      }
+    }
+  }
+
+  .certificates-carousel {
+    .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include md() {
+        display: none;
+      }
+    }
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .owl-prev {
+      left: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+
+      &:active {
+        content: url("../../assets/images/arrow_active.png");
+      }
+    }
+
+    .owl-next {
+      right: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+      transform: rotate(180deg);
+
+      &:active {
+        content: url("../../assets/images/arrow_active.png");
+      }
+    }
+  }
+}
