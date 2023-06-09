@@ -376,7 +376,7 @@ ul, ol, li {
   padding: 0.5208333333vw;
   display: none;
   position: absolute;
-  top: 2.6041666667vw;
+  top: 2.0833333333vw;
   right: 0;
   left: 0;
 }
@@ -418,6 +418,18 @@ ul, ol, li {
   background-color: #ffffff;
 }
 
+.delay {
+  animation: delay 3s linear;
+}
+
+@keyframes delay {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .general {
   height: 100vh;
   width: 100vw;
