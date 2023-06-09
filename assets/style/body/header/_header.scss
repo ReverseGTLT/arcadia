@@ -145,7 +145,7 @@
     padding: vw(10);
     display: none;
     position: absolute;
-    top: vw(50);
+    top: vw(40);
     right: 0;
     left: 0;
   }
@@ -189,4 +189,17 @@
 }
 
 
+.delay {
+  //opacity: 0;
+  animation: delay 3s linear;
+}
+
+@keyframes delay {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
