@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Owl
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
@@ -59,6 +60,10 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    // Anima
+    // document.documentElement.style.setProperty('--animate-duration', '2s');
 });
 
 
