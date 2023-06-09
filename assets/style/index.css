@@ -1682,10 +1682,38 @@ ul, ol, li {
   width: 25.2083333333vw;
   height: 18.4895833333vw;
   margin-right: 3.125vw;
-  border: 1px solid gray;
+  background: url("../../assets/images/map.png") no-repeat;
+  background-size: cover;
+  border: 0.0520833333vw solid #D4D8EB;
+  border-radius: 20px;
 }
-.contacts-info__address {
+.contacts-info__address, .contacts-info__time {
   padding-right: 7.4479166667vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.contacts-info__address-title, .contacts-info__time-title {
+  position: relative;
+  display: flex;
+}
+.contacts-info__address-title::before, .contacts-info__time-title::before {
+  position: absolute;
+  content: url("../../assets/images/map_icon.svg");
+  overflow: hidden;
+  width: 1.3020833333vw;
+  height: 1.9609375vw;
+  top: 0;
+  left: 0;
+}
+.contacts-info__time {
+  padding-right: 0.2604166667vw;
+}
+.contacts-info__time-title::before {
+  content: url("../../assets/images/map_icon.svg");
+  width: 1.71875vw;
+  height: 2.034375vw;
 }
 
 /*# sourceMappingURL=index.css.map */
