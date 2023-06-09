@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Owl
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
@@ -35,6 +36,34 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('.certificates-carousel').owlCarousel({
+        loop: true,
+        autoplay: 1000,
+        autoplayHoverPause: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        mouseDrag: true,
+        touchDrag: true,
+        responsiveClass:true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 4,
+            }
+        }
+    });
+
+
+    // Anima
+    // document.documentElement.style.setProperty('--animate-duration', '2s');
 });
 
 
