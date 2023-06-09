@@ -1,0 +1,35 @@
+@use "../../presets/index" as *;
+
+.modal {
+  z-index: 1000;
+  //display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: vw(1047);
+  height: vw(735);
+  background-color: $background-light;
+  box-shadow: 14px 17px 39px rgba(216, 225, 236, 0.94);
+  border-radius: 30px;
+  overflow: auto;
+
+  &-content {
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+  }
+}
+
+.close {
+  color: $color-grey-increase;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}

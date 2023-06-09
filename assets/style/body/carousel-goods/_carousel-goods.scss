@@ -4,7 +4,6 @@
   padding-bottom: vw(131);
 
   @include md {
-    //height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,18 +12,10 @@
 
   &-content {
     position: relative;
-    //width: vw(1160);
     margin-left: vw(183);
-    //margin-right: vw(202);
     display: flex;
     justify-content: space-between;
     align-items: start;
-
-    //@include lg {
-    //  width: 100%;
-    //  margin: vw(5);
-    //  padding: vw(20);
-    //}
 
     @include md {
       width: 100%;
@@ -37,7 +28,6 @@
       width: vw(755);
       text-align: left;
       padding-bottom: vw(38);
-      //margin-right: vw(156);
 
       @include md {
         width: 100%;
@@ -86,50 +76,39 @@
   &-carousel {
     position: relative;
     max-width: vw(1364);
-    margin: auto;
-    //height: vw(564);
+    margin-inline: auto;
+    height: vw(564);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include lg() {
-      //max-width: 98%;
-      //margin: auto;
-      //height: auto;
-    }
 
     @include md {
       max-width: 98%;
       margin: auto;
       height: auto;
-      //background: #8edd96;
     }
 
     &__item {
-      max-width: vw(326);
-      margin: auto;
+      width: vw(326);
+      //height: vw(564);
       padding: vw(41) vw(20) vw(22) vw(21);
       background: $color-white;
       border: vw(1) solid $color-grey-border;
       border-radius: vw(30);
-      box-shadow: 0;
+      box-shadow: none;
       display: flex;
-      flex-wrap: wrap;
       flex-direction: column;
       justify-content: center;
       transition: box-shadow 0.3s;
 
       @include lg() {
-        max-width: initial;
-        margin: auto;
-        height: auto;
+        width: 100%;
+        //height: auto;
         padding: vm(5);
       }
 
       @include md {
-        max-width: initial;
-        margin: auto;
-        height: auto;
+        width: initial;
         padding: vm(10);
       }
 
@@ -140,7 +119,7 @@
       }
 
       .good-image {
-        max-width: vw(173);
+        width: vw(173);
         height: vw(262);
         margin-inline: auto;
         display: flex;
@@ -152,7 +131,7 @@
         }
 
         @include md {
-          max-width: initial;
+          width: initial;
           margin: auto;
           height: auto;
           padding-bottom: vm(10);
@@ -161,7 +140,6 @@
         img {
           display: block;
           width: 100%;
-          height: content-box;
           text-align: center;
           border-radius: vw(10) vw(10) 0 0;
         }
@@ -201,69 +179,62 @@
         }
 
         .good-counter {
-          p {
-            display: inline-block;
+          width: 50%;
+          display: flex;
+          margin: auto;
+          justify-content: space-between;
+          align-items: center;
+          padding: vw(15) vw(21) vw(15) vw(23);
+
+          background: $color-white;
+          border-color: $color-grey-border;
+
+          @include md {
+            width: initial;
           }
 
-          &.btn-light {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background: $color-white;
-            border-color: $color-grey-border;
+          .counter-minus,
+          .counter-plus {
+            display: block;
+            height: vw(34);
+            width: vw(16);
             color: $color-grey-increase;
-            width: vw(138);
-            height: wv(64);
-
-            padding: vw(22) vw(50) vw(21) vw(51);
+            text-align: center;
+            border: none;
+            background: none;
 
             @include lg {
-              width: 50%;
-              height: auto;
+              height: vw(34);
+              width: vw(16);
             }
             @include md {
-              width: 15%;
-            }
-            // @include sm {
-            //}
-
-            &::after,
-            &::before {
-              position: absolute;
-              display: inline-block;
               height: vw(34);
               width: vw(16);
 
-              @include lg {
-                height: vw(34);
-                width: vw(16);
-              }
-              @include md {
-                height: vw(34);
-                width: vw(16);
-
-              }
-              @include sm {
-                height: vm(6);
-                width: vw(5);
-              }
+            }
+            @include sm {
+              height: vm(6);
+              width: vw(5);
             }
 
-            &::after {
-              content: "+";
-              right: vw(25);
+            &:active {
+              color: $color-grey-border;
             }
+          }
 
-            &::before {
-              content: "-";
-              left: vw(25);
-            }
+          input {
+            font-size: vw(20);
+            display: block;
+            width: vw(37);
+            height: vw(21);
+            color: $color-grey-increase;
+            text-align: center;
+            border: none;
           }
         }
 
         .good-price {
+          width: 25%;
           display: flex;
 
           p {
@@ -273,7 +244,6 @@
               font-weight: 400;
             }
           }
-
         }
       }
 
@@ -330,10 +300,10 @@
       top: 30%;
       width: vw(82);
       height: vw(82);
-      content: url("../../assets/images/arrow_light.png");
+      content: url("../../assets/images/arrow_light1.png");
 
       &:active {
-        content: url("../../assets/images/arrow_active.png");
+        content: url("../../assets/images/arrow_active1.png");
       }
     }
 
@@ -342,11 +312,11 @@
       top: 30%;
       width: vw(82);
       height: vw(82);
-      content: url("../../assets/images/arrow_light.png");
+      content: url("../../assets/images/arrow_light1.png");
       transform: rotate(180deg);
 
       &:active {
-        content: url("../../assets/images/arrow_active.png");
+        content: url("../../assets/images/arrow_active1.png");
       }
     }
   }

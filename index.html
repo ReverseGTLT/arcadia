@@ -304,7 +304,7 @@
                 <a class="btn btn-light" href="/">Пункт розливу</a>
             </div>
         </div>
-        <div class="goods-carousel carousel owl-carousel container-1540">
+        <div class="goods-carousel carousel owl-carousel owl-loaded container-1540">
             <div class="goods-carousel__item">
                 <div class="good-image">
                     <img src="./assets/images/bult_18.png" alt="Product Image">
@@ -312,7 +312,29 @@
                 <h4 class="good-title">Вода Arcadia<br>18,9 л</h4>
                 <div class="good-counter-price-wrapper">
                     <div class="good-counter btn-light">
-                        <p>123</p>
+                        <button class="counter-btn counter-minus">-</button>
+                        <label for="counter-input"></label>
+                        <input type="text" class="counter-input" id="counter-input" value="0" min="0" max="999">
+                        <button class="counter-btn counter-plus">+</button>
+                    </div>
+                    <div class="good-price">
+                        <p class="text-accent">75<span class="text-little"> грн</span></p>
+                    </div>
+                </div>
+                <button class="btn">+ замовити</button>
+            </div>
+
+            <div class="goods-carousel__item">
+                <div class="good-image">
+                    <img src="./assets/images/bult_18.png" alt="Product Image">
+                </div>
+                <h4 class="good-title">Вода Arcadia<br>18,9 л</h4>
+                <div class="good-counter-price-wrapper">
+                    <div class="good-counter btn-light">
+                        <button class="counter-btn counter-minus">-</button>
+                        <label for="counter-input"></label>
+                        <input type="text" class="counter-input" id="counter-input" value="0" min="0" max="999">
+                        <button class="counter-btn counter-plus">+</button>
                     </div>
                     <div class="good-price">
                         <p class="text-accent">75<span class="text-little"> грн</span></p>
@@ -469,20 +491,20 @@
             <div class="contacts-content">
                 <div class="contacts-content__text">
                     <h2>Контакти</h2>
-                    <p>Ми завжді раді всем кто прагне якісну воду - і ми це робимо.
+                    <p>Ми завжді раді всем кто прагне якісну воду - і ми це робимо.<br>
                         Приходьте до нашої точці та спробуйте що дйсне класне - кристальна вода з мяким смаком!</p>
                 </div>
             </div>
             <div class="contacts-info">
                 <div class="contacts-info__map">
-                    map
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.93032006274!2d30.736487276700945!3d46.46988816577835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63178a4a69243%3A0x734b62bfb496996!2z0YPQuy4g0KDQuNGI0LXQu9GM0LXQstGB0LrQsNGPLCA3MSwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1686341590821!5m2!1sru!2sua" width="484" height="355" style="border: 1px solid #D4D8EB; border-radius: 20px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="contacts-info__address">
-                    <p class="contacts-info__address-title">м.Одеса, Аркадія аллея
-                        Гарагінське Плато, буд. 24</p>
-                    <a class="contact-info__map-link text-little" href="/" target="_blank">Відкрити на гугл карті</a>
-                    <p>Телефон для зв`язку:</p>
-                    <a class="contact-info__tel-link" href="tel:+380635765535" target="_blank">+38 063 576 55 35</a>
+                    <p class="contacts-info__address-title">м.Одеса,
+                        <br>Рішельєвська, 71</p>
+                    <a class="contact-info__map-link text-little a-link" href="https://goo.gl/maps/3JQ3yodJjYUazt7GA" target="_blank">Відкрити на гугл карті</a>
+                    <p class="contact-info__tel">Телефон для зв`язку:</p>
+                    <a class="contact-info__tel-link" href="tel:+380685557712" target="_blank">+38 068 555 77 12</a>
                 </div>
                 <div class="contacts-info__time">
                     <p class="contacts-info__time-title">Час роботи: <span>с 9:00 до 19:00</span></p>
@@ -491,15 +513,48 @@
 
             </div>
         </div>
-
     </section>
+
+
+    <!--    _________________________-->
+    <!--    MODAL-->
+    <!--    _________________________-->
+
+<!--    <div class="modal" id="modal-item">-->
+<!--        <div class="modal-content">-->
+<!--            <span class="close">&times;</span>-->
+<!--            <h2 class="modal-title">Название товара</h2>-->
+<!--            <img class="modal-image" src="/" alt="Product Image">-->
+<!--            <p>counter</p>-->
+<!--            <p class="modal-price">Цена: <span></span> грн</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="modal" id="modal-cart">-->
+
+<!--    </div>-->
+
+<!--    <div class="modal" id="modal-contact">-->
+
+<!--    </div>-->
+
+    <div class="modal" id="modal-order-accepted">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Ваше замовлення прийнято</h2>
+            <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
+            <p>Для уточнення замовлення
+                з вами зв'яжеться менеджер</p>
+        </div>
+    </div>
+
 
 </main>
 <!--FOOTER-->
 
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
 <script defer src="assets/js/owl.carousel.min.js"></script>
+<script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
 
 <script defer src="assets/js/index.js"></script>
 </body>

@@ -1,47 +1,10 @@
 $(document).ready(function () {
     // Owl
-    $('.stages-carousel').owlCarousel({
-        loop: true,
-        items: 1,
-        autoplay: 1000,
-        margin: 10,
-        dots: true,
-        // dotsEach: 4,
-        slideBy: 1,
-        nav: true,
-        mouseDrag: true,
-        touchDrag: true,
-    });
-
     $('.goods-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
         autoplayHoverPause: true,
         margin: 20,
-        nav: true,
-        dots: false,
-        mouseDrag: true,
-        touchDrag: true,
-        responsiveClass:true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            },
-            768: {
-                items: 3
-            },
-            992: {
-                items: 4
-            }
-        }
-    });
-
-    $('.certificates-carousel').owlCarousel({
-        loop: true,
-        autoplay: 1000,
-        autoplayHoverPause: true,
-        margin: 0,
         nav: true,
         dots: false,
         mouseDrag: true,
@@ -62,8 +25,44 @@ $(document).ready(function () {
     });
 
 
-    // Anima
-    // document.documentElement.style.setProperty('--animate-duration', '2s');
+    $('.stages-carousel').owlCarousel({
+        loop: true,
+        items: 1,
+        autoplay: 1000,
+        margin: 10,
+        dots: true,
+        // dotsEach: 4,
+        slideBy: 1,
+        nav: true,
+        mouseDrag: true,
+        touchDrag: true,
+    });
+
+
+
+    $('.certificates-carousel').owlCarousel({
+        loop: true,
+        autoplay: 1000,
+        autoplayHoverPause: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        mouseDrag: true,
+        touchDrag: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 4,
+            }
+        }
+    });
 });
 
 
@@ -103,3 +102,12 @@ window.addEventListener('load', function() {
         header.classList.add('bgcolor-white');
     }
 });
+
+//map. Открытие карты в полноэкранном режиме
+// const mapIframe = document.getElementById('map');
+//
+// mapIframe.addEventListener('click', () => {
+//     mapIframe.requestFullscreen();
+// });
+
+
