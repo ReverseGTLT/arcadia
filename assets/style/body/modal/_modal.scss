@@ -2,34 +2,70 @@
 
 .modal {
   z-index: 1000;
-  //display: none;
-  display: flex;
+  display: none;
+  //display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 15vh;
+  left: 25vw;
+  //right: 0;
+  //bottom: 0;
   width: vw(1047);
   height: vw(735);
   background-color: $background-light;
-  box-shadow: 14px 17px 39px rgba(216, 225, 236, 0.94);
-  border-radius: 30px;
-  overflow: auto;
+  box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
+  border-radius: vw(30);
+  overflow: hidden;
+  padding: vw(73) vw(68) vw(43) vw(71);
 
   &-content {
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
   }
 }
 
 .close {
   color: $color-grey-increase;
   float: right;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: vw(45);
   cursor: pointer;
+}
+
+#modal-order-accepted {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: vw(2);
+      margin-right: vw(25);
+    }
+
+    .modal-image {
+      padding-bottom: vw(38.66);
+      width: vw(147);
+
+      img {
+        display: block;
+        width: 100%;
+      };
+    }
+
+    .modal-title {
+      display: flex;
+      flex-wrap: nowrap;
+      color: $color-green;
+      padding-bottom: vw(35);
+    }
+
+    p {
+      line-height: 1.23;
+      text-align: center;
+    }
+  }
 }
