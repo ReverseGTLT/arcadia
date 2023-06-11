@@ -112,56 +112,116 @@ window.addEventListener('load', function () {
 // goods order
 document.addEventListener('DOMContentLoaded', function () {
     const minusBtn = document.querySelector('.counter-minus');
+    const minusBtns = document.querySelectorAll('.counter-minus');
     const plusBtn = document.querySelector('.counter-plus');
+    const plusBtns = document.querySelectorAll('.counter-plus');
     const counterInput = document.querySelector('.counter-input');
-    const goodsOrderBtn = document.querySelector('.goods-order-btn');
+    const counterInputs = document.querySelectorAll('.counter-input');
+    const goodsOrderBtn = document.querySelectorAll('.goods-order-btn');
+    const modal = document.querySelector('.modal');
     const modals = document.querySelectorAll('.modal');
+    const closeModal = document.querySelector('.close');
 
-    minusBtn.addEventListener('click', function () {
-        let currentValue = parseInt(counterInput.value);
-        console.log(currentValue);
+
+    minusBtn.addEventListener('click', function() {
+        const currentValue = parseInt(counterInput.value);
         if (currentValue > 0) {
             counterInput.value = currentValue - 1;
         }
         updateCounterBtns();
+    });
+
+    // Потрібно налагодити логіку, не те отримує
+
+    // minusBtns.forEach(button => {
+    //     button.addEventListener('click', function () {
+    //         const input = button.nextElementSibling;
+    //         console.log(input + 'inp');
+    //         const currentValue = parseInt(input.value);
+    //         console.log(currentValue + 'curr');
+    //
+    //         if (currentValue > 0) {
+    //             input.value = currentValue - 1;
+    //             if (input.value === 0) {
+    //                 // button.disabled = true;
+    //             }
+    //         }
+    //         updateCounterBtns();
+    //     });
+    // });
+
+    plusBtns.forEach(button => {
+        button.addEventListener('click', function () {
+            const input = button.previousElementSibling;
+            const currentValue = parseInt(input.value);
+            input.value = currentValue + 1;
+            if (input.value > 0) {
+                input.previousElementSibling.disabled = false;
+            }
+            updateCounterBtns();
+        });
+    });
+
+    counterInputs.forEach(input => {
+        input.addEventListener('change', function () {
+            if (parseInt(input.value) < 0) {
+                input.value = 0;
+            }
+            updateCounterBtns();
+        })
     })
 
-    plusBtn.addEventListener('click', function () {
-
-        let currentValue = parseInt(counterInput.value);
-        console.log(currentValue);
-        counterInput.value = currentValue + 1;
-        updateCounterBtns();
-    })
-
-    counterInput.addEventListener('change', function () {
-        if (parseInt(counterInput.value) < 0) {
-            counterInput.value = 0;
-        }
-        updateCounterBtns();
-    })
+    // counterInput.addEventListener('change', function () {
+    //     if (parseInt(counterInput.value) < 0) {
+    //         counterInput.value = 0;
+    //     }
+    //     updateCounterBtns();
+    // })
 
     // для вспливаючого вікна з товаром
-    goodsOrderBtn.addEventListener('click', function () {
-        // modal-order-accepted
-        modals.forEach(modal => {
-            if (modal.id === 'modal-order-accepted') {
-                modal.style.display = 'flex';
-            }
-        })
-    })
+    goodsOrderBtn.forEach(button => {
+        button.addEventListener('click', function () {
+            // modal-order-accepted
+            modals.forEach(modal => {
+                if (modal.id === 'modal-item') {
+                    getValueFields(button, modal);
+                    modal.style.display = 'flex';
+                }
+            })
+        });
 
-    modals.forEach(modal => {
-        modal.addEventListener('click', function ({target}) {
-            if (target === modal) {
-                modal.style.display = 'none';
-            }
-        })
-    })
+    });
+
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function ({target}) {
+        if (target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 
     function updateCounterBtns() {
-        let currentValue = parseInt(counterInput.value);
+        const currentValue = parseInt(counterInput.value);
         minusBtn.style.color = currentValue > 0 ? '#949CBE' : '#D4D8EB';
         plusBtn.style.color = '#949CBE';
+    }
+
+    function getValueFields(button, modal) {
+        const itemTitle = button.parentElement.querySelector('.good-title').textContent;
+        const itemImage = button.parentElement.querySelector('.good-image img').src;
+        const itemCount = button.parentElement.querySelector('.good-input').value;
+        const itemPrice = button.parentElement.querySelector('.good-price').textContent;
+
+        const imageName = itemImage.split('/').pop();
+        const imagePath = `../../assets/images/${imageName}`;
+        console.log(imagePath);
+
+        modal.querySelector('.modal-title').textContent = itemTitle;
+        modal.querySelector('.modal-image').src = imagePath;
+        console.log(itemImage);
+        modal.querySelector('.modal-input').value = itemCount;
+        modal.querySelector('.modal-price').textContent = itemPrice;
     }
 });

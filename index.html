@@ -314,7 +314,8 @@
                     <div class="good-counter btn-light">
                         <button class="counter-btn counter-minus">-</button>
                         <label for="counter-input"></label>
-                        <input type="number" class="counter-input" id="counter-input" value="0" min="0" max="999">
+                        <input type="number" class="counter-input good-input" id="counter-input" value="0" min="0"
+                               max="999">
                         <button class="counter-btn counter-plus">+</button>
                     </div>
                     <div class="good-price">
@@ -324,24 +325,24 @@
                 <button class="btn goods-order-btn">+ замовити</button>
             </div>
 
-<!--            <div class="goods-carousel__item">-->
-<!--                <div class="good-image">-->
-<!--                    <img src="./assets/images/bult_18.png" alt="Product Image">-->
-<!--                </div>-->
-<!--                <h4 class="good-title">Вода Arcadia<br>18,9 л</h4>-->
-<!--                <div class="good-counter-price-wrapper">-->
-<!--                    <div class="good-counter btn-light">-->
-<!--                        <button class="counter-btn counter-minus">-</button>-->
-<!--                        <label for="counter-input"></label>-->
-<!--                        <input type="number" class="counter-input" id="counter-input" value="0" min="0" max="999">-->
-<!--                        <button class="counter-btn counter-plus">+</button>-->
-<!--                    </div>-->
-<!--                    <div class="good-price">-->
-<!--                        <p class="text-accent">75<span class="text-little"> грн</span></p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <button class="btn goods-order-btn">+ замовити</button>-->
-<!--            </div>-->
+            <!--            <div class="goods-carousel__item">-->
+            <!--                <div class="good-image">-->
+            <!--                    <img src="./assets/images/bult_18.png" alt="Product Image">-->
+            <!--                </div>-->
+            <!--                <h4 class="good-title">Вода Arcadia<br>18,9 л</h4>-->
+            <!--                <div class="good-counter-price-wrapper">-->
+            <!--                    <div class="good-counter btn-light">-->
+            <!--                        <button class="counter-btn counter-minus" disabled>-</button>-->
+            <!--                        <label for="counter-input"></label>-->
+            <!--                        <input type="number" class="counter-input good-input" id="counter-input" value="0" min="0" max="999">-->
+            <!--                        <button class="counter-btn counter-plus">+</button>-->
+            <!--                    </div>-->
+            <!--                    <div class="good-price">-->
+            <!--                        <p class="text-accent">75<span class="text-little"> грн</span></p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <button class="btn goods-order-btn">+ замовити</button>-->
+            <!--            </div>-->
         </div>
     </section>
 
@@ -497,12 +498,16 @@
             </div>
             <div class="contacts-info">
                 <div class="contacts-info__map">
-                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.93032006274!2d30.736487276700945!3d46.46988816577835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63178a4a69243%3A0x734b62bfb496996!2z0YPQuy4g0KDQuNGI0LXQu9GM0LXQstGB0LrQsNGPLCA3MSwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1686341590821!5m2!1sru!2sua" width="484" height="355" style="border: 1px solid #D4D8EB; border-radius: 20px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe id="map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.93032006274!2d30.736487276700945!3d46.46988816577835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63178a4a69243%3A0x734b62bfb496996!2z0YPQuy4g0KDQuNGI0LXQu9GM0LXQstGB0LrQsNGPLCA3MSwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1686341590821!5m2!1sru!2sua"
+                            width="484" height="355" style="border: 1px solid #D4D8EB; border-radius: 20px;"
+                            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="contacts-info__address">
                     <p class="contacts-info__address-title">м.Одеса,
                         <br>Рішельєвська, 71</p>
-                    <a class="contact-info__map-link text-little a-link" href="https://goo.gl/maps/3JQ3yodJjYUazt7GA" target="_blank">Відкрити на гугл карті</a>
+                    <a class="contact-info__map-link text-little a-link" href="https://goo.gl/maps/3JQ3yodJjYUazt7GA"
+                       target="_blank">Відкрити на гугл карті</a>
                     <p class="contact-info__tel">Телефон для зв`язку:</p>
                     <a class="contact-info__tel-link" href="tel:+380685557712" target="_blank">+38 068 555 77 12</a>
                 </div>
@@ -520,33 +525,87 @@
     <!--    MODAL-->
     <!--    _________________________-->
 
-<!--    <div class="modal" id="modal-item">-->
-<!--        <div class="modal-content">-->
-<!--            <span class="close">&times;</span>-->
-<!--            <h2 class="modal-title">Название товара</h2>-->
-<!--            <img class="modal-image" src="/" alt="Product Image">-->
-<!--            <p>counter</p>-->
-<!--            <p class="modal-price">Цена: <span></span> грн</p>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="modal" id="modal-cart">-->
-
-<!--    </div>-->
-
-<!--    <div class="modal" id="modal-contact">-->
-
-<!--    </div>-->
-
-    <div class="modal" id="modal-order-accepted">
+    <div class="modal" id="modal-item">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
-            <h3 class="modal-title">Ваше замовлення прийнято</h3>
-            <p class="text-little">Для уточнення замовлення<br>
-                з вами зв'яжеться менеджер</p>
+            <div class="modal__wrapper">
+                <div class="modal-image">
+                    <img src="" alt="Product Image">
+                </div>
+                <div class="modal-content__wrap">
+                    <h3 class="modal-title"></h3>
+                    <p class="text-little">19-літрова пляшка з водою є ідеальним джерелом гідратації як вдома, так і в
+                        офісі щодня з
+                        багатьох
+                        причин, більш-менш очевидних. По-перше, вода якісна, мікробіологічно чиста. <br>
+                        <br>
+                        Пляшка з водою є ідеальним джерелом гідратації як вдома, так і в офісі щодня з багатьох причин,
+                        більш-менш очевидних. По-перше, вода якісна, мікробіологічно чиста.
+                    </p>
+                    <div class="modal-counter-price-wrapper">
+                        <div class="modal-counter btn-light">
+                            <button class="counter-btn counter-minus">-</button>
+                            <label for="counter-input"></label>
+                            <input type="number" class="counter-input modal-input" id="counter-input" value="0" min="0"
+                                   max="999">
+                            <button class="counter-btn counter-plus">+</button>
+                        </div>
+                        <div class="modal-price">
+                            <p class="text-accent"><span class="text-little"> грн</span></p>
+                        </div>
+                    </div>
+                    <button class="btn goods-order-btn modal-item-order-btn">+ замовити</button>
+                </div>
+            </div>
+
+            <div class="modal-content__text-little">
+                <p class="text-little">Пляшка з водою пропонується безкоштовно під час
+                    зберігання, але її потрібно повернути після використання. </p>
+            </div>
         </div>
     </div>
+
+    <div class="modal" id="modal-cart">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Ваша корзина (3)</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="cart-item__info">
+                        <div class="for-img">
+                            <img src="..." alt="Product Image">
+                        </div>
+                        <p class="icon">x</p>
+                        <p class="cart-item__quantity">123</p>
+                        <p class="cart-item__title">Вода вода</p>
+                    </div>
+                    <div class="cart-item__total-price">
+                        <p>Итого: <span>100</span> грн</p>
+                        <button class="cart-item__delete-btn">&times;</button>
+                    </div>
+                </div>
+                <div class="cart-item">...</div>
+                <div class="cart-item">...</div>
+                <div class="cart-total">
+                    <p>Итого: <span>300</span> грн</p>
+                </div>
+                <button class="btn cart-order-btn">Оформить</button>
+            </div>
+        </div>
+
+        <!--    <div class="modal" id="modal-contact">-->
+
+        <!--    </div>-->
+
+        <div class="modal" id="modal-order-accepted">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
+                <h3 class="modal-title">Ваше замовлення прийнято</h3>
+                <p class="text-little">Для уточнення замовлення<br>
+                    з вами зв'яжеться менеджер</p>
+            </div>
+        </div>
 
 
 </main>
