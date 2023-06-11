@@ -22,14 +22,21 @@
   &-content {
     width: 100%;
   }
+
+  .close {
+    color: $color-grey-increase;
+    float: right;
+    font-size: vw(45);
+
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: vw(2);
+    margin-right: vw(25);
+  }
 }
 
-.close {
-  color: $color-grey-increase;
-  float: right;
-  font-size: vw(45);
-  cursor: pointer;
-}
 
 #modal-order-accepted {
   .modal-content {
@@ -38,13 +45,13 @@
     justify-content: center;
     align-items: center;
 
-    .close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-top: vw(2);
-      margin-right: vw(25);
-    }
+    //.close {
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  margin-top: vw(2);
+    //  margin-right: vw(25);
+    //}
 
     .modal-image {
       padding-bottom: vw(38.66);
@@ -53,7 +60,8 @@
       img {
         display: block;
         width: 100%;
-      };
+      }
+    ;
     }
 
     .modal-title {
@@ -66,6 +74,245 @@
     p {
       line-height: 1.23;
       text-align: center;
+    }
+  }
+}
+
+#modal-item {
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    @include lg() {
+      //padding: vm(5);
+    }
+
+    @include md {
+      //padding: vm(10);
+    }
+
+    .modal__wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-inline: auto;
+    }
+
+    .modal-image {
+      width: 40%;
+      max-width: vw(169);
+      height: vw(262);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      @include lg() {
+      }
+
+      @include md {
+        width: initial;
+        margin: auto;
+        height: auto;
+        padding-bottom: vm(10);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .modal-content__wrap {
+      display: flex;
+      width: 60%;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding-bottom: vw(30);
+
+      .modal-title {
+        display: inline-block;
+        width: 100%;
+        padding-bottom: vw(25);
+      }
+
+      p {
+        padding-bottom: vw(40);
+      }
+
+      .modal-counter-price-wrapper {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: vw(18);
+
+        @include md {
+          justify-content: center;
+          gap: vm(10);
+          padding-bottom: vm(7);
+        }
+
+        .modal-counter {
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: vw(15) vw(21) vw(15) vw(23);
+
+          background: $color-white;
+          border-color: $color-grey-border;
+
+          @include md {
+            width: initial;
+          }
+
+          .counter-minus,
+          .counter-plus {
+            display: block;
+            height: vw(34);
+            width: vw(16);
+            color: $color-grey-increase;
+            text-align: center;
+            border: none;
+            background: none;
+
+            @include lg {
+              height: vw(34);
+              width: vw(16);
+            }
+            @include md {
+              height: vw(34);
+              width: vw(16);
+
+            }
+            @include sm {
+              height: vm(6);
+              width: vw(5);
+            }
+
+            &:active {
+              color: $color-grey-border;
+            }
+          }
+
+          .counter-input {
+            font-size: vw(20);
+            display: block;
+            width: vw(37);
+            height: vw(21);
+            color: $color-grey-increase;
+            text-align: center;
+            border: none;
+          }
+        }
+
+        .modal-price {
+          width: 25%;
+          display: flex;
+          align-items: center;
+
+          p {
+            font-weight: 500;
+            padding: 0;
+
+            span {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+      .btn {
+        //background-color: $color-green;
+        width: 60%;
+        height: 100%;
+        border-radius: vw(100);
+        //border: vw(1) solid $color-green;
+        font-size: vw(15);
+        font-weight: $font-weight-accent;
+        line-height: 1.2;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: vw(23) vw(30) vw(23) vw(29);
+
+        @include lg {
+          font-size: vm(4);
+        }
+        @include md {
+          font-size: vm(4);
+          width: 30%;
+          height: auto;
+          margin: auto;
+        }
+        @include sm {
+          font-size: vm(5);
+        }
+      }
+    }
+
+    &__text-little {
+      align-items: start;
+
+      p {
+        display: block;
+        width: vw(302);
+        font-weight: $font-weight-accent;
+        color: red;
+      }
+    }
+  }
+}
+
+#modal-cart {
+  display: flex;
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+    &__info {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      .for-img {
+        width: vw(61);
+        height: vw(95);
+        padding-right: vw(24);
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .icon {
+        padding-right: vw(11);
+      }
+
+      .cart-item__quantity {
+        padding-right: vw(48);
+      }
+    }
+
+    &__total-price {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      p {
+        padding-right: vw(49.89);
+      }
     }
   }
 }
