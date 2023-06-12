@@ -1779,7 +1779,6 @@ ul, ol, li {
 }
 .modal-content .btn {
   width: 30%;
-  height: auto;
   border-radius: 5.2083333333vw;
   font-size: 0.78125vw;
   font-weight: 700;
@@ -2013,15 +2012,14 @@ ul, ol, li {
   flex-direction: column;
   justify-content: start;
   overflow-y: scroll;
-  padding-bottom: 1.6666666667vw;
 }
 #modal-cart .cart-items .cart-item {
   display: flex;
   height: 6.9791666667vw;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.0520833333vw solid rgba(48, 162, 60, 0.2);
-  border-bottom: 0.0520833333vw solid rgba(48, 162, 60, 0.2);
+  border-top: 0.0520833333vw solid #D4D8EB;
+  border-bottom: 0.0520833333vw solid #D4D8EB;
 }
 #modal-cart .cart-items .cart-item__info {
   display: flex;
@@ -2055,12 +2053,21 @@ ul, ol, li {
 }
 #modal-cart .cart-items .cart-item__total-price button {
   margin-right: 0.5208333333vw;
+  width: 0.8333333333vw;
+  height: 0.9895833333vw;
+  overflow: hidden;
+  border: none;
+}
+#modal-cart .cart-items .cart-item__total-price button img {
+  display: block;
+  width: 100%;
 }
 #modal-cart .cart-items .cart-total {
   width: 30%;
   display: flex;
   justify-content: right;
   margin-right: 2.1354166667vw;
+  margin-top: 1.6666666667vw;
 }
 #modal-cart .cart-items .cart-total p {
   padding-bottom: 4.1145833333vw;
@@ -2070,7 +2077,7 @@ ul, ol, li {
   margin-left: 4.4270833333vw;
 }
 #modal-cart .cart-items .btn {
-  padding-bottom: 1.8229166667vw;
+  margin-bottom: 1.8229166667vw;
 }
 
 /*# sourceMappingURL=index.css.map */

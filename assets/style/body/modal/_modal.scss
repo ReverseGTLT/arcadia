@@ -38,7 +38,7 @@
 
     .btn {
       width: 30%;
-      height: auto;
+      //height: 100%;
       border-radius: vw(100);
       font-size: vw(15);
       font-weight: $font-weight-accent;
@@ -318,8 +318,6 @@
       flex-direction: column;
       justify-content: start;
       overflow-y: scroll;
-      //overflow-scrolling: vw(268);
-      padding-bottom: vw(32);
     }
 
     .cart-item {
@@ -327,8 +325,8 @@
       height: vw(134);
       justify-content: space-between;
       align-items: center;
-      border-top: vw(1) solid $color-green-border;
-      border-bottom: vw(1) solid $color-green-border;
+      border-top: vw(1) solid $color-grey-border;
+      border-bottom: vw(1) solid $color-grey-border;
 
       &__info {
         display: flex;
@@ -367,6 +365,15 @@
         }
         button {
           margin-right: vw(10);
+          width: vw(16);
+          height: vw(19);
+          overflow: hidden;
+          border: none;
+
+          img {
+            display: block;
+            width: 100%;
+          }
         }
       }
     }
@@ -376,6 +383,7 @@
       display: flex;
       justify-content: right;
       margin-right: vw(41);
+      margin-top: vw(32);
 
       p {
         padding-bottom: vw(79);
@@ -387,7 +395,7 @@
       }
     }
     .btn {
-      padding-bottom: vw(35);
+      margin-bottom: vw(35);
     }
   }
 }
