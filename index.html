@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/style/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--    <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">-->
+    <!--    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>-->
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/style/index.css">
 
@@ -322,7 +324,7 @@
                         <p class="text-accent">75<span class="text-little"> грн</span></p>
                     </div>
                 </div>
-                <button class="btn goods-order-btn">+ замовити</button>
+                <button class="btn goods-order-btn open-modal-btn">+ замовити</button>
             </div>
 
             <!--            <div class="goods-carousel__item">-->
@@ -341,7 +343,7 @@
             <!--                        <p class="text-accent">75<span class="text-little"> грн</span></p>-->
             <!--                    </div>-->
             <!--                </div>-->
-            <!--                <button class="btn goods-order-btn">+ замовити</button>-->
+            <!--                <button class="btn goods-order-btn open-modal-btn">+ замовити</button>-->
             <!--            </div>-->
         </div>
     </section>
@@ -546,7 +548,8 @@
                         <div class="modal-counter btn-light">
                             <button class="counter-btn counter-minus">-</button>
                             <label for="counter-input"></label>
-                            <input type="number" class="counter-input modal-input" id="counter-input" value="0" min="0"
+                            <input type="number" class="counter-input modal-input" id="modal-counter-input" value="0"
+                                   min="0"
                                    max="999">
                             <button class="counter-btn counter-plus">+</button>
                         </div>
@@ -554,7 +557,7 @@
                             <p class="text-accent"><span class="text-little"> грн</span></p>
                         </div>
                     </div>
-                    <button class="btn goods-order-btn modal-item-order-btn">+ замовити</button>
+                    <button class="btn modal-item-order-btn open-modal-btn" id="btn-modal-item">+ замовити</button>
                 </div>
             </div>
 
@@ -565,47 +568,161 @@
         </div>
     </div>
 
+    <!--Модалка. Корзина-->
     <div class="modal" id="modal-cart">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="modal-title">Ваша корзина (3)</h2>
+            <p class="text-little">Наименование</p>
             <div class="cart-items">
-                <div class="cart-item">
-                    <div class="cart-item__info">
-                        <div class="for-img">
-                            <img src="..." alt="Product Image">
+                <div class="cart-items__wrap">
+                    <div class="cart-item">
+                        <div class="cart-item__info">
+                            <div class="for-img">
+                                <img src="..." alt="Product Image">
+                            </div>
+                            <p class="icon">x</p>
+                            <p class="cart-item__quantity">123</p>
+                            <p class="cart-item__title">Вода вода</p>
                         </div>
-                        <p class="icon">x</p>
-                        <p class="cart-item__quantity">123</p>
-                        <p class="cart-item__title">Вода вода</p>
+                        <div class="cart-item__total-price">
+                            <p><span>100</span> грн</p>
+                            <button class="cart-item__delete-btn">&times;</button>
+                        </div>
                     </div>
-                    <div class="cart-item__total-price">
-                        <p>Итого: <span>100</span> грн</p>
-                        <button class="cart-item__delete-btn">&times;</button>
+
+
+                    <div class="cart-item">
+                        <div class="cart-item__info">
+                            <div class="for-img">
+                                <img src="..." alt="Product Image">
+                            </div>
+                            <p class="icon">x</p>
+                            <p class="cart-item__quantity">123</p>
+                            <p class="cart-item__title">Вода вода</p>
+                        </div>
+                        <div class="cart-item__total-price">
+                            <p><span>100</span> грн</p>
+                            <button class="cart-item__delete-btn">&times;</button>
+                        </div>
                     </div>
+
+
+                    <div class="cart-item">
+                        <div class="cart-item__info">
+                            <div class="for-img">
+                                <img src="..." alt="Product Image">
+                            </div>
+                            <p class="icon">x</p>
+                            <p class="cart-item__quantity">123</p>
+                            <p class="cart-item__title">Вода вода</p>
+                        </div>
+                        <div class="cart-item__total-price">
+                            <p><span>100</span> грн</p>
+                            <button class="cart-item__delete-btn">&times;</button>
+                        </div>
+                    </div>
+
+
+                    <div class="cart-item">
+                        <div class="cart-item__info">
+                            <div class="for-img">
+                                <img src="..." alt="Product Image">
+                            </div>
+                            <p class="icon">x</p>
+                            <p class="cart-item__quantity">123</p>
+                            <p class="cart-item__title">Вода вода</p>
+                        </div>
+                        <div class="cart-item__total-price">
+                            <p><span>100</span> грн</p>
+                            <button class="cart-item__delete-btn">&times;</button>
+                        </div>
+                    </div>
+                    <div class="cart-item">...</div>
+                    <div class="cart-item">...</div>
                 </div>
-                <div class="cart-item">...</div>
-                <div class="cart-item">...</div>
                 <div class="cart-total">
-                    <p>Итого: <span>300</span> грн</p>
+                    <p>Итого: <span class="text-accent">300</span> грн</p>
                 </div>
-                <button class="btn cart-order-btn">Оформить</button>
+                <button class="btn cart-order-btn open-modal-btn" id="btn-modal-cart">Оформить</button>
             </div>
         </div>
+    </div>
 
-        <!--    <div class="modal" id="modal-contact">-->
-
-        <!--    </div>-->
-
-        <div class="modal" id="modal-order-accepted">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
-                <h3 class="modal-title">Ваше замовлення прийнято</h3>
-                <p class="text-little">Для уточнення замовлення<br>
-                    з вами зв'яжеться менеджер</p>
-            </div>
+    <!--Модалка. Контакты пользователя-->
+    <div class="modal" id="modal-contact">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Оформление</h2>
+            <form id="contact-form" data-parsley-validate>
+                <div class="payment-amount">
+                    <p>Сумма к оплате: <span>300</span> грн</p>
+                </div>
+                <div class="delivery-options">
+                    <label>
+                        <input type="radio" name="delivery" value="home" checked required>
+                        Дом
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="office" required>
+                        Офис
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="other" required>
+                        Другое
+                    </label>
+                </div>
+                <div class="form-section">
+                    <div class="form-row">
+                        <input type="text" placeholder="Имя" name="name" required>
+                        <input type="text" placeholder="Телефон" name="phone" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Адрес" name="address" required>
+                        <div class="date-input">
+                            <input type="text" placeholder="Дата" name="date" required>
+                            <i class="calendar-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <textarea placeholder="Комментарий" name="comment"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="payment-selection">
+                            <span>Выбор оплаты</span>
+                            <select name="payment" required>
+                                <option value="">Выберите опцию</option>
+                                <option>Опция 1</option>
+                                <option>Опция 2</option>
+                                <option>Опция 3</option>
+                            </select>
+                            <i class="down-arrow-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agree" required>
+                            Я принимаю условия пользовательского соглашения
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформить</button>
+                    </div>
+                </div>
+            </form>
         </div>
+    </div>
+
+    <!--Модалка Заказ принят-->
+    <div class="modal" id="modal-order-accepted">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
+            <h3 class="modal-title">Ваше замовлення прийнято</h3>
+            <p class="text-little">Для уточнення замовлення<br>
+                з вами зв'яжеться менеджер</p>
+        </div>
+    </div>
 
 
 </main>
@@ -613,8 +730,8 @@
 
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script defer src="assets/js/owl.carousel.min.js"></script>
+<!--<script defer src="node_modules/parsleyjs/dist/parsley.min.js"></script>-->
 <script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
-
 <script defer src="assets/js/index.js"></script>
 </body>
 </html>
