@@ -1770,6 +1770,41 @@ ul, ol, li {
 }
 .modal-content {
   width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.modal-content .btn {
+  width: 30%;
+  height: auto;
+  border-radius: 5.2083333333vw;
+  font-size: 0.78125vw;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 1.1979166667vw 1.5625vw 1.1979166667vw 1.5104166667vw;
+}
+@media (max-width: 991.8px) {
+  .modal-content .btn {
+    font-size: 1.25vw;
+  }
+}
+@media (max-width: 767.8px) {
+  .modal-content .btn {
+    font-size: 1.25vw;
+    width: 30%;
+    height: auto;
+    margin: auto;
+  }
+}
+@media (max-width: 575.8px) {
+  .modal-content .btn {
+    font-size: 1.5625vw;
+  }
 }
 .modal .close {
   color: #949CBE;
@@ -1808,15 +1843,6 @@ ul, ol, li {
   text-align: center;
 }
 
-#modal-item .modal-content {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-}
 #modal-item .modal-content .modal__wrapper {
   display: flex;
   justify-content: space-between;
@@ -1946,32 +1972,6 @@ ul, ol, li {
 }
 #modal-item .modal-content .modal-content__wrap .btn {
   width: 60%;
-  height: 100%;
-  border-radius: 5.2083333333vw;
-  font-size: 0.78125vw;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.1em;
-  text-align: center;
-  padding: 1.1979166667vw 1.5625vw 1.1979166667vw 1.5104166667vw;
-}
-@media (max-width: 991.8px) {
-  #modal-item .modal-content .modal-content__wrap .btn {
-    font-size: 1.25vw;
-  }
-}
-@media (max-width: 767.8px) {
-  #modal-item .modal-content .modal-content__wrap .btn {
-    font-size: 1.25vw;
-    width: 30%;
-    height: auto;
-    margin: auto;
-  }
-}
-@media (max-width: 575.8px) {
-  #modal-item .modal-content .modal-content__wrap .btn {
-    font-size: 1.5625vw;
-  }
 }
 #modal-item .modal-content__text-little {
   align-items: start;
@@ -1986,39 +1986,91 @@ ul, ol, li {
 #modal-cart {
   display: flex;
 }
-#modal-cart .cart-item {
+#modal-cart .modal-content {
+  justify-content: start;
+}
+#modal-cart .modal-content .modal-title {
+  display: block;
+  padding-bottom: 2.3958333333vw;
+}
+#modal-cart .modal-content .text-little {
+  display: block;
+  font-size: 0.8854166667vw;
+  color: #949CBE;
+  padding-bottom: 1.1979166667vw;
+}
+#modal-cart .cart-items {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  overflow: hidden;
+}
+#modal-cart .cart-items__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow-y: scroll;
+  padding-bottom: 1.6666666667vw;
+}
+#modal-cart .cart-items .cart-item {
+  display: flex;
+  height: 6.9791666667vw;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  border-top: 0.0520833333vw solid rgba(48, 162, 60, 0.2);
+  border-bottom: 0.0520833333vw solid rgba(48, 162, 60, 0.2);
 }
-#modal-cart .cart-item__info {
+#modal-cart .cart-items .cart-item__info {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-#modal-cart .cart-item__info .for-img {
+#modal-cart .cart-items .cart-item__info .for-img {
   width: 3.1770833333vw;
   height: 4.9479166667vw;
   padding-right: 1.25vw;
 }
-#modal-cart .cart-item__info .for-img img {
+#modal-cart .cart-items .cart-item__info .for-img img {
   display: block;
   width: 100%;
 }
-#modal-cart .cart-item__info .icon {
+#modal-cart .cart-items .cart-item__info .icon {
   padding-right: 0.5729166667vw;
 }
-#modal-cart .cart-item__info .cart-item__quantity {
+#modal-cart .cart-items .cart-item__info .cart-item__quantity {
+  font-weight: 500;
   padding-right: 2.5vw;
 }
-#modal-cart .cart-item__total-price {
+#modal-cart .cart-items .cart-item__total-price {
   display: flex;
   justify-content: end;
   align-items: center;
+  margin-left: auto;
 }
-#modal-cart .cart-item__total-price p {
+#modal-cart .cart-items .cart-item__total-price p {
   padding-right: 2.5984375vw;
+}
+#modal-cart .cart-items .cart-item__total-price button {
+  margin-right: 0.5208333333vw;
+}
+#modal-cart .cart-items .cart-total {
+  width: 30%;
+  display: flex;
+  justify-content: right;
+  margin-right: 2.1354166667vw;
+}
+#modal-cart .cart-items .cart-total p {
+  padding-bottom: 4.1145833333vw;
+  font-weight: 500;
+}
+#modal-cart .cart-items .cart-total p span {
+  margin-left: 4.4270833333vw;
+}
+#modal-cart .cart-items .btn {
+  padding-bottom: 1.8229166667vw;
 }
 
 /*# sourceMappingURL=index.css.map */
