@@ -178,7 +178,8 @@ ul, ol, li {
   }
 
   &:hover {
-    background: $color-white;
+    background: $color-red-border;
+    color: $color-red;
     border: vw(1) solid $color-red;
     border-radius: vw(100);
   }
