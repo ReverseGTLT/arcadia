@@ -481,6 +481,8 @@
     .textarea-row textarea {
       height: 100px;
       overflow-y: auto;
+      resize: none;
+      width: 100%;
     }
 
     .flex-between-row {
