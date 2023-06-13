@@ -1,6 +1,8 @@
 @use "../../presets/index" as *;
 
 .order-contact {
+  padding-bottom: vw(138);
+
   .container-1540 {
     padding: vw(64) vw(130) vw(47) vw(44);
     border-radius: 0 0 vw(30) vw(30);
@@ -103,10 +105,14 @@
 
       .text-area-row {
         box-sizing: content-box;
-        overflow-y: scroll;
+
 
         textarea {
           height: vw(195);
+          resize: none;
+          overflow-y: scroll;
+          //scrollbar-gutter: auto;
+          padding: vw(28) vw(28) vw(27) vw(39);
         }
       }
 
@@ -126,7 +132,7 @@
             width: auto;
             line-height: 1.05;
             padding: 0;
-            margin: 0 vw(10) 0 0 ;
+            margin: 0 vw(10) 0 0;
           }
         }
       }
