@@ -73,6 +73,13 @@
     right: 0;
     margin-top: vw(2);
     margin-right: vw(25);
+
+    &:hover,
+    &:focus {
+      color: $color-h-txt-link;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
 
@@ -285,7 +292,7 @@
 }
 
 #modal-cart {
-  display: flex;
+  //display: flex;
 
   .modal-content {
     justify-content: start;
@@ -363,6 +370,7 @@
         p {
           padding-right: vw(49.89);
         }
+
         button {
           margin-right: vw(10);
           width: vw(16);
@@ -394,8 +402,97 @@
         }
       }
     }
+
     .btn {
       margin-bottom: vw(35);
+    }
+  }
+}
+
+#modal-contact {
+  //display: flex;
+
+  .modal-content {
+    justify-content: start;
+    align-items: center;
+
+    .modal-title {
+      margin-bottom: vw(46);
+    }
+  }
+
+  #contact-form {
+
+    input,
+    textarea,
+    select {
+      background: $color-white;
+      border: vw(1) solid $color-grey-border;
+      border-radius: vw(30);
+      padding: vw(28) vw(28) vw(27) vw(39);
+    }
+    .payment-amount,
+    .delivery-options {
+      margin-bottom: vw(43);
+    }
+
+    .form-row {
+      margin-bottom: vw(12);
+    }
+
+    .checkbox-label {
+      display: block;
+      font-weight: 400;
+    }
+
+    .date-input {
+      position: relative;
+    }
+
+    .calendar-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      /* Стили для иконки календаря */
+    }
+
+    .down-arrow-icon {
+      /* Стили для иконки стрелки вниз */
+    }
+
+    /* Дополнительные стили для размещения полей */
+    .payment-amount,
+    .delivery-options {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+
+    .full-width-row {
+      width: 100%;
+    }
+
+    .textarea-row {
+      width: 100%;
+    }
+
+    .textarea-row textarea {
+      height: 100px;
+      overflow-y: auto;
+    }
+
+    .flex-between-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-section {
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }

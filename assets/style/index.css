@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap");
 *,
@@ -1752,6 +1753,64 @@ ul, ol, li {
   background-size: cover;
 }
 
+.order-contact .container-1540 {
+  padding: 3.3333333333vw 6.7708333333vw 2.4479166667vw 2.2916666667vw;
+  border-radius: 0 0 1.5625vw 1.5625vw;
+  background-color: #D8E8F8;
+}
+.order-contact-content {
+  justify-content: start;
+  align-items: center;
+}
+.order-contact-content .order-contact-title {
+  margin-bottom: 4.1145833333vw;
+}
+.order-contact #order-contact-form input,
+.order-contact #order-contact-form textarea,
+.order-contact #order-contact-form select {
+  background: #ffffff;
+  border: 0.0520833333vw solid #D4D8EB;
+  border-radius: 1.5625vw;
+  padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
+}
+.order-contact #order-contact-form .payment-amount,
+.order-contact #order-contact-form .delivery-options {
+  margin-bottom: 2.2395833333vw;
+}
+.order-contact #order-contact-form .checkbox-label {
+  display: block;
+  font-weight: 400;
+}
+.order-contact #order-contact-form .date-input {
+  position: relative;
+}
+.order-contact #order-contact-form .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  /* Стили для иконки календаря */
+}
+.order-contact #order-contact-form .down-arrow-icon {
+  /* Стили для иконки стрелки вниз */
+}
+.order-contact #order-contact-form .form-section {
+  display: flex;
+  flex-direction: column;
+}
+.order-contact #order-contact-form .form-section .form-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.order-contact #order-contact-form .form-section .form-row {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.40625vw;
+}
+
 .modal {
   z-index: 1000;
   display: none;
@@ -1815,6 +1874,11 @@ ul, ol, li {
   right: 0;
   margin-top: 0.1041666667vw;
   margin-right: 1.3020833333vw;
+}
+.modal .close:hover, .modal .close:focus {
+  color: #0A0E20;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #modal-order-accepted .modal-content {
@@ -1982,9 +2046,6 @@ ul, ol, li {
   color: red;
 }
 
-#modal-cart {
-  display: flex;
-}
 #modal-cart .modal-content {
   justify-content: start;
 }
@@ -2078,6 +2139,72 @@ ul, ol, li {
 }
 #modal-cart .cart-items .btn {
   margin-bottom: 1.8229166667vw;
+}
+
+#modal-contact .modal-content {
+  justify-content: start;
+  align-items: center;
+}
+#modal-contact .modal-content .modal-title {
+  margin-bottom: 2.3958333333vw;
+}
+#modal-contact #contact-form {
+  /* Дополнительные стили для размещения полей */
+}
+#modal-contact #contact-form input,
+#modal-contact #contact-form textarea,
+#modal-contact #contact-form select {
+  background: #ffffff;
+  border: 0.0520833333vw solid #D4D8EB;
+  border-radius: 1.5625vw;
+  padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
+}
+#modal-contact #contact-form .payment-amount,
+#modal-contact #contact-form .delivery-options {
+  margin-bottom: 2.2395833333vw;
+}
+#modal-contact #contact-form .form-row {
+  margin-bottom: 0.625vw;
+}
+#modal-contact #contact-form .checkbox-label {
+  display: block;
+  font-weight: 400;
+}
+#modal-contact #contact-form .date-input {
+  position: relative;
+}
+#modal-contact #contact-form .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  /* Стили для иконки календаря */
+}
+#modal-contact #contact-form .down-arrow-icon {
+  /* Стили для иконки стрелки вниз */
+}
+#modal-contact #contact-form .payment-amount,
+#modal-contact #contact-form .delivery-options {
+  display: flex;
+  justify-content: space-between;
+}
+#modal-contact #contact-form .full-width-row {
+  width: 100%;
+}
+#modal-contact #contact-form .textarea-row {
+  width: 100%;
+}
+#modal-contact #contact-form .textarea-row textarea {
+  height: 100px;
+  overflow-y: auto;
+}
+#modal-contact #contact-form .flex-between-row {
+  display: flex;
+  justify-content: space-between;
+}
+#modal-contact #contact-form .form-section .form-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=index.css.map */

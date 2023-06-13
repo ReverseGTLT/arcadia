@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/style/owl.theme.default.min.css">
-    <!--    <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">-->
+    <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">
     <!--    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">-->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>-->
     <link rel="stylesheet" href="assets/style/normalize.css">
@@ -522,6 +522,64 @@
         </div>
     </section>
 
+    <section class="order-contact">
+        <div class="container-1540" id="order-contact">
+            <div class="order-contact-content">
+                <h2 class="order-contact-title">Відправити заявку на воду</h2>
+                <form id="order-contact-form" data-parsley-validate>
+                    <div class="delivery-options">
+                        <label>
+                            <input type="radio" name="delivery" value="home" checked required>
+                            До дому
+                        </label>
+                        <label>
+                            <input type="radio" name="delivery" value="office" required>
+                            У офіс
+                        </label>
+                        <label>
+                            <input type="radio" name="delivery" value="other" required>
+                            Інше
+                        </label>
+                    </div>
+                    <div class="form-section">
+                        <div class="form-col">
+                            <div class="form-row">
+                                <input type="text" placeholder="Ваше ім'я" name="name" required>
+                                <input type="text" placeholder="Адреса" name="address" required>
+                            </div>
+                            <div class="form-row">
+
+                                <input type="text" placeholder="Телефон" name="phone" required>
+                                <div class="date-input">
+                                    <input type="text" placeholder="На коли" name="date" required>
+                                    <i class="calendar-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <textarea placeholder="Коментар" name="comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-row">
+                                <label class="checkbox-label">
+                                    <input class="text-little" type="checkbox" name="agree" required>
+                                    Я приймаю умови користувальницької угоди,
+                                    дозволяю їх обробку та зв'язатися зі мною якнайшвидше
+                                </label>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформити
+                                    доставку
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
 
     <!--    _________________________-->
     <!--    MODAL-->
@@ -661,60 +719,61 @@
     <div class="modal" id="modal-contact">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 class="modal-title">Оформление</h2>
+            <h2 class="modal-title">Оформлення</h2>
             <form id="contact-form" data-parsley-validate>
                 <div class="payment-amount">
-                    <p>Сумма к оплате: <span>300</span> грн</p>
+                    <p>Сума до сплати: <span>300</span> грн</p>
                 </div>
                 <div class="delivery-options">
                     <label>
                         <input type="radio" name="delivery" value="home" checked required>
-                        Дом
+                        До дому
                     </label>
                     <label>
                         <input type="radio" name="delivery" value="office" required>
-                        Офис
+                        У офіс
                     </label>
                     <label>
                         <input type="radio" name="delivery" value="other" required>
-                        Другое
+                        Інше
                     </label>
                 </div>
                 <div class="form-section">
                     <div class="form-row">
-                        <input type="text" placeholder="Имя" name="name" required>
+                        <input type="text" placeholder="Ваше ім'я" name="name" required>
                         <input type="text" placeholder="Телефон" name="phone" required>
                     </div>
                     <div class="form-row">
-                        <input type="text" placeholder="Адрес" name="address" required>
+                        <input type="text" placeholder="Адреса" name="address" required>
                         <div class="date-input">
-                            <input type="text" placeholder="Дата" name="date" required>
+                            <input type="text" placeholder="На коли" name="date" required>
                             <i class="calendar-icon"></i>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <textarea placeholder="Комментарий" name="comment"></textarea>
+                    <div class="form-row full-width-row">
+                        <textarea placeholder="Коментар" name="comment"></textarea>
                     </div>
                     <div class="form-row">
                         <div class="payment-selection">
                             <span>Выбор оплаты</span>
                             <select name="payment" required>
-                                <option value="">Выберите опцию</option>
-                                <option>Опция 1</option>
-                                <option>Опция 2</option>
-                                <option>Опция 3</option>
+                                <option value="">Сплатити онлайн на сайті</option>
+                                <option>Оплата при доставці на місці</option>
+                                <option>На місці карткою</option>
                             </select>
                             <i class="down-arrow-icon"></i>
                         </div>
                     </div>
                     <div class="form-row">
                         <label class="checkbox-label">
-                            <input type="checkbox" name="agree" required>
-                            Я принимаю условия пользовательского соглашения
+                            <input class="text-little" type="checkbox" name="agree" required>
+                            Я приймаю умови користувальницької угоди,
+                            дозволяю їх обробку та зв'язатися зі мною якнайшвидше
                         </label>
                     </div>
                     <div class="form-row">
-                        <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформить</button>
+                        <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформити доставку
+                        </button>
                     </div>
                 </div>
             </form>
@@ -738,7 +797,7 @@
 
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script defer src="assets/js/owl.carousel.min.js"></script>
-<!--<script defer src="node_modules/parsleyjs/dist/parsley.min.js"></script>-->
+<script defer src="node_modules/parsleyjs/dist/parsley.min.js"></script>
 <script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
 <script defer src="assets/js/index.js"></script>
 </body>

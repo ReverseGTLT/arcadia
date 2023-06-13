@@ -1,5 +1,5 @@
 // import 'animejs';
-// import 'parsleyjs';
+// import 'parsleyjs'; АКТИВИРОВАТЬ, если используется сборщик модулей
 // import anime from "animejs";
 // import parsley from "parsleyjs/dist/parsley";
 
@@ -70,6 +70,9 @@ $(document).ready(function () {
             }
         }
     });
+
+//Parsley
+    $('#contact-form').parsley();
 });
 
 
