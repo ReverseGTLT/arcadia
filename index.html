@@ -522,24 +522,30 @@
         </div>
     </section>
 
+
+    <!--    _________________________-->
+    <!--    Section. ORDER CONTACT. -->
+    <!--    _________________________-->
     <section class="order-contact">
         <div class="container-1540" id="order-contact">
             <div class="order-contact-content">
                 <h2 class="order-contact-title">Відправити заявку на воду</h2>
                 <form id="order-contact-form" data-parsley-validate>
-                    <div class="delivery-options">
-                        <label>
-                            <input type="radio" name="delivery" value="home" checked required>
-                            До дому
-                        </label>
-                        <label>
-                            <input type="radio" name="delivery" value="office" required>
-                            У офіс
-                        </label>
-                        <label>
-                            <input type="radio" name="delivery" value="other" required>
-                            Інше
-                        </label>
+                    <div class="delivery-options-col">
+                        <div class="delivery-options">
+                            <label>
+                                <input type="radio" name="delivery" value="home" checked required>
+                                До дому
+                            </label>
+                            <label>
+                                <input type="radio" name="delivery" value="office" required>
+                                У офіс
+                            </label>
+                            <label>
+                                <input type="radio" name="delivery" value="other" required>
+                                Інше
+                            </label>
+                        </div>
                     </div>
                     <div class="form-section">
                         <div class="form-col">
@@ -548,31 +554,29 @@
                                 <input type="text" placeholder="Адреса" name="address" required>
                             </div>
                             <div class="form-row">
-
                                 <input type="text" placeholder="Телефон" name="phone" required>
                                 <div class="date-input">
                                     <input type="text" placeholder="На коли" name="date" required>
                                     <i class="calendar-icon"></i>
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="form-row text-area-row">
                                 <textarea placeholder="Коментар" name="comment"></textarea>
                             </div>
                         </div>
-                        <div class="form-col">
-                            <div class="form-row">
+                        <div class="form-col checkbox-btn-col">
+                            <div class="form-row checkbox-row">
+                                <input class="text-little" type="checkbox" name="agree" required>
                                 <label class="checkbox-label">
-                                    <input class="text-little" type="checkbox" name="agree" required>
                                     Я приймаю умови користувальницької угоди,
                                     дозволяю їх обробку та зв'язатися зі мною якнайшвидше
                                 </label>
+
                             </div>
                             <div class="form-row">
-                                <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформити
-                                    доставку
+                                <button type="submit" class="btn open-modal-btn" id="btn-order-contact">Замовити воду
                                 </button>
                             </div>
-
                         </div>
                     </div>
                 </form>

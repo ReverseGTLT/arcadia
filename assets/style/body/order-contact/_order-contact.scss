@@ -2,9 +2,9 @@
 
 .order-contact {
   .container-1540 {
-  padding: vw(64) vw(130) vw(47) vw(44);
-  border-radius: 0 0 vw(30) vw(30);
-  background-color: $background-grey;
+    padding: vw(64) vw(130) vw(47) vw(44);
+    border-radius: 0 0 vw(30) vw(30);
+    background-color: $background-grey;
   }
 
   @include md {
@@ -15,28 +15,38 @@
   }
 
   &-content {
+    position: relative;
     justify-content: start;
     align-items: center;
 
     .order-contact-title {
-      margin-bottom: vw(79);
+      position: absolute;
+      top: 0;
+      margin-top: vw(10);
+      padding-left: vw(224);
+      //margin-bottom: vw(79);
     }
   }
 
   #order-contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
 
-    input,
-    textarea,
-    select {
-      background: $color-white;
-      border: vw(1) solid $color-grey-border;
-      border-radius: vw(30);
-      padding: vw(28) vw(28) vw(27) vw(39);
+    .delivery-options-col {
+      padding-right: vw(109);
+      margin-bottom: vw(76);
+      margin-top: vw(24);
+
+      .delivery-options {
+        width: vw(359);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
-    .payment-amount,
-    .delivery-options {
-      margin-bottom: vw(43);
-    }
+
     .checkbox-label {
       display: block;
       font-weight: 400;
@@ -62,6 +72,21 @@
       display: flex;
       flex-direction: column;
 
+      input,
+      textarea,
+      select {
+        width: vw(447);
+        background: $color-white;
+        border: vw(1) solid $color-grey-border;
+        border-radius: vw(30);
+        padding: vw(28) vw(28) vw(27) vw(39);
+        margin-bottom: vw(27);
+      }
+
+      input {
+        margin-right: vw(12);
+      }
+
       .form-col {
         display: flex;
         justify-content: space-between;
@@ -74,7 +99,36 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: vw(27);
+      }
 
+      .text-area-row {
+        box-sizing: content-box;
+        overflow-y: scroll;
+
+        textarea {
+          height: vw(195);
+        }
+      }
+
+      .checkbox-btn-col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: vw(80);
+
+        .checkbox-row {
+          width: vw(580);
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+
+          input {
+            width: auto;
+            line-height: 1.05;
+            padding: 0;
+            margin: 0 vw(10) 0 0 ;
+          }
+        }
       }
     }
   }

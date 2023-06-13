@@ -1759,23 +1759,32 @@ ul, ol, li {
   background-color: #D8E8F8;
 }
 .order-contact-content {
+  position: relative;
   justify-content: start;
   align-items: center;
 }
 .order-contact-content .order-contact-title {
-  margin-bottom: 4.1145833333vw;
+  position: absolute;
+  top: 0;
+  margin-top: 0.5208333333vw;
+  padding-left: 11.6666666667vw;
 }
-.order-contact #order-contact-form input,
-.order-contact #order-contact-form textarea,
-.order-contact #order-contact-form select {
-  background: #ffffff;
-  border: 0.0520833333vw solid #D4D8EB;
-  border-radius: 1.5625vw;
-  padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
+.order-contact #order-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
 }
-.order-contact #order-contact-form .payment-amount,
-.order-contact #order-contact-form .delivery-options {
-  margin-bottom: 2.2395833333vw;
+.order-contact #order-contact-form .delivery-options-col {
+  padding-right: 5.6770833333vw;
+  margin-bottom: 3.9583333333vw;
+  margin-top: 1.25vw;
+}
+.order-contact #order-contact-form .delivery-options-col .delivery-options {
+  width: 18.6979166667vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .order-contact #order-contact-form .checkbox-label {
   display: block;
@@ -1798,6 +1807,19 @@ ul, ol, li {
   display: flex;
   flex-direction: column;
 }
+.order-contact #order-contact-form .form-section input,
+.order-contact #order-contact-form .form-section textarea,
+.order-contact #order-contact-form .form-section select {
+  width: 23.28125vw;
+  background: #ffffff;
+  border: 0.0520833333vw solid #D4D8EB;
+  border-radius: 1.5625vw;
+  padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
+  margin-bottom: 1.40625vw;
+}
+.order-contact #order-contact-form .form-section input {
+  margin-right: 0.625vw;
+}
 .order-contact #order-contact-form .form-section .form-col {
   display: flex;
   justify-content: space-between;
@@ -1809,6 +1831,31 @@ ul, ol, li {
   flex-direction: column;
   align-items: center;
   margin-bottom: 1.40625vw;
+}
+.order-contact #order-contact-form .form-section .text-area-row {
+  box-sizing: content-box;
+  overflow-y: scroll;
+}
+.order-contact #order-contact-form .form-section .text-area-row textarea {
+  height: 10.15625vw;
+}
+.order-contact #order-contact-form .form-section .checkbox-btn-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4.1666666667vw;
+}
+.order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row {
+  width: 30.2083333333vw;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input {
+  width: auto;
+  line-height: 1.05;
+  padding: 0;
+  margin: 0 0.5208333333vw 0 0;
 }
 
 .modal {

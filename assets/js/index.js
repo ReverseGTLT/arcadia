@@ -120,6 +120,11 @@ window.addEventListener('load', function () {
 //     mapIframe.requestFullscreen();
 // });
 
+
+
+// let cart =[];
+
+
 //
 // ------------------------------------
 // MODAL
