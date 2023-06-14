@@ -1884,6 +1884,117 @@ ul, ol, li {
   margin: 0 0.5208333333vw 0 0;
 }
 
+.facts {
+  padding-bottom: 7.1875vw;
+}
+@media (max-width: 767.8px) {
+  .facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.facts-content {
+  margin-left: 9.53125vw;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.facts-content__text {
+  width: 57.2916666667vw;
+}
+@media (max-width: 767.8px) {
+  .facts-content__text {
+    width: 100%;
+    margin: 0.2604166667vw;
+  }
+}
+.facts-content__text h2 {
+  padding-bottom: 5.3645833333vw;
+}
+.facts-carousel {
+  position: relative;
+  width: 100%;
+  margin-left: 9.53125vw;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+@media (max-width: 767.8px) {
+  .facts-carousel {
+    max-width: 98%;
+    margin: auto;
+    height: auto;
+  }
+}
+.facts-carousel__item {
+  width: 19.0625vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-bottom: 2.7083333333vw;
+}
+@media (max-width: 767.8px) {
+  .facts-carousel__item {
+    padding: 3.125vw;
+  }
+}
+.facts-carousel__item .fact-wrap {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 1.8229166667vw;
+}
+.facts-carousel__item .fact-wrap img {
+  display: block;
+  width: 3.7760416667vw;
+  height: 3.5302083333vw;
+  padding-right: 1.3020833333vw;
+}
+.facts-carousel__item .fact-wrap h4 {
+  display: block;
+}
+.facts-carousel__item p {
+  display: block;
+  width: 100%;
+}
+.facts .facts-carousel .owl-dots {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6.25vw;
+  left: 7.2916666667vw;
+  bottom: 1.8229166667vw;
+}
+@media (max-width: 991.8px) {
+  .facts .facts-carousel .owl-dots {
+    bottom: -1.0416666667vw;
+  }
+}
+@media (max-width: 767.8px) {
+  .facts .facts-carousel .owl-dots {
+    bottom: 0;
+  }
+}
+.facts .facts-carousel .owl-dots .owl-dot {
+  display: inline-block !important;
+  justify-content: center;
+  margin: 0 0.78125vw;
+  width: 0.5208333333vw;
+  height: 0.5208333333vw;
+  border-radius: 50%;
+  background-color: #FFBBBB;
+}
+.facts .facts-carousel .owl-dots .owl-dot.active {
+  background-color: #F80505;
+}
+
 .modal {
   z-index: 1000;
   display: none;
