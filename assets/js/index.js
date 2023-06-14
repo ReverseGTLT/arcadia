@@ -71,6 +71,29 @@ $(document).ready(function () {
         }
     });
 
+    $('.facts-carousel').owlCarousel({
+        loop: true,
+        autoplay: 1000,
+        autoplayHoverPause: true,
+        margin: 0,
+        nav: false,
+        dots: true,
+        mouseDrag: true,
+        touchDrag: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 3,
+            }
+        }
+    });
+
 //Parsley
     $('#contact-form').parsley();
 });
