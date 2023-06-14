@@ -1,0 +1,41 @@
+@use "../../presets/index" as *;
+
+.water {
+  padding-bottom: vw(151);
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-content {
+    margin-left: vw(183);
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    width: vw(996);
+
+    h2,
+    p {
+      padding-bottom: vw(21);
+    }
+
+    p{
+      line-height: 1.05;
+    }
+
+    a{
+      color: $color-blue-link;
+      font-weight: $font-weight-accent;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: $color-red-border;
+      }
+    }
+
+  }
+}

@@ -1995,6 +1995,41 @@ ul, ol, li {
   background-color: #F80505;
 }
 
+.water {
+  padding-bottom: 7.8645833333vw;
+}
+@media (max-width: 767.8px) {
+  .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.water-content {
+  margin-left: 9.53125vw;
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  width: 51.875vw;
+}
+.water-content h2,
+.water-content p {
+  padding-bottom: 1.09375vw;
+}
+.water-content p {
+  line-height: 1.05;
+}
+.water-content a {
+  color: #0879E0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.water-content a:hover {
+  color: #FFBBBB;
+}
+
 .modal {
   z-index: 1000;
   display: none;
