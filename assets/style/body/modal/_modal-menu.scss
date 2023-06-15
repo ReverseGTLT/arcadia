@@ -1,0 +1,35 @@
+
+@use "../../presets/index" as *;
+
+.modal-menu {
+  display: none;
+  background-color: rgba(97, 173, 243, 0.7);
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &__wrapper {
+    width: vw(439);
+    height: 100vh;
+    background-color: $color-white;
+    margin-left: auto;
+    opacity: 1;
+    padding: vw(15);
+  }
+  &__close {
+    width: vw(26);
+    margin-left: auto;
+    cursor: pointer;
+    svg {
+      width: vw(26);
+      height: vw(26);
+      display: block;
+    }
+  }
+}
+
+.visible {
+  display: block;
+}
