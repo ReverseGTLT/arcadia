@@ -98,7 +98,7 @@ $(document).ready(function () {
     $('#contact-form').parsley();
 });
 
-
+// Header
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');
 const headerLanguageArrow = document.querySelector('.arrow');
@@ -135,6 +135,28 @@ window.addEventListener('load', function () {
         header.classList.add('bgcolor-white');
     }
 });
+
+// Скролл ап
+document.addEventListener("DOMContentLoaded", function() {
+    var scrollToTopButton = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
+
+    scrollToTopButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
 
 //map. Открытие карты в полноэкранном режиме
 // const mapIframe = document.getElementById('map');
