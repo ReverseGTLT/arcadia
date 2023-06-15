@@ -30,7 +30,7 @@
       color: $color-blue-link;
       font-weight: $font-weight-accent;
       text-decoration: underline;
-      text-underline-offset: 2px;
+      text-underline-offset: vw(2);
 
       &:hover {
         color: $color-red-border;
