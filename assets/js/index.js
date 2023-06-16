@@ -98,7 +98,7 @@ $(document).ready(function () {
     $('#contact-form').parsley();
 });
 
-
+// Header
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');
 const headerLanguageArrow = document.querySelector('.arrow');
@@ -132,10 +132,12 @@ window.addEventListener('load', function () {
     const scrollPresent = localStorage.getItem('scrollPresent');
 
     if (scrollPresent) {
+        console.log('asfasfasf')
         header.classList.add('bgcolor-white');
     }
 });
 
+// <<<<<<< HEAD
 // Открытие меню
 const menuOpen = document.querySelector('.header-menu__btn');
 const menuWindow = document.querySelector('.modal-menu');
@@ -148,6 +150,29 @@ function onMenuOpen() {
 function onMenuClose() {
     menuWindow.classList.remove('visible')
 }
+
+// Скролл ап
+document.addEventListener("DOMContentLoaded", function() {
+    var scrollToTopButton = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
+
+    scrollToTopButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+// >>>>>>> 670c0290817281f5e25a798cd4bfb2f4ae422a38
 
 //map. Открытие карты в полноэкранном режиме
 // const mapIframe = document.getElementById('map');

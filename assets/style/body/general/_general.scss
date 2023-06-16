@@ -83,7 +83,6 @@
   left: vw(-50);
   img {
     width: 100%;
-    animation: rotate 20s linear infinite;
   }
 }
 
@@ -94,4 +93,8 @@
   100% {
     transform: translateX(-50%) rotate(360deg);
   }
+}
+
+.circle-rotate {
+  animation: rotate 20s linear infinite;
 }

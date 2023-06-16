@@ -1,0 +1,36 @@
+@use "../../presets/index" as *;
+
+.scroll-button {
+  position: fixed;
+  bottom: vw(90);
+  right: vw(100);
+  width: vw(82);
+  height: vw(82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //color: #fff;
+  cursor: pointer;
+  z-index: 999;
+
+  img {
+    display: block;
+    overflow: hidden;
+  }
+
+
+  @include lg {
+    width: 44px;
+    height: 44px;
+  }
+
+  @include md {
+    width: 44px;
+    height: 44px;
+  }
+
+  @include xs {
+    width: 34px;
+    height: 34px;
+  }
+}

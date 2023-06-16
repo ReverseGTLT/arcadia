@@ -1,0 +1,153 @@
+@use "../../presets/index" as *;
+
+footer {
+  width: 100%;
+  //height: vw(105);
+  background-color: $color-red;
+  padding: vw(31) vw(58) vw(31.15) vw(69);
+
+
+  .container {
+    max-width: vw(1728);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-white;
+    font-size: vw(14);
+
+    @include md {
+      max-width: vw(172);
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-items: center;
+
+      @include md {
+        width: vw(150);
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: vw(21);
+      }
+
+      .logo {
+        padding-right: vw(30.45);
+
+        @include md {
+          padding-right: 0;
+          padding-bottom: vw(8);
+        }
+
+        img {
+          display: block;
+          width: vw(130.55);
+          height: vw(42.85);
+        }
+      }
+
+      .text p {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include md {
+          white-space: normal;
+          text-align: center;
+        }
+      }
+    }
+
+    .img-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .social-media,
+    .payment,
+    .attribution {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .social-media,
+    .payment {
+      @include md {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+
+    .social-media {
+      @include md {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: vw(18);
+      }
+
+      p {
+        padding-right: vw(20);
+
+        @include md {
+          text-align: center;
+          padding-right: 0;
+          padding-bottom: vw(8);
+        }
+      }
+
+      img {
+        height: vw(20.44);
+        width: auto;
+        margin-right: vw(21);
+      }
+    }
+
+    .payment {
+      @include md {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: vw(21);
+      }
+
+      p {
+        padding-right: vw(18);
+        @include md {
+          text-align: center;
+          padding-right: 0;
+          padding-bottom: vw(8.85);
+        }
+      }
+
+      img {
+        height: vw(29);
+        width: auto;
+        margin-right: vw(12);
+      }
+    }
+
+    .attribution {
+
+      p {
+        padding-right: vw(5);
+      }
+
+      a {
+        color: $color-white;
+        text-decoration: underline;
+        text-underline-offset: vw(3);
+      }
+    }
+  }
+}
