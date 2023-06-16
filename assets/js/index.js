@@ -132,9 +132,24 @@ window.addEventListener('load', function () {
     const scrollPresent = localStorage.getItem('scrollPresent');
 
     if (scrollPresent) {
+        console.log('asfasfasf')
         header.classList.add('bgcolor-white');
     }
 });
+
+// <<<<<<< HEAD
+// Открытие меню
+const menuOpen = document.querySelector('.header-menu__btn');
+const menuWindow = document.querySelector('.modal-menu');
+const menuClose = document.querySelector('.modal-menu__close');
+menuOpen.addEventListener('click', onMenuOpen);
+menuClose.addEventListener('click', onMenuClose)
+function onMenuOpen() {
+    menuWindow.classList.add('visible')
+}
+function onMenuClose() {
+    menuWindow.classList.remove('visible')
+}
 
 // Скролл ап
 document.addEventListener("DOMContentLoaded", function() {
@@ -157,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// >>>>>>> 670c0290817281f5e25a798cd4bfb2f4ae422a38
 
 //map. Открытие карты в полноэкранном режиме
 // const mapIframe = document.getElementById('map');

@@ -37,8 +37,9 @@
   }
   &-form {
     button {
+      padding-inline: vw(20);
       flex: 1;
-      width: vw(298);
+      //width: vw(298);
       &:hover {
         color: $color-white;
         background-color: lighten($color-red, 30);
@@ -75,11 +76,9 @@
     }
   }
   &__input-name {
-    width: vw(450);
     flex: 1;
   }
   &__input-tel {
-    width: vw(520);
     flex: 1.5;
   }
 }
