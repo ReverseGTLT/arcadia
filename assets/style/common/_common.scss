@@ -215,3 +215,25 @@ ul, ol, li {
   }
 }
 
+/* Для веб-китовых браузеров, таких как Chrome, Safari и новых версий Opera */
+::-webkit-scrollbar {
+  width: 5px; /* Задаем ширину вертикального скролл-бара */
+  height: 5px; /* Задаем высоту горизонтального скролл-бара */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Задаем цвет ползунка скролл-бара */
+  border-radius: 2px; /* Задаем скругление углов ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Задаем цвет ползунка при наведении курсора */
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin; /* Задаем тонкий скролл-бар */
+  scrollbar-color: #888 #f0f0f0; /* Задаем цвет ползунка и цвет фона скролл-бара */
+}
+
+

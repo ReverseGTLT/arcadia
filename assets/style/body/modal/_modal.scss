@@ -21,6 +21,45 @@
 
   &-content {
     width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    @include lg() {
+      //padding: vm(5);
+    }
+
+    @include md {
+      //padding: vm(10);
+    }
+
+    .btn {
+      width: 30%;
+      //height: 100%;
+      border-radius: vw(100);
+      font-size: vw(15);
+      font-weight: $font-weight-accent;
+      line-height: 1.2;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: vw(23) vw(30) vw(23) vw(29);
+
+      @include lg {
+        font-size: vm(4);
+      }
+      @include md {
+        font-size: vm(4);
+        width: 30%;
+        height: auto;
+        margin: auto;
+      }
+      @include sm {
+        font-size: vm(5);
+      }
+    }
   }
 
   .close {
@@ -34,6 +73,13 @@
     right: 0;
     margin-top: vw(2);
     margin-right: vw(25);
+
+    &:hover,
+    &:focus {
+      color: $color-h-txt-link;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
 
@@ -45,14 +91,6 @@
     justify-content: center;
     align-items: center;
 
-    //.close {
-    //  position: absolute;
-    //  top: 0;
-    //  right: 0;
-    //  margin-top: vw(2);
-    //  margin-right: vw(25);
-    //}
-
     .modal-image {
       padding-bottom: vw(38.66);
       width: vw(147);
@@ -61,7 +99,6 @@
         display: block;
         width: 100%;
       }
-    ;
     }
 
     .modal-title {
@@ -81,21 +118,6 @@
 #modal-item {
 
   .modal-content {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-
-    @include lg() {
-      //padding: vm(5);
-    }
-
-    @include md {
-      //padding: vm(10);
-    }
 
     .modal__wrapper {
       display: flex;
@@ -231,30 +253,28 @@
       }
 
       .btn {
-        //background-color: $color-green;
         width: 60%;
-        height: 100%;
-        border-radius: vw(100);
-        //border: vw(1) solid $color-green;
-        font-size: vw(15);
-        font-weight: $font-weight-accent;
-        line-height: 1.2;
-        letter-spacing: 0.1em;
-        text-align: center;
-        padding: vw(23) vw(30) vw(23) vw(29);
-
-        @include lg {
-          font-size: vm(4);
-        }
-        @include md {
-          font-size: vm(4);
-          width: 30%;
-          height: auto;
-          margin: auto;
-        }
-        @include sm {
-          font-size: vm(5);
-        }
+        //height: 100%;
+        //border-radius: vw(100);
+        //font-size: vw(15);
+        //font-weight: $font-weight-accent;
+        //line-height: 1.2;
+        //letter-spacing: 0.1em;
+        //text-align: center;
+        //padding: vw(23) vw(30) vw(23) vw(29);
+        //
+        //@include lg {
+        //  font-size: vm(4);
+        //}
+        //@include md {
+        //  font-size: vm(4);
+        //  width: 30%;
+        //  height: auto;
+        //  margin: auto;
+        //}
+        //@include sm {
+        //  font-size: vm(5);
+        //}
       }
     }
 
@@ -272,46 +292,208 @@
 }
 
 #modal-cart {
-  display: flex;
+  //display: flex;
 
-  .cart-item {
+  .modal-content {
+    justify-content: start;
+
+    .modal-title {
+      display: block;
+      padding-bottom: vw(46);
+    }
+
+    .text-little {
+      display: block;
+      font-size: vw(17);
+      color: $color-grey-increase;
+      padding-bottom: vw(23);
+    }
+  }
+
+  .cart-items {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin: auto;
+    align-items: end;
+    overflow: hidden;
 
-    &__info {
+    &__wrap {
+      width: 100%;
+      //height: vw(268);
       display: flex;
+      flex-direction: column;
       justify-content: start;
+      overflow-y: scroll;
+    }
+
+    .cart-item {
+      display: flex;
+      height: vw(134);
+      justify-content: space-between;
       align-items: center;
+      border-top: vw(1) solid $color-grey-border;
+      border-bottom: vw(1) solid $color-grey-border;
 
-      .for-img {
-        width: vw(61);
-        height: vw(95);
-        padding-right: vw(24);
+      &__info {
+        display: flex;
+        justify-content: start;
+        align-items: center;
 
-        img {
-          display: block;
-          width: 100%;
+        .for-img {
+          width: vw(61);
+          height: vw(95);
+          padding-right: vw(24);
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .icon {
+          padding-right: vw(11);
+        }
+
+        .cart-item__quantity {
+          font-weight: 500;
+          padding-right: vw(48);
         }
       }
 
-      .icon {
-        padding-right: vw(11);
-      }
+      &__total-price {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-left: auto;
 
-      .cart-item__quantity {
-        padding-right: vw(48);
+        p {
+          padding-right: vw(49.89);
+        }
+
+        button {
+          margin-right: vw(10);
+          width: vw(16);
+          height: vw(19);
+          overflow: hidden;
+          border: none;
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
       }
     }
 
-    &__total-price {
+    .cart-total {
+      width: 30%;
       display: flex;
-      justify-content: end;
-      align-items: center;
+      justify-content: right;
+      margin-right: vw(41);
+      margin-top: vw(32);
 
       p {
-        padding-right: vw(49.89);
+        padding-bottom: vw(79);
+        font-weight: 500;
+
+        span {
+          margin-left: vw(85);
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: vw(35);
+    }
+  }
+}
+
+#modal-contact {
+  //display: flex;
+
+  .modal-content {
+    justify-content: start;
+    align-items: center;
+
+    .modal-title {
+      margin-bottom: vw(46);
+    }
+  }
+
+  #contact-form {
+
+    input,
+    textarea,
+    select {
+      background: $color-white;
+      border: vw(1) solid $color-grey-border;
+      border-radius: vw(30);
+      padding: vw(28) vw(28) vw(27) vw(39);
+    }
+    .payment-amount,
+    .delivery-options {
+      margin-bottom: vw(43);
+    }
+
+    .form-row {
+      margin-bottom: vw(12);
+    }
+
+    .checkbox-label {
+      display: block;
+      font-weight: 400;
+    }
+
+    .date-input {
+      position: relative;
+    }
+
+    .calendar-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      /* Стили для иконки календаря */
+    }
+
+    .down-arrow-icon {
+      /* Стили для иконки стрелки вниз */
+    }
+
+    /* Дополнительные стили для размещения полей */
+    .payment-amount,
+    .delivery-options {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+
+    .full-width-row {
+      width: 100%;
+    }
+
+    .textarea-row {
+      width: 100%;
+    }
+
+    .textarea-row textarea {
+      height: 100px;
+      overflow-y: auto;
+      resize: none;
+      width: 100%;
+    }
+
+    .flex-between-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-section {
+      .form-row {
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
