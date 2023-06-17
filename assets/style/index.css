@@ -126,15 +126,48 @@ h3 {
   max-width: 90vw;
   margin-inline: auto;
 }
+@media (max-width: 991.8px) {
+  .container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
 
 .container-1360 {
   max-width: 70.8333333333vw;
   margin-inline: auto;
 }
+@media (max-width: 991.8px) {
+  .container-1360 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
 
 .container-1540 {
   max-width: 80.2083333333vw;
   margin-inline: auto;
+}
+@media (max-width: 991.8px) {
+  .container-1540 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 a, button, img {
@@ -661,27 +694,30 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .benefits-content__img {
-    order: 3;
+    order: 4;
     margin: 0;
     padding: 0.5208333333vw 0.2604166667vw;
-  }
-}
-@media (max-width: 767.8px) {
-  .benefits-content__img {
-    display: none;
   }
 }
 .benefits-content__img img {
   display: block;
   width: 100%;
 }
-.benefits-content__text {
+.benefits-content__logo-wrap {
   order: 2;
+}
+@media (max-width: 991.8px) {
+  .benefits-content__logo-wrap {
+    order: 1;
+  }
+}
+.benefits-content__text {
+  order: 3;
   width: 36.5625vw;
 }
 @media (max-width: 991.8px) {
   .benefits-content__text {
-    order: 1;
+    order: 3;
     width: 80%;
     margin-inline: auto;
     padding-top: 3.125vw;
@@ -705,13 +741,13 @@ ul, ol, li {
   font-weight: 700;
 }
 .benefits-content__btn {
-  order: 3;
+  order: 4;
   position: absolute;
   top: 2.9166666667vw;
   right: 4.2708333333vw;
   display: flex;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .benefits-content__btn {
     order: 2;
     position: initial;
@@ -1223,21 +1259,21 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 767.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 1.875vw;
     width: 0.2604166667vw;
   }
@@ -2145,7 +2181,7 @@ footer .container .attribution {
 }
 @media (max-width: 767.8px) {
   footer .container .social-media,
-  footer .container .payment {
+footer .container .payment {
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -2383,21 +2419,21 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 767.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 575.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.875vw;
     width: 0.2604166667vw;
   }

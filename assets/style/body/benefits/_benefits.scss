@@ -37,14 +37,14 @@
       margin-right: vw(127);
 
       @include lg {
-        order: 3;
+        order: 4;
         margin: 0;
         padding: vw(10) vw(5);
       }
 
       @include md {
         //visibility: hidden;
-        display: none;
+        //display: none;
       }
 
       img {
@@ -53,12 +53,20 @@
       }
     }
 
-    &__text {
+    &__logo-wrap{
       order: 2;
-      width: vw(702);
 
       @include lg {
         order: 1;
+      }
+    }
+
+    &__text {
+      order: 3;
+      width: vw(702);
+
+      @include lg {
+        order: 3;
         width: 80%;
         margin-inline: auto;
         padding-top: vw(60);
@@ -86,13 +94,13 @@
     }
 
     &__btn {
-      order: 3;
+      order: 4;
       position: absolute;
       top: vw(56);
       right: vw(82);
       display: flex;
 
-      @include md {
+      @include lg {
         order: 2;
         position: initial;
         justify-content: center;
