@@ -77,11 +77,13 @@
   &__data {
     padding-top: vw(50);
     &-item {
-      font-weight: 500;
-      font-size: vw(16);
-      line-height: 218.1%;
-      text-align: center;
-      color: $color-h-txt-link;
+      a {
+        font-weight: 500;
+        font-size: vw(16);
+        line-height: 218.1%;
+        text-align: center;
+        color: $color-h-txt-link;
+      }
     }
   }
   &__social {
@@ -123,9 +125,6 @@
 @keyframes open {
   0% {
     width: vw(0);
-  }
-  30% {
-    width: 50%;
   }
   100% {
     width: vw(439);
