@@ -2680,7 +2680,7 @@ footer .container .attribution a {
 .modal-menu__data {
   padding-top: 2.6041666667vw;
 }
-.modal-menu__data-item {
+.modal-menu__data-item a {
   font-weight: 500;
   font-size: 0.8333333333vw;
   line-height: 218.1%;
@@ -2725,9 +2725,6 @@ footer .container .attribution a {
 @keyframes open {
   0% {
     width: 0vw;
-  }
-  30% {
-    width: 50%;
   }
   100% {
     width: 22.8645833333vw;
