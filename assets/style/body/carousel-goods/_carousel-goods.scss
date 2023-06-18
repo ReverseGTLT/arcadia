@@ -3,11 +3,12 @@
 .goods {
   padding-bottom: vw(131);
 
-  @include md {
+  @include lg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: vw(68);
   }
 
   &-content {
@@ -17,9 +18,10 @@
     justify-content: space-between;
     align-items: start;
 
-    @include md {
+    @include lg {
       width: 100%;
       flex-direction: column;
+      align-items: center;
       margin: vw(5);
       padding: vw(20);
     }
@@ -29,17 +31,25 @@
       text-align: left;
       padding-bottom: vw(38);
 
-      @include md {
+      @include lg {
         width: 100%;
-        margin: vw(5);
+        margin: 10px;
+        text-align: center;
       }
 
       h2 {
         padding-bottom: vw(50);
+
+        @include lg {
+          padding-bottom: vm(20);
+        }
       }
 
       p {
         width: 100%;
+        @include lg {
+          padding-bottom: vm(20);
+        }
       }
     }
 
@@ -49,9 +59,9 @@
       right: vw(82);
       display: flex;
 
-      @include md {
+      @include lg {
         position: initial;
-        padding: vw(20);
+        padding-bottom: vm(20);
       }
 
       .btn {
@@ -82,7 +92,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include md {
+    @include lg {
       max-width: 98%;
       margin: auto;
       height: auto;
@@ -101,13 +111,13 @@
       justify-content: center;
       transition: box-shadow 0.3s;
 
-      @include lg() {
-        width: 100%;
-        //height: auto;
-        padding: vm(5);
-      }
+      //@include lg() {
+      //  width: 100%;
+      //  //height: auto;
+      //  padding: vm(5);
+      //}
 
-      @include md {
+      @include lg {
         width: initial;
         padding: vm(10);
       }
@@ -127,10 +137,7 @@
         margin-bottom: vw(25);
         overflow: hidden;
 
-        @include lg() {
-        }
-
-        @include md {
+        @include lg {
           width: initial;
           margin: auto;
           height: auto;
@@ -154,15 +161,9 @@
         padding-bottom: vw(17);
 
         @include lg {
-          font-size: vm(6);
-        }
-        @include md {
-          font-size: vm(7);
+          font-size: vm(16);
           text-align: center;
           padding-bottom: vm(10);
-        }
-        @include sm {
-          font-size: vm(7);
         }
       }
 
@@ -172,7 +173,7 @@
         align-items: center;
         padding-bottom: vw(17);
 
-        @include md {
+        @include lg {
           justify-content: center;
           gap: vm(10);
           padding-bottom: vm(7);
@@ -189,7 +190,7 @@
           background: $color-white;
           border-color: $color-grey-border;
 
-          @include md {
+          @include lg {
             width: initial;
           }
 
@@ -267,12 +268,13 @@
 
         @include lg {
           font-size: vm(4);
-        }
-        @include md {
-          font-size: vm(4);
           width: 30%;
           height: auto;
           margin: auto;
+        }
+        @include md {
+          font-size: vm(4);
+
         }
         @include sm {
           font-size: vm(5);
@@ -286,9 +288,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include md() {
-        display: none;
-      }
+      //@include md() {
+      //  display: none;
+      //}
     }
 
     .owl-prev,
