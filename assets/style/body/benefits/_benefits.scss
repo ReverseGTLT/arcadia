@@ -1,11 +1,11 @@
 @use "../../presets/index" as *;
 
 .benefits {
-  padding-top: vw(139);
+  //padding-top: vw(139);
   padding-bottom: vw(139);
 
   @include lg {
-    padding-top: 27px;
+    //padding-top: 27px;
     padding-bottom: 55px;
   }
 

@@ -2,18 +2,23 @@
 @use "../../presets/index" as *;
 
 .general {
-  height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
-  background-size: cover, cover;
-  background-repeat: no-repeat;
-  background-position: center, center;
+
+
   display: flex;
   flex-direction: column;
   position: relative;
+  &-bg {
+    background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
+    height: 100%;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-position: center, center;
+  }
   &-container {
     display: flex;
-    flex: 1;
+    //flex: 1;
+    height: 100%;
   }
 
   &-wrapper {
@@ -24,6 +29,10 @@
     background-repeat: no-repeat;
     background-position: left bottom;
     @include lg {
+      background-size: 60%;
+      background-position: center bottom;
+    }
+    @include sm {
       background-size: contain;
       background-position: center bottom;
     }
@@ -39,10 +48,16 @@
       background-color: $color-red;
       border-radius: 50%;
       @include lg {
+        width: vp(145);
+        height: vp(145);
+        bottom: vp(280);
+        left: vp(290);
+      }
+      @include sm {
         width: vm(75);
         height: vm(75);
-        bottom: vm(180);
-        left: vm(60);
+        bottom: vm(175);
+        left: vm(70);
       }
       p {
         line-height: vw(24);
@@ -50,6 +65,11 @@
         display: block;
         font-size: vw(20);
         @include lg {
+          font-size: vp(20);
+          line-height: vp(24);
+          padding-left: vp(14);
+        }
+        @include sm {
           font-size: vm(12);
           line-height: vm(15);
           padding-left: vm(9);
@@ -60,6 +80,10 @@
           text-align: center;
           font-style: normal;
           @include lg {
+            font-size: vp(40);
+            line-height: vp(48);
+          }
+          @include sm {
             font-size: vm(24);
             line-height: vm(29);
           }
@@ -71,6 +95,11 @@
       margin-top: vw(362);
       margin-left: vw(825);
       @include lg {
+        margin-inline: auto;
+        margin-top: vp(86);
+        padding-inline: vp(15);
+      }
+      @include sm {
         margin-inline: auto;
         margin-top: vm(38);
         padding-inline: vm(15);
@@ -84,6 +113,13 @@
       max-width: vw(670);
       @include lg {
         font-weight: 700;
+        font-size: vp(55);
+        line-height: vp(58);
+        text-align: center;
+        max-width: 100%;
+      }
+      @include sm {
+        font-weight: 700;
         font-size: vm(32);
         line-height: vm(34);
         text-align: center;
@@ -96,6 +132,12 @@
       line-height: vw(38);
       color: $color-h-txt-link;
       @include lg {
+        margin-inline: auto;
+        font-size: vp(36);
+        line-height: vp(38);
+        text-align: center;
+      }
+      @include sm {
         margin-inline: auto;
         font-size: vm(20);
         line-height: vm(21);
@@ -115,6 +157,13 @@
       padding: vw(30) vw(50);
       margin-top: vw(65);
       @include lg {
+        width: vp(420);
+        height: vp(80);
+        font-size: vp(20);
+        margin-inline: auto;
+        margin-top: vp(60);
+      }
+      @include sm {
         width: vm(300);
         height: vm(58);
         font-size: vm(16);
@@ -131,6 +180,12 @@
   top: vw(-130);
   left: vw(-50);
   @include lg {
+    width: vp(224);
+    height: vp(224);
+    top: vp(-100);
+    left: vp(180);
+  }
+  @include sm {
     width: vm(145);
     height: vm(145);
     top: vm(-80);
@@ -152,4 +207,35 @@
 
 .circle-rotate {
   animation: rotate 20s linear infinite;
+}
+
+.height {
+  height: 100vh;
+}
+
+.pb-600 {
+  @include lg {
+    padding-bottom: vp(600);
+  }
+}
+
+.white-block {
+  height: vw(114);
+  @include lg {
+    height: vp(114);
+  }
+  @include sm {
+    height: vm(57);
+  }
+}
+
+.bg-size {
+  background-size: 75%;
+}
+
+.top {
+  @include sm {
+    bottom: vm(125);
+    left: vm(85);
+  }
 }

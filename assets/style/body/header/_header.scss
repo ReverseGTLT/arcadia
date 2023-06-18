@@ -19,6 +19,9 @@
   }
   &-logo {
     @include lg {
+      margin-top: vp(244);
+    }
+    @include sm {
       margin-top: vm(66);
     }
     &__images {
@@ -27,11 +30,19 @@
       align-items: baseline;
       @include lg {
         flex-direction: column;
+        gap: vp(17);
+      }
+      @include sm {
+        flex-direction: column;
         gap: vm(12);
       }
       img:first-child {
         width: vw(113);
         @include lg {
+          margin-inline: auto;
+          width: vp(132);
+        }
+        @include sm {
           margin-inline: auto;
           width: vm(132);
         }
@@ -39,6 +50,10 @@
       img:last-child {
         width: vw(205);
         @include lg {
+          margin-inline: auto;
+          width: vp(132);
+        }
+        @include sm {
           margin-inline: auto;
           width: vm(132);
         }
@@ -187,6 +202,10 @@
     padding-left: vw(25);
     @include lg {
       margin-left: auto;
+      padding-block: vp(36);
+      padding-right: vp(42);
+    }
+    @include md {
       padding-top: vm(13);
       padding-bottom: vm(13);
       padding-right: vm(10);
@@ -206,6 +225,11 @@
       text-transform: uppercase;
       color: $color-white;
       @include lg {
+        width: vp(86);
+        height: vp(50);
+        font-size: vp(12);
+      }
+      @include sm {
         width: vm(65);
         height: vm(38);
         font-size: vm(12);
@@ -258,4 +282,8 @@
   @include lg-min {
     display: none;
   }
+}
+
+.absolute {
+  position: absolute;
 }
