@@ -23,10 +23,9 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                nav: false,
             },
             768: {
-                items: 3,
+                items: 1,
             },
             992: {
                 items: 4,
@@ -40,7 +39,7 @@ $(document).ready(function () {
         autoplay: 1000,
         margin: 10,
         dots: true,
-        // dotsEach: 4,
+        dotsEach: 4,
         slideBy: 1,
         nav: true,
         mouseDrag: true,
@@ -78,6 +77,7 @@ $(document).ready(function () {
         margin: 0,
         nav: false,
         dots: true,
+        dotsEach: 3,
         mouseDrag: true,
         touchDrag: true,
         responsiveClass: true,

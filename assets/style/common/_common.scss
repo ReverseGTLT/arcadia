@@ -23,15 +23,15 @@ body {
   overflow-x: hidden;
 
   @include lg {
-    font-size: vm(5);
+    font-size: vm(16);
   }
 
   @include md {
-    font-size: vm(5);
+    font-size: vm(16);
   }
 
   @include sm {
-    font-size: vm(6);
+    font-size: vm(16);
   }
 }
 
@@ -41,13 +41,13 @@ body {
   line-height: 1.06;
 
   @include lg {
-    font-size: vm(6);
+    font-size: vm(16);
   }
   @include md {
-    font-size: vm(6);
+    font-size: vm(16);
   }
   @include sm {
-    font-size: vm(6);
+    font-size: vm(16);
   }
 }
 
@@ -56,13 +56,13 @@ body {
   line-height: 1.08;
 
   @include lg {
-    font-size: vm(4);
+    font-size: vm(12);
   }
   @include md {
-    font-size: vm(4);
+    font-size: vm(12);
   }
   @include sm {
-    font-size: vm(5);
+    font-size: vm(12);
   }
 }
 
@@ -72,13 +72,13 @@ h2 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(12);
+    font-size: vm(32);
   }
   @include md {
-    font-size: vm(12);
+    font-size: vm(32);
   }
   @include sm {
-    font-size: vm(14);
+    font-size: vm(32);
   }
 }
 
@@ -88,13 +88,13 @@ h3 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(10);
+    font-size: vm(24);
   }
   @include md {
-    font-size: vm(10);
+    font-size: vm(24);
   }
   @include sm {
-    font-size: vm(12);
+    font-size: vm(24);
   }
 }
 
@@ -102,16 +102,55 @@ h3 {
 .container {
   max-width: vw(1728);
   margin-inline: auto;
+
+  @include lg {
+    display: flex;
+    max-width: vm(375);
+    //width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 .container-1360 {
   max-width: vw(1360);
   margin-inline: auto;
+
+  @include lg {
+    display: flex;
+    max-width: vm(375);
+    //width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 .container-1540 {
   max-width: vw(1540);
   margin-inline: auto;
+
+  @include lg {
+    display: flex;
+    max-width: vm(375);
+    //width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 a, button, img {
@@ -119,22 +158,23 @@ a, button, img {
   display: block;
   color: $color-h-txt-link;
 }
+
 a, button {
   cursor: pointer;
 }
-.a-link {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
 
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-bottom: vw(2) solid $color-h-txt-link;
-  }
+.a-link {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+
+  //&::after {
+  //  position: absolute;
+  //  content: "";
+  //  left: 0;
+  //  bottom: 0;
+  //  width: 100%;
+  //  border-bottom: vw(2) solid $color-h-txt-link;
+  //}
 
   &:hover {
     transition: 0.2s all;
@@ -167,15 +207,18 @@ ul, ol, li {
   padding: vw(30) vw(50);
 
   @include lg {
-    font-size: vm(5);
+    font-size: vm(16);
+    padding: vm(21) vm(55);
   }
 
   @include md {
-    font-size: vm(5);
+    font-size: vm(16);
+    padding: vm(21) vm(55);
   }
 
   @include sm {
-    font-size: vm(6);
+    font-size: vm(16);
+    padding: vm(21) vm(55);
   }
 
   &:hover {
@@ -200,19 +243,50 @@ ul, ol, li {
   padding: vw(20) vw(31) vw(19) vw(57);
 
   @include lg {
-    font-size: vm(6);
+    font-size: vm(16);
+    padding: vm(15) vm(20);
   }
   @include md {
-    font-size: vm(6);
+    font-size: vm(16);
+    padding: vm(15) vm(20);
   }
   @include sm {
-    font-size: vm(6);
+    font-size: vm(16);
+    padding: vm(15) vm(20);
   }
 
   &:hover {
     background: $color-red-border;
     border-radius: vw(100);
     border: vw(1) solid $color-red-border;
+  }
+}
+
+.order-1 {
+  order: 1;
+  @include lg {
+    order: 2;
+  }
+}
+
+.order-2 {
+  order: 2;
+  @include lg {
+    order: 3;
+  }
+}
+
+.order-3 {
+  order: 3;
+  @include lg {
+    order: 4;
+  }
+}
+
+.order-4 {
+  order: 4;
+  @include lg {
+    order: 1;
   }
 }
 
