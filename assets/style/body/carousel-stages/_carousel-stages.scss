@@ -3,12 +3,12 @@
 .stages {
   padding-bottom: vw(160);
 
-  @include lg {
-    padding-bottom: vm(74);
+  @include md {
   }
 
-  @include md {
+  @include lg {
     display: flex;
+    padding-bottom: vm(74);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -139,8 +139,6 @@
         display: inline-block;
       }
     }
-
-
   }
 
   .owl-carousel {
@@ -224,7 +222,6 @@
           background-color: $color-red;
         }
       }
-
     }
   }
 }

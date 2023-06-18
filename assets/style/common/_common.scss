@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
 
   @include lg {
-    font-size: vm(16);
+    font-size: vm(13);
   }
 
   @include md {
@@ -41,7 +41,7 @@ body {
   line-height: 1.06;
 
   @include lg {
-    font-size: vm(16);
+    font-size: vm(14);
   }
   @include md {
     font-size: vm(16);
@@ -56,7 +56,7 @@ body {
   line-height: 1.08;
 
   @include lg {
-    font-size: vm(12);
+    font-size: vm(9);
   }
   @include md {
     font-size: vm(12);
@@ -72,7 +72,7 @@ h2 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(32);
+    font-size: vm(26);
   }
   @include md {
     font-size: vm(32);
@@ -88,7 +88,7 @@ h3 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(24);
+    font-size: vm(18);
   }
   @include md {
     font-size: vm(24);
@@ -104,6 +104,19 @@ h3 {
   margin-inline: auto;
 
   @include lg {
+    display: flex;
+    max-width: vp(992);
+    //width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  @include sm {
     display: flex;
     max-width: vm(375);
     //width: 100%;
@@ -123,6 +136,19 @@ h3 {
 
   @include lg {
     display: flex;
+    max-width: vp(992);
+    //width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  @include sm {
+    display: flex;
     max-width: vm(375);
     //width: 100%;
     flex-direction: column;
@@ -140,6 +166,18 @@ h3 {
   margin-inline: auto;
 
   @include lg {
+    display: flex;
+    max-width: vp(992);
+    //width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @include sm {
     display: flex;
     max-width: vm(375);
     //width: 100%;
@@ -207,7 +245,7 @@ ul, ol, li {
   padding: vw(30) vw(50);
 
   @include lg {
-    font-size: vm(16);
+    font-size: vm(12);
     padding: vm(21) vm(55);
   }
 
@@ -243,7 +281,7 @@ ul, ol, li {
   padding: vw(20) vw(31) vw(19) vw(57);
 
   @include lg {
-    font-size: vm(16);
+    font-size: vm(12);
     padding: vm(15) vm(20);
   }
   @include md {
