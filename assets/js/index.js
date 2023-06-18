@@ -190,7 +190,7 @@ function handleOrientationChange() {
         const ratio = window.innerHeight/window.innerWidth;
         const generalWrapper = document.querySelector('.general-wrapper');
         const generalWrapperPrice = document.querySelector('.general-wrapper__price');
-        if (ratio < 2) {
+        if (ratio < 2 && window.innerWidth < 992) {
             generalWrapper.classList.add('bg-size');
             generalWrapperPrice.classList.add('top');
         } else {
