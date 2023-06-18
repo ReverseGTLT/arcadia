@@ -18,15 +18,30 @@
     flex: 1;
   }
   &-logo {
+    @include lg {
+      margin-top: vm(66);
+    }
     &__images {
       display: flex;
       gap: vw(20);
       align-items: baseline;
+      @include lg {
+        flex-direction: column;
+        gap: vm(12);
+      }
       img:first-child {
         width: vw(113);
+        @include lg {
+          margin-inline: auto;
+          width: vm(132);
+        }
       }
       img:last-child {
         width: vw(205);
+        @include lg {
+          margin-inline: auto;
+          width: vm(132);
+        }
       }
     }
     &__text {
@@ -41,6 +56,9 @@
     justify-content: center;
     align-items: center;
     gap: vw(15);
+    @include lg {
+      gap: vm(15);
+    }
     &__tel {
       &-link {
         padding-block: vw(10);
@@ -48,10 +66,17 @@
         font-size: vw(24);
         line-height: vw(25);
         color: $color-h-txt-link;
+        @include lg {
+          font-size: vm(24);
+          line-height: vm(25);
+        }
       }
     }
     &__telegram {
       width: vw(38);
+      @include lg {
+        width: vm(38);
+      }
       &-link {
         svg {
           display: block;
@@ -69,6 +94,9 @@
         text-align: center;
         color: $color-opacity;
         transition: 0.2s;
+        @include lg {
+          font-size: vm(18);
+        }
         &:hover {
           color: $color-green;
         }
@@ -92,6 +120,12 @@
         background: $color-red;
         border-radius: vw(100);
         border: none;
+        @include lg {
+          width: vm(267);
+          height: vm(56);
+          border-radius: vm(100);
+          font-size: vm(18);
+        }
       }
     }
   }
@@ -151,6 +185,12 @@
   }
   &-menu {
     padding-left: vw(25);
+    @include lg {
+      margin-left: auto;
+      padding-top: vm(13);
+      padding-bottom: vm(13);
+      padding-right: vm(10);
+    }
     &__btn {
       cursor: pointer;
       width: vw(86);
@@ -165,6 +205,11 @@
       text-align: center;
       text-transform: uppercase;
       color: $color-white;
+      @include lg {
+        width: vm(65);
+        height: vm(38);
+        font-size: vm(12);
+      }
     }
   }
 }
@@ -203,3 +248,14 @@
   }
 }
 
+.hidden-mobile {
+  @include lg {
+    display: none;
+  }
+}
+
+.header-logo--modal-menu {
+  @include lg-min {
+    display: none;
+  }
+}
