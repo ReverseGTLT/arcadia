@@ -4,7 +4,7 @@
   padding-bottom: vw(160);
 
   @include lg {
-    padding-bottom: vw(200);
+    padding-bottom: vm(74);
   }
 
   @include md {
@@ -20,17 +20,28 @@
     display: flex;
     flex-direction: column;
 
+    @include lg {
+      margin-left: 0;
+      text-align: center;
+    }
+
     &__text {
       width: vw(1100);
       padding-bottom: vw(52);
 
-      @include md {
+      @include lg {
         width: 100%;
-        margin: vw(5);
+        margin-right: 10px;
+        margin-left: 10px;
+        padding-bottom: vm(27);
       }
 
       h2 {
         padding-bottom: vw(50);
+
+        @include lg {
+          padding-bottom: vm(20);
+        }
 
         span {
           font-weight: 400;
