@@ -1,6 +1,7 @@
 @use "../../presets/index" as *;
 
 footer {
+  margin-bottom: vw(115);
   width: 100%;
   //height: vw(105);
   background-color: $color-red;

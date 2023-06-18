@@ -5,11 +5,16 @@
   height: vw(114);
   background-color: $color-red;
   overflow: hidden;
-  position: sticky;
-  top: vw(115);
+  position: fixed;
+  //top: vw(115);
+  bottom: 0;
   right: 0;
   left: 0;
-  z-index: 999;
+  z-index: 5;
+  @include lg {
+    height: vm(57);
+    padding-top: vm(15);
+  }
   &-wrapper {
     height: vw(114);
     background-color: $color-red;
@@ -24,6 +29,10 @@
       line-height: 110.3%;
       color: $color-white;
       min-width: vw(350);
+      @include lg {
+        font-size: vm(14);
+        min-width: vm(182);
+      }
     }
     &__title {
       font-weight: 700;
@@ -31,6 +40,10 @@
       line-height: vw(64);
       color: $color-white;
       transform: rotate(-10deg);
+      @include lg {
+        font-size: vm(32);
+        line-height: vm(32);
+      }
     }
   }
 }

@@ -21,14 +21,23 @@
     padding: vw(15);
     animation: open 0.5s ease-in-out;
     position: relative;
+    @include lg {
+      width: 100%;
+      animation: open-mobile 0.5s ease-in-out;
+    }
   }
   &__close {
     width: vw(26);
     margin-left: auto;
     cursor: pointer;
+    @include lg {
+      width: vm(32);
+      padding-top: vm(15);
+      padding-right: vm(15);
+    }
     svg {
-      width: vw(26);
-      height: vw(26);
+      width: 100%;
+      height: 100%;
       display: block;
     }
   }
@@ -39,9 +48,15 @@
     }
     img:first-child {
       width: vw(90);
+      @include lg {
+        width: vm(97);
+      }
     }
     img:last-child {
       width: vw(176);
+      @include lg {
+        width: vm(176);
+      }
     }
   }
   &__title {
@@ -53,29 +68,52 @@
     font-size: vw(16);
     line-height: vw(17);
     color: $color-red;
+    @include lg {
+      max-width: vm(187);
+      font-size: vm(16);
+      line-height: vm(17);
+      padding-top: vm(34);
+    }
   }
   &__circle {
     position: absolute;
     right: vw(-230);
     top: vw(160);
     width: vw(229);
+    @include lg {
+      width: vm(169);
+      top: vm(80);
+      right: vm(-160);
+    }
   }
   &__list {
     padding-top: vw(82);
+    @include lg {
+      padding-top: vm(82);
+    }
   }
   &__item {
     margin-inline: auto;
     padding-bottom: vw(10);
+    @include lg {
+      padding-bottom: vm(10);
+    }
     a {
       font-weight: 500;
       font-size: vw(20);
       line-height: 218.1%;
       text-align: center;
       color: $color-h-txt-link;
+      @include lg {
+        font-size: vm(20);
+      }
     }
   }
   &__data {
     padding-top: vw(50);
+    @include lg {
+      padding-top: vm(50);
+    }
     &-item {
       a {
         font-weight: 500;
@@ -83,6 +121,9 @@
         line-height: 218.1%;
         text-align: center;
         color: $color-h-txt-link;
+        @include lg {
+          font-size: vm(16);
+        }
       }
     }
   }
@@ -92,15 +133,27 @@
     gap: vw(30);
     align-items: center;
     justify-content: center;
+    @include lg {
+      padding-top: vm(40);
+      gap: vm(30);
+      padding-bottom: vm(60);
+    }
   }
   &__svg {
     width: vw(21);
     height: vw(21);
+    @include lg {
+      width: vm(21);
+      height: vm(21);
+    }
     path {
       fill: $color-red;
     }
     &--first {
       width: vw(30);
+      @include lg {
+        width: vm(30);
+      }
     }
   }
 }
@@ -112,10 +165,16 @@
 .header-info--modal-menu {
   flex-wrap: wrap;
   padding-top: vw(50);
+  @include lg {
+    padding-top: vm(50);
+  }
 }
 
 .header-info__tel-link--modal-menu {
   padding-left: vw(40);
+  @include lg {
+    padding-left: vm(40);
+  }
 }
 
 .header-info__buy--modal-menu {
@@ -128,5 +187,13 @@
   }
   100% {
     width: vw(439);
+  }
+}
+@keyframes open-mobile {
+  0% {
+    width: vw(0);
+  }
+  100% {
+    width: 100%;
   }
 }
