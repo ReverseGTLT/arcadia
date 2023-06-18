@@ -6,12 +6,15 @@
   background-color: $color-red;
   overflow: hidden;
   position: fixed;
-  //top: vw(115);
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 5;
   @include lg {
+    height: vp(114);
+    padding-top: vp(22);
+  }
+  @include sm {
     height: vm(57);
     padding-top: vm(15);
   }
@@ -30,6 +33,10 @@
       color: $color-white;
       min-width: vw(350);
       @include lg {
+        font-size: vp(24);
+        min-width: vm(182);
+      }
+      @include sm {
         font-size: vm(14);
         min-width: vm(182);
       }
@@ -41,11 +48,19 @@
       color: $color-white;
       transform: rotate(-10deg);
       @include lg {
+        font-size: vp(64);
+        line-height: vp(64);
+      }
+      @include sm {
         font-size: vm(32);
         line-height: vm(32);
       }
     }
   }
+}
+
+.static {
+  position: static;
 }
 
 @keyframes scroll {

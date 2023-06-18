@@ -132,7 +132,6 @@ window.addEventListener('load', function () {
     const scrollPresent = localStorage.getItem('scrollPresent');
 
     if (scrollPresent) {
-        console.log('asfasfasf')
         header.classList.add('bgcolor-white');
     }
 });
@@ -153,7 +152,7 @@ function onMenuClose() {
 
 // Скролл ап
 document.addEventListener("DOMContentLoaded", function() {
-    var scrollToTopButton = document.getElementById("scroll-to-top");
+    const scrollToTopButton = document.getElementById("scroll-to-top");
 
     window.addEventListener("scroll", function() {
         if (window.pageYOffset > 100) {
@@ -171,6 +170,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+function handleOrientationChange() {
+    const generalElement = document.getElementById('general');
+    const generalWrapperInfo = document.getElementById('generalWrapperInfo');
+    const header = document.querySelector('.header');
+    const sale = document.querySelector('.sale');
+
+    if (window.innerWidth < 992 && (window.orientation === 90 || window.orientation === -90)) {
+        generalElement.classList.remove('height');
+        generalWrapperInfo.classList.add('pb-600');
+        header.classList.add('absolute');
+        sale.classList.add('static');
+    } else {
+        generalElement.classList.add('height');
+        generalWrapperInfo.classList.remove('pb-600');
+        header.classList.remove('absolute');
+        sale.classList.remove('static');
+        const ratio = window.innerHeight/window.innerWidth;
+        const generalWrapper = document.querySelector('.general-wrapper');
+        const generalWrapperPrice = document.querySelector('.general-wrapper__price');
+        if (ratio < 2) {
+            generalWrapper.classList.add('bg-size');
+            generalWrapperPrice.classList.add('top');
+        } else {
+            generalWrapper.classList.remove('bg-size');
+            generalWrapperPrice.classList.remove('top');
+        }
+    }
+}
+
+window.addEventListener('orientationchange', handleOrientationChange);
+window.addEventListener('resize', handleOrientationChange);
+
+// Проверка ориентации и ширины при загрузке страницы
+handleOrientationChange();
 
 // >>>>>>> 670c0290817281f5e25a798cd4bfb2f4ae422a38
 
