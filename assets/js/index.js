@@ -14,7 +14,7 @@ $(document).ready(function () {
         loop: true,
         autoplay: 1000,
         autoplayHoverPause: true,
-        margin: 20,
+
         nav: true,
         dots: false,
         mouseDrag: true,
@@ -26,9 +26,11 @@ $(document).ready(function () {
             },
             768: {
                 items: 1,
+                margin: 0,
             },
             992: {
                 items: 4,
+                margin: 20,
             }
         }
     });
@@ -59,10 +61,9 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                nav: false,
             },
             768: {
-                items: 3,
+                items: 1,
             },
             992: {
                 items: 4,

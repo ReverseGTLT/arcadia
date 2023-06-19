@@ -1,9 +1,10 @@
 @use "../../presets/index" as *;
 
 .certificates {
+  padding-top: vw(111);
   padding-bottom: vw(192);
 
-  @include md {
+  @include lg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,9 +21,10 @@
       width: vw(1100);
       padding-bottom: vw(54);
 
-      @include md {
-        width: 100%;
-        margin: vw(5);
+      @include lg {
+        text-align: center;
+        width: 80%;
+        margin: vm(5);
       }
 
       h2 {
@@ -44,26 +46,19 @@
     justify-content: space-around;
     align-items: center;
 
-    @include lg() {
+    @include lg {
       //max-width: 98%;
-      //margin: auto;
-      //height: auto;
-    }
-
-    @include md {
-      max-width: 98%;
       margin: auto;
       height: auto;
-      //background: #8edd96;
     }
 
     &__item {
       width: vw(250);
-      height: vw(450);
-      text-align: left;
+      //height: vw(450);
       //margin: auto;
-      padding: vw(10);
+      text-align: left;
       background: $color-white;
+      padding: vw(10);
       border: none;
       box-shadow: 0;
       transition: box-shadow 0.3s;
@@ -74,20 +69,15 @@
       margin-left: 0;
 
       @include lg() {
-        width: 100%;
-        //height: inherit;
-        //background: #0879E0;
-        //max-width: initial;
-        margin: 0;
-        height: auto;
-        padding: vm(2);
+        //width: 100%;
+        //margin: 0;
+        //height: auto;
+        padding: vp(2);
+        text-align: center;
       }
 
-      @include md {
-        //max-width: initial;
-        //margin: vm(10);
-        //height: auto;
-        padding: vm(10);
+      @include sm {
+        padding: vm(2);
       }
 
       &:hover {
@@ -103,16 +93,17 @@
         margin-bottom: vw(23);
         //overflow: inherit;
 
-        @include lg() {
+        //@include lg() {
           //width: vw(173);
           //height: vw(262);
-        }
+        //}
 
-        @include md {
-          max-width: 100%;
-          margin: vm(10);
-          height: auto;
-          padding-bottom: vm(10);
+        @include lg {
+          width: vp(214);
+          margin: vp(10);
+          //height: auto;
+          padding-bottom: vp(10);
+
         }
 
         img {
@@ -135,9 +126,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include md() {
-        display: none;
-      }
     }
 
     .owl-prev,
@@ -156,6 +144,17 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light.png");
 
+      @include lg {
+        left: vp(-100);
+        width: vp(82);
+        height: vp(82);
+      }
+      @include sm {
+        left: vm(-50);
+        width: vm(54);
+        height: vm(54);
+      }
+
       &:active {
         content: url("../../assets/images/arrow_active.png");
       }
@@ -168,6 +167,17 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light.png");
       transform: rotate(180deg);
+
+      @include lg {
+        right: vp(-100);
+        width: vp(82);
+        height: vp(82);
+      }
+      @include sm {
+        right: vm(-50);
+        width: vm(54);
+        height: vm(54);
+      }
 
       &:active {
         content: url("../../assets/images/arrow_active.png");

@@ -23,12 +23,12 @@ body {
   overflow-x: hidden;
 
   @include lg {
-    font-size: vm(13);
+    font-size: vp(20);
   }
 
-  @include md {
-    font-size: vm(16);
-  }
+  //@include md {
+  //  font-size: vm(16);
+  //}
 
   @include sm {
     font-size: vm(16);
@@ -41,11 +41,11 @@ body {
   line-height: 1.06;
 
   @include lg {
-    font-size: vm(14);
+    font-size: vp(23);
   }
-  @include md {
-    font-size: vm(16);
-  }
+  //@include md {
+  //  font-size: vm(16);
+  //}
   @include sm {
     font-size: vm(16);
   }
@@ -56,11 +56,11 @@ body {
   line-height: 1.08;
 
   @include lg {
-    font-size: vm(9);
+    font-size: vp(16);
   }
-  @include md {
-    font-size: vm(12);
-  }
+  //@include md {
+  //  font-size: vm(12);
+  //}
   @include sm {
     font-size: vm(12);
   }
@@ -72,11 +72,11 @@ h2 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(26);
+    font-size: vp(40);
   }
-  @include md {
-    font-size: vm(32);
-  }
+  //@include md {
+  //  font-size: vm(32);
+  //}
   @include sm {
     font-size: vm(32);
   }
@@ -88,11 +88,11 @@ h3 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(18);
+    font-size: vp(32);
   }
-  @include md {
-    font-size: vm(24);
-  }
+  //@include md {
+  //  font-size: vm(24);
+  //}
   @include sm {
     font-size: vm(24);
   }
@@ -245,14 +245,14 @@ ul, ol, li {
   padding: vw(30) vw(50);
 
   @include lg {
-    font-size: vm(12);
+    font-size: vp(20);
     padding: vm(21) vm(55);
   }
 
-  @include md {
-    font-size: vm(16);
-    padding: vm(21) vm(55);
-  }
+  //@include md {
+  //  font-size: vm(16);
+  //  padding: vm(21) vm(55);
+  //}
 
   @include sm {
     font-size: vm(16);
@@ -281,13 +281,13 @@ ul, ol, li {
   padding: vw(20) vw(31) vw(19) vw(57);
 
   @include lg {
-    font-size: vm(12);
+    font-size: vp(23);
     padding: vm(15) vm(20);
   }
-  @include md {
-    font-size: vm(16);
-    padding: vm(15) vm(20);
-  }
+  //@include md {
+  //  font-size: vm(16);
+  //  padding: vm(15) vm(20);
+  //}
   @include sm {
     font-size: vm(16);
     padding: vm(15) vm(20);
