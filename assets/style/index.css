@@ -34,6 +34,26 @@ body {
   }
 }
 
+input {
+  font-family: "Inter", sans-serif;
+  font-size: 1.0416666667vw;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  color: #0A0E20;
+  overflow-x: hidden;
+}
+@media (max-width: 991.8px) {
+  input {
+    font-size: 2.0161290323vw;
+  }
+}
+@media (max-width: 575.8px) {
+  input {
+    font-size: 4.2666666667vw;
+  }
+}
+
 .text-accent {
   font-size: 1.1979166667vw;
   font-weight: 700;
@@ -223,13 +243,15 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .btn {
     font-size: 2.0161290323vw;
-    padding: 5.6vw 14.6666666667vw;
+    padding: 3.0241935484vw 5.0403225806vw;
+    border-radius: 10.0806451613vw;
   }
 }
 @media (max-width: 575.8px) {
   .btn {
     font-size: 4.2666666667vw;
     padding: 5.6vw 14.6666666667vw;
+    border-radius: 26.6666666667vw;
   }
 }
 .btn:hover {
@@ -237,6 +259,18 @@ ul, ol, li {
   color: #F80505;
   border: 0.0520833333vw solid #F80505;
   border-radius: 5.2083333333vw;
+}
+@media (max-width: 991.8px) {
+  .btn:hover {
+    border: 0.1008064516vw solid #F80505;
+    border-radius: 10.0806451613vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .btn:hover {
+    border: 0.2666666667vw solid #F80505;
+    border-radius: 26.6666666667vw;
+  }
 }
 
 .btn-light {
@@ -255,19 +289,33 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .btn-light {
     font-size: 2.3185483871vw;
-    padding: 4vw 5.3333333333vw;
+    padding: 2.0161290323vw 3.125vw 1.9153225806vw 5.7459677419vw;
+    border-radius: 10.0806451613vw;
   }
 }
 @media (max-width: 575.8px) {
   .btn-light {
     font-size: 4.2666666667vw;
     padding: 4vw 5.3333333333vw;
+    border-radius: 26.6666666667vw;
   }
 }
 .btn-light:hover {
   background: #FFBBBB;
   border-radius: 5.2083333333vw;
   border: 0.0520833333vw solid #FFBBBB;
+}
+@media (max-width: 991.8px) {
+  .btn-light:hover {
+    border: 0.1008064516vw solid #F80505;
+    border-radius: 10.0806451613vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .btn-light:hover {
+    border: 0.2666666667vw solid #F80505;
+    border-radius: 26.6666666667vw;
+  }
 }
 
 .order-1 {
@@ -1035,6 +1083,12 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .benefits {
     position: relative;
+    padding-bottom: 45.3629032258vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits {
+    position: relative;
     padding-bottom: 69.8666666667vw;
   }
 }
@@ -1067,6 +1121,12 @@ ul, ol, li {
   .benefits-content__img {
     order: 4;
     margin: 0;
+    width: 50%;
+    padding-bottom: 15.1209677419vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-content__img {
     width: 70%;
     padding-bottom: 22.4vw;
   }
@@ -1081,6 +1141,15 @@ ul, ol, li {
   width: 15.9375vw;
 }
 @media (max-width: 991.8px) {
+  .benefits-content__logo-wrap {
+    order: 1;
+    display: block;
+    width: 30.8467741935vw;
+    padding-bottom: 4.0322580645vw;
+    padding-top: 2.0161290323vw;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-content__logo-wrap {
     order: 1;
     display: block;
@@ -1101,6 +1170,12 @@ ul, ol, li {
     order: 3;
     width: auto;
     text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-content__text {
     margin-right: 10px;
     margin-left: 10px;
   }
@@ -1127,6 +1202,11 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .benefits-content__text p {
+    padding-bottom: 2.8225806452vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-content__text p {
     padding-bottom: 3.4666666667vw;
   }
 }
@@ -1134,6 +1214,12 @@ ul, ol, li {
   font-weight: 700;
 }
 @media (max-width: 991.8px) {
+  .benefits-content__text a {
+    padding-top: 0.7056451613vw;
+    padding-bottom: 2.0161290323vw;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-content__text a {
     padding-top: 1.8666666667vw;
     padding-bottom: 5.3333333333vw;
@@ -1151,6 +1237,11 @@ ul, ol, li {
     order: 2;
     position: initial;
     justify-content: center;
+    padding-bottom: 4.0322580645vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-content__btn {
     padding-bottom: 6.6666666667vw;
   }
 }
@@ -1161,6 +1252,11 @@ ul, ol, li {
   justify-content: center;
 }
 @media (max-width: 991.8px) {
+  .benefits-content__btn .btn {
+    padding: 2.4193548387vw 3.5282258065vw 2.3185483871vw 6.1491935484vw;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-content__btn .btn {
     padding: 4.2666666667vw 4.5333333333vw 4vw 10.1333333333vw;
   }
@@ -1177,9 +1273,16 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .benefits-content__btn .btn::before {
+    height: 1.6129032258vw;
+    width: 1.2096774194vw;
+    left: 3.3266129032vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-content__btn .btn::before {
     height: 2.6666666667vw;
-    width: 2.1333333333vw;
-    left: 6.6666666667vw;
+    width: 1.8666666667vw;
+    left: 5.8666666667vw;
   }
 }
 .benefits-carts {
@@ -1194,6 +1297,15 @@ ul, ol, li {
   line-height: 1.06;
 }
 @media (max-width: 991.8px) {
+  .benefits-carts {
+    position: absolute;
+    bottom: 48.8911290323vw;
+    max-width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-carts {
     position: absolute;
     bottom: 78.6666666667vw;
@@ -1218,12 +1330,21 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .benefits-carts__item {
     width: 46.1333333333vw;
+    align-items: start;
+    flex-direction: column;
+    padding-bottom: 1.0080645161vw;
+    padding-right: 2.4vw;
+    margin: auto auto 2.6666666667vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-carts__item {
+    width: 46.1333333333vw;
     justify-content: center;
     flex-direction: column;
     padding-bottom: 2.6666666667vw;
     padding-right: 2.4vw;
-    margin: auto;
-    margin-bottom: 2.6666666667vw;
+    margin: auto auto 2.6666666667vw;
   }
 }
 .benefits-carts__item p {
@@ -1235,6 +1356,16 @@ ul, ol, li {
   margin: 1.8229166667vw 0.6770833333vw 1.7708333333vw 1.3020833333vw;
 }
 @media (max-width: 991.8px) {
+  .benefits-carts__item p {
+    width: 20.1612903226vw;
+    height: 8.064516129vw;
+    align-items: start;
+    margin: 10.0806451613vw 1.0080645161vw 1.0080645161vw 4.0322580645vw;
+    flex-direction: column;
+    padding-top: 1.0080645161vw;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-carts__item p {
     width: 36.8vw;
     height: 13.6vw;
@@ -1257,10 +1388,20 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .benefits-carts__item p::before {
+    top: -7.0564516129vw;
+    left: 0;
+    height: 80%;
+    width: 80%;
+    padding-right: 0;
+    overflow: hidden;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-carts__item p::before {
     top: -8vw;
     left: 0;
-    height: 10.096vw;
-    width: 6.6053333333vw;
+    height: 7.4666666667vw;
+    width: 7.4666666667vw;
     padding-right: 0;
     overflow: hidden;
   }
@@ -1274,10 +1415,18 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .benefits-carts__item .item2::before {
+    top: -7.0564516129vw;
+    left: 0;
+    height: 80%;
+    width: 80%;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-carts__item .item2::before {
     top: -8vw;
     left: 0;
-    height: 7.4666666667vw;
-    width: 7.4666666667vw;
+    height: 7.7333333333vw;
+    width: 10.4vw;
   }
 }
 .benefits-carts__item .item3::before {
@@ -1287,6 +1436,14 @@ ul, ol, li {
   width: 3.4338541667vw;
 }
 @media (max-width: 991.8px) {
+  .benefits-carts__item .item3::before {
+    top: -7.0564516129vw;
+    left: 0;
+    height: 80%;
+    width: 80%;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-carts__item .item3::before {
     top: -8vw;
     left: 0;
@@ -1301,6 +1458,14 @@ ul, ol, li {
   width: 4.1078125vw;
 }
 @media (max-width: 991.8px) {
+  .benefits-carts__item .item4::before {
+    top: -5.0403225806vw;
+    left: 0;
+    height: 60%;
+    width: 60%;
+  }
+}
+@media (max-width: 575.8px) {
   .benefits-carts__item .item4::before {
     top: -8vw;
     left: 0;
@@ -1626,8 +1791,16 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .goods-carousel {
-    max-width: 98%;
-    margin: auto;
+    max-width: 45.3629032258vw;
+    justify-content: center;
+    margin-inline: 1.0080645161vw;
+    height: auto;
+  }
+}
+@media (max-width: 575.8px) {
+  .goods-carousel {
+    max-width: 57.3333333333vw;
+    margin-inline: 1.3333333333vw;
     height: auto;
   }
 }
@@ -1645,21 +1818,35 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .goods-carousel__item {
     padding: 4.1330645161vw 2.0161290323vw 2.2177419355vw 2.1169354839vw;
-    border-radius: 1.0080645161vw;
+    border-radius: 3.0241935484vw;
+    border: 0.1008064516vw solid #D4D8EB;
     margin: 0;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item {
-    width: 56.8vw;
     padding: 6.1333333333vw 2.1333333333vw 3.7333333333vw 2.4vw;
     border-radius: 2.6666666667vw;
+    border: 0.2666666667vw solid #D4D8EB;
+    margin: 0;
   }
 }
 .goods-carousel__item:hover {
   background: #F2F9FF;
   box-shadow: 0.7291666667vw 0.8854166667vw 2.03125vw rgba(216, 225, 236, 0.94);
   border-radius: 1.5625vw;
+}
+@media (max-width: 991.8px) {
+  .goods-carousel__item:hover {
+    box-shadow: 1.4112903226vw 1.7137096774vw 3.9314516129vw rgba(216, 225, 236, 0.94);
+    border-radius: 3.0241935484vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .goods-carousel__item:hover {
+    box-shadow: 1.8666666667vw 2.1333333333vw 5.3333333333vw rgba(216, 225, 236, 0.94);
+    border-radius: 2.6666666667vw;
+  }
 }
 .goods-carousel__item .good-image {
   width: 9.0104166667vw;
@@ -1771,7 +1958,6 @@ ul, ol, li {
   color: #D4D8EB;
 }
 .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input {
-  font-size: 1.0416666667vw;
   display: block;
   width: 1.9270833333vw;
   height: 1.09375vw;
@@ -1781,14 +1967,12 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input {
-    font-size: 2.2177419355vw;
     width: 1.7137096774vw;
     height: 2.1169354839vw;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input {
-    font-size: 4.2666666667vw;
     width: 4.5333333333vw;
     height: 5.6vw;
   }

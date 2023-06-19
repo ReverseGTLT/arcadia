@@ -6,7 +6,10 @@
 
   @include lg {
     position: relative;
-    //padding-top: 27px;
+    padding-bottom: vp(450);
+  }
+  @include sm {
+    position: relative;
     padding-bottom: vm(262);
   }
 
@@ -37,6 +40,10 @@
       @include lg {
         order: 4;
         margin: 0;
+        width: 50%;
+        padding-bottom: vp(150);
+      }
+      @include sm {
         width: 70%;
         padding-bottom: vm(84);
       }
@@ -53,6 +60,13 @@
       width: vw(306);
 
       @include lg {
+        order: 1;
+        display: block;
+        width: vp(306);
+        padding-bottom: vp(40);
+        padding-top: vp(20);
+      }
+      @include sm {
         order: 1;
         display: block;
         width: vm(223);
@@ -73,6 +87,10 @@
         order: 3;
         width: auto;
         text-align: center;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+      @include sm {
         margin-right: 10px;
         margin-left: 10px;
       }
@@ -100,6 +118,9 @@
         line-height: 1.3;
 
         @include lg {
+          padding-bottom: vp(28);
+        }
+        @include sm {
           padding-bottom: vm(13);
         }
       }
@@ -108,6 +129,10 @@
         font-weight: $font-weight-accent;
 
         @include lg {
+          padding-top: vp(7);
+          padding-bottom: vp(20);
+        }
+        @include sm {
           padding-top: vm(7);
           padding-bottom: vm(20);
         }
@@ -125,6 +150,9 @@
         order: 2;
         position: initial;
         justify-content: center;
+        padding-bottom: vp(40);
+      }
+      @include sm {
         padding-bottom: vm(25);
       }
 
@@ -135,6 +163,10 @@
         justify-content: center;
 
         @include lg {
+          padding: vp(24) vp(35) vp(23) vp(61);
+        }
+
+        @include sm {
           padding: vm(16) vm(17) vm(15) vm(38);
         }
 
@@ -149,9 +181,14 @@
           background-size: cover;
 
           @include lg {
+            height: vp(16);
+            width: vp(12);
+            left: vp(33);
+          }
+          @include sm {
             height: vm(10);
-            width: vm(8);
-            left: vm(25);
+            width: vm(7);
+            left: vm(22);
           }
         }
       }
@@ -171,8 +208,15 @@
 
     @include lg {
       position: absolute;
-      bottom: vm(295);
+      bottom: vp(485);
       max-width: vp(992);
+      margin: 0;
+      box-sizing: border-box;
+    }
+    @include sm {
+      position: absolute;
+      bottom: vm(295);
+      max-width: vm(375);
       margin: 0;
       box-sizing: border-box;
     }
@@ -193,12 +237,20 @@
 
       @include lg {
         width: vm(173);
+        align-items: start;
+        flex-direction: column;
+        padding-bottom: vp(10);
+        padding-right: vm(9);
+        margin: auto auto vm(10);
+      }
+
+      @include sm {
+        width: vm(173);
         justify-content: center;
         flex-direction: column;
         padding-bottom: vm(10);
         padding-right: vm(9);
-        margin: auto;
-        margin-bottom: vm(10);
+        margin: auto auto vm(10);
       }
 
       p {
@@ -210,6 +262,14 @@
         margin: vw(35) vw(13) vw(34) vw(25);
 
         @include lg {
+          width: vp(200);
+          height: vp(80);
+          align-items: start;
+          margin: vp(100) vp(10) vp(10) vp(40);
+          flex-direction: column;
+          padding-top: vp(10);
+        }
+        @include sm {
           width: vm(138);
           height: vm(51);
           align-items: start;
@@ -230,10 +290,18 @@
           padding-right: vw(25);
 
           @include lg {
+            top: vp(-70);
+            left: 0;
+            height: 80%;
+            width: 80%;
+            padding-right: 0;
+            overflow: hidden;
+          }
+          @include sm {
             top: vm(-30);
             left: 0;
-            height: vm(37.86);
-            width: vm(24.77);
+            height: vm(28);
+            width: vm(28);
             padding-right: 0;
             overflow: hidden;
           }
@@ -248,10 +316,16 @@
         left: vw(-65);
 
         @include lg {
+          top: vp(-70);
+          left: 0;
+          height: 80%;
+          width: 80%;
+        }
+        @include sm {
           top: vm(-30);
           left: 0;
-          height: vm(28);
-          width: vm(28);
+          height: vm(29);
+          width: vm(39);
         }
       }
 
@@ -262,6 +336,12 @@
         width: vw(65.93);
 
         @include lg {
+          top: vp(-70);
+          left: 0;
+          height: 80%;
+          width: 80%;
+        }
+        @include sm {
           top: vm(-30);
           left: 0;
           height: vm(31.4);
@@ -277,6 +357,12 @@
         //left: vw(-100);
 
         @include lg {
+          top: vp(-50);
+          left: 0;
+          height: 60%;
+          width: 60%;
+        }
+        @include sm {
           top: vm(-30);
           left: 0;
           height: vm(26);

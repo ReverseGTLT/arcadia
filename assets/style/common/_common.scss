@@ -26,9 +26,23 @@ body {
     font-size: vp(20);
   }
 
-  //@include md {
-  //  font-size: vm(16);
-  //}
+  @include sm {
+    font-size: vm(16);
+  }
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+  font-size: vw(20);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  color: $color-h-txt-link;
+  overflow-x: hidden;
+
+  @include lg {
+    font-size: vp(20);
+  }
 
   @include sm {
     font-size: vm(16);
@@ -43,9 +57,7 @@ body {
   @include lg {
     font-size: vp(23);
   }
-  //@include md {
-  //  font-size: vm(16);
-  //}
+
   @include sm {
     font-size: vm(16);
   }
@@ -58,9 +70,7 @@ body {
   @include lg {
     font-size: vp(16);
   }
-  //@include md {
-  //  font-size: vm(12);
-  //}
+
   @include sm {
     font-size: vm(12);
   }
@@ -74,9 +84,7 @@ h2 {
   @include lg {
     font-size: vp(40);
   }
-  //@include md {
-  //  font-size: vm(32);
-  //}
+
   @include sm {
     font-size: vm(32);
   }
@@ -90,9 +98,7 @@ h3 {
   @include lg {
     font-size: vp(32);
   }
-  //@include md {
-  //  font-size: vm(24);
-  //}
+
   @include sm {
     font-size: vm(24);
   }
@@ -106,7 +112,6 @@ h3 {
   @include lg {
     display: flex;
     max-width: vp(992);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -119,7 +124,6 @@ h3 {
   @include sm {
     display: flex;
     max-width: vm(375);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -137,7 +141,6 @@ h3 {
   @include lg {
     display: flex;
     max-width: vp(992);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -150,7 +153,6 @@ h3 {
   @include sm {
     display: flex;
     max-width: vm(375);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -168,7 +170,6 @@ h3 {
   @include lg {
     display: flex;
     max-width: vp(992);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -180,7 +181,6 @@ h3 {
   @include sm {
     display: flex;
     max-width: vm(375);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -246,17 +246,14 @@ ul, ol, li {
 
   @include lg {
     font-size: vp(20);
-    padding: vm(21) vm(55);
+    padding: vp(30) vp(50);
+    border-radius: vp(100);
   }
-
-  //@include md {
-  //  font-size: vm(16);
-  //  padding: vm(21) vm(55);
-  //}
 
   @include sm {
     font-size: vm(16);
     padding: vm(21) vm(55);
+    border-radius: vm(100);
   }
 
   &:hover {
@@ -264,6 +261,16 @@ ul, ol, li {
     color: $color-red;
     border: vw(1) solid $color-red;
     border-radius: vw(100);
+
+    @include lg {
+      border: vp(1) solid $color-red;
+      border-radius: vp(100);
+    }
+
+    @include sm {
+      border: vm(1) solid $color-red;
+      border-radius: vm(100);
+    }
   }
 }
 
@@ -282,21 +289,30 @@ ul, ol, li {
 
   @include lg {
     font-size: vp(23);
-    padding: vm(15) vm(20);
+    padding: vp(20) vp(31) vp(19) vp(57);
+    border-radius: vp(100);
   }
-  //@include md {
-  //  font-size: vm(16);
-  //  padding: vm(15) vm(20);
-  //}
+
   @include sm {
     font-size: vm(16);
     padding: vm(15) vm(20);
+    border-radius: vm(100);
   }
 
   &:hover {
     background: $color-red-border;
     border-radius: vw(100);
     border: vw(1) solid $color-red-border;
+
+    @include lg {
+      border: vp(1) solid $color-red;
+      border-radius: vp(100);
+    }
+
+    @include sm {
+      border: vm(1) solid $color-red;
+      border-radius: vm(100);
+    }
   }
 }
 

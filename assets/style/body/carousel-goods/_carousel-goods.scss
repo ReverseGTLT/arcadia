@@ -102,8 +102,14 @@
     align-items: center;
 
     @include lg {
-      max-width: 98%;
-      margin: auto;
+      max-width: vp(450);
+      justify-content: center;
+      margin-inline: vp(10);
+      height: auto;
+    }
+    @include sm {
+      max-width: vm(215);
+      margin-inline: vm(5);
       height: auto;
     }
 
@@ -119,21 +125,31 @@
       transition: box-shadow 0.3s;
 
       @include lg {
-        //width: vm(213);
         padding: vp(41) vp(20) vp(22) vp(21);
-        border-radius: vp(10);
+        border-radius: vp(30);
+        border: vp(1) solid $color-grey-border;
         margin: 0;
       }
       @include sm {
-        width: vm(213);
         padding: vm(23) vm(8) vm(14) vm(9);
         border-radius: vm(10);
+        border: vm(1) solid $color-grey-border;
+        margin: 0;
       }
 
       &:hover {
         background: $background-light;
         box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
         border-radius: vw(30);
+
+        @include lg {
+          box-shadow: vp(14) vp(17) vp(39) rgba(216, 225, 236, 0.94);
+          border-radius: vp(30);
+        }
+        @include sm {
+          box-shadow: vm(7) vm(8) vm(20) rgba(216, 225, 236, 0.94);
+          border-radius: vm(10);
+        }
       }
 
       .good-image {
@@ -156,7 +172,6 @@
           display: block;
           width: 100%;
           text-align: center;
-          //border-radius: vw(10) vw(10) 0 0;
         }
       }
 
@@ -196,7 +211,6 @@
         .good-counter {
           width: 50%;
           display: flex;
-          //margin: auto;
           justify-content: space-between;
           align-items: center;
           padding: vw(15) vw(21) vw(15) vw(23);
@@ -232,15 +246,6 @@
               height: vm(21);
               width: vm(10);
             }
-            //@include md {
-            //  height: vm(34);
-            //  width: vm(16);
-            //
-            //}
-            //@include sm {
-            //  height: vm(6);
-            //  width: vm(5);
-            //}
 
             &:active {
               color: $color-grey-border;
@@ -248,7 +253,7 @@
           }
 
           .counter-input {
-            font-size: vw(20);
+            //font-size: vw(20);
             display: block;
             width: vw(37);
             height: vw(21);
@@ -257,12 +262,12 @@
             border: none;
 
             @include lg {
-              font-size: vp(22);
+              //font-size: vp(22);
               width: vp(17);
               height: vp(21);
             }
             @include sm {
-              font-size: vm(16);
+              //font-size: vm(16);
               width: vm(17);
               height: vm(21);
             }

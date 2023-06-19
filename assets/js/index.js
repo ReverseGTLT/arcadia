@@ -14,7 +14,6 @@ $(document).ready(function () {
         loop: true,
         autoplay: 1000,
         autoplayHoverPause: true,
-
         nav: true,
         dots: false,
         mouseDrag: true,
@@ -23,6 +22,7 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
+                margin: 0,
             },
             768: {
                 items: 1,
