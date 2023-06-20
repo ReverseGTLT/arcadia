@@ -1483,12 +1483,12 @@ ul, ol, li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 11.3911290323vw;
+    padding-bottom: 9.0725806452vw;
   }
 }
 @media (max-width: 575.8px) {
   .stages {
-    padding-bottom: 30.1333333333vw;
+    padding-bottom: 19.6933333333vw;
   }
 }
 .stages-content {
@@ -1569,6 +1569,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .stages .stages-carousel {
+    justify-content: center;
     max-width: 80.6451612903vw;
   }
 }
@@ -1704,21 +1705,17 @@ ul, ol, li {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-left: 6.25vw;
+  margin-left: 18.2291666667vw;
   width: 27.65625vw;
   bottom: 0;
-  left: 1.0416666667vw;
-  right: 1.0416666667vw;
+  left: 0;
   z-index: 1;
 }
 @media (max-width: 991.8px) {
   .stages .owl-carousel .owl-nav {
-    bottom: -3.125vw;
-  }
-}
-@media (max-width: 767.8px) {
-  .stages .owl-carousel .owl-nav {
-    display: none;
+    margin-left: 0;
+    width: 100%;
+    top: 4.0322580645vw;
   }
 }
 .stages .owl-carousel .owl-nav .owl-prev,
@@ -1733,6 +1730,18 @@ ul, ol, li {
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
 }
+@media (max-width: 991.8px) {
+  .stages .owl-carousel .owl-nav .owl-prev {
+    width: 8.2661290323vw;
+    height: 8.2661290323vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .stages .owl-carousel .owl-nav .owl-prev {
+    width: 14.4vw;
+    height: 14.4vw;
+  }
+}
 .stages .owl-carousel .owl-nav .owl-prev:active {
   content: url("../../assets/images/arrow_active.png");
 }
@@ -1741,6 +1750,18 @@ ul, ol, li {
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
   transform: rotate(180deg);
+}
+@media (max-width: 991.8px) {
+  .stages .owl-carousel .owl-nav .owl-next {
+    width: 8.2661290323vw;
+    height: 8.2661290323vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .stages .owl-carousel .owl-nav .owl-next {
+    width: 14.4vw;
+    height: 14.4vw;
+  }
 }
 .stages .owl-carousel .owl-nav .owl-next:active {
   content: url("../../assets/images/arrow_active.png");
@@ -1751,28 +1772,42 @@ ul, ol, li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 6.25vw;
-  left: 7.2916666667vw;
+  margin-left: 26.0416666667vw;
+  left: 0;
   bottom: 1.8229166667vw;
 }
 @media (max-width: 991.8px) {
   .stages .owl-carousel .owl-dots {
-    bottom: -1.0416666667vw;
+    margin-left: 0;
+    left: initial;
+    bottom: -3.0241935484vw;
   }
 }
-@media (max-width: 767.8px) {
+@media (max-width: 575.8px) {
   .stages .owl-carousel .owl-dots {
-    bottom: 0;
+    bottom: -8vw;
   }
 }
 .stages .owl-carousel .owl-dots .owl-dot {
   display: inline-block !important;
   justify-content: center;
-  margin: 0 0.78125vw;
+  margin: 0 1.3020833333vw;
   width: 0.5208333333vw;
   height: 0.5208333333vw;
   border-radius: 50%;
   background-color: #FFBBBB;
+}
+@media (max-width: 991.8px) {
+  .stages .owl-carousel .owl-dots .owl-dot {
+    width: 1.0080645161vw;
+    height: 1.0080645161vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .stages .owl-carousel .owl-dots .owl-dot {
+    width: 1.8666666667vw;
+    height: 1.8666666667vw;
+  }
 }
 .stages .owl-carousel .owl-dots .owl-dot.active {
   background-color: #F80505;

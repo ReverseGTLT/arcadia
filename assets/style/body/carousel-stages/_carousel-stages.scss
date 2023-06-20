@@ -8,10 +8,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: vp(113);
+    padding-bottom: vp(90);
   }
   @include sm {
-    padding-bottom: vm(113);
+    padding-bottom: vm(73.85);
   }
 
   &-content {
@@ -103,6 +103,7 @@
     align-items: center;
 
     @include lg {
+      justify-content: center;
       max-width: vp(800);
     }
     @include sm {
@@ -231,18 +232,16 @@
       position: absolute;
       display: flex;
       justify-content: space-between;
-      margin-left: vw(120);
+      margin-left: vw(350);
       width: vw(531);
       bottom: 0;
-      left: vw(20);
-      right: vw(20);
+      left: 0;
       z-index: 1;
 
       @include lg {
-        bottom: vw(-60);
-      }
-      @include md() {
-        display: none;
+        margin-left: 0;
+        width: 100%;
+        top: vp(40);
       }
 
       .owl-prev,
@@ -258,6 +257,15 @@
         height: vw(82);
         content: url("../../assets/images/arrow_light.png");
 
+        @include lg {
+          width: vp(82);
+          height: vp(82);
+        }
+        @include sm {
+          width: vm(54);
+          height: vm(54);
+        }
+
         &:active {
           content: url("../../assets/images/arrow_active.png");
         }
@@ -268,6 +276,15 @@
         height: vw(82);
         content: url("../../assets/images/arrow_light.png");
         transform: rotate(180deg);
+
+        @include lg {
+          width: vp(82);
+          height: vp(82);
+        }
+        @include sm {
+          width: vm(54);
+          height: vm(54);
+        }
 
         &:active {
           content: url("../../assets/images/arrow_active.png");
@@ -281,27 +298,37 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: vw(120);
-      left: vw(140);
+      margin-left: vw(500);
+      left: 0;
       bottom: vw(35);
 
       @include lg() {
-        bottom: vw(-20);
+        margin-left: 0;
+        left: initial;
+        bottom: vp(-30);
       }
+      @include sm {
+        bottom: vm(-30);
 
-      @include md() {
-        bottom: 0;
       }
 
       .owl-dot {
         display: inline-block !important;
         justify-content: center;
-        margin: 0 vw(15);
-        //margin: 0 vw(40);
+        margin: 0 vw(25);
         width: vw(10);
         height: vw(10);
         border-radius: 50%;
         background-color: $color-red-border;
+
+        @include lg {
+          width: vp(10);
+          height: vp(10);
+        }
+        @include sm {
+          width: vm(7);
+          height: vm(7);
+        }
 
         &.active {
           background-color: $color-red;

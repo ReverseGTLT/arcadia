@@ -41,7 +41,7 @@ $(document).ready(function () {
         // autoplay: 1000,
         margin: 10,
         dots: true,
-        dotsEach: 4,
+        // dotsEach: 4,
         slideBy: 1,
         nav: true,
         mouseDrag: true,
