@@ -23,11 +23,25 @@ body {
   overflow-x: hidden;
 
   @include lg {
-    font-size: vm(16);
+    font-size: vp(20);
   }
 
-  @include md {
+  @include sm {
     font-size: vm(16);
+  }
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+  font-size: vw(20);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  color: $color-h-txt-link;
+  overflow-x: hidden;
+
+  @include lg {
+    font-size: vp(20);
   }
 
   @include sm {
@@ -41,11 +55,9 @@ body {
   line-height: 1.06;
 
   @include lg {
-    font-size: vm(16);
+    font-size: vp(23);
   }
-  @include md {
-    font-size: vm(16);
-  }
+
   @include sm {
     font-size: vm(16);
   }
@@ -56,11 +68,9 @@ body {
   line-height: 1.08;
 
   @include lg {
-    font-size: vm(12);
+    font-size: vp(16);
   }
-  @include md {
-    font-size: vm(12);
-  }
+
   @include sm {
     font-size: vm(12);
   }
@@ -72,11 +82,9 @@ h2 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(32);
+    font-size: vp(40);
   }
-  @include md {
-    font-size: vm(32);
-  }
+
   @include sm {
     font-size: vm(32);
   }
@@ -88,11 +96,9 @@ h3 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vm(24);
+    font-size: vp(32);
   }
-  @include md {
-    font-size: vm(24);
-  }
+
   @include sm {
     font-size: vm(24);
   }
@@ -105,8 +111,19 @@ h3 {
 
   @include lg {
     display: flex;
+    max-width: vp(992);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  @include sm {
+    display: flex;
     max-width: vm(375);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -123,8 +140,19 @@ h3 {
 
   @include lg {
     display: flex;
+    max-width: vp(992);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  @include sm {
+    display: flex;
     max-width: vm(375);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -141,8 +169,18 @@ h3 {
 
   @include lg {
     display: flex;
+    max-width: vp(992);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-right: 10px;
+    //padding-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @include sm {
+    display: flex;
     max-width: vm(375);
-    //width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -207,18 +245,15 @@ ul, ol, li {
   padding: vw(30) vw(50);
 
   @include lg {
-    font-size: vm(16);
-    padding: vm(21) vm(55);
-  }
-
-  @include md {
-    font-size: vm(16);
-    padding: vm(21) vm(55);
+    font-size: vp(20);
+    padding: vp(30) vp(50);
+    border-radius: vp(100);
   }
 
   @include sm {
     font-size: vm(16);
     padding: vm(21) vm(55);
+    border-radius: vm(100);
   }
 
   &:hover {
@@ -226,6 +261,16 @@ ul, ol, li {
     color: $color-red;
     border: vw(1) solid $color-red;
     border-radius: vw(100);
+
+    @include lg {
+      border: vp(1) solid $color-red;
+      border-radius: vp(100);
+    }
+
+    @include sm {
+      border: vm(1) solid $color-red;
+      border-radius: vm(100);
+    }
   }
 }
 
@@ -243,22 +288,31 @@ ul, ol, li {
   padding: vw(20) vw(31) vw(19) vw(57);
 
   @include lg {
-    font-size: vm(16);
-    padding: vm(15) vm(20);
+    font-size: vp(23);
+    padding: vp(20) vp(31) vp(19) vp(57);
+    border-radius: vp(100);
   }
-  @include md {
-    font-size: vm(16);
-    padding: vm(15) vm(20);
-  }
+
   @include sm {
     font-size: vm(16);
     padding: vm(15) vm(20);
+    border-radius: vm(100);
   }
 
   &:hover {
     background: $color-red-border;
     border-radius: vw(100);
     border: vw(1) solid $color-red-border;
+
+    @include lg {
+      border: vp(1) solid $color-red;
+      border-radius: vp(100);
+    }
+
+    @include sm {
+      border: vm(1) solid $color-red;
+      border-radius: vm(100);
+    }
   }
 }
 

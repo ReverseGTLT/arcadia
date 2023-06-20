@@ -9,17 +9,20 @@
     background-color: $background-grey;
   }
 
-  @include md {
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
+  @include lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &-content {
     position: relative;
     justify-content: start;
     align-items: center;
+    @include lg {
+      justify-content: center;
+    }
 
     .order-contact-title {
       position: absolute;
@@ -27,6 +30,11 @@
       margin-top: vw(10);
       padding-left: vw(224);
       //margin-bottom: vw(79);
+
+      @include lg {
+        padding-left: 0;
+      }
+
     }
   }
 
@@ -40,6 +48,11 @@
       padding-right: vw(109);
       margin-bottom: vw(76);
       margin-top: vw(24);
+
+      @include  lg {
+        display: flex;
+        flex-direction: column;
+      }
 
       .delivery-options {
         width: vw(359);
@@ -93,6 +106,11 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
+        
+        @include  lg {
+          display: flex;
+          flex-direction: column;
+        }
       }
 
       .form-row {

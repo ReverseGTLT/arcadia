@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: vw(68);
+    padding-bottom: vm(68);
   }
 
   &-content {
@@ -22,8 +22,8 @@
       width: 100%;
       flex-direction: column;
       align-items: center;
-      margin: vw(5);
-      padding: vw(20);
+      margin: vm(5);
+      padding: vm(20);
     }
 
     &__text {
@@ -68,6 +68,9 @@
         position: relative;
         display: flex;
         align-items: center;
+        @include lg {
+          padding: vm(16) vm(24) vm(15) vm(57);
+        }
 
         &::before {
           position: absolute;
@@ -78,6 +81,12 @@
           left: vw(20);
           background: url("../../assets/images/punkt.svg") no-repeat;
           background-size: cover;
+
+          @include lg {
+            height: vm(24);
+            width: vm(24);
+            left: vm(20);
+          }
         }
       }
     }
@@ -93,14 +102,18 @@
     align-items: center;
 
     @include lg {
-      max-width: 98%;
-      margin: auto;
+      max-width: vp(450);
+      justify-content: center;
+      margin-inline: vp(10);
+      height: auto;
+    }
+    @include sm {
+      max-width: vm(215);
+      margin-inline: vm(5);
       height: auto;
     }
 
     &__item {
-      width: vw(326);
-      //height: vw(564);
       padding: vw(41) vw(20) vw(22) vw(21);
       background: $color-white;
       border: vw(1) solid $color-grey-border;
@@ -111,21 +124,32 @@
       justify-content: center;
       transition: box-shadow 0.3s;
 
-      //@include lg() {
-      //  width: 100%;
-      //  //height: auto;
-      //  padding: vm(5);
-      //}
-
       @include lg {
-        width: initial;
-        padding: vm(10);
+        padding: vp(41) vp(20) vp(22) vp(21);
+        border-radius: vp(30);
+        border: vp(1) solid $color-grey-border;
+        margin: 0;
+      }
+      @include sm {
+        padding: vm(23) vm(8) vm(14) vm(9);
+        border-radius: vm(10);
+        border: vm(1) solid $color-grey-border;
+        margin: 0;
       }
 
       &:hover {
         background: $background-light;
         box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
         border-radius: vw(30);
+
+        @include lg {
+          box-shadow: vp(14) vp(17) vp(39) rgba(216, 225, 236, 0.94);
+          border-radius: vp(30);
+        }
+        @include sm {
+          box-shadow: vm(7) vm(8) vm(20) rgba(216, 225, 236, 0.94);
+          border-radius: vm(10);
+        }
       }
 
       .good-image {
@@ -138,7 +162,7 @@
         overflow: hidden;
 
         @include lg {
-          width: initial;
+          width: vm(95);
           margin: auto;
           height: auto;
           padding-bottom: vm(10);
@@ -148,7 +172,6 @@
           display: block;
           width: 100%;
           text-align: center;
-          border-radius: vw(10) vw(10) 0 0;
         }
       }
 
@@ -161,9 +184,12 @@
         padding-bottom: vw(17);
 
         @include lg {
-          font-size: vm(16);
-          text-align: center;
-          padding-bottom: vm(10);
+          font-size: vp(22);
+          padding-bottom: vp(17);
+        }
+        @include sm {
+          font-size: vm(14);
+          padding-bottom: vm(5);
         }
       }
 
@@ -174,24 +200,31 @@
         padding-bottom: vw(17);
 
         @include lg {
-          justify-content: center;
-          gap: vm(10);
-          padding-bottom: vm(7);
+          justify-content: space-between;
+          padding-bottom: vp(17);
+        }
+        @include sm {
+          justify-content: space-between;
+          padding-bottom: vm(6);
         }
 
         .good-counter {
           width: 50%;
           display: flex;
-          margin: auto;
           justify-content: space-between;
           align-items: center;
           padding: vw(15) vw(21) vw(15) vw(23);
+          margin: 0;
 
           background: $color-white;
           border-color: $color-grey-border;
 
           @include lg {
-            width: initial;
+            width: 40%;
+            padding: vp(15) vp(21) vp(15) vp(23);
+          }
+          @include sm {
+            padding: vm(7) vm(7) vm(8) vm(9);
           }
 
           .counter-minus,
@@ -205,17 +238,13 @@
             background: none;
 
             @include lg {
-              height: vw(34);
-              width: vw(16);
+              height: vp(34);
+              width: vp(16);
             }
-            @include md {
-              height: vw(34);
-              width: vw(16);
 
-            }
             @include sm {
-              height: vm(6);
-              width: vw(5);
+              height: vm(21);
+              width: vm(10);
             }
 
             &:active {
@@ -224,22 +253,40 @@
           }
 
           .counter-input {
-            font-size: vw(20);
+            //font-size: vw(20);
             display: block;
             width: vw(37);
             height: vw(21);
             color: $color-grey-increase;
             text-align: center;
             border: none;
+
+            @include lg {
+              //font-size: vp(22);
+              width: vp(17);
+              height: vp(21);
+            }
+            @include sm {
+              //font-size: vm(16);
+              width: vm(17);
+              height: vm(21);
+            }
           }
         }
 
         .good-price {
-          width: 25%;
+          width: 30%;
           display: flex;
 
           p {
             font-weight: 500;
+
+            @include lg {
+              font-size: vp(22);
+            }
+            @include sm {
+              font-size: vm(14);
+            }
 
             span {
               font-weight: 400;
@@ -252,7 +299,7 @@
         background-color: $color-green;
         width: 100%;
         height: 100%;
-        border-radius: vw(100);
+        border-radius: 100px;
         border: vw(1) solid $color-green;
         font-size: vw(15);
         font-weight: $font-weight-accent;
@@ -267,18 +314,26 @@
         }
 
         @include lg {
-          font-size: vm(4);
-          width: 30%;
+          font-size: vp(15);
+          width: 90%;
           height: auto;
           margin: auto;
-        }
-        @include md {
-          font-size: vm(4);
-
+          padding: vp(23) vp(30) vp(23) vp(29);
         }
         @include sm {
-          font-size: vm(5);
+          font-size: vm(14);
+          width: 90%;
+          height: auto;
+          margin: auto;
+          padding: vm(17) vm(20) vm(17) vm(24);
         }
+        //@include md {
+        //  font-size: vm(14);
+        //
+        //}
+        //@include sm {
+        //  font-size: vm(14);
+        //}
       }
     }
   }
@@ -288,9 +343,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      //@include md() {
-      //  display: none;
-      //}
     }
 
     .owl-prev,
@@ -309,6 +361,17 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light1.png");
 
+      @include lg {
+        left: vp(-100);
+        width: vp(82);
+        height: vp(82);
+      }
+      @include sm {
+        left: vm(-50);
+        width: vm(54);
+        height: vm(54);
+      }
+
       &:active {
         content: url("../../assets/images/arrow_active1.png");
       }
@@ -321,6 +384,17 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light1.png");
       transform: rotate(180deg);
+
+      @include lg {
+        right: vp(-100);
+        width: vp(82);
+        height: vp(82);
+      }
+      @include sm {
+        right: vm(-50);
+        width: vm(54);
+        height: vm(54);
+      }
 
       &:active {
         content: url("../../assets/images/arrow_active1.png");
