@@ -3,15 +3,15 @@
 .stages {
   padding-bottom: vw(160);
 
-  @include md {
-  }
-
   @include lg {
     display: flex;
-    padding-bottom: vm(74);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: vp(113);
+  }
+  @include sm {
+    padding-bottom: vm(113);
   }
 
   &-content {
@@ -31,6 +31,11 @@
 
       @include lg {
         width: 100%;
+        align-items: center;
+        margin-inline: auto;
+        padding-bottom: vp(27);
+      }
+      @include sm {
         margin-right: 10px;
         margin-left: 10px;
         padding-bottom: vm(27);
@@ -40,6 +45,10 @@
         padding-bottom: vw(50);
 
         @include lg {
+          text-align: center;
+          padding-bottom: vp(20);
+        }
+        @include sm {
           padding-bottom: vm(20);
         }
 
@@ -51,6 +60,9 @@
 
       p {
         width: 100%;
+        @include lg {
+          text-align: center;
+        }
       }
     }
 
@@ -60,19 +72,25 @@
       justify-content: space-between;
 
       @include lg {
-      align-items: center;
-    }
-
-      .stage-image {
-        width: vw(160);
-        height: vw(415);
-        align-items: end;
-
-        img {
-          display: block;
-          width: 100%;
-        }
+        align-items: center;
+        justify-content: center;
       }
+
+      //.stage-image {
+      //  order: 3;
+      //  width: vw(160);
+      //  height: vw(415);
+      //  align-items: end;
+      //
+      //  @include lg {
+      //    order: 2;
+      //  }
+      //
+      //  img {
+      //    display: block;
+      //    width: 100%;
+      //  }
+      //}
     }
   }
 
@@ -80,17 +98,27 @@
     position: relative;
     max-width: vw(1083);
     display: flex;
-    margin-inline: auto;
+    margin-inline: 0;
     justify-content: space-between;
-    //flex-direction: column;
     align-items: center;
+
+    @include lg {
+      max-width: vp(800);
+    }
+    @include sm {
+      max-width: vm(335);
+    }
 
     &__item {
       display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+      justify-content: end;
 
-      @include md {
+      @include lg {
+        justify-content: center;
+        margin-inline: auto;
+        padding: vp(10);
+      }
+      @include sm {
         padding: vm(10);
       }
     }
@@ -98,18 +126,69 @@
     .stage-text {
       position: relative;
       width: vw(743);
+      height: vw(415);
       margin-top: vw(100);
       margin-left: vw(133);
       display: flex;
       flex-direction: column;
 
+      @include lg {
+        margin-left: 0;
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: vp(100);
+
+      }
+      @include sm {
+        width: 100%;
+        margin-top: vm(50);
+
+      }
+
+      .stage-image {
+        position: absolute;
+        left: vw(-320);
+        top: vm(-10);
+        order: 3;
+        width: vw(160);
+        height: vw(415);
+        align-items: end;
+
+        @include lg {
+          order: 2;
+          position: initial;
+          align-items: center;
+          width: vp(160);
+          height: vp(415);
+        }
+        @include sm {
+          width: vm(81);
+          height: vm(210);
+        }
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
 
       .stage-title {
+        order: 1;
         position: relative;
         display: inline-block;
         justify-content: start;
         align-items: center;
         padding-bottom: vw(37);
+
+        @include lg {
+          order: 1;
+          width: vp(300);
+        }
+        @include sm {
+          width: vm(228);
+        }
 
         &::before {
           z-index: -1;
@@ -123,20 +202,26 @@
           text-align: left;
 
           @include lg {
-            font-size: vm(65);
-          }
-          @include md {
-            font-size: vm(65);
+            font-size: vp(180);
+            top: vp(-120);
+            left: vp(105);
           }
           @include sm {
-            font-size: vm(67);
+            font-size: vm(96);
+            top: vm(-65);
+            left: vm(80);
           }
         }
       }
 
       p {
+        order: 2;
         padding-bottom: vw(37);
         display: inline-block;
+
+        @include lg {
+          order: 3;
+        }
       }
     }
   }
@@ -208,8 +293,8 @@
         bottom: 0;
       }
 
-      .owl-dot{
-        display: inline-block!important;
+      .owl-dot {
+        display: inline-block !important;
         justify-content: center;
         margin: 0 vw(15);
         //margin: 0 vw(40);

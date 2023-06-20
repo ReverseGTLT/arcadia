@@ -38,7 +38,7 @@ $(document).ready(function () {
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
-        autoplay: 1000,
+        // autoplay: 1000,
         margin: 10,
         dots: true,
         dotsEach: 4,
