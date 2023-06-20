@@ -2511,7 +2511,6 @@ ul, ol, li {
 
 .certificates {
   padding-top: 5.78125vw;
-  padding-bottom: 10vw;
 }
 @media (max-width: 991.8px) {
   .certificates {
@@ -2673,7 +2672,6 @@ ul, ol, li {
 
 .new {
   position: relative;
-  margin-block: 9.8958333333vw;
   background: linear-gradient(95.83deg, #F80505 70.77%, #1377ED 83.73%);
   border-radius: 1.5625vw;
   height: 16.3541666667vw;
@@ -2748,6 +2746,9 @@ ul, ol, li {
   transform: rotateZ(16deg);
 }
 
+.contacts {
+  padding-top: 10.15625vw;
+}
 .contacts .container-1540 {
   padding: 3.9583333333vw 2.2916666667vw 4.5833333333vw;
   border-radius: 1.5625vw 1.5625vw 0 0;

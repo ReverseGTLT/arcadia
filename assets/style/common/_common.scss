@@ -1,5 +1,9 @@
 @use "../presets/index" as *;
 
+:root {
+  //--animate-duration: 2s;
+  //--animate-delay: 2s;
+}
 *,
 *::before,
 *::after {
