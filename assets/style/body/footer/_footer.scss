@@ -1,12 +1,19 @@
 @use "../../presets/index" as *;
 
 footer {
-  margin-bottom: vw(115);
+  margin-bottom: vw(114);
   width: 100%;
   //height: vw(105);
   background-color: $color-red;
   padding: vw(31) vw(58) vw(31.15) vw(69);
-
+  @include lg {
+    padding-top: vm(15);
+    margin-bottom: vp(114);
+    padding-bottom: vm(24);
+  }
+  @include sm {
+    margin-bottom: vm(57);
+  }
 
   .container {
     max-width: vw(1728);
@@ -18,7 +25,7 @@ footer {
     font-size: vw(14);
 
     @include md {
-      max-width: vw(172);
+      max-width: 100%;
       flex-direction: column;
       justify-content: center;
     }
@@ -29,8 +36,8 @@ footer {
       justify-content: start;
       align-items: center;
 
-      @include md {
-        width: vw(150);
+      @include lg {
+        //width: vw(150);
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -49,6 +56,10 @@ footer {
           display: block;
           width: vw(130.55);
           height: vw(42.85);
+          @include lg {
+            width: vm(100);
+            height: auto;
+          }
         }
       }
 
@@ -58,7 +69,9 @@ footer {
         overflow: hidden;
         text-overflow: ellipsis;
 
-        @include md {
+        @include lg {
+          font-size: vm(12);
+          max-width: vm(170);
           white-space: normal;
           text-align: center;
         }
@@ -70,6 +83,9 @@ footer {
       justify-content: space-between;
       align-items: center;
       flex-wrap: nowrap;
+      @include lg {
+        gap: vm(8);
+      }
     }
 
     .social-media,
@@ -90,7 +106,8 @@ footer {
     }
 
     .social-media {
-      @include md {
+      @include lg {
+        padding-top: vm(15);
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -100,10 +117,16 @@ footer {
       p {
         padding-right: vw(20);
 
-        @include md {
+        @include lg {
+          margin-top: vp(8);
           text-align: center;
           padding-right: 0;
-          padding-bottom: vw(8);
+          padding-bottom: vp(8);
+          font-size: vm(12);
+        }
+        @include sm {
+          font-size: vm(12);
+          margin-top: vm(8);
         }
       }
 
@@ -111,11 +134,15 @@ footer {
         height: vw(20.44);
         width: auto;
         margin-right: vw(21);
+        @include lg {
+          height: vm(17);
+        }
       }
     }
 
     .payment {
-      @include md {
+      @include lg {
+        padding-top: vm(15);
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -124,10 +151,11 @@ footer {
 
       p {
         padding-right: vw(18);
-        @include md {
+        @include lg {
           text-align: center;
           padding-right: 0;
           padding-bottom: vw(8.85);
+          font-size: vm(12);
         }
       }
 
@@ -135,19 +163,30 @@ footer {
         height: vw(29);
         width: auto;
         margin-right: vw(12);
+        @include lg {
+          height: vm(15);
+        }
       }
     }
 
     .attribution {
-
+      @include lg {
+        padding-top: vm(15);
+      }
       p {
         padding-right: vw(5);
+        @include lg {
+          font-size: vm(12);
+        }
       }
 
       a {
         color: $color-white;
         text-decoration: underline;
         text-underline-offset: vw(3);
+        @include lg {
+          font-size: vm(12);
+        }
       }
     }
   }
