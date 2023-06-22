@@ -255,11 +255,18 @@
           .counter-input {
             //font-size: vw(20);
             display: block;
+            flex: 1;
             width: vw(37);
             height: vw(21);
             color: $color-grey-increase;
             text-align: center;
             border: none;
+
+            flex: 1;
+            .counter-input::-webkit-outer-spin-button,
+            .counter-input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
 
             @include lg {
               //font-size: vp(22);
@@ -315,14 +322,14 @@
 
         @include lg {
           font-size: vp(15);
-          width: 90%;
+          //width: 90%;
           height: auto;
           margin: auto;
           padding: vp(23) vp(30) vp(23) vp(29);
         }
         @include sm {
           font-size: vm(14);
-          width: 90%;
+          //width: 90%;
           height: auto;
           margin: auto;
           padding: vm(17) vm(20) vm(17) vm(24);
@@ -360,6 +367,7 @@
       width: vw(82);
       height: vw(82);
       content: url("../../assets/images/arrow_light1.png");
+      transition: 0.2s;
 
       @include lg {
         left: vp(-100);
@@ -372,8 +380,12 @@
         height: vm(54);
       }
 
+      &:hover {
+        content: url("../../assets/images/arrow_active.png");
+      }
+
       &:active {
-        content: url("../../assets/images/arrow_active1.png");
+        transform: scale(1.05);
       }
     }
 
@@ -384,6 +396,8 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light1.png");
       transform: rotate(180deg);
+      transition: 0.2s;
+
 
       @include lg {
         right: vp(-100);
@@ -396,8 +410,11 @@
         height: vm(54);
       }
 
+      &:hover {
+        content: url("../../assets/images/arrow_active.png");
+      }
       &:active {
-        content: url("../../assets/images/arrow_active1.png");
+        transform: scale(1.05) rotate(180deg);
       }
     }
   }

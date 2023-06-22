@@ -1729,6 +1729,7 @@ ul, ol, li {
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
+  transition: 0.2s;
 }
 @media (max-width: 991.8px) {
   .stages .owl-carousel .owl-nav .owl-prev {
@@ -1742,14 +1743,18 @@ ul, ol, li {
     height: 14.4vw;
   }
 }
-.stages .owl-carousel .owl-nav .owl-prev:active {
+.stages .owl-carousel .owl-nav .owl-prev:hover {
   content: url("../../assets/images/arrow_active.png");
+}
+.stages .owl-carousel .owl-nav .owl-prev:active {
+  transform: scale(1.05);
 }
 .stages .owl-carousel .owl-nav .owl-next {
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
   transform: rotate(180deg);
+  transition: 0.2s;
 }
 @media (max-width: 991.8px) {
   .stages .owl-carousel .owl-nav .owl-next {
@@ -1763,8 +1768,11 @@ ul, ol, li {
     height: 14.4vw;
   }
 }
-.stages .owl-carousel .owl-nav .owl-next:active {
+.stages .owl-carousel .owl-nav .owl-next:hover {
   content: url("../../assets/images/arrow_active.png");
+}
+.stages .owl-carousel .owl-nav .owl-next:active {
+  transform: scale(1.05) rotate(180deg);
 }
 .stages .owl-carousel .owl-dots {
   z-index: 1;
@@ -2087,11 +2095,17 @@ ul, ol, li {
 }
 .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input {
   display: block;
+  flex: 1;
   width: 1.9270833333vw;
   height: 1.09375vw;
   color: #949CBE;
   text-align: center;
   border: none;
+  flex: 1;
+}
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input .counter-input::-webkit-outer-spin-button,
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input .counter-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input {
@@ -2145,7 +2159,6 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .goods-carousel__item .btn {
     font-size: 1.5120967742vw;
-    width: 90%;
     height: auto;
     margin: auto;
     padding: 2.3185483871vw 3.0241935484vw 2.3185483871vw 2.9233870968vw;
@@ -2154,7 +2167,6 @@ ul, ol, li {
 @media (max-width: 575.8px) {
   .goods-carousel__item .btn {
     font-size: 3.7333333333vw;
-    width: 90%;
     height: auto;
     margin: auto;
     padding: 4.5333333333vw 5.3333333333vw 4.5333333333vw 6.4vw;
@@ -2179,6 +2191,7 @@ ul, ol, li {
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light1.png");
+  transition: 0.2s;
 }
 @media (max-width: 991.8px) {
   .goods .goods-carousel .owl-prev {
@@ -2194,8 +2207,11 @@ ul, ol, li {
     height: 14.4vw;
   }
 }
+.goods .goods-carousel .owl-prev:hover {
+  content: url("../../assets/images/arrow_active.png");
+}
 .goods .goods-carousel .owl-prev:active {
-  content: url("../../assets/images/arrow_active1.png");
+  transform: scale(1.05);
 }
 .goods .goods-carousel .owl-next {
   right: -5.2083333333vw;
@@ -2204,6 +2220,7 @@ ul, ol, li {
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light1.png");
   transform: rotate(180deg);
+  transition: 0.2s;
 }
 @media (max-width: 991.8px) {
   .goods .goods-carousel .owl-next {
@@ -2219,8 +2236,11 @@ ul, ol, li {
     height: 14.4vw;
   }
 }
+.goods .goods-carousel .owl-next:hover {
+  content: url("../../assets/images/arrow_active.png");
+}
 .goods .goods-carousel .owl-next:active {
-  content: url("../../assets/images/arrow_active1.png");
+  transform: scale(1.05) rotate(180deg);
 }
 
 .point {
@@ -2626,6 +2646,7 @@ ul, ol, li {
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
+  transition: 0.2s;
 }
 @media (max-width: 991.8px) {
   .certificates .certificates-carousel .owl-prev {
@@ -2641,8 +2662,11 @@ ul, ol, li {
     height: 14.4vw;
   }
 }
-.certificates .certificates-carousel .owl-prev:active {
+.certificates .certificates-carousel .owl-prev:hover {
   content: url("../../assets/images/arrow_active.png");
+}
+.certificates .certificates-carousel .owl-prev:active {
+  transform: scale(1.05);
 }
 .certificates .certificates-carousel .owl-next {
   right: -5.2083333333vw;
@@ -2651,6 +2675,7 @@ ul, ol, li {
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
   transform: rotate(180deg);
+  transition: 0.2s;
 }
 @media (max-width: 991.8px) {
   .certificates .certificates-carousel .owl-next {
@@ -2666,8 +2691,11 @@ ul, ol, li {
     height: 14.4vw;
   }
 }
-.certificates .certificates-carousel .owl-next:active {
+.certificates .certificates-carousel .owl-next:hover {
   content: url("../../assets/images/arrow_active.png");
+}
+.certificates .certificates-carousel .owl-next:active {
+  transform: scale(1.05) rotate(180deg);
 }
 
 .new {
