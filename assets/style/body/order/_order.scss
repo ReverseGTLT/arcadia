@@ -1,4 +1,3 @@
-
 @use "../../presets" as *;
 
 .order {
@@ -8,43 +7,98 @@
   width: 100%;
   border: 1px solid #949CBE;
   border-radius: 30px;
+
+  @include lg {
+    flex-direction: column;
+    border-radius: vp(30);
+  }
+
+  @include sm {
+    border-radius: vm(10);
+  }
+
   &__img {
     width: vw(410);
     border-top-left-radius: vw(30);
     border-bottom-left-radius: vw(30);
     overflow: hidden;
     height: vw(441);
+
+    @include lg {
+      width: 100%;
+      height: auto;
+      border-radius: vp(30) vp(30) 0 0;
+    }
+
+    @include sm {
+      border-radius: vm(10) vm(10) 0 0;
+    }
+
     img {
       width: 100%;
       height: 100%;
     }
   }
+
   &-info {
     padding-top: vw(80);
     padding-right: vw(50);
     flex: 1;
+
+    @include lg {
+      justify-content: center;
+      align-items: center;
+      padding: vp(0) vp(12) vp(36) vp(12);
+    }
+    @include sm {
+      padding: vm(0) vm(12) vm(36) vm(12);
+    }
+
     &__title {
-      font-weight: 700;
-      font-size: vw(40);
-      line-height: vw(42);
       color: $color-red;
       padding-bottom: vw(29);
+
+      @include lg {
+        text-align: center;
+        padding-right: 0;
+        width: 80%;
+      }
     }
+
     &__description {
-      line-height: 150%;
+      //line-height: 150%;
       color: $color-h-txt-link;
+
+      @include lg {
+        text-align: center;
+        width: 80%;
+      }
     }
   }
+
   &-form {
+    @include lg {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
     button {
       padding-inline: vw(20);
       flex: 1;
       //width: vw(298);
+      @include lg {
+        padding-inline: vp(20);
+      }
+      @include sm {
+        padding-inline: vm(51);
+      }
       &:hover {
         color: $color-white;
         background-color: lighten($color-red, 30);
       }
     }
+
     &__wrapper {
       padding-top: vw(50);
       padding-bottom: vw(35);
@@ -52,6 +106,14 @@
       gap: vw(20);
       justify-content: space-between;
       margin-left: vw(-450);
+
+      @include lg {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+      }
+
       input {
         padding: vw(28) vw(50);
         line-height: vw(21);
@@ -61,11 +123,13 @@
         border-radius: vw(30);
       }
     }
+
     &__label-wrapper {
       display: flex;
       align-items: baseline;
       gap: vw(7);
     }
+
     label {
       flex: 1;
       display: block;
@@ -75,9 +139,11 @@
       max-width: vw(520);
     }
   }
+
   &__input-name {
     flex: 1;
   }
+
   &__input-tel {
     flex: 1.5;
   }

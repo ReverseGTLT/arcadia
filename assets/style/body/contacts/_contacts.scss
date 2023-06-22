@@ -1,6 +1,8 @@
 @use "../../presets/index" as *;
 
 .contacts {
+  padding-top: vw(195);
+
   .container-1540 {
   padding: vw(76) vw(44) vw(88);
   border-radius: vw(30) vw(30) 0 0;

@@ -14,7 +14,6 @@ $(document).ready(function () {
         loop: true,
         autoplay: 1000,
         autoplayHoverPause: true,
-        margin: 20,
         nav: true,
         dots: false,
         mouseDrag: true,
@@ -23,12 +22,15 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
+                margin: 0,
             },
             768: {
                 items: 1,
+                margin: 0,
             },
             992: {
                 items: 4,
+                margin: 20,
             }
         }
     });
@@ -36,10 +38,10 @@ $(document).ready(function () {
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
-        autoplay: 1000,
+        // autoplay: 1000,
         margin: 10,
         dots: true,
-        dotsEach: 4,
+        // dotsEach: 4,
         slideBy: 1,
         nav: true,
         mouseDrag: true,
@@ -59,10 +61,9 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                nav: false,
             },
             768: {
-                items: 3,
+                items: 1,
             },
             992: {
                 items: 4,
@@ -143,18 +144,48 @@ const menuWindow = document.querySelector('.modal-menu');
 const menuClose = document.querySelector('.modal-menu__close');
 menuOpen.addEventListener('click', onMenuOpen);
 menuClose.addEventListener('click', onMenuClose)
+
 function onMenuOpen() {
     menuWindow.classList.add('visible')
 }
+
 function onMenuClose() {
     menuWindow.classList.remove('visible')
 }
 
+// _____________________________________________
+// Появление для всех h2
+// fadeInHeadings();
+
+window.addEventListener("load", function() {
+    fadeInHeadings();
+});
+
+window.addEventListener('scroll', fadeInHeadings);
+
+function fadeInHeadings() {
+    const headings = document.querySelectorAll('h2');
+    headings.forEach(function (heading) {
+        if (isElementVisible(heading) && !heading.classList.contains("scrollflow", "-opacity", "-slide-top")) {
+            heading.classList.add("scrollflow", "-opacity", "-slide-top");
+        }
+    });
+
+}
+
+function isElementVisible(elem) {
+    const rect = elem.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    return rect.top <= windowHeight;
+}
+
+
+// ______________________________________________
 // Скролл ап
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const scrollToTopButton = document.getElementById("scroll-to-top");
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (window.pageYOffset > 100) {
             scrollToTopButton.style.display = "block";
         } else {
@@ -162,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    scrollToTopButton.addEventListener("click", function(event) {
+    scrollToTopButton.addEventListener("click", function (event) {
         event.preventDefault();
         window.scrollTo({
             top: 0,
@@ -187,7 +218,7 @@ function handleOrientationChange() {
         generalWrapperInfo.classList.remove('pb-600');
         header.classList.remove('absolute');
         sale.classList.remove('static');
-        const ratio = window.innerHeight/window.innerWidth;
+        const ratio = window.innerHeight / window.innerWidth;
         const generalWrapper = document.querySelector('.general-wrapper');
         const generalWrapperPrice = document.querySelector('.general-wrapper__price');
         if (ratio < 2 && window.innerWidth < 992) {
@@ -214,7 +245,6 @@ handleOrientationChange();
 // mapIframe.addEventListener('click', () => {
 //     mapIframe.requestFullscreen();
 // });
-
 
 
 // let cart =[];
