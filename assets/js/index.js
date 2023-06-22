@@ -9,7 +9,7 @@
 // });
 
 $(document).ready(function () {
-    // Owl
+    // Owl Goods
     $('.goods-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -35,6 +35,7 @@ $(document).ready(function () {
         }
     });
 
+    // Owl Stages
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
@@ -48,6 +49,7 @@ $(document).ready(function () {
         touchDrag: true,
     });
 
+    // Owl Certificates
     $('.certificates-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -70,7 +72,108 @@ $(document).ready(function () {
             }
         }
     });
+    // Инициализация Magnific Popup
+    $('.certificates-carousel__item').each(function () {
+        let $lightboxLink = $('<a>')
+            .addClass('lightbox-link')
+            .attr('href', $(this).find('img').attr('src'));
 
+        $(this).append($lightboxLink);
+    });
+
+    $('.lightbox-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        callbacks: {
+            buildControls: function () {
+                this.arrowLeft.addClass("left-arrow");
+                this.arrowRight.addClass("right-arrow");
+            }
+        },
+        closeBtnInside: true,
+        closeOnContentClick: false,
+        mainClass: "mfp-fade",
+        removalDelay: 300
+    });
+
+    $(".certificates-carousel__item").click(function (e) {
+        e.stopPropagation();
+        const imagePath = $(this).find(".certificate-image img").attr("src");
+        showGallery(imagePath);
+    });
+
+    function showGallery(imagePath) {
+        const galleryHtml = `
+      <div class="overlay">
+        <div class="gallery">
+          <img class="gallery-image" src="${imagePath}" alt="img">
+          <a class="close-link" href="#"></a>
+          <a class="zoom-link zoom-in" href="#"></a>
+          <a class="zoom-link zoom-out" href="#"></a>
+          <a class="arrow-link left-arrow"></a>
+          <a class="arrow-link right-arrow"></a>
+        </div>
+      </div>`;
+
+        $("body").append(galleryHtml);
+
+        $(".close-link, .overlay").click(function () {
+            closeGallery();
+        });
+
+        $(".left-arrow").click(function (e) {
+            e.stopPropagation();
+            const currentImage = $(".gallery-image");
+            const prevImage = currentImage
+                .closest(".gallery")
+                .prev(".gallery")
+                .find(".gallery-image");
+
+            if (prevImage.length > 0) {
+                const imagePath = prevImage.attr("src");
+                currentImage.attr("src", imagePath);
+            }
+        });
+
+        $(".right-arrow").click(function (e) {
+            e.stopPropagation();
+            const currentImage = $(".gallery-image");
+            const nextImage = currentImage
+                .closest(".gallery")
+                .next(".gallery")
+                .find(".gallery-image");
+
+            if (nextImage.length > 0) {
+                const imagePath = nextImage.attr("src");
+                currentImage.attr("src", imagePath);
+            }
+        });
+
+        $('.zoom-in').click(function (e) {
+            e.stopPropagation();
+            const magnificPopup = $.magnificPopup.instance;
+            if (magnificPopup && magnificPopup.currItem) {
+                magnificPopup.currItem.zoom.open();
+            }
+        });
+
+        $('.zoom-out').click(function (e) {
+            e.stopPropagation();
+            const magnificPopup = $.magnificPopup.instance;
+            if (magnificPopup && magnificPopup.currItem) {
+                magnificPopup.currItem.zoom.close();
+            }
+        });
+    }
+
+    function closeGallery() {
+        $(".overlay").remove();
+    }
+
+
+// Owl Facts
     $('.facts-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -157,7 +260,7 @@ function onMenuClose() {
 // Появление для всех h2
 // fadeInHeadings();
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     fadeInHeadings();
 });
 
