@@ -2289,8 +2289,9 @@ ul, ol, li {
   .point__title {
     max-width: 80%;
     text-align: center;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 2.6666666667vw;
+    margin-left: 2.6666666667vw;
+    margin-bottom: 26.6666666667vw;
   }
 }
 .point-info {
@@ -2319,6 +2320,9 @@ ul, ol, li {
     width: 100%;
     height: auto;
     flex-direction: column;
+    gap: 5.3333333333vw;
+    border-radius: 5.3333333333vw;
+    padding-bottom: 13.3333333333vw;
   }
 }
 .point-img {
@@ -2327,6 +2331,14 @@ ul, ol, li {
   top: -9.1145833333vw;
   left: 1.0416666667vw;
   position: absolute;
+}
+@media (max-width: 991.8px) {
+  .point-img {
+    width: 54.4vw;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .point-img img {
   display: block;
@@ -2341,6 +2353,7 @@ ul, ol, li {
     flex-direction: column;
     width: 100%;
     padding-top: 31.7333333333vw;
+    gap: 8vw;
   }
 }
 .point-text__wrapper {
@@ -2361,8 +2374,8 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .point-text__num {
-    width: 2.8125vw;
-    height: 2.8125vw;
+    width: 14.4vw;
+    height: 14.4vw;
   }
 }
 .point-text__description {
@@ -2375,6 +2388,7 @@ ul, ol, li {
     max-width: 80%;
     text-align: start;
     padding-bottom: 6.6666666667vw;
+    padding-left: 5.3333333333vw;
   }
 }
 .point-btns {
@@ -2386,6 +2400,7 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .point-btns {
     flex-direction: column;
+    gap: 5.3333333333vw;
   }
 }
 .point-btns__btn {
@@ -2399,6 +2414,7 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .point-btns__btn {
     font-size: 4.2666666667vw;
+    margin-top: 5.3333333333vw;
   }
 }
 .point-btns__btn:hover {
