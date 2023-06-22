@@ -2425,7 +2425,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .order__img {
-    width: 94.6666666667vw;
+    width: 100%;
     height: 68.2666666667vw;
     border-radius: 3.0241935484vw 3.0241935484vw 0 0;
   }
@@ -2597,6 +2597,20 @@ ul, ol, li {
   .order-form__label-wrapper--mobile {
     display: flex;
   }
+}
+
+.new-mobile {
+  width: 100%;
+  display: none;
+  margin-top: 13.3333333333vw;
+}
+@media (max-width: 991.8px) {
+  .new-mobile {
+    display: block;
+  }
+}
+.new-mobile img {
+  width: 100%;
 }
 
 .certificates {
@@ -2776,6 +2790,11 @@ ul, ol, li {
   background: linear-gradient(95.83deg, #F80505 70.77%, #1377ED 83.73%);
   border-radius: 1.5625vw;
   height: 16.3541666667vw;
+}
+@media (max-width: 991.8px) {
+  .new {
+    display: none;
+  }
 }
 .new-info {
   max-width: 23.4375vw;
@@ -3193,9 +3212,14 @@ ul, ol, li {
 
 .water {
   padding-bottom: 7.8645833333vw;
+  background-image: url("../../assets/images/water-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .water {
+    padding-bottom: 45.3333333333vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3209,18 +3233,51 @@ ul, ol, li {
   flex-direction: column;
   width: 51.875vw;
 }
+@media (max-width: 991.8px) {
+  .water-content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 .water-content h2,
 .water-content p {
   padding-bottom: 1.09375vw;
 }
+@media (max-width: 991.8px) {
+  .water-content h2,
+  .water-content p {
+    margin-bottom: 4.5333333333vw;
+  }
+}
+@media (max-width: 991.8px) {
+  .water-content h2 {
+    font-size: 6.4vw;
+    text-align: center;
+    max-width: 80vw;
+    margin-inline: auto;
+  }
+}
 .water-content p {
   line-height: 1.05;
+}
+@media (max-width: 991.8px) {
+  .water-content p {
+    text-align: center;
+    font-size: 3.7333333333vw;
+    padding-inline: 4vw;
+  }
 }
 .water-content a {
   color: #0879E0;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 0.1041666667vw;
+}
+@media (max-width: 991.8px) {
+  .water-content a {
+    font-size: 4.2666666667vw;
+    text-align: center;
+  }
 }
 .water-content a:hover {
   color: #FFBBBB;

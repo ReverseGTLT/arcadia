@@ -7,6 +7,9 @@
   background: linear-gradient(95.83deg, #F80505 70.77%, #1377ED 83.73%);
   border-radius: vw(30);
   height: vw(314);
+  @include lg {
+    display: none;
+  }
   &-info {
     max-width: vw(450);
     margin-inline: auto;
