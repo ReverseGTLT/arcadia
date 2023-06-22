@@ -6,9 +6,18 @@
 
   @include lg {
     display: flex;
-    flex-direction: column;
+    //flex-direction: column;
     justify-content: center;
     align-items: center;
+
+  }
+  @include lg {
+    padding-top: vp(100);
+    padding-bottom: vp(150);
+  }
+  @include sm {
+    padding-top: vm(55);
+    padding-bottom: vm(46);
   }
 
   &-content {
@@ -17,22 +26,46 @@
     display: flex;
     flex-direction: column;
 
+    @include lg {
+      justify-content: center;
+      text-align: center;
+      margin-inline: auto;
+
+    }
+
     &__text {
       width: vw(1100);
       padding-bottom: vw(54);
 
       @include lg {
         text-align: center;
-        width: 80%;
-        margin: vm(5);
+        width: 100%;
+        margin-right: vp(20);
+        margin-left: vp(20);
+        padding-bottom: vp(54);
+
+      }
+      @include sm {
+        padding-bottom: vm(20);
+        margin-inline: vm(5);
       }
 
       h2 {
         padding-bottom: vw(43);
+        @include lg {
+          padding-bottom: vp(43);
+          text-align: center;
+        }
+        @include sm {
+          padding-bottom: vm(20);
+        }
       }
 
       p {
         width: 100%;
+        @include lg {
+          text-align: center;
+        }
       }
     }
   }
@@ -47,37 +80,42 @@
     align-items: center;
 
     @include lg {
-      //max-width: 98%;
-      margin: auto;
+      max-width: vp(450);
+      justify-content: center;
+      margin-inline: vp(10);
+      height: auto;
+    }
+    @include sm {
+      max-width: vm(153);
+      margin-inline: vm(5);
       height: auto;
     }
 
     &__item {
-      width: vw(250);
-      //height: vw(450);
-      //margin: auto;
-      text-align: left;
+      //width: vw(250);
       background: $color-white;
-      padding: vw(10);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
       border: none;
-      box-shadow: 0;
+      box-shadow: none;
+      padding: vw(10);
       transition: box-shadow 0.3s;
-      //display: flex;
-      //flex-direction: column;
-      //gap: vw(20);
-      margin-right: 0;
-      margin-left: 0;
+      //margin-right: 0;
+      //margin-left: 0;
 
       @include lg() {
-        //width: 100%;
-        //margin: 0;
-        //height: auto;
+        //width: vp(250);
         padding: vp(2);
+        justify-content: center;
         text-align: center;
+        margin-inline:vp(5);
       }
 
       @include sm {
         padding: vm(2);
+        margin-inline:vm(5);
       }
 
       &:hover {
@@ -85,33 +123,30 @@
       }
 
       .certificate-image {
-        width: vw(219);
+        //width: vw(219);
         height: auto;
         display: flex;
         align-items: flex-start;
         margin-right: vw(26);
         margin-bottom: vw(23);
-        //overflow: inherit;
-
-        //@include lg() {
-          //width: vw(173);
-          //height: vw(262);
-        //}
 
         @include lg {
-          width: vp(214);
           margin: vp(10);
-          //height: auto;
-          padding-bottom: vp(10);
-
+          padding-bottom: vp(20);
+        }
+        @include sm {
+           padding-bottom: vm(11);
         }
 
         img {
           display: block;
           width: 100%;
           overflow: hidden;
-          //height: content-box;
           text-align: start;
+
+          @include lg {
+            text-align: center;
+          }
         }
       }
 
@@ -146,12 +181,12 @@
       transition: 0.2s;
 
       @include lg {
-        left: vp(-100);
+        left: vp(-175);
         width: vp(82);
         height: vp(82);
       }
       @include sm {
-        left: vm(-50);
+        left: vm(-95);
         width: vm(54);
         height: vm(54);
       }
@@ -161,7 +196,7 @@
       }
 
       &:active {
-      transform: scale(1.05);
+        transform: scale(1.05);
       }
     }
 
@@ -175,12 +210,12 @@
       transition: 0.2s;
 
       @include lg {
-        right: vp(-100);
+        right: vp(-175);
         width: vp(82);
         height: vp(82);
       }
       @include sm {
-        right: vm(-50);
+        right: vm(-95);
         width: vm(54);
         height: vm(54);
       }
@@ -188,6 +223,7 @@
       &:hover {
         content: url("../../assets/images/arrow_active.png");
       }
+
       &:active {
         transform: scale(1.05) rotate(180deg);
       }
