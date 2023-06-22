@@ -179,8 +179,8 @@ h3 {
     align-items: center;
     //padding-right: 10px;
     //padding-left: 10px;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: vm(15);
+    margin-left: vm(15);
   }
   @include sm {
     display: flex;
@@ -190,8 +190,8 @@ h3 {
     align-items: center;
     //padding-right: 10px;
     //padding-left: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: vm(10);
+    margin-left: vm(10);
   }
 }
 
