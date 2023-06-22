@@ -138,6 +138,7 @@ $(document).ready(function () {
 //Parsley
     $('#contact-form').parsley();
 });
+
 // Header
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');

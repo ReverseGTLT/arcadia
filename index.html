@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">
     <!--        <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/style/index.css">
 
@@ -477,6 +476,16 @@
                     <button class="order-btn btn animate__animated animate__bounceIn animate__delay-2s" type="submit">
                         Замовити воду
                     </button>
+
+                    <div class="order-form__label-wrapper order-form__label-wrapper--mobile">
+                        <input type="checkbox" id="order-checkboxMobile">
+                        <label for="order-checkboxMobile">
+                            Я приймаю умови користувальницької угоди,
+                            дозволяю їх обробку і зв'язатися зі мною якнайшвидше
+                        </label>
+                    </div>
+
+                    <button class="order-btn btn animate__animated animate__bounceIn animate__delay-2s" type="submit">Замовити воду</button>
                 </div>
                 <div class="order-form__label-wrapper">
                     <input type="checkbox" id="order-checkbox">
@@ -574,6 +583,10 @@
         <img class="new-img__5" src="assets/images/2.png" alt="2">
         <img class="new-img__6" src="assets/images/wave.png" alt="wave">
         <img class="new-img__7" src="assets/images/bl.png" alt="butl">
+    </section>
+
+    <section class="new-mobile container-1360 scrollflow -opacity -pop">
+        <img src="assets/images/first.png" alt="new">
     </section>
 
     <!--    _________________________-->
@@ -745,8 +758,8 @@
     <!--    Section. WATER. Carousel -->
     <!--    _________________________-->
 
-    <section class="water container-1540">
-        <div class="water-content">
+    <section class="water">
+        <div class="water-content container-1540">
             <h2 class="animate__animated">Вода від “Acradia” - це користь яку дарує Одеса</h2>
             <p class="text-little scrollflow -opacity -slide-left">19-літрова пляшка з водою є ідеальним джерелом
                 гідратації як вдома, так і в офісі

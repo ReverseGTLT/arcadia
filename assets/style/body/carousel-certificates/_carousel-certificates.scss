@@ -184,6 +184,10 @@
       content: url("../../assets/images/arrow_light.png");
       transition: 0.2s;
 
+      &:hover {
+        content: url("../../assets/images/arrow_active.png");
+      }
+
       @include lg {
         left: vp(-175);
         width: vp(82);
