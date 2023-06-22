@@ -262,12 +262,6 @@
             text-align: center;
             border: none;
 
-            flex: 1;
-            .counter-input::-webkit-outer-spin-button,
-            .counter-input::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-            }
-
             @include lg {
               //font-size: vp(22);
               width: vp(17);
@@ -278,6 +272,10 @@
               width: vm(17);
               height: vm(21);
             }
+          }
+          .counter-input::-webkit-outer-spin-button,
+          .counter-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
           }
         }
 
