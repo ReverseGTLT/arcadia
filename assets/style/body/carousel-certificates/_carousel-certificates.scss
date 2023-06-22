@@ -144,11 +144,10 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light.png");
       transition: 0.2s;
-<<<<<<< HEAD
 
       &:hover {
         content: url("../../assets/images/arrow_active.png");
-=======
+      }
 
       @include lg {
         left: vp(-100);
@@ -167,10 +166,6 @@
 
       &:active {
       transform: scale(1.05);
->>>>>>> a8db1ce91a56b3fda2c315986ed7a0cd5e38952c
-      }
-      &:active {
-        transform: scale(1.05);
       }
     }
 
@@ -183,8 +178,6 @@
       transform: rotate(180deg);
       transition: 0.2s;
 
-<<<<<<< HEAD
-=======
       @include lg {
         right: vp(-100);
         width: vp(82);
@@ -196,13 +189,8 @@
         height: vm(54);
       }
 
->>>>>>> a8db1ce91a56b3fda2c315986ed7a0cd5e38952c
       &:hover {
         content: url("../../assets/images/arrow_active.png");
-
-      }
-      &:active {
-        transform: scale(1.05) rotate(180deg);
       }
       &:active {
         transform: scale(1.05) rotate(180deg);
