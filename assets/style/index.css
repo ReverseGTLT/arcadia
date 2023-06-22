@@ -2101,11 +2101,6 @@ ul, ol, li {
   color: #949CBE;
   text-align: center;
   border: none;
-  flex: 1;
-}
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input .counter-input::-webkit-outer-spin-button,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input .counter-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input {
@@ -2118,6 +2113,10 @@ ul, ol, li {
     width: 4.5333333333vw;
     height: 5.6vw;
   }
+}
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input::-webkit-outer-spin-button,
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .goods-carousel__item .good-counter-price-wrapper .good-price {
   width: 30%;
