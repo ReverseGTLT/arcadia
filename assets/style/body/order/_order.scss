@@ -5,12 +5,13 @@
   align-items: center;
   gap: vw(100);
   width: 100%;
-  border: 1px solid #949CBE;
+  border: vw(1) solid #949CBE;
   border-radius: 30px;
 
   @include lg {
     flex-direction: column;
     border-radius: vp(30);
+    width: auto;
   }
 
   @include sm {
@@ -22,11 +23,11 @@
     border-top-left-radius: vw(30);
     border-bottom-left-radius: vw(30);
     overflow: hidden;
-    height: vw(441);
+    //height: vw(441);
 
     @include lg {
-      width: 100%;
-      height: auto;
+      width: vm(355);
+      height: vm(256);
       border-radius: vp(30) vp(30) 0 0;
     }
 
@@ -34,9 +35,21 @@
       border-radius: vm(10) vm(10) 0 0;
     }
 
-    img {
-      width: 100%;
-      height: 100%;
+    //img {
+    //  width: 100%;
+    //  height: 100%;
+    //}
+    img:first-child {
+      @include lg {
+        display: none;
+      }
+    }
+    img:last-child {
+      display: none;
+      @include lg {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
@@ -61,7 +74,8 @@
       @include lg {
         text-align: center;
         padding-right: 0;
-        width: 80%;
+        //width: 80%;
+        font-size: vm(32);
       }
     }
 
@@ -71,7 +85,8 @@
 
       @include lg {
         text-align: center;
-        width: 80%;
+        //width: 80%;
+        padding-block: vm(20);
       }
     }
   }
@@ -89,6 +104,7 @@
       //width: vw(298);
       @include lg {
         padding-inline: vp(20);
+        margin-top: vp(50);
       }
       @include sm {
         padding-inline: vm(51);
@@ -121,6 +137,11 @@
         background: $color-white;
         border: vw(1) solid $color-grey-border;
         border-radius: vw(30);
+        @include lg {
+          padding: vm(28) vm(20);
+          border-radius: vm(20);
+          margin-bottom: vm(8);
+        }
       }
     }
 
@@ -128,6 +149,10 @@
       display: flex;
       align-items: baseline;
       gap: vw(7);
+      @include lg {
+        gap: vm(10);
+        align-items: flex-start;
+      }
     }
 
     label {
@@ -137,6 +162,11 @@
       line-height: vw(17);
       color: $color-h-txt-link;
       max-width: vw(520);
+      @include lg {
+        font-size: vm(12);
+        line-height: vm(17);
+        max-width: 100%;
+      }
     }
   }
 
@@ -148,3 +178,25 @@
     flex: 1.5;
   }
 }
+
+.order-form__label-wrapper > input {
+  @include lg {
+    width: vm(22);
+    height: vm(22);
+    border-radius: vm(6);
+  }
+}
+
+.order-form__label-wrapper {
+   @include lg {
+     display: none;
+   }
+ }
+
+.order-form__label-wrapper--mobile {
+  display: none;
+  @include lg {
+    display: flex;
+  }
+}
+
