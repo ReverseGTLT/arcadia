@@ -685,7 +685,7 @@ ul, ol, li {
 
 .scroll-button {
   position: fixed;
-  bottom: 4.6875vw;
+  bottom: 3.90625vw;
   right: 5.2083333333vw;
   width: 4.2708333333vw;
   height: 4.2708333333vw;
@@ -3376,10 +3376,22 @@ ul, ol, li {
 }
 
 footer {
-  margin-bottom: 5.9895833333vw;
+  margin-bottom: 5.9375vw;
   width: 100%;
   background-color: #F80505;
   padding: 1.6145833333vw 3.0208333333vw 1.6223958333vw 3.59375vw;
+}
+@media (max-width: 991.8px) {
+  footer {
+    padding-top: 4vw;
+    margin-bottom: 11.4919354839vw;
+    padding-bottom: 6.4vw;
+  }
+}
+@media (max-width: 575.8px) {
+  footer {
+    margin-bottom: 15.2vw;
+  }
 }
 footer .container {
   max-width: 90vw;
@@ -3392,7 +3404,7 @@ footer .container {
 }
 @media (max-width: 767.8px) {
   footer .container {
-    max-width: 8.9583333333vw;
+    max-width: 100%;
     flex-direction: column;
     justify-content: center;
   }
@@ -3403,9 +3415,8 @@ footer .container .logo-wrap {
   justify-content: start;
   align-items: center;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   footer .container .logo-wrap {
-    width: 7.8125vw;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -3426,14 +3437,22 @@ footer .container .logo-wrap .logo img {
   width: 6.7994791667vw;
   height: 2.2317708333vw;
 }
+@media (max-width: 991.8px) {
+  footer .container .logo-wrap .logo img {
+    width: 26.6666666667vw;
+    height: auto;
+  }
+}
 footer .container .logo-wrap .text p {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   footer .container .logo-wrap .text p {
+    font-size: 3.2vw;
+    max-width: 45.3333333333vw;
     white-space: normal;
     text-align: center;
   }
@@ -3443,6 +3462,11 @@ footer .container .img-wrap {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media (max-width: 991.8px) {
+  footer .container .img-wrap {
+    gap: 2.1333333333vw;
+  }
 }
 footer .container .social-media,
 footer .container .payment,
@@ -3459,8 +3483,9 @@ footer .container .attribution {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   footer .container .social-media {
+    padding-top: 4vw;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -3470,11 +3495,19 @@ footer .container .attribution {
 footer .container .social-media p {
   padding-right: 1.0416666667vw;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   footer .container .social-media p {
+    margin-top: 0.8064516129vw;
     text-align: center;
     padding-right: 0;
-    padding-bottom: 0.4166666667vw;
+    padding-bottom: 0.8064516129vw;
+    font-size: 3.2vw;
+  }
+}
+@media (max-width: 575.8px) {
+  footer .container .social-media p {
+    font-size: 3.2vw;
+    margin-top: 2.1333333333vw;
   }
 }
 footer .container .social-media img {
@@ -3482,8 +3515,14 @@ footer .container .social-media img {
   width: auto;
   margin-right: 1.09375vw;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
+  footer .container .social-media img {
+    height: 4.5333333333vw;
+  }
+}
+@media (max-width: 991.8px) {
   footer .container .payment {
+    padding-top: 4vw;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -3493,11 +3532,12 @@ footer .container .social-media img {
 footer .container .payment p {
   padding-right: 0.9375vw;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   footer .container .payment p {
     text-align: center;
     padding-right: 0;
     padding-bottom: 0.4609375vw;
+    font-size: 3.2vw;
   }
 }
 footer .container .payment img {
@@ -3505,13 +3545,33 @@ footer .container .payment img {
   width: auto;
   margin-right: 0.625vw;
 }
+@media (max-width: 991.8px) {
+  footer .container .payment img {
+    height: 4vw;
+  }
+}
+@media (max-width: 991.8px) {
+  footer .container .attribution {
+    padding-top: 4vw;
+  }
+}
 footer .container .attribution p {
   padding-right: 0.2604166667vw;
+}
+@media (max-width: 991.8px) {
+  footer .container .attribution p {
+    font-size: 3.2vw;
+  }
 }
 footer .container .attribution a {
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 0.15625vw;
+}
+@media (max-width: 991.8px) {
+  footer .container .attribution a {
+    font-size: 3.2vw;
+  }
 }
 
 .modal {
