@@ -75,15 +75,29 @@
       padding-top: vm(34);
     }
   }
+  &__logo-wrapper {
+
+  }
   &__circle {
     position: absolute;
-    right: vw(-230);
+    right: vw(-220);
     top: vw(160);
     width: vw(229);
     @include lg {
       width: vm(169);
       top: vm(80);
       right: vm(-160);
+    }
+    &-center {
+      position: absolute;
+      right: vw(0);
+      top: vw(250);
+      width: vw(28);
+      @include lg {
+        width: vm(24);
+        top: vm(145);
+        right: vm(0);
+      }
     }
   }
   &__list {
