@@ -9,11 +9,8 @@
   background-color: $background-light;
   }
 
-  @include md {
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
+  @include lg {
+    padding-bottom: vm(54);
   }
 
   &-content {
@@ -21,22 +18,33 @@
     text-align: start;
     display: flex;
     flex-direction: column;
+    @include lg {
+      margin-left: 0;
+    }
 
     &__text {
       width: vw(723);
       padding-bottom: vw(33);
 
-      //@include md {
-      //  width: 100%;
-      //  margin: vw(5);
-      //}
+      @include lg {
+        width: 100%;
+        margin: vw(5);
+      }
 
-      h2 {
+      h4 {
         padding-bottom: vw(42);
+        @include lg {
+          text-align: center;
+          font-size: vm(32);
+        }
       }
 
       p {
         width: 100%;
+        @include lg {
+          text-align: center;
+          font-size: vm(16);
+        }
       }
     }
   }
@@ -47,16 +55,58 @@
     justify-content: space-between;
     //align-items: start;
     //padding-bottom: vw(88);
+    @include lg {
+      flex-direction: column-reverse;
+    }
 
     &__map {
       display: flex;
       flex-basis: calc(40% - 60px);
-      align-items: start;
-      padding-right: vw(60);
-      //background: url("../../assets/images/map.png") no-repeat;
-      //background-size: cover;
-      //border: vw(1) solid $color-grey-border;
-      //border-radius: 20px;
+      //align-items: start;
+      margin-right: vw(60);
+      border: vw(1) solid #D4D8EB;
+      border-radius: vw(20);
+      @include lg {
+        flex-basis: auto;
+        width: vm(325);
+        height: vm(238);
+        padding-right: 0;
+        border-radius: vm(20);
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: vw(20);
+        @include lg {
+          width: 100%;
+          border-radius: vm(20);
+          height: 100%;
+        }
+      }
+      &-link {
+        flex: 1;
+        font-weight: bold;
+        color: #1377ED;
+        @include lg {
+          margin-inline: auto;
+          padding-top: vm(20);
+          padding-bottom: vm(30);
+        }
+      }
+    }
+
+    &__tel {
+      padding-top: vw(60);
+      @include lg {
+        padding-bottom: vm(20);
+        padding-top: 0;
+      }
+      &-link {
+        font-weight: bold;
+        @include lg {
+          padding-bottom: vm(40);
+        }
+      }
     }
 
     &__address,
@@ -67,11 +117,19 @@
       align-items: flex-start;
       //padding-right: vw(143);
       //justify-content: start;
+      @include lg {
+        margin-inline: auto;
+        padding-top: vm(60);
+      }
 
       &-title {
         position: relative;
         margin-top: vw(20);
         padding-top: vw(70);
+        @include lg {
+          text-align: center;
+          margin-inline: auto;
+        }
 
         &::before {
           position: absolute;
@@ -85,6 +143,13 @@
           background-image: url("../../assets/images/map_icon.svg");
           background-repeat: no-repeat;
           background-size: cover;
+          @include lg {
+            width: vm(27);
+            height: vm(40);
+            top: vm(-25);
+            transform: translate(-50%, -50%);
+            left: 50%;
+          }
         }
       }
     }
@@ -119,8 +184,18 @@
 
     &__time {
       //padding-right: vw(5);
+      @include lg {
+        padding-top: vm(60);
+      }
       &-title {
         padding-bottom: vw(2);
+        @include lg {
+          text-align: center;
+          margin-inline: auto;
+        }
+        span {
+          font-weight: bold;
+        }
 
         &::before {
           content: "";
@@ -130,8 +205,36 @@
           background-image: url("../../assets/images/time_icon.svg");
           background-repeat: no-repeat;
           background-size: cover;
+          @include lg {
+            width: vm(34);
+            height: vm(40);
+            top: vm(-25);
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      &-description {
+        padding-bottom: vw(2);
+        @include lg {
+          text-align: center;
+          margin-inline: auto;
+        }
+        span {
+          font-weight: bold;
         }
       }
     }
   }
+}
+
+.contacts-info__box {
+  display: flex;
+  gap: vw(10);
+  align-items: center;
+
+  @include lg {
+    gap: vm(10);
+  }
+
 }
