@@ -7,6 +7,10 @@
     padding: vw(64) vw(130) vw(47) vw(44);
     border-radius: 0 0 vw(30) vw(30);
     background-color: $background-grey;
+    @include lg {
+      padding-inline: vm(15);
+      padding-bottom: vm(40);
+    }
   }
 
   @include lg {
@@ -25,10 +29,10 @@
     }
 
     .order-contact-title {
-      position: absolute;
-      top: 0;
-      margin-top: vw(10);
-      padding-left: vw(224);
+      //position: absolute;
+      //top: 0;
+      //margin-top: vw(10);
+      //padding-left: vw(224);
       //margin-bottom: vw(79);
 
       @include lg {
@@ -49,8 +53,12 @@
       margin-bottom: vw(76);
       margin-top: vw(24);
 
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
       @include  lg {
-        display: flex;
+        padding-right: 0;
         flex-direction: column;
       }
 
@@ -59,16 +67,29 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include lg {
+          width: 100%;
+          padding: vm(15);
+        }
       }
     }
 
     .checkbox-label {
       display: block;
       font-weight: 400;
+      max-width: vw(600);
+      @include lg {
+        max-width: 100%;
+        flex: 1;
+        font-size: vm(12);
+      }
     }
 
     .date-input {
       position: relative;
+      @include lg {
+        width: 100%;
+      }
     }
 
     .calendar-icon {
@@ -86,6 +107,9 @@
     .form-section {
       display: flex;
       flex-direction: column;
+      @include lg {
+        width: 100%;
+      }
 
       input,
       textarea,
@@ -96,6 +120,9 @@
         border-radius: vw(30);
         padding: vw(28) vw(28) vw(27) vw(39);
         margin-bottom: vw(27);
+        @include lg {
+          width: 100%;
+        }
       }
 
       input {
@@ -119,6 +146,16 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: vw(27);
+        @include lg {
+          width: 100%;
+          margin-bottom: 0;
+        }
+        input {
+          @include lg {
+            border-radius: vm(20);
+            padding: vm(20) vm(20);
+          }
+        }
       }
 
       .text-area-row {
@@ -131,6 +168,11 @@
           overflow-y: scroll;
           //scrollbar-gutter: auto;
           padding: vw(28) vw(28) vw(27) vw(39);
+          @include lg {
+            border-radius: vm(20);
+            padding: vm(20) vm(20);
+            height: vm(195);
+          }
         }
       }
 
@@ -139,21 +181,40 @@
         justify-content: space-between;
         align-items: center;
         margin-left: vw(80);
+        @include lg {
+          margin-left: 0;
+        }
 
         .checkbox-row {
-          width: vw(580);
+          //width: vw(580);
           display: flex;
           flex-direction: row;
           align-items: baseline;
+          @include lg {
+            margin-bottom: vm(30);
+            margin-top: vm(20);
+          }
 
           input {
             width: auto;
             line-height: 1.05;
             padding: 0;
             margin: 0 vw(10) 0 0;
+            @include lg {
+              width: vm(22);
+            }
           }
         }
       }
     }
+  }
+}
+
+.order-contact-title {
+  font-size: vw(40);
+  margin-inline: auto;
+  @include lg {
+    font-size: vm(32);
+    text-align: center;
   }
 }

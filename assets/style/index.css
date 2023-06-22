@@ -182,8 +182,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 4vw;
+    margin-left: 4vw;
   }
 }
 @media (max-width: 575.8px) {
@@ -193,8 +193,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 2.6666666667vw;
+    margin-left: 2.6666666667vw;
   }
 }
 
@@ -2941,6 +2941,7 @@ ul, ol, li {
     height: 63.4666666667vw;
     padding-right: 0;
     border-radius: 5.3333333333vw;
+    margin-right: 0;
   }
 }
 .contacts-info__map iframe {
@@ -3119,6 +3120,12 @@ ul, ol, li {
   background-color: #D8E8F8;
 }
 @media (max-width: 991.8px) {
+  .order-contact .container-1540 {
+    padding-inline: 4vw;
+    padding-bottom: 10.6666666667vw;
+  }
+}
+@media (max-width: 991.8px) {
   .order-contact {
     display: flex;
     flex-direction: column;
@@ -3136,12 +3143,6 @@ ul, ol, li {
     justify-content: center;
   }
 }
-.order-contact-content .order-contact-title {
-  position: absolute;
-  top: 0;
-  margin-top: 0.5208333333vw;
-  padding-left: 11.6666666667vw;
-}
 @media (max-width: 991.8px) {
   .order-contact-content .order-contact-title {
     padding-left: 0;
@@ -3157,10 +3158,14 @@ ul, ol, li {
   padding-right: 5.6770833333vw;
   margin-bottom: 3.9583333333vw;
   margin-top: 1.25vw;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .delivery-options-col {
-    display: flex;
+    padding-right: 0;
     flex-direction: column;
   }
 }
@@ -3170,12 +3175,31 @@ ul, ol, li {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .delivery-options-col .delivery-options {
+    width: 100%;
+    padding: 4vw;
+  }
+}
 .order-contact #order-contact-form .checkbox-label {
   display: block;
   font-weight: 400;
+  max-width: 31.25vw;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .checkbox-label {
+    max-width: 100%;
+    flex: 1;
+    font-size: 3.2vw;
+  }
 }
 .order-contact #order-contact-form .date-input {
   position: relative;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .date-input {
+    width: 100%;
+  }
 }
 .order-contact #order-contact-form .calendar-icon {
   position: absolute;
@@ -3191,6 +3215,11 @@ ul, ol, li {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section {
+    width: 100%;
+  }
+}
 .order-contact #order-contact-form .form-section input,
 .order-contact #order-contact-form .form-section textarea,
 .order-contact #order-contact-form .form-section select {
@@ -3200,6 +3229,13 @@ ul, ol, li {
   border-radius: 1.5625vw;
   padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
   margin-bottom: 1.40625vw;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section input,
+  .order-contact #order-contact-form .form-section textarea,
+  .order-contact #order-contact-form .form-section select {
+    width: 100%;
+  }
 }
 .order-contact #order-contact-form .form-section input {
   margin-right: 0.625vw;
@@ -3222,6 +3258,18 @@ ul, ol, li {
   align-items: center;
   margin-bottom: 1.40625vw;
 }
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .form-row {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .form-row input {
+    border-radius: 5.3333333333vw;
+    padding: 5.3333333333vw 5.3333333333vw;
+  }
+}
 .order-contact #order-contact-form .form-section .text-area-row {
   box-sizing: content-box;
 }
@@ -3231,23 +3279,56 @@ ul, ol, li {
   overflow-y: scroll;
   padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
 }
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .text-area-row textarea {
+    border-radius: 5.3333333333vw;
+    padding: 5.3333333333vw 5.3333333333vw;
+    height: 52vw;
+  }
+}
 .order-contact #order-contact-form .form-section .checkbox-btn-col {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 4.1666666667vw;
 }
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .checkbox-btn-col {
+    margin-left: 0;
+  }
+}
 .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row {
-  width: 30.2083333333vw;
   display: flex;
   flex-direction: row;
   align-items: baseline;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row {
+    margin-bottom: 8vw;
+    margin-top: 5.3333333333vw;
+  }
 }
 .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input {
   width: auto;
   line-height: 1.05;
   padding: 0;
   margin: 0 0.5208333333vw 0 0;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input {
+    width: 5.8666666667vw;
+  }
+}
+
+.order-contact-title {
+  font-size: 2.0833333333vw;
+  margin-inline: auto;
+}
+@media (max-width: 991.8px) {
+  .order-contact-title {
+    font-size: 8.5333333333vw;
+    text-align: center;
+  }
 }
 
 .facts {
