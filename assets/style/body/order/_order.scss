@@ -26,7 +26,7 @@
     //height: vw(441);
 
     @include lg {
-      width: vm(355);
+      width: 100%;
       height: vm(256);
       border-radius: vp(30) vp(30) 0 0;
     }
@@ -200,3 +200,14 @@
   }
 }
 
+.new-mobile {
+  width: 100%;
+  display: none;
+  margin-top: vm(50);
+  @include lg {
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+}

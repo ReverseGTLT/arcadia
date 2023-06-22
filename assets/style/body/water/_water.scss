@@ -3,7 +3,14 @@
 .water {
   padding-bottom: vw(151);
 
-  @include md {
+  background-image: url('../../assets/images/water-mobile.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+
+  @include lg {
+    padding-bottom: vm(170);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,14 +23,35 @@
     text-align: start;
     flex-direction: column;
     width: vw(996);
+    @include lg {
+      width: 100%;
+      margin-left: 0;
+    }
 
     h2,
     p {
       padding-bottom: vw(21);
+      @include lg {
+        margin-bottom: vm(17);
+      }
+    }
+
+    h2 {
+      @include lg {
+        font-size: vm(24);
+        text-align: center;
+        max-width: vm(300);
+        margin-inline: auto;
+      }
     }
 
     p{
       line-height: 1.05;
+      @include lg {
+        text-align: center;
+        font-size: vm(14);
+        padding-inline: vm(15);
+      }
     }
 
     a{
@@ -31,6 +59,10 @@
       font-weight: $font-weight-accent;
       text-decoration: underline;
       text-underline-offset: vw(2);
+      @include lg {
+        font-size: vm(16);
+        text-align: center;
+      }
 
       &:hover {
         color: $color-red-border;
