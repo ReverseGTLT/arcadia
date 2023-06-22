@@ -231,6 +231,12 @@
             color: $color-grey-increase;
             text-align: center;
             border: none;
+
+            flex: 1;
+          }
+          .counter-input::-webkit-outer-spin-button,
+          .counter-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
           }
         }
 

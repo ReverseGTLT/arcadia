@@ -1757,6 +1757,11 @@ ul, ol, li {
   color: #949CBE;
   text-align: center;
   border: none;
+  flex: 1;
+}
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input::-webkit-outer-spin-button,
+.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .goods-carousel__item .good-counter-price-wrapper .good-price {
   width: 25%;
@@ -2181,9 +2186,13 @@ ul, ol, li {
   width: 4.2708333333vw;
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
+  transition: 0.2s;
+}
+.certificates .certificates-carousel .owl-prev:hover {
+  content: url("../../assets/images/arrow_active.png");
 }
 .certificates .certificates-carousel .owl-prev:active {
-  content: url("../../assets/images/arrow_active.png");
+  transform: scale(1.05);
 }
 .certificates .certificates-carousel .owl-next {
   right: -5.2083333333vw;
@@ -2192,9 +2201,13 @@ ul, ol, li {
   height: 4.2708333333vw;
   content: url("../../assets/images/arrow_light.png");
   transform: rotate(180deg);
+  transition: 0.2s;
+}
+.certificates .certificates-carousel .owl-next:hover {
+  content: url("../../assets/images/arrow_active.png");
 }
 .certificates .certificates-carousel .owl-next:active {
-  content: url("../../assets/images/arrow_active.png");
+  transform: scale(1.05) rotate(180deg);
 }
 
 .new {

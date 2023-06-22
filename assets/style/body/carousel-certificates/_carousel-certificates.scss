@@ -155,9 +155,13 @@
       width: vw(82);
       height: vw(82);
       content: url("../../assets/images/arrow_light.png");
+      transition: 0.2s;
 
-      &:active {
+      &:hover {
         content: url("../../assets/images/arrow_active.png");
+      }
+      &:active {
+        transform: scale(1.05);
       }
     }
 
@@ -168,9 +172,14 @@
       height: vw(82);
       content: url("../../assets/images/arrow_light.png");
       transform: rotate(180deg);
+      transition: 0.2s;
 
-      &:active {
+      &:hover {
         content: url("../../assets/images/arrow_active.png");
+
+      }
+      &:active {
+        transform: scale(1.05) rotate(180deg);
       }
     }
   }
