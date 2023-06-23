@@ -9,7 +9,7 @@
 // });
 
 $(document).ready(function () {
-    // Owl
+    // Owl Goods
     $('.goods-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -35,6 +35,7 @@ $(document).ready(function () {
         }
     });
 
+    // Owl Stages
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
@@ -48,6 +49,7 @@ $(document).ready(function () {
         touchDrag: true,
     });
 
+    // Owl Certificates
     $('.certificates-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -71,6 +73,44 @@ $(document).ready(function () {
         }
     });
 
+    $(".certificates-carousel__item").click(function (e) {
+        e.preventDefault();
+        const items = $(this).closest(".certificates-carousel").find(".certificates-carousel__item");
+        const images = items.map(function () {
+            return {src: $(this).find("img").attr("src"), type: "image"};
+        }).get();
+        const index = items.index(this);
+        console.log(index);
+
+        const fancybox = new Fancybox(images, {
+            // closeButton: "top",
+            mainClass: "fancybox-custom",
+            loop: true,
+            animationEffect: "fade",
+            contentClick: "iterateZoom",
+            Images: {
+                Panzoom: {
+                    maxScale: 2,
+                },
+            },
+            Toolbar: {
+                display: {
+                    left: [],
+                    right: ["zoomIn", "zoomOut", "slideshow", "close"],
+                },
+            },
+            caption: function (instance, item) {
+                return $(this).closest(".certificates-carousel__item").find("a").text();
+            },
+            startIndex: index,
+            Thumbs: false,
+        });
+
+        fancybox.open();
+    });
+
+
+// Owl Facts
     $('.facts-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -98,7 +138,6 @@ $(document).ready(function () {
 //Parsley
     $('#contact-form').parsley();
 });
-
 // Header
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');
@@ -157,7 +196,7 @@ function onMenuClose() {
 // Появление для всех h2
 // fadeInHeadings();
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     fadeInHeadings();
 });
 

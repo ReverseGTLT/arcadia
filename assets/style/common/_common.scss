@@ -3,6 +3,9 @@
 :root {
   //--animate-duration: 2s;
   //--animate-delay: 2s;
+  //.fancybox-custom .fancybox-inner {
+  //  background-color: $background-blue;
+  //}
 }
 *,
 *::before,
@@ -317,34 +320,6 @@ ul, ol, li {
       border: vm(1) solid $color-red;
       border-radius: vm(100);
     }
-  }
-}
-
-.order-1 {
-  order: 1;
-  @include lg {
-    order: 2;
-  }
-}
-
-.order-2 {
-  order: 2;
-  @include lg {
-    order: 3;
-  }
-}
-
-.order-3 {
-  order: 3;
-  @include lg {
-    order: 4;
-  }
-}
-
-.order-4 {
-  order: 4;
-  @include lg {
-    order: 1;
   }
 }
 
