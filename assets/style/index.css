@@ -2877,7 +2877,6 @@ ul, ol, li {
   transform: scale(1.05) rotate(180deg);
 }
 
-
 .fancybox-slide--iframe .fancybox-content,
 .fancybox-slide--image .fancybox-content {
   padding: 0;
@@ -2933,6 +2932,7 @@ ul, ol, li {
 
 .fancybox-custom .fancybox-toolbar {
   background-color: transparent;
+}
 
 .new {
   position: relative;
