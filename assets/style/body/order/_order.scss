@@ -188,10 +188,10 @@
 }
 
 .order-form__label-wrapper {
-  @include lg {
-    display: none;
-  }
-}
+   @include lg {
+     display: none;
+   }
+ }
 
 .order-form__label-wrapper--mobile {
   display: none;
