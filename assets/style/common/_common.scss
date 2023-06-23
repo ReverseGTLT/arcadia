@@ -323,34 +323,6 @@ ul, ol, li {
   }
 }
 
-.order-1 {
-  order: 1;
-  @include lg {
-    order: 2;
-  }
-}
-
-.order-2 {
-  order: 2;
-  @include lg {
-    order: 3;
-  }
-}
-
-.order-3 {
-  order: 3;
-  @include lg {
-    order: 4;
-  }
-}
-
-.order-4 {
-  order: 4;
-  @include lg {
-    order: 1;
-  }
-}
-
 /* Для веб-китовых браузеров, таких как Chrome, Safari и новых версий Opera */
 ::-webkit-scrollbar {
   width: 5px; /* Задаем ширину вертикального скролл-бара */

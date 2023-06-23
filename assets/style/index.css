@@ -318,42 +318,6 @@ ul, ol, li {
   }
 }
 
-.order-1 {
-  order: 1;
-}
-@media (max-width: 991.8px) {
-  .order-1 {
-    order: 2;
-  }
-}
-
-.order-2 {
-  order: 2;
-}
-@media (max-width: 991.8px) {
-  .order-2 {
-    order: 3;
-  }
-}
-
-.order-3 {
-  order: 3;
-}
-@media (max-width: 991.8px) {
-  .order-3 {
-    order: 4;
-  }
-}
-
-.order-4 {
-  order: 4;
-}
-@media (max-width: 991.8px) {
-  .order-4 {
-    order: 1;
-  }
-}
-
 /* Для веб-китовых браузеров, таких как Chrome, Safari и новых версий Opera */
 ::-webkit-scrollbar {
   width: 5px; /* Задаем ширину вертикального скролл-бара */
@@ -1301,6 +1265,7 @@ ul, ol, li {
     position: absolute;
     bottom: 48.8911290323vw;
     max-width: 100vw;
+    gap: 1.0080645161vw;
     margin: 0;
     box-sizing: border-box;
   }
@@ -1312,6 +1277,60 @@ ul, ol, li {
     max-width: 100vw;
     margin: 0;
     box-sizing: border-box;
+  }
+  .benefits-carts .order-1 {
+    order: 1;
+  }
+}
+@media (max-width: 575.8px) and (max-width: 991.8px) {
+  .benefits-carts .order-1 {
+    order: 2;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-carts .order-2 {
+    order: 2;
+  }
+}
+@media (max-width: 575.8px) and (max-width: 991.8px) {
+  .benefits-carts .order-2 {
+    order: 3;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-carts .order-3 {
+    order: 3;
+  }
+}
+@media (max-width: 575.8px) and (max-width: 991.8px) {
+  .benefits-carts .order-3 {
+    order: 4;
+  }
+}
+@media (max-width: 575.8px) {
+  .benefits-carts .order-4 {
+    order: 4;
+  }
+}
+@media (max-width: 575.8px) and (max-width: 991.8px) {
+  .benefits-carts .order-4 {
+    order: 1;
+  }
+}
+@media (max-width: 575.8px) and (max-width: 991.8px) {
+  .benefits-carts .order-1,
+.benefits-carts .order-2,
+.benefits-carts .order-3,
+.benefits-carts .order-4 {
+    flex: 1 1 50%;
+  }
+}
+@media (max-width: 575.8px) and (max-width: 991.8px) and (max-width: 575.8px) {
+  .benefits-carts .order-1,
+.benefits-carts .order-2,
+.benefits-carts .order-3,
+.benefits-carts .order-4 {
+    flex: 1;
   }
 }
 .benefits-carts__item {
@@ -1329,22 +1348,22 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .benefits-carts__item {
-    width: 46.1333333333vw;
+    width: 45.3333333333vw;
     align-items: start;
     flex-direction: column;
     padding-bottom: 1.0080645161vw;
     padding-right: 2.4vw;
-    margin: auto auto 2.6666666667vw;
+    margin: auto;
   }
 }
 @media (max-width: 575.8px) {
   .benefits-carts__item {
-    width: 46.1333333333vw;
+    width: 45.3333333333vw;
     justify-content: center;
     flex-direction: column;
     padding-bottom: 2.6666666667vw;
     padding-right: 2.4vw;
-    margin: auto auto 2.6666666667vw;
+    margin: auto;
   }
 }
 .benefits-carts__item p {
