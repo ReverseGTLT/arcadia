@@ -2824,6 +2824,9 @@ ul, ol, li {
   content: url("../../assets/images/arrow_light.png");
   transition: 0.2s;
 }
+.certificates .certificates-carousel .owl-prev:hover {
+  content: url("../../assets/images/arrow_active.png");
+}
 @media (max-width: 991.8px) {
   .certificates .certificates-carousel .owl-prev {
     left: -17.6411290323vw;
@@ -2874,111 +2877,6 @@ ul, ol, li {
   transform: scale(1.05) rotate(180deg);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2b7d589 (Certificates gallery. Done)
-.fancybox-slide--iframe .fancybox-content,
-.fancybox-slide--image .fancybox-content {
-  padding: 0;
-}
-
-.fancybox-slide--image .fancybox-content img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.fancybox-toolbar {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-<<<<<<< HEAD
-  top: 0;
-  right: 0;
-  padding: 10px;
-  z-index: 9999;
-}
-
-.fancybox-toolbar button {
-  margin-left: 5px;
-  padding: 5px;
-}
-
-.fancybox-custom {
-  background-color: rgba(81, 165, 242, 0.8980392157);
-  --fancybox-bg: $background-blue;
-}
-
-.fancybox-custom .fancybox-button svg {
-  fill: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:before,
-.fancybox-custom .fancybox-button:after {
-  background-color: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:hover:before,
-.fancybox-custom .fancybox-button:hover:after {
-  background-color: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:hover svg {
-  fill: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:disabled:before,
-.fancybox-custom .fancybox-button:disabled:after {
-  background-color: #ccc;
-}
-
-.fancybox-custom .fancybox-toolbar {
-  background-color: transparent;
-=======
-.overlay {
-  z-index: 10100;
-  position: fixed;
-=======
->>>>>>> 2b7d589 (Certificates gallery. Done)
-  top: 0;
-  right: 0;
-  padding: 10px;
-  z-index: 9999;
-}
-
-.fancybox-toolbar button {
-  margin-left: 5px;
-  padding: 5px;
-}
-
-.fancybox-custom {
-  background-color: rgba(81, 165, 242, 0.8980392157);
-  --fancybox-bg: $background-blue;
-}
-
-.fancybox-custom .fancybox-button svg {
-  fill: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:before,
-.fancybox-custom .fancybox-button:after {
-  background-color: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:hover:before,
-.fancybox-custom .fancybox-button:hover:after {
-  background-color: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:hover svg {
-  fill: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:disabled:before,
-.fancybox-custom .fancybox-button:disabled:after {
-  background-color: #ccc;
-}
-
 
 .fancybox-slide--iframe .fancybox-content,
 .fancybox-slide--image .fancybox-content {
@@ -2994,108 +2892,6 @@ ul, ol, li {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  z-index: 9999;
-}
-
-.fancybox-toolbar button {
-  margin-left: 5px;
-  padding: 5px;
-}
-
-.fancybox-custom {
-  background-color: rgba(81, 165, 242, 0.8980392157);
-  --fancybox-bg: $background-blue;
-}
-
-.fancybox-custom .fancybox-button svg {
-  fill: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:before,
-.fancybox-custom .fancybox-button:after {
-  background-color: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:hover:before,
-.fancybox-custom .fancybox-button:hover:after {
-  background-color: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:hover svg {
-  fill: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:disabled:before,
-.fancybox-custom .fancybox-button:disabled:after {
-  background-color: #ccc;
-}
-
-=======
->>>>>>> 2b7d589 (Certificates gallery. Done)
-.fancybox-custom .fancybox-toolbar {
-  background-color: transparent;
-<<<<<<< HEAD
-.fancybox-slide--iframe .fancybox-content,
-.fancybox-slide--image .fancybox-content {
-  padding: 0;
-}
-
-.fancybox-slide--image .fancybox-content img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.fancybox-toolbar {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  z-index: 9999;
-}
-
-.fancybox-toolbar button {
-  margin-left: 5px;
-  padding: 5px;
-}
-
-.fancybox-custom {
-  background-color: rgba(81, 165, 242, 0.8980392157);
-  --fancybox-bg: $background-blue;
-}
-
-.fancybox-custom .fancybox-button svg {
-  fill: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:before,
-.fancybox-custom .fancybox-button:after {
-  background-color: #ffffff;
-}
-
-.fancybox-custom .fancybox-button:hover:before,
-.fancybox-custom .fancybox-button:hover:after {
-  background-color: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:hover svg {
-  fill: #51A5F2;
-}
-
-.fancybox-custom .fancybox-button:disabled:before,
-.fancybox-custom .fancybox-button:disabled:after {
-  background-color: #ccc;
-}
-
-.fancybox-custom .fancybox-toolbar {
-  background-color: transparent;
-
-.fancybox-slide--image .fancybox-content img {
-.fancybox-toolbar {
   top: 0;
   right: 0;
   padding: 10px;
