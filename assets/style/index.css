@@ -3068,11 +3068,11 @@ ul, ol, li {
     margin: 0.2604166667vw;
   }
 }
-.contacts-content__text h4 {
+.contacts-content__text h2 {
   padding-bottom: 2.1875vw;
 }
 @media (max-width: 991.8px) {
-  .contacts-content__text h4 {
+  .contacts-content__text h2 {
     text-align: center;
     font-size: 8.5333333333vw;
   }
@@ -3400,8 +3400,8 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .form-section input,
-  .order-contact #order-contact-form .form-section textarea,
-  .order-contact #order-contact-form .form-section select {
+.order-contact #order-contact-form .form-section textarea,
+.order-contact #order-contact-form .form-section select {
     width: 100%;
   }
 }
@@ -3502,7 +3502,7 @@ ul, ol, li {
 .facts {
   padding-bottom: 7.1875vw;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .facts {
     display: flex;
     flex-direction: column;
@@ -3519,7 +3519,7 @@ ul, ol, li {
 .facts-content__text {
   width: 57.2916666667vw;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .facts-content__text {
     width: 100%;
     margin: 0.2604166667vw;
@@ -3537,7 +3537,7 @@ ul, ol, li {
   justify-content: space-between;
   align-items: start;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .facts-carousel {
     max-width: 98%;
     margin: auto;
@@ -3553,7 +3553,7 @@ ul, ol, li {
   align-items: start;
   padding-bottom: 2.7083333333vw;
 }
-@media (max-width: 767.8px) {
+@media (max-width: 991.8px) {
   .facts-carousel__item {
     padding: 2.6666666667vw;
   }
@@ -3589,25 +3589,26 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .facts .facts-carousel .owl-dots {
-    bottom: -1.0416666667vw;
+    bottom: -2.0161290323vw;
   }
 }
-@media (max-width: 767.8px) {
+@media (max-width: 575.8px) {
   .facts .facts-carousel .owl-dots {
     bottom: 0;
   }
 }
 .facts .facts-carousel .owl-dots .owl-dot {
-  display: inline-block !important;
   justify-content: center;
   margin: 0 0.78125vw;
-  width: 0.5208333333vw;
   height: 0.5208333333vw;
+  width: 100%;
+  max-width: 19.0625vw;
   border-radius: 50%;
-  background-color: #FFBBBB;
+  background-color: #D8E4EE;
+  transition: background-color 0.3s ease;
 }
 .facts .facts-carousel .owl-dots .owl-dot.active {
-  background-color: #F80505;
+  background-color: #D4D8EB;
 }
 
 .water {
@@ -3645,7 +3646,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .water-content h2,
-  .water-content p {
+.water-content p {
     margin-bottom: 4.5333333333vw;
   }
 }
@@ -3786,7 +3787,7 @@ footer .container .attribution {
 }
 @media (max-width: 767.8px) {
   footer .container .social-media,
-  footer .container .payment {
+footer .container .payment {
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -4060,21 +4061,21 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 767.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 575.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.6vw;
     width: 0.2604166667vw;
   }

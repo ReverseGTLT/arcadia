@@ -3,7 +3,7 @@
 .facts {
   padding-bottom: vw(138);
 
-  @include md {
+  @include lg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@
       width: vw(1100);
       //padding-bottom: vw(103);
 
-      @include md {
+      @include lg {
         width: 100%;
         margin: vw(5);
       }
@@ -42,13 +42,7 @@
     justify-content: space-between;
     align-items: start;
 
-    @include lg() {
-      //max-width: 98%;
-      //margin: auto;
-      //height: auto;
-    }
-
-    @include md {
+    @include lg {
       max-width: 98%;
       margin: auto;
       height: auto;
@@ -64,15 +58,7 @@
       align-items: start;
       padding-bottom: vw(52);
 
-      @include lg() {
-        //width: 100%;
-        //
-        //margin: 0;
-        //height: auto;
-        //padding: vm(2);
-      }
-
-      @include md {
+      @include lg {
         padding: vm(10);
       }
 
@@ -124,25 +110,27 @@
       bottom: vw(35);
 
       @include lg() {
-        bottom: vw(-20);
+        bottom: vp(-20);
       }
 
-      @include md() {
+      @include sm() {
         bottom: 0;
       }
 
       .owl-dot {
-        display: inline-block !important;
+        //display: inline-block;
         justify-content: center;
         margin: 0 vw(15);
         //margin: 0 vw(40);
-        width: vw(10);
         height: vw(10);
+        width: 100%;
+        max-width: vw(366);
         border-radius: 50%;
-        background-color: $color-red-border;
+        background-color: $color-grey-border-light;
+        transition: background-color 0.3s ease;
 
         &.active {
-          background-color: $color-red;
+          background-color: $color-grey-border;
         }
       }
     }
