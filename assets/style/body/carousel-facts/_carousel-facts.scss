@@ -8,6 +8,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: vp(130);
+    @include sm {
+      padding-bottom: vm(59);
+    }
   }
 
   &-content {
@@ -16,41 +20,59 @@
     display: flex;
     flex-direction: column;
 
+    @include lg {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+    }
+
     &__text {
       width: vw(1100);
-      //padding-bottom: vw(103);
 
       @include lg {
         width: 100%;
-        margin: vw(5);
+        margin: vp(5);
+      }
+      @include sm {
+        margin: vm(5);
       }
 
       h2 {
         padding-bottom: vw(103);
+        @include lg {
+          padding-bottom: vp(50);
+        }
+        @include sm {
+          padding-bottom: vm(29);
+        }
       }
     }
   }
 
   &-carousel {
     position: relative;
-    width: 100%;
+    max-width: vw(1304);
     margin-left: vw(183);
     text-align: start;
-    //margin-inline: auto;
-    //height: vw(564);
     display: flex;
     justify-content: space-between;
     align-items: start;
 
     @include lg {
-      max-width: 98%;
-      margin: auto;
+      max-width: 100%;
+      margin: 0;
       height: auto;
+      overflow-x: hidden;
+      padding-bottom: vp(20);
+    }
+    @include sm {
+      width: vm(528);
+      padding-bottom: vm(10);
     }
 
     &__item {
       width: vw(366);
-      //height: vw(252);
       text-align: left;
       display: flex;
       flex-direction: column;
@@ -59,27 +81,55 @@
       padding-bottom: vw(52);
 
       @include lg {
+        width: 100%;
+        padding: vp(10);
+        margin: 0;
+      }
+      @include sm {
+        margin: 0;
         padding: vm(10);
       }
 
       .fact-wrap {
         display: flex;
+        height: 100%;
         justify-content: start;
         align-items: center;
         padding-bottom: vw(35);
 
-        img {
-          display: block;
+        @include lg {
+          padding-bottom: vp(35);
+        }
+        @include sm {
+          height: vm(34);
+          width: vm(140);
+          padding-bottom: vm(19);
+        }
+
+        .for_img {
           width: vw(72.5);
           height: vw(67.78);
           padding-right: vw(25);
+
+          @include lg {
+            width: vp(72.5);
+            height: vp(67.78);
+          }
+          @include sm {
+            width: vm(28);
+            height: vm(25);
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
         }
 
         h4 {
           display: block;
         }
       }
-
 
       p {
         display: block;
@@ -88,16 +138,15 @@
     }
   }
 
-
-  .facts-carousel-dots .owl-dots {
+  .facts-carousel-dots {
     margin-left: vw(183);
     z-index: 1;
-    //position: absolute;
     display: flex;
     justify-content: start;
-    align-items: end;
-    width: 100%;
-    //margin-left: 0;
+    align-items: center;
+    width: 70%;
+    height: vw(3);
+    background-color: $color-grey-border;
     left: 0;
     bottom: vw(-55);
 
@@ -114,26 +163,20 @@
     }
 
     .owl-dot {
-      //display: inline-block !important;
-      height: vw(4);
-      width: vw(990);
+      z-index: 1;
+      height: vw(2);
+      width: 30%;
       justify-content: start;
-      align-items: end;
+      align-items: center;
       margin: 0;
-      background-color: $color-grey-border;
-      transition: background-color 0.3s ease;
+      background-color: $color-grey-increase;
+      transition: 0.3s ease;
 
       @include lg {
-        //width: 100%;
+        height: vp(2);
       }
       @include sm {
-
-      }
-
-      &.active {
-        height: vw(4);
-        width: vw(275);
-        background-color: $color-grey-increase;
+        height: vm(2);
       }
     }
   }
@@ -141,5 +184,4 @@
   .facts-carousel-dots .owl-nav {
     display: none;
   }
-
 }

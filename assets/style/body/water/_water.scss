@@ -45,24 +45,27 @@
       }
     }
 
-    p{
+    p {
       line-height: 1.05;
       @include lg {
+        font-size: vp(20);
         text-align: center;
-        font-size: vm(14);
         padding-inline: vm(15);
+      }
+      @include sm {
+        font-size: vm(14);
       }
     }
 
-    a{
+    a {
       color: $color-blue-link;
       font-weight: $font-weight-accent;
       text-decoration: underline;
       text-underline-offset: vw(2);
       @include lg {
-        font-size: vm(16);
         text-align: center;
       }
+
 
       &:hover {
         color: $color-red-border;
