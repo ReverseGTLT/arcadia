@@ -4,6 +4,48 @@
 // import parsley from "parsleyjs/dist/parsley";
 
 
+
+//____________________________________________________________________
+// VARIABLES
+//____________________________________________________________________
+
+let orders = [
+    {
+        client: {
+            id: 0,
+            firstName: 'test',
+            lastName: 'test',
+            phone: '123',
+        },
+        goods: [
+            {
+                good: {
+                    id: 0,
+                    title: 'test',
+                    count: 0,
+                },
+            },
+        ],
+    }
+];
+
+let client = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    phone: '',
+};
+
+let good = {
+    id: 0,
+    title: '',
+    description: '',
+    count: 0,
+};
+
+
+
+
 // $(document).ready(function() {
 //     $('#contact-form').parsley();
 // });
@@ -123,10 +165,10 @@ $(document).ready(function () {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 1.5,
             },
             768: {
-                items: 3,
+                items: 1.5,
             },
             992: {
                 items: 3,
@@ -152,7 +194,7 @@ $(document).ready(function () {
         dotClass: 'owl-dot',
         dotContainerClass: 'owl-dots',
         dotClassActive: 'active',
-        startPosition: 0
+        startPosition: 0,
     });
 
 //Parsley
@@ -161,13 +203,12 @@ $(document).ready(function () {
 
 
 // Preloader
-window.addEventListener('load', function() {
-    setTimeout(function() {
+window.addEventListener('load', function () {
+    setTimeout(function () {
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none';
     }, 2000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
 });
-
 
 
 // Header
@@ -273,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//_____________________________
 function handleOrientationChange() {
     const generalElement = document.getElementById('general');
     const generalWrapperInfo = document.getElementById('generalWrapperInfo');
@@ -316,10 +358,6 @@ handleOrientationChange();
 // mapIframe.addEventListener('click', () => {
 //     mapIframe.requestFullscreen();
 // });
-
-
-// let cart =[];
-
 
 //
 // ------------------------------------
