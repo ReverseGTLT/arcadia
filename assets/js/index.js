@@ -160,6 +160,16 @@ $(document).ready(function () {
 });
 
 
+// Preloader
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    }, 2000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
+});
+
+
+
 // Header
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');
@@ -179,7 +189,7 @@ function onScrollWindow() {
     const header = document.querySelector('.header');
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition >= 1) {
+    if (scrollPosition >= 101) {
         header.classList.add('bgcolor-white');
         localStorage.setItem('scrollPresent', 'true'); // Сохраняем информацию о наличии скролла в Local Storage
     } else {

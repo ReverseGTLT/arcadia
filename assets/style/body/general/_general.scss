@@ -14,6 +14,8 @@
     background-size: cover, cover;
     background-repeat: no-repeat;
     background-position: center, center;
+
+    animation: opacity2 3.5s linear;
   }
   &-container {
     display: flex;
@@ -92,7 +94,7 @@
     }
     &__info {
       position: relative;
-      margin-top: vw(362);
+      margin-top: vw(302);
       margin-left: vw(825);
       @include lg {
         margin-inline: auto;
@@ -179,6 +181,7 @@
   position: absolute;
   top: vw(-130);
   left: vw(-50);
+  animation: opacity2 6s ease-in-out;
   @include lg {
     width: vp(224);
     height: vp(224);
@@ -204,6 +207,18 @@
     transform: translateX(-50%) rotate(360deg);
   }
 }
+
+//@keyframes circle-delay {
+//  0% {
+//    opacity: 0;
+//  }
+//  99% {
+//    opacity: 0;
+//  }
+//  100% {
+//    opacity: 1;
+//  }
+//}
 
 .circle-rotate {
   animation: rotate 20s linear infinite;
@@ -239,3 +254,16 @@
     left: vm(85);
   }
 }
+
+@keyframes opacity2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

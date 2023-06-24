@@ -694,6 +694,7 @@ ul, ol, li {
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: center, center;
+  animation: opacity2 3.5s linear;
 }
 .general-container {
   display: flex;
@@ -787,7 +788,7 @@ ul, ol, li {
 }
 .general-wrapper__info {
   position: relative;
-  margin-top: 18.8541666667vw;
+  margin-top: 15.7291666667vw;
   margin-left: 42.96875vw;
 }
 @media (max-width: 991.8px) {
@@ -888,6 +889,7 @@ ul, ol, li {
   position: absolute;
   top: -6.7708333333vw;
   left: -2.6041666667vw;
+  animation: opacity2 6s ease-in-out;
 }
 @media (max-width: 991.8px) {
   .circle-text {
@@ -956,6 +958,17 @@ ul, ol, li {
   }
 }
 
+@keyframes opacity2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .sale {
   height: 5.9375vw;
   background-color: #F80505;
@@ -1319,17 +1332,17 @@ ul, ol, li {
 }
 @media (max-width: 575.8px) and (max-width: 991.8px) {
   .benefits-carts .order-1,
-.benefits-carts .order-2,
-.benefits-carts .order-3,
-.benefits-carts .order-4 {
+  .benefits-carts .order-2,
+  .benefits-carts .order-3,
+  .benefits-carts .order-4 {
     flex: 1 1 50%;
   }
 }
 @media (max-width: 575.8px) and (max-width: 991.8px) and (max-width: 575.8px) {
   .benefits-carts .order-1,
-.benefits-carts .order-2,
-.benefits-carts .order-3,
-.benefits-carts .order-4 {
+  .benefits-carts .order-2,
+  .benefits-carts .order-3,
+  .benefits-carts .order-4 {
     flex: 1;
   }
 }
@@ -2122,14 +2135,14 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 3.4274193548vw;
     width: 1.6129032258vw;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 5.6vw;
     width: 2.6666666667vw;
   }
@@ -3400,8 +3413,8 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .form-section input,
-.order-contact #order-contact-form .form-section textarea,
-.order-contact #order-contact-form .form-section select {
+  .order-contact #order-contact-form .form-section textarea,
+  .order-contact #order-contact-form .form-section select {
     width: 100%;
   }
 }
@@ -3648,7 +3661,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .water-content h2,
-.water-content p {
+  .water-content p {
     margin-bottom: 4.5333333333vw;
   }
 }
@@ -3789,7 +3802,7 @@ footer .container .attribution {
 }
 @media (max-width: 767.8px) {
   footer .container .social-media,
-footer .container .payment {
+  footer .container .payment {
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -4063,21 +4076,21 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 767.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.7708333333vw;
     width: 0.8333333333vw;
   }
 }
 @media (max-width: 575.8px) {
   #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-#modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  #modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 1.6vw;
     width: 0.2604166667vw;
   }
@@ -4520,6 +4533,97 @@ footer .container .attribution a {
   }
   100% {
     transform: translateX(0);
+  }
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.loader {
+  background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url("../images/main.png");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  animation: pos2 3s linear;
+}
+@media (max-width: 991.8px) {
+  .loader {
+    background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url("../images/general-mobile.png");
+  }
+}
+.loader img {
+  transition: 0.2s;
+}
+
+.header-logo__images--preloader {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 22.3958333333vw;
+  animation: spin 3s linear;
+  opacity: 0;
+}
+.header-logo__images--preloader img:first-child {
+  width: 13.0208333333vw;
+}
+.header-logo__images--preloader img:last-child {
+  width: 22.3958333333vw;
+  animation: opacity 3s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(0.7) translateY(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  90% {
+    opacity: 0.7;
+    transform: scale(6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pos2 {
+  0% {
+    background-size: 120%, 120%;
+  }
+  90% {
+    opacity: 1;
+    background-size: 200%, 200%;
+  }
+  100% {
+    opacity: 0;
+    background-size: 100%, 100%;
   }
 }
 
