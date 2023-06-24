@@ -9,7 +9,7 @@
 // });
 
 $(document).ready(function () {
-    // Owl
+    // Owl Goods
     $('.goods-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -35,6 +35,7 @@ $(document).ready(function () {
         }
     });
 
+    // Owl Stages
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
@@ -48,6 +49,7 @@ $(document).ready(function () {
         touchDrag: true,
     });
 
+    // Owl Certificates
     $('.certificates-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -71,14 +73,51 @@ $(document).ready(function () {
         }
     });
 
+    $(".certificates-carousel__item").click(function (e) {
+        e.preventDefault();
+        const items = $(this).closest(".certificates-carousel").find(".certificates-carousel__item");
+        const images = items.map(function () {
+            return {src: $(this).find("img").attr("src"), type: "image"};
+        }).get();
+        const index = items.index(this);
+        console.log(index);
+
+        const fancybox = new Fancybox(images, {
+            // closeButton: "top",
+            mainClass: "fancybox-custom",
+            loop: true,
+            animationEffect: "fade",
+            contentClick: "iterateZoom",
+            Images: {
+                Panzoom: {
+                    maxScale: 2,
+                },
+            },
+            Toolbar: {
+                display: {
+                    left: [],
+                    right: ["zoomIn", "zoomOut", "slideshow", "close"],
+                },
+            },
+            caption: function (instance, item) {
+                return $(this).closest(".certificates-carousel__item").find("a").text();
+            },
+            startIndex: index,
+            Thumbs: false,
+        });
+
+        fancybox.open();
+    });
+
+
+// Owl Facts
     $('.facts-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
         autoplayHoverPause: true,
         margin: 0,
         nav: false,
-        dots: true,
-        dotsEach: 3,
+        dots: false,
         mouseDrag: true,
         touchDrag: true,
         responsiveClass: true,
@@ -92,20 +131,43 @@ $(document).ready(function () {
             992: {
                 items: 3,
             }
-        }
+        },
+        dotsContainer: '.facts-carousel-dots',
+        onInitialized: updateDots,
+        onTranslated: updateDots,
+    });
+
+    function updateDots(event) {
+        const currentIndex = event.item.index; // Получаем индекс текущего слайда
+        $('.facts-carousel-dots .owl-dot').removeClass('active'); // Удаляем класс active у всех dots
+        $('.facts-carousel-dots .owl-dot').eq(currentIndex).addClass('active'); // Добавляем класс active к соответствующему dots
+    }
+
+
+    $('.facts-carousel-dots').owlCarousel({
+        items: 1,
+        nav: false,
+        dots: true,
+        // dotsEach: 3,
+        dotClass: 'owl-dot',
+        dotContainerClass: 'owl-dots',
+        dotClassActive: 'active',
+        startPosition: 0
     });
 
 //Parsley
     $('#contact-form').parsley();
 });
 
+
 // Preloader
 window.addEventListener('load', function() {
     setTimeout(function() {
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none';
-    }, 4000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
+    }, 2000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
 });
+
 
 
 // Header
@@ -127,7 +189,7 @@ function onScrollWindow() {
     const header = document.querySelector('.header');
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition >= 1) {
+    if (scrollPosition >= 101) {
         header.classList.add('bgcolor-white');
         localStorage.setItem('scrollPresent', 'true'); // Сохраняем информацию о наличии скролла в Local Storage
     } else {
@@ -166,7 +228,7 @@ function onMenuClose() {
 // Появление для всех h2
 // fadeInHeadings();
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     fadeInHeadings();
 });
 

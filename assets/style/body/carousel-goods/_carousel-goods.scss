@@ -8,6 +8,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: vp(131);
+  }
+  @include sm {
     padding-bottom: vm(68);
   }
 
@@ -33,23 +36,23 @@
 
       @include lg {
         width: 100%;
-        margin: 10px;
         text-align: center;
+        padding-bottom: 0;
       }
 
       h2 {
         padding-bottom: vw(50);
 
         @include lg {
+          padding-bottom: vp(40);
+        }
+        @include sm {
           padding-bottom: vm(20);
         }
       }
 
       p {
         width: 100%;
-        @include lg {
-          padding-bottom: vm(20);
-        }
       }
     }
 
@@ -61,6 +64,10 @@
 
       @include lg {
         position: initial;
+        justify-content: center;
+        padding-bottom: vp(40);
+      }
+      @include sm {
         padding-bottom: vm(20);
       }
 
@@ -69,6 +76,9 @@
         display: flex;
         align-items: center;
         @include lg {
+          padding: vp(20) vp(30) vp(19) vp(83);
+        }
+        @include sm {
           padding: vm(16) vm(24) vm(15) vm(57);
         }
 
@@ -83,6 +93,11 @@
           background-size: cover;
 
           @include lg {
+            height: vp(29);
+            width: vp(29);
+            left: vp(29);
+          }
+          @include sm {
             height: vm(24);
             width: vm(24);
             left: vm(20);
@@ -114,7 +129,6 @@
     }
 
     &__item {
-      padding: vw(41) vw(20) vw(22) vw(21);
       background: $color-white;
       border: vw(1) solid $color-grey-border;
       border-radius: vw(30);
@@ -122,19 +136,20 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: vw(41) vw(20) vw(22) vw(21);
       transition: box-shadow 0.3s;
 
       @include lg {
         padding: vp(41) vp(20) vp(22) vp(21);
         border-radius: vp(30);
         border: vp(1) solid $color-grey-border;
-        margin: 0;
+        margin-inline:vp(5);
       }
       @include sm {
         padding: vm(23) vm(8) vm(14) vm(9);
         border-radius: vm(10);
         border: vm(1) solid $color-grey-border;
-        margin: 0;
+        margin-inline:vm(5);
       }
 
       &:hover {
@@ -181,6 +196,9 @@
         font-weight: $font-weight-accent;
         line-height: 1.3;
         text-align: left;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         padding-bottom: vw(17);
 
         @include lg {
@@ -253,7 +271,7 @@
           }
 
           .counter-input {
-            //font-size: vw(20);
+            font-size: vw(20);
             display: block;
             flex: 1;
             width: vw(37);
@@ -263,12 +281,12 @@
             border: none;
 
             @include lg {
-              //font-size: vp(22);
+              font-size: vp(20);
               width: vp(17);
               height: vp(21);
             }
             @include sm {
-              //font-size: vm(16);
+              font-size: vm(15);
               width: vm(17);
               height: vm(21);
             }
@@ -320,7 +338,6 @@
 
         @include lg {
           font-size: vp(15);
-          //width: 90%;
           height: auto;
           margin: auto;
           padding: vp(23) vp(30) vp(23) vp(29);
@@ -332,13 +349,6 @@
           margin: auto;
           padding: vm(17) vm(20) vm(17) vm(24);
         }
-        //@include md {
-        //  font-size: vm(14);
-        //
-        //}
-        //@include sm {
-        //  font-size: vm(14);
-        //}
       }
     }
   }
@@ -368,12 +378,12 @@
       transition: 0.2s;
 
       @include lg {
-        left: vp(-100);
+        left: vp(-175);
         width: vp(82);
         height: vp(82);
       }
       @include sm {
-        left: vm(-50);
+        left: vm(-65);
         width: vm(54);
         height: vm(54);
       }
@@ -398,12 +408,12 @@
 
 
       @include lg {
-        right: vp(-100);
+        right: vp(-175);
         width: vp(82);
         height: vp(82);
       }
       @include sm {
-        right: vm(-50);
+        right: vm(-65);
         width: vm(54);
         height: vm(54);
       }

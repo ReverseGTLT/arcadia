@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/style/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">
     <!--        <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -41,7 +42,7 @@
 <!--    HEADER-->
 <!--    _________________________-->
 
-<header class="header">
+<header class="header animate__animated animate__fadeInLeft animate__delay-3s">
     <a href="index.html" class="header-link hidden-mobile">
         <div class="header-logo">
             <div class="header-logo__images">
@@ -51,7 +52,7 @@
             <p class="header-logo__text">Доставка чистої води в Одесі до будинку чи офісу</p>
         </div>
     </a>
-    <div class="header-info delay hidden-mobile">
+    <div class="header-info hidden-mobile">
         <div class="header-info__tel">
             <a href="tel:+380935286359" target="_blank" class="header-info__tel-link">+38 093 528 63 59</a>
         </div>
@@ -84,7 +85,7 @@
             <button class="header-info__buy-btn">Замовити воду</button>
         </div>
     </div>
-    <div class="header-cart delay hidden-mobile">
+    <div class="header-cart hidden-mobile">
         <button class="header-cart__btn">
             <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.6859 19.6286C19.5341 20.9791 18.392 22 17.0331 22H6.03809C4.68661 22 3.54839 20.99 3.38755 19.6481L2.38965 11.322"
@@ -106,7 +107,7 @@
             <span><i>0</i> грн</span>
         </button>
     </div>
-    <div class="header-box delay hidden-mobile">
+    <div class="header-box hidden-mobile">
         <div class="header-language">
             <p class="header-language__text">УКР</p>
             <svg class="arrow" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,19 +121,21 @@
             </a>
         </div>
     </div>
-    <div class="header-menu delay">
+    <div class="header-menu">
         <button class="header-menu__btn">МЕНЮ</button>
     </div>
 </header>
 
 <main class="main">
+
     <!--    _________________________-->
     <!--    Section 1. GENERAL. MAIN-->
     <!--    _________________________-->
+
     <section class="general height" id="general">
         <div class="general-bg">
             <div class="general-container">
-                <div class="general-wrapper delay">
+                <div class="general-wrapper animate__animated animate__fadeIn animate__delay-4s">
                     <div class="header-logo header-logo--modal-menu">
                         <div class="header-logo__images">
                             <img src="assets/images/logo2.svg" alt="logo">
@@ -140,24 +143,24 @@
                         </div>
                         <p class="header-logo__text hidden-mobile">Доставка чистої води в Одесі до будинку чи офісу</p>
                     </div>
-                    <div class="general-wrapper__price">
+                    <div class="general-wrapper__price animate__animated animate__bounceIn animate__delay-5s">
                         <p>Всього <i>75</i> грн за 18,9 л</p>
                     </div>
-                    <div class="general-wrapper__info" id="generalWrapperInfo">
+                    <div class="general-wrapper__info animate__animated animate__fadeInLeft animate__delay-4s" id="generalWrapperInfo">
                         <div class="circle-text">
                             <img class="circle-rotate" src="assets/images/circle.svg" alt="">
                         </div>
                         <h1 class="general-wrapper__title">Доставка свіжої <br>
                             та чистої води в Одесі</h1>
                         <p class="general-wrapper__description">до будинку чи офісу</p>
-                        <button class="general-wrapper__btn animate__animated animate__bounceIn animate__delay-4s">
+                        <button class="general-wrapper__btn animate__animated animate__bounceIn animate__delay-5s">
                             Замовити воду зараз
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sale" id="sale">
+        <div class="sale animate__animated animate__slideInRight animate__delay-4s" id="sale">
             <div class="sale-wrapper">
                 <div class="sale-wrapper__description">Доставка свіжої <br>
                     та чистої води в Одесі
@@ -199,9 +202,11 @@
         </div>
         <div class="white-block"></div>
     </section>
+
     <!--    _________________________-->
     <!--    Section 2. BENEFITS-->
     <!--    _________________________-->
+
     <section class="benefits container-1540">
         <div class="benefits-content">
             <div class="benefits-content__img scrollflow -opacity -pop">
@@ -257,14 +262,12 @@
             <div class="stages-content__text">
                 <h2 class="animate__animated">Очищення води від “Acradia”<br>
                     <span>це - не менш, ніж 8 степеней очистки!</span></h2>
-                <p class="scrollflow -opacity -slide-left">Підключивши продукт до диспенсера, який ви також можете знайти в пропозиції H2On, ви отримаєте
+                <p class="scrollflow -opacity -slide-left">Підключивши продукт до диспенсера, який ви також можете
+                    знайти в пропозиції H2On, ви отримаєте
                     миттєву холодну або гарячу воду!</p>
             </div>
 
             <div class="stages-content__img-carousel-wrapper scrollflow -opacity -pop">
-                <!--                    <div class="stage-image">-->
-                <!--                        <img src="./assets/images/stage_03.png" alt="stage">-->
-                <!--                    </div>-->
                 <div class="stages-carousel carousel owl-carousel">
                     <div class="stages-carousel__item">
                         <div class="stage-text">
@@ -318,25 +321,6 @@
                                 харчування та інших.</p>
                         </div>
                     </div>
-
-
-                    <!--                    <div class="stages-carousel__item">-->
-                    <!--                        <div class="stage-text">-->
-                    <!--                            <h3 class="stage-title">Система пом’якшення води</h3>-->
-                    <!--                            <p>Основна наша мета – забезпечення якісною, смачною та чистою артезіанською водою-->
-                    <!--                                максимальної-->
-                    <!--                                кількості клієнтів, як приватних осіб, так і підприємств, офісів, організацій-->
-                    <!--                                громадського-->
-                    <!--                                харчування та інших.</p>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="owl-nav"></div>-->
-                    <!--                    <div class="owl-dots">-->
-                    <!--                        <div class="owl-dot active">1</div>-->
-                    <!--                        <div class="owl-dot">2</div>-->
-                    <!--                        <div class="owl-dot">3</div>-->
-                    <!--                        <div class="owl-dot">4</div>-->
-                    <!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -350,12 +334,13 @@
         <div class="goods-content">
             <div class="goods-content__text">
                 <h2 class="animate__animated">Замовити воду</h2>
-                <p class="scrollflow -opacity -slide-left">19-літрова пляшка з водою є ідеальним джерелом гідратації як вдома, так і в офісі щодня з багатьох
+                <div class="goods-content__btn">
+                    <a class="btn btn-light" href="/">Пункт розливу</a>
+                </div>
+                <p class="scrollflow -opacity -slide-left">19-літрова пляшка з водою є ідеальним джерелом гідратації як
+                    вдома, так і в офісі щодня з багатьох
                     причин, більш-менш очевидних. По-перше, вода якісна, мікробіологічно чиста. Вода H2On має pH
                     7,8. </p>
-            </div>
-            <div class="goods-content__btn">
-                <a class="btn btn-light" href="#point-link">Пункт розливу</a>
             </div>
         </div>
         <div class="goods-carousel carousel owl-carousel owl-loaded container-1540">
@@ -379,24 +364,26 @@
                 <button class="btn goods-order-btn open-modal-btn">+ замовити</button>
             </div>
 
-            <!--            <div class="goods-carousel__item">-->
-            <!--                <div class="good-image">-->
-            <!--                    <img src="./assets/images/bult_18.png" alt="Product Image">-->
-            <!--                </div>-->
-            <!--                <h4 class="good-title">Вода Arcadia<br>18,9 л</h4>-->
-            <!--                <div class="good-counter-price-wrapper">-->
-            <!--                    <div class="good-counter btn-light">-->
-            <!--                        <button class="counter-btn counter-minus" disabled>-</button>-->
-            <!--                        <label for="counter-input"></label>-->
-            <!--                        <input type="number" class="counter-input good-input" id="counter-input" value="0" min="0" max="999">-->
-            <!--                        <button class="counter-btn counter-plus">+</button>-->
-            <!--                    </div>-->
-            <!--                    <div class="good-price">-->
-            <!--                        <p class="text-accent">75<span class="text-little"> грн</span></p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <button class="btn goods-order-btn open-modal-btn">+ замовити</button>-->
-            <!--            </div>-->
+            <div class="goods-carousel__item">
+                <div class="good-image">
+                    <img src="./assets/images/bult_18.png" alt="Product Image">
+                </div>
+                <h4 class="good-title">Вода Arcadia Вода Arcadia Вода Arcadia<br>18,9 л</h4>
+                <div class="good-counter-price-wrapper">
+                    <div class="good-counter btn-light">
+                        <button class="counter-btn counter-minus">-</button>
+                        <label for="counter-input"></label>
+                        <input type="number" class="counter-input good-input" id="counter-input" value="0" min="0"
+                               max="999">
+                        <button class="counter-btn counter-plus">+</button>
+                    </div>
+                    <div class="good-price">
+                        <p class="text-accent">75<span class="text-little"> грн</span></p>
+                    </div>
+                </div>
+                <button class="btn goods-order-btn open-modal-btn">+ замовити</button>
+            </div>
+
         </div>
     </section>
 
@@ -438,7 +425,6 @@
             </div>
         </div>
     </section>
-
 
     <!--    _________________________-->
     <!--    Section. ORDER -->
@@ -496,41 +482,50 @@
         <div class="certificates-carousel carousel owl-carousel container-1540">
             <div class="certificates-carousel__item">
                 <div class="certificate-image">
-                    <img src="./assets/images/certif1.jpg" alt="Certificate Image">
+                    <img src="./assets/images/certif1.jpg" alt="Certificate Image"
+                         data-fancybox="gallery" data-src="./assets/images/certif1.jpg">
                 </div>
-                <a class="text-little" href="/">Сертифікат на те, що
+                <a class="text-little" href="./assets/images/certif1.jpg" data-fancybox="gallery">Сертифікат на те, що
                     у нас витримуються екологічні
                     норми</a>
             </div>
 
             <div class="certificates-carousel__item">
                 <div class="certificate-image">
-                    <img src="./assets/images/certif2.jpg" alt="Certificate Image">
+                    <img src="./assets/images/certif2.jpg" alt="Certificate Image"
+                         data-fancybox="gallery" data-src="./assets/images/certif2.jpg">
                 </div>
-                <a class="text-little" href="/">Сертифікат на те, що
+                <a class="text-little" href="./assets/images/certif2.jpg" data-fancybox="gallery">Сертифікат на те, що
                     у нас витримуються екологічні
                     норми</a>
             </div>
 
             <div class="certificates-carousel__item">
                 <div class="certificate-image">
-                    <img src="./assets/images/certif3.jpg" alt="Certificate Image">
+                    <img src="./assets/images/certif3.jpg" alt="Certificate Image"
+                         data-fancybox="gallery" data-src="./assets/images/certif3.jpg">
                 </div>
-                <a class="text-little" href="/">Сертифікат на те, що
+                <a class="text-little" href="./assets/images/certif3.jpg" data-fancybox="gallery">Сертифікат на те, що
                     у нас витримуються екологічні
                     норми</a>
             </div>
 
             <div class="certificates-carousel__item">
                 <div class="certificate-image">
-                    <img src="./assets/images/certif4.jpg" alt="Certificate Image">
+                    <img src="./assets/images/certif4.jpg" alt="Certificate Image"
+                         data-fancybox="gallery" data-src="./assets/images/certif4.jpg">
                 </div>
-                <a class="text-little" href="/">Сертифікат на те, що
+                <a class="text-little fancybox" href="./assets/images/certif4.jpg" data-fancybox="gallery">Сертифікат на те, що
                     у нас витримуються екологічні
                     норми</a>
             </div>
         </div>
     </section>
+
+    <!--    _________________________-->
+    <!--    Gallery -->
+    <!--    _________________________-->
+
 
     <!--    _________________________-->
     <!--    Section. NEW client -->
@@ -570,7 +565,7 @@
         <div class="container-1540">
             <div class="contacts-content">
                 <div class="contacts-content__text">
-                    <h4 class="animate__animated">Контакти</h4>
+                    <h2 class="animate__animated">Контакти</h2>
                     <p>Ми завжді раді всем кто прагне якісну воду - і ми це робимо.<br>
                         Приходьте до нашої точки та спробуйте те, що дйсно класне - кристальна вода з м'яким смаком!</p>
                 </div>
@@ -669,7 +664,9 @@
 
                             </div>
                             <div class="form-row">
-                                <button type="submit" class="btn open-modal-btn  animate__animated animate__bounceIn animate__delay-2s" id="btn-order-contact">Замовити воду
+                                <button type="submit"
+                                        class="btn open-modal-btn  animate__animated animate__bounceIn animate__delay-2s"
+                                        id="btn-order-contact">Замовити воду
                                 </button>
                             </div>
                         </div>
@@ -716,12 +713,10 @@
                 <p>Вода знижує біль у суглобах. Питна вода може зменшити біль у суглобах, зберігаючи хрящі м'якими та
                     зволоженими. Обираючи воду, ми стаємо витривалішими.</p>
             </div>
-
-            <div class="owl-nav"></div>
-            <div class="owl-dots">
-                <div class="owl-dot active"></div>
-                <div class="owl-dot"></div>
-            </div>
+        </div>
+        <div class="facts-carousel-dots owl-dots">
+            <div class="owl-dot active"></div>
+            <div class="owl-dot"></div>
         </div>
     </section>
 
@@ -732,17 +727,17 @@
     <section class="water">
         <div class="water-content container-1540">
             <h2 class="animate__animated">Вода від “Acradia” - це користь яку дарує Одеса</h2>
-            <p class="text-little">19-літрова пляшка з водою є ідеальним джерелом гідратації як вдома, так і в офісі
+            <p class="text-little scrollflow -opacity -slide-left">19-літрова пляшка з водою є ідеальним джерелом гідратації як вдома, так і в офісі
                 щодня з багатьох причин, більш-менш очевидних. По-перше, вода якісна, мікробіологічно чиста. Вода H2On
                 має pH 7,8. По-друге, якщо ви виберете бутильовану воду в банках, ви отримаєте найнижчу ціну за літр
                 (трохи більше 1 грн). І останнє, але не менш важливе: підключивши продукт до диспенсера, який ви також
                 можете знайти в пропозиції H2On, ви отримаєте миттєву холодну або гарячу воду!</p>
-            <a class="text-little" href="/">Читати більше</a>
+            <a class="text-little scrollflow -opacity -slide-left" href="/">Читати більше</a>
         </div>
     </section>
 
     <!--    _________________________-->
-    <!--    MODAL-->
+    <!--    MODALS-->
     <!--    _________________________-->
 
     <div class="modal-menu">
@@ -1092,6 +1087,7 @@
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script defer src="assets/js/owl.carousel.min.js"></script>
 <script defer src="assets/js/scrollflow.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script defer src="node_modules/parsleyjs/dist/parsley.min.js"></script>
 <script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
 <script defer src="assets/js/index.js"></script>

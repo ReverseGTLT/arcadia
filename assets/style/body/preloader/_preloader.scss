@@ -14,6 +14,7 @@
 
 .loader {
   background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
+
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: center, center;
@@ -25,7 +26,11 @@
   height: 100%;
   width: 100%;
 
-  animation: pos2 5s linear;
+  animation: pos2 3s linear;
+  @include lg {
+    background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/general-mobile.png');
+  }
+
   img {
     transition: 0.2s;
   }
@@ -36,7 +41,7 @@
   align-items: center;
   justify-content: center;
   width: vw(430);
-  animation: spin 5s linear;
+  animation: spin 3s linear;
   opacity: 0;
 
   img:first-child {
@@ -44,7 +49,7 @@
   }
   img:last-child {
     width: vw(430);
-    animation: opacity 5s linear;
+    animation: opacity 3s linear;
   }
 }
 
@@ -55,15 +60,18 @@
   }
   80% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+  80% {
+
   }
   90% {
     opacity: 0.7;
-    transform: scale(1) translateY(vw(-1000));
+    transform: scale(6);
   }
   100% {
     opacity: 0;
-    transform: scale(1) translateY(vw(-1000));
+    transform: scale(10);
   }
 }
 
