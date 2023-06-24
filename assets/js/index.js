@@ -99,6 +99,15 @@ $(document).ready(function () {
     $('#contact-form').parsley();
 });
 
+// Preloader
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    }, 4000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
+});
+
+
 // Header
 const headerLanguageBtn = document.querySelector('.header-language');
 const headerLanguageList = document.querySelector('.header__language-list');

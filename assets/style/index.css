@@ -730,6 +730,7 @@ ul, ol, li {
   background-size: cover, cover;
   background-repeat: no-repeat;
   background-position: center, center;
+  animation: opacity2 5.2s linear;
 }
 .general-container {
   display: flex;
@@ -992,6 +993,17 @@ ul, ol, li {
   }
 }
 
+@keyframes opacity2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .sale {
   height: 5.9375vw;
   background-color: #F80505;
@@ -4349,6 +4361,92 @@ footer .container .attribution a {
   }
   100% {
     transform: translateX(0);
+  }
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.loader {
+  background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url("../images/main.png");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  animation: pos2 5s linear;
+}
+.loader img {
+  transition: 0.2s;
+}
+
+.header-logo__images--preloader {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 22.3958333333vw;
+  animation: spin 5s linear;
+  opacity: 0;
+}
+.header-logo__images--preloader img:first-child {
+  width: 13.0208333333vw;
+}
+.header-logo__images--preloader img:last-child {
+  width: 22.3958333333vw;
+  animation: opacity 5s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(0.7) translateY(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 0.7;
+    transform: scale(1) translateY(-52.0833333333vw);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translateY(-52.0833333333vw);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pos2 {
+  0% {
+    background-size: 120%, 120%;
+  }
+  90% {
+    opacity: 1;
+    background-size: 200%, 200%;
+  }
+  100% {
+    opacity: 0;
+    background-size: 100%, 100%;
   }
 }
 

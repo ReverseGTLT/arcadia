@@ -14,6 +14,8 @@
     background-size: cover, cover;
     background-repeat: no-repeat;
     background-position: center, center;
+
+    animation: opacity2 5.2s linear;
   }
   &-container {
     display: flex;
@@ -237,5 +239,17 @@
   @include sm {
     bottom: vm(105);
     left: vm(85);
+  }
+}
+
+@keyframes opacity2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
