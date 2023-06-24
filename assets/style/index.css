@@ -3577,38 +3577,40 @@ ul, ol, li {
   display: block;
   width: 100%;
 }
-.facts .facts-carousel .owl-dots {
+.facts .facts-carousel-dots .owl-dots {
+  margin-left: 9.53125vw;
   z-index: 1;
-  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 6.25vw;
-  left: 7.2916666667vw;
-  bottom: 1.8229166667vw;
+  justify-content: start;
+  align-items: end;
+  width: 100%;
+  left: 0;
+  bottom: -2.8645833333vw;
 }
 @media (max-width: 991.8px) {
-  .facts .facts-carousel .owl-dots {
-    bottom: -2.0161290323vw;
+  .facts .facts-carousel-dots .owl-dots {
+    width: 100%;
+    left: initial;
+    margin-left: 0;
+    bottom: -3.0241935484vw;
   }
 }
-@media (max-width: 575.8px) {
-  .facts .facts-carousel .owl-dots {
-    bottom: 0;
-  }
-}
-.facts .facts-carousel .owl-dots .owl-dot {
-  justify-content: center;
-  margin: 0 0.78125vw;
-  height: 0.5208333333vw;
-  width: 100%;
-  max-width: 19.0625vw;
-  border-radius: 50%;
-  background-color: #D8E4EE;
+.facts .facts-carousel-dots .owl-dots .owl-dot {
+  height: 0.2083333333vw;
+  width: 51.5625vw;
+  justify-content: start;
+  align-items: end;
+  margin: 0;
+  background-color: #D4D8EB;
   transition: background-color 0.3s ease;
 }
-.facts .facts-carousel .owl-dots .owl-dot.active {
-  background-color: #D4D8EB;
+.facts .facts-carousel-dots .owl-dots .owl-dot.active {
+  height: 0.2083333333vw;
+  width: 14.3229166667vw;
+  background-color: #949CBE;
+}
+.facts .facts-carousel-dots .owl-nav {
+  display: none;
 }
 
 .water {
