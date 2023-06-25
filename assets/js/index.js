@@ -11,17 +11,28 @@
 
 let orders = [
     {
+        id: 0,
+        dateOrder: '',
+        totalOrder: 0,
+        typePayment: '',
+        typeDelivery: '',
+        dateDelivery: '',
+        addressDelivery: '',
+        comment: '',
+
         client: {
             id: 0,
             firstName: 'test',
             lastName: 'test',
             phone: '123',
         },
+
         goods: [
             {
                 good: {
                     id: 0,
                     title: 'test',
+                    price: 0,
                     count: 0,
                 },
             },
@@ -40,6 +51,7 @@ let good = {
     id: 0,
     title: '',
     description: '',
+    price: 0,
     count: 0,
 };
 

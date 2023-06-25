@@ -282,7 +282,7 @@
 
             @include lg {
               font-size: vp(20);
-              width: vp(17);
+              width: vp(37);
               height: vp(21);
             }
             @include sm {
@@ -343,11 +343,11 @@
           padding: vp(23) vp(30) vp(23) vp(29);
         }
         @include sm {
-          font-size: vm(14);
+          font-size: vm(12);
           //width: 90%;
           height: auto;
           margin: auto;
-          padding: vm(17) vm(20) vm(17) vm(24);
+          padding: vm(15) vm(28) vm(15) vm(19);
         }
       }
     }
