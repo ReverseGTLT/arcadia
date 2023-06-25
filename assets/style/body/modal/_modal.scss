@@ -9,8 +9,6 @@
   position: fixed;
   top: 15vh;
   left: 25vw;
-  //right: 0;
-  //bottom: 0;
   width: vw(1047);
   height: vw(735);
   background-color: $background-light;
@@ -18,6 +16,22 @@
   border-radius: vw(30);
   overflow: hidden;
   padding: vw(73) vw(68) vw(43) vw(71);
+
+  @include lg {
+    max-width: vp(980);
+    margin-inline: auto;
+    width: 90%;
+    height: auto;
+    left: vp(25);
+    right: vp(25);
+    padding: vp(73) vp(68) vp(43) vp(71);
+  }
+  @include sm {
+    max-width: vm(350);
+    left: vm(5);
+    right: vm(5);
+    padding: vm(25) vm(22) vm(19) vm(22);
+  }
 
   &-content {
     width: 100%;
@@ -29,16 +43,15 @@
     align-items: start;
 
     @include lg() {
-      //padding: vm(5);
+      padding: vp(15);
     }
 
-    @include md {
-      //padding: vm(10);
+    @include sm {
+      padding: vm(15);
     }
 
     .btn {
       width: 30%;
-      //height: 100%;
       border-radius: vw(100);
       font-size: vw(15);
       font-weight: $font-weight-accent;
@@ -48,16 +61,15 @@
       padding: vw(23) vw(30) vw(23) vw(29);
 
       @include lg {
-        font-size: vm(4);
-      }
-      @include md {
-        font-size: vm(4);
-        width: 30%;
+        font-size: vp(14);
+        width: 100%;
         height: auto;
         margin: auto;
+        padding: vp(23) vp(30) vp(23) vp(29);
       }
       @include sm {
-        font-size: vm(5);
+        font-size: vm(12);
+        padding: vm(15) vm(18) vm(15) vm(19);
       }
     }
   }
@@ -73,6 +85,17 @@
     right: 0;
     margin-top: vw(2);
     margin-right: vw(25);
+
+    @include lg {
+      font-size: vp(40);
+      margin-top: vp(2);
+      margin-right: vp(25);
+    }
+    @include sm {
+      font-size: vm(20);
+      margin-top: vm(2);
+      margin-right: vm(10);
+    }
 
     &:hover,
     &:focus {
@@ -116,6 +139,7 @@
 }
 
 #modal-item {
+  //display: flex;
 
   .modal-content {
 
@@ -134,13 +158,13 @@
       align-items: center;
       overflow: hidden;
 
-      @include lg() {
-      }
-
-      @include md {
+      @include lg {
         width: initial;
         margin: auto;
         height: auto;
+        padding-bottom: vp(10);
+      }
+      @include sm {
         padding-bottom: vm(10);
       }
 
@@ -159,14 +183,34 @@
       align-items: start;
       padding-bottom: vw(30);
 
+      @include lg {
+        padding-bottom: vp(20);
+      }
+      @include sm {
+        padding-bottom: vm(15);
+      }
+
       .modal-title {
         display: inline-block;
         width: 100%;
         padding-bottom: vw(25);
+
+        @include lg {
+          padding-bottom: vp(25);
+        }
+        @include sm {
+          padding-bottom: vm(15);
+        }
       }
 
       p {
         padding-bottom: vw(40);
+        @include lg {
+          padding-bottom: vp(30);
+        }
+        @include sm {
+          padding-bottom: vm(10);
+        }
       }
 
       .modal-counter-price-wrapper {
@@ -176,8 +220,13 @@
         align-items: center;
         padding-bottom: vw(18);
 
-        @include md {
-          justify-content: center;
+        @include lg {
+          justify-content: start;
+          gap: vp(10);
+          padding-bottom: vp(17);
+        }
+        @include sm {
+          width: 100%;
           gap: vm(10);
           padding-bottom: vm(7);
         }
@@ -192,8 +241,11 @@
           background: $color-white;
           border-color: $color-grey-border;
 
-          @include md {
-            width: initial;
+          @include lg {
+            padding: vp(15) vp(21) vp(15) vp(23);
+          }
+          @include sm {
+            padding: vm(7) vm(7) vm(8) vm(9);
           }
 
           .counter-minus,
@@ -207,17 +259,12 @@
             background: none;
 
             @include lg {
-              height: vw(34);
-              width: vw(16);
-            }
-            @include md {
-              height: vw(34);
-              width: vw(16);
-
+              height: vp(34);
+              width: vp(16);
             }
             @include sm {
-              height: vm(6);
-              width: vw(5);
+              height: vm(21);
+              width: vm(10);
             }
 
             &:active {
@@ -228,11 +275,28 @@
           .counter-input {
             font-size: vw(20);
             display: block;
+            flex: 1;
             width: vw(37);
             height: vw(21);
             color: $color-grey-increase;
             text-align: center;
             border: none;
+
+            @include lg {
+              font-size: vp(20);
+              width: vp(37);
+              height: vp(21);
+            }
+            @include sm {
+              font-size: vm(15);
+              width: vm(17);
+              height: vm(21);
+            }
+          }
+
+          .counter-input::-webkit-outer-spin-button,
+          .counter-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
           }
         }
 
@@ -240,10 +304,20 @@
           width: 25%;
           display: flex;
           align-items: center;
+          @include lg {
+            width: 30%;
+          }
 
           p {
             font-weight: 500;
             padding: 0;
+
+            @include lg {
+              font-size: vp(22);
+            }
+            @include sm {
+              font-size: vm(14);
+            }
 
             span {
               font-weight: 400;
@@ -254,27 +328,13 @@
 
       .btn {
         width: 60%;
-        //height: 100%;
-        //border-radius: vw(100);
-        //font-size: vw(15);
-        //font-weight: $font-weight-accent;
-        //line-height: 1.2;
-        //letter-spacing: 0.1em;
-        //text-align: center;
-        //padding: vw(23) vw(30) vw(23) vw(29);
-        //
-        //@include lg {
-        //  font-size: vm(4);
-        //}
-        //@include md {
-        //  font-size: vm(4);
-        //  width: 30%;
-        //  height: auto;
-        //  margin: auto;
-        //}
-        //@include sm {
-        //  font-size: vm(5);
-        //}
+
+        @include lg {
+          margin-left: 0;
+        }
+        @include sm {
+          width: 100%;
+        }
       }
     }
 
@@ -286,6 +346,10 @@
         width: vw(302);
         font-weight: $font-weight-accent;
         color: red;
+
+        @include lg {
+          width: 80%;
+        }
       }
     }
   }
@@ -431,6 +495,7 @@
       border-radius: vw(30);
       padding: vw(28) vw(28) vw(27) vw(39);
     }
+
     .payment-amount,
     .delivery-options {
       margin-bottom: vw(43);
@@ -467,7 +532,6 @@
       display: flex;
       justify-content: space-between;
     }
-
 
 
     .full-width-row {
