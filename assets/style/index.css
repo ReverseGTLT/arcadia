@@ -4007,6 +4007,7 @@ footer .container .attribution a {
 @media (max-width: 575.8px) {
   .modal {
     max-width: 93.3333333333vw;
+    top: 5vh;
     left: 1.3333333333vw;
     right: 1.3333333333vw;
     padding: 6.6666666667vw 5.8666666667vw 5.0666666667vw 5.8666666667vw;
@@ -4097,6 +4098,18 @@ footer .container .attribution a {
   padding-bottom: 2.0135416667vw;
   width: 7.65625vw;
 }
+@media (max-width: 991.8px) {
+  #modal-order-accepted .modal-content .modal-image {
+    padding-bottom: 3.8971774194vw;
+    width: 14.8185483871vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-order-accepted .modal-content .modal-image {
+    padding-bottom: 5.0666666667vw;
+    width: 13.3333333333vw;
+  }
+}
 #modal-order-accepted .modal-content .modal-image img {
   display: block;
   width: 100%;
@@ -4107,9 +4120,30 @@ footer .container .attribution a {
   color: #30A23C;
   padding-bottom: 1.8229166667vw;
 }
+@media (max-width: 991.8px) {
+  #modal-order-accepted .modal-content .modal-title {
+    text-align: center;
+    padding-bottom: 3.5282258065vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-order-accepted .modal-content .modal-title {
+    padding-bottom: 5.3333333333vw;
+  }
+}
 #modal-order-accepted .modal-content p {
   line-height: 1.23;
   text-align: center;
+}
+@media (max-width: 991.8px) {
+  #modal-order-accepted .modal-content p {
+    padding-bottom: 7.560483871vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-order-accepted .modal-content p {
+    padding-bottom: 9.3333333333vw;
+  }
 }
 
 #modal-item .modal-content .modal__wrapper {
@@ -4348,6 +4382,16 @@ footer .container .attribution a {
   display: block;
   padding-bottom: 2.3958333333vw;
 }
+@media (max-width: 991.8px) {
+  #modal-cart .modal-content .modal-title {
+    padding-bottom: 4.0322580645vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .modal-content .modal-title {
+    padding-bottom: 5.3333333333vw;
+  }
+}
 #modal-cart .modal-content .text-little {
   display: block;
   font-size: 0.8854166667vw;
@@ -4377,6 +4421,12 @@ footer .container .attribution a {
   border-top: 0.0520833333vw solid #D4D8EB;
   border-bottom: 0.0520833333vw solid #D4D8EB;
 }
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-item {
+    flex-direction: column;
+    height: auto;
+  }
+}
 #modal-cart .cart-items .cart-item__info {
   display: flex;
   justify-content: start;
@@ -4387,6 +4437,20 @@ footer .container .attribution a {
   height: 4.9479166667vw;
   padding-right: 1.25vw;
 }
+@media (max-width: 991.8px) {
+  #modal-cart .cart-items .cart-item__info .for-img {
+    width: 6.1491935484vw;
+    height: 9.5766129032vw;
+    padding-right: 2.4193548387vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-item__info .for-img {
+    width: 8vw;
+    height: 13.3333333333vw;
+    padding-right: 4vw;
+  }
+}
 #modal-cart .cart-items .cart-item__info .for-img img {
   display: block;
   width: 100%;
@@ -4394,9 +4458,29 @@ footer .container .attribution a {
 #modal-cart .cart-items .cart-item__info .icon {
   padding-right: 0.5729166667vw;
 }
+@media (max-width: 991.8px) {
+  #modal-cart .cart-items .cart-item__info .icon {
+    padding-right: 1.1088709677vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-item__info .icon {
+    padding-right: 1.6vw;
+  }
+}
 #modal-cart .cart-items .cart-item__info .cart-item__quantity {
   font-weight: 500;
   padding-right: 2.5vw;
+}
+@media (max-width: 991.8px) {
+  #modal-cart .cart-items .cart-item__info .cart-item__quantity {
+    padding-right: 4.8387096774vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-item__info .cart-item__quantity {
+    padding-right: 5.3333333333vw;
+  }
 }
 #modal-cart .cart-items .cart-item__total-price {
   display: flex;
@@ -4407,12 +4491,36 @@ footer .container .attribution a {
 #modal-cart .cart-items .cart-item__total-price p {
   padding-right: 2.5984375vw;
 }
+@media (max-width: 991.8px) {
+  #modal-cart .cart-items .cart-item__total-price p {
+    padding-right: 4.8387096774vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-item__total-price p {
+    padding-right: 5.3333333333vw;
+  }
+}
 #modal-cart .cart-items .cart-item__total-price button {
   margin-right: 0.5208333333vw;
   width: 0.8333333333vw;
   height: 0.9895833333vw;
   overflow: hidden;
   border: none;
+}
+@media (max-width: 991.8px) {
+  #modal-cart .cart-items .cart-item__total-price button {
+    margin-right: 1.0080645161vw;
+    width: 1.6129032258vw;
+    height: 2.0161290323vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-item__total-price button {
+    margin-right: 1.3333333333vw;
+    width: 2.1333333333vw;
+    height: 2.6666666667vw;
+  }
 }
 #modal-cart .cart-items .cart-item__total-price button img {
   display: block;
@@ -4425,6 +4533,12 @@ footer .container .attribution a {
   margin-right: 2.1354166667vw;
   margin-top: 1.6666666667vw;
 }
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .cart-total {
+    margin-right: 0;
+    width: 80%;
+  }
+}
 #modal-cart .cart-items .cart-total p {
   padding-bottom: 4.1145833333vw;
   font-weight: 500;
@@ -4435,35 +4549,108 @@ footer .container .attribution a {
 #modal-cart .cart-items .btn {
   margin-bottom: 1.8229166667vw;
 }
+@media (max-width: 991.8px) {
+  #modal-cart .cart-items .btn {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-cart .cart-items .btn {
+    width: 100%;
+  }
+}
 
 #modal-contact .modal-content {
   justify-content: start;
-  align-items: center;
 }
 #modal-contact .modal-content .modal-title {
   margin-bottom: 2.3958333333vw;
 }
+@media (max-width: 991.8px) {
+  #modal-contact .modal-content .modal-title {
+    margin-bottom: 4.6370967742vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-contact .modal-content .modal-title {
+    margin-bottom: 5.3333333333vw;
+  }
+}
 #modal-contact #contact-form {
+  display: flex;
+  flex-wrap: wrap;
   /* Дополнительные стили для размещения полей */
 }
 #modal-contact #contact-form input,
 #modal-contact #contact-form textarea,
 #modal-contact #contact-form select {
+  width: 100%;
   background: #ffffff;
   border: 0.0520833333vw solid #D4D8EB;
   border-radius: 1.5625vw;
   padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
 }
+@media (max-width: 991.8px) {
+  #modal-contact #contact-form input,
+#modal-contact #contact-form textarea,
+#modal-contact #contact-form select {
+    border-radius: 3.0241935484vw;
+    padding: 2.8225806452vw 2.8225806452vw 2.7217741935vw 3.9314516129vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form input,
+#modal-contact #contact-form textarea,
+#modal-contact #contact-form select {
+    border-radius: 2.6666666667vw;
+    padding: 3.7333333333vw 0.7291666667vw 0.6770833333vw 0.9895833333vw;
+  }
+}
 #modal-contact #contact-form .payment-amount,
 #modal-contact #contact-form .delivery-options {
+  flex-basis: 50%;
   margin-bottom: 2.2395833333vw;
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .payment-amount,
+#modal-contact #contact-form .delivery-options {
+    flex-basis: 100%;
+    margin-bottom: 4.3346774194vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .payment-amount,
+#modal-contact #contact-form .delivery-options {
+    margin-bottom: 4vw;
+  }
 }
 #modal-contact #contact-form .form-row {
   margin-bottom: 0.625vw;
 }
+@media (max-width: 991.8px) {
+  #modal-contact #contact-form .form-row {
+    margin-bottom: 1.2096774194vw;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .form-row {
+    margin-bottom: 0;
+  }
+}
 #modal-contact #contact-form .checkbox-label {
   display: block;
   font-weight: 400;
+}
+@media (max-width: 991.8px) {
+  #modal-contact #contact-form .checkbox-label input {
+    width: auto;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .checkbox-label {
+    padding-bottom: 2.6666666667vw;
+  }
 }
 #modal-contact #contact-form .date-input {
   position: relative;
@@ -4486,6 +4673,11 @@ footer .container .attribution a {
 #modal-contact #contact-form .full-width-row {
   width: 100%;
 }
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .full-width-row {
+    margin-bottom: 1.3333333333vw;
+  }
+}
 #modal-contact #contact-form .textarea-row {
   width: 100%;
 }
@@ -4499,9 +4691,40 @@ footer .container .attribution a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .payment-selection {
+    margin-bottom: 2.6666666667vw;
+  }
+}
+#modal-contact #contact-form .form-section {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 #modal-contact #contact-form .form-section .form-row {
   display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
   justify-content: space-between;
+}
+#modal-contact #contact-form .form-section .form-row .item {
+  flex-basis: 50%;
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .form-section .form-row .item {
+    margin-bottom: 1.3333333333vw;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 991.8px) {
+  #modal-contact #contact-form .form-section .btn {
+    width: 50%;
+  }
+}
+@media (max-width: 575.8px) {
+  #modal-contact #contact-form .form-section .btn {
+    width: 100%;
+  }
 }
 
 .modal-menu {

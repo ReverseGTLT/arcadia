@@ -28,6 +28,7 @@
   }
   @include sm {
     max-width: vm(350);
+    top: 5vh;
     left: vm(5);
     right: vm(5);
     padding: vm(25) vm(22) vm(19) vm(22);
@@ -108,6 +109,8 @@
 
 
 #modal-order-accepted {
+  //display: flex;
+
   .modal-content {
     display: flex;
     flex-direction: column;
@@ -117,6 +120,14 @@
     .modal-image {
       padding-bottom: vw(38.66);
       width: vw(147);
+      @include lg {
+        padding-bottom: vp(38.66);
+        width: vp(147);
+      }
+      @include sm {
+        padding-bottom: vm(19);
+        width: vm(50);
+      }
 
       img {
         display: block;
@@ -129,11 +140,24 @@
       flex-wrap: nowrap;
       color: $color-green;
       padding-bottom: vw(35);
+      @include lg {
+        text-align: center;
+        padding-bottom: vp(35);
+      }
+      @include sm {
+        padding-bottom: vm(20);
+      }
     }
 
     p {
       line-height: 1.23;
       text-align: center;
+      @include lg {
+        padding-bottom: vp(75);
+      }
+      @include sm {
+        padding-bottom: vm(35);
+      }
     }
   }
 }
@@ -364,6 +388,12 @@
     .modal-title {
       display: block;
       padding-bottom: vw(46);
+      @include lg {
+        padding-bottom: vp(40);
+      }
+      @include sm {
+        padding-bottom: vm(20);
+      }
     }
 
     .text-little {
@@ -398,6 +428,12 @@
       align-items: center;
       border-top: vw(1) solid $color-grey-border;
       border-bottom: vw(1) solid $color-grey-border;
+      @include lg {
+      }
+      @include sm {
+        flex-direction: column;
+        height: auto;
+      }
 
       &__info {
         display: flex;
@@ -408,6 +444,16 @@
           width: vw(61);
           height: vw(95);
           padding-right: vw(24);
+          @include lg {
+            width: vp(61);
+            height: vp(95);
+            padding-right: vp(24);
+          }
+          @include sm {
+            width: vm(30);
+            height: vm(50);
+            padding-right: vm(15);
+          }
 
           img {
             display: block;
@@ -417,11 +463,23 @@
 
         .icon {
           padding-right: vw(11);
+          @include lg {
+            padding-right: vp(11);
+          }
+          @include sm {
+            padding-right: vm(6);
+          }
         }
 
         .cart-item__quantity {
           font-weight: 500;
           padding-right: vw(48);
+          @include lg {
+            padding-right: vp(48);
+          }
+          @include sm {
+            padding-right: vm(20);
+          }
         }
       }
 
@@ -433,6 +491,12 @@
 
         p {
           padding-right: vw(49.89);
+          @include lg {
+            padding-right: vp(48);
+          }
+          @include sm {
+            padding-right: vm(20);
+          }
         }
 
         button {
@@ -441,6 +505,17 @@
           height: vw(19);
           overflow: hidden;
           border: none;
+
+          @include lg {
+            margin-right: vp(10);
+            width: vp(16);
+            height: vp(20);
+          }
+          @include sm {
+            margin-right: vm(5);
+            width: vm(8);
+            height: vm(10);
+          }
 
           img {
             display: block;
@@ -456,6 +531,10 @@
       justify-content: right;
       margin-right: vw(41);
       margin-top: vw(32);
+      @include sm {
+        margin-right: 0;
+        width: 80%;
+      }
 
       p {
         padding-bottom: vw(79);
@@ -469,6 +548,13 @@
 
     .btn {
       margin-bottom: vw(35);
+      @include lg {
+        width: 50%;
+        margin-right: 0;
+      }
+      @include sm {
+        width: 100%;
+      }
     }
   }
 }
@@ -478,36 +564,75 @@
 
   .modal-content {
     justify-content: start;
-    align-items: center;
+    //align-items: center;
 
     .modal-title {
       margin-bottom: vw(46);
+      @include lg {
+        margin-bottom: vp(46);
+      }
+      @include sm {
+        margin-bottom: vm(20);
+      }
     }
   }
 
   #contact-form {
+    display: flex;
+    flex-wrap: wrap;
 
     input,
     textarea,
     select {
+      width: 100%;
       background: $color-white;
       border: vw(1) solid $color-grey-border;
       border-radius: vw(30);
       padding: vw(28) vw(28) vw(27) vw(39);
+      @include lg {
+        border-radius: vp(30);
+        padding: vp(28) vp(28) vp(27) vp(39);
+      }
+      @include sm {
+        border-radius: vm(10);
+        padding: vm(14) vw(14) vw(13) vw(19);
+      }
     }
 
     .payment-amount,
     .delivery-options {
+      flex-basis: 50%;
       margin-bottom: vw(43);
+      @include sm {
+        flex-basis: 100%;
+        margin-bottom: vp(43);
+      }
+      @include sm {
+        margin-bottom: vm(15);
+      }
     }
 
     .form-row {
       margin-bottom: vw(12);
+      @include lg {
+        margin-bottom: vp(12);
+      }
+      @include sm {
+        margin-bottom: 0;
+      }
     }
 
     .checkbox-label {
       display: block;
       font-weight: 400;
+      @include lg {
+        input {
+          width: auto;
+        }
+      }
+      @include sm {
+        padding-bottom: vm(10);
+      }
     }
 
     .date-input {
@@ -536,6 +661,9 @@
 
     .full-width-row {
       width: 100%;
+      @include sm {
+        margin-bottom: vm(5);
+      }
     }
 
     .textarea-row {
@@ -554,10 +682,39 @@
       justify-content: space-between;
     }
 
+    .payment-selection {
+      @include sm {
+        margin-bottom: vm(10);
+      }
+    }
+
     .form-section {
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
       .form-row {
         display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
         justify-content: space-between;
+
+        .item {
+          flex-basis: 50%;
+          @include sm {
+            margin-bottom: vm(5);
+            flex-basis: 100%;
+          }
+        }
+      }
+
+      .btn {
+        @include lg {
+          width: 50%;
+        }
+        @include sm {
+          width: 100%;
+        }
       }
     }
   }
