@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modalContact.style.display = 'flex';
             } else if (button.id === 'btn-modal-contact') {
                 cart = [];
-                updateCart();
+                // updateCart();
                 modalOrderAccepted.style.display = 'flex';
             }
         });
