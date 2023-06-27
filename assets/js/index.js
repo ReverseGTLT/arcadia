@@ -14,8 +14,6 @@ var maskOptions = {
     mask: '+{38}(000)000-00-00'
 };
 var mask = IMask(element, maskOptions);
-console.log(mask)
-
 
 //____________________________________________________________________
 // VARIABLES
@@ -66,8 +64,6 @@ let good = {
     price: 0,
     count: 0,
 };
-
-
 
 
 // $(document).ready(function() {
@@ -223,6 +219,36 @@ $(document).ready(function () {
 
 //Parsley
     $('#contact-form').parsley();
+
+
+// _____________________________________________
+// Появление для всех h2
+
+    setTimeout(function () {
+        animateVisibleHeaders();
+    }, 5000);
+
+    $(window).scroll(function () {
+        animateVisibleHeaders();
+    });
+
+    function animateVisibleHeaders() {
+        const windowHeight = $(window).height();
+        const scrollPos = $(window).scrollTop();
+        const windowBottomPos = scrollPos + windowHeight;
+
+        $('h2.animate__animated').each(function (index) {
+            const offsetTop = $(this).offset().top;
+            if (
+                (offsetTop < windowBottomPos && offsetTop > scrollPos) || // Заголовок видим в текущем окне просмотра
+                (offsetTop < scrollPos && $(this).hasClass('animate__fadeInUp')) // Заголовок вышел из поля видимости, но уже был анимирован
+            ) {
+                $(this).addClass('animate__fadeInUp animate__slower delay-' + index); // Добавляем классы анимации
+            } else {
+                $(this).removeClass('animate__fadeInUp animate__slower delay-' + index); // Удаляем классы анимации
+            }
+        });
+    }
 });
 
 
@@ -287,32 +313,6 @@ function onMenuOpen() {
 
 function onMenuClose() {
     menuWindow.classList.remove('visible')
-}
-
-// _____________________________________________
-// Появление для всех h2
-// fadeInHeadings();
-
-window.addEventListener("load", function () {
-    fadeInHeadings();
-});
-
-window.addEventListener('scroll', fadeInHeadings);
-
-function fadeInHeadings() {
-    const headings = document.querySelectorAll('h2');
-    headings.forEach(function (heading) {
-        if (isElementVisible(heading) && !heading.classList.contains("scrollflow", "-opacity", "-slide-top")) {
-            heading.classList.add("scrollflow", "-opacity", "-slide-top");
-        }
-    });
-
-}
-
-function isElementVisible(elem) {
-    const rect = elem.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    return rect.top <= windowHeight;
 }
 
 
