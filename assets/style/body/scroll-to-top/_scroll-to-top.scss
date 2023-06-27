@@ -20,17 +20,12 @@
 
 
   @include lg {
-    width: 44px;
-    height: 44px;
+    width: vp(82);
+    height: vp(82);
   }
 
-  @include md {
-    width: 44px;
-    height: 44px;
-  }
-
-  @include xs {
-    width: 34px;
-    height: 34px;
+  @include sm {
+    width: vm(44);
+    height: vm(44);
   }
 }
