@@ -4,9 +4,16 @@
 // import parsley from "parsleyjs/dist/parsley";
 
 
-// $(document).ready(function() {
-//     $('#contact-form').parsley();
-// });
+$(document).ready(function() {
+    $('#myForm').parsley();
+});
+
+var element = document.getElementById('order-input-tel');
+var maskOptions = {
+    mask: '+{38}(000)000-00-00'
+};
+var mask = IMask(element, maskOptions);
+console.log(mask)
 
 $(document).ready(function () {
     // Owl Goods
