@@ -4,6 +4,17 @@
 // import parsley from "parsleyjs/dist/parsley";
 
 
+
+$(document).ready(function() {
+    $('#myForm').parsley();
+});
+
+var element = document.getElementById('order-input-tel');
+var maskOptions = {
+    mask: '+{38}(000)000-00-00'
+};
+var mask = IMask(element, maskOptions);
+
 //____________________________________________________________________
 // VARIABLES
 //____________________________________________________________________
@@ -376,76 +387,142 @@ handleOrientationChange();
 // ------------------------------------
 // MODAL
 // goods order & all modal
-document.addEventListener('DOMContentLoaded', function () {
-    const minusBtn = document.querySelector('.counter-minus');
-    const minusBtns = document.querySelectorAll('.counter-minus');
-    const plusBtn = document.querySelector('.counter-plus');
-    const plusBtns = document.querySelectorAll('.counter-plus');
-    const counterInput = document.querySelector('.counter-input');
-    const counterInputs = document.querySelectorAll('.counter-input');
-    const goodsOrderBtn = document.querySelector('.goods-order-btn');
-    const modal = document.querySelector('.modal');
-    const modals = document.querySelectorAll('.modal');
-    const modalItem = document.getElementById('modal-item');
-    const modalCart = document.getElementById('modal-cart');
-    const modalContact = document.getElementById('modal-contact');
-    const modalOrderAccepted = document.getElementById('modal-order-accepted');
-
     const openModalBtns = document.querySelectorAll('.open-modal-btn');
-    const closeModal = document.querySelector('.close');
+    const closeButtons = document.querySelectorAll('.close');
 
-    // анимация открытия модалки
+    const modals = [
+        document.getElementById('modal-item'),
+        document.getElementById('modal-cart'),
+        document.getElementById('modal-contact'),
+        document.getElementById('modal-order-accepted')
+    ];
 
-    openModalBtns.forEach(button => {
-        button.addEventListener('click', function () {
-            if (button.className === goodsOrderBtn.className) {
-                modals.forEach(modal => {
-                    if (modal.id === 'modal-item') {
-                        getValueFields(button, modal);
-                        modal.style.display = 'flex';
-                        // animeModal();
-                    }
-                });
-            }
-            if (button.id === 'btn-modal-item') {
-                modalCart.style.display = 'flex';
-            } else if (button.id === 'btn-modal-cart') {
-                modalContact.style.display = 'flex';
-            } else if (button.id === 'btn-modal-contact') {
-                cart = [];
-                // updateCart();
-                modalOrderAccepted.style.display = 'flex';
-            }
-        });
-    });
+    let currentModalIndex = -1;
 
-    closeModal.addEventListener('click', function () {
-        anime({
-            targets: modal,
-            scale: [1, 0],
-            duration: 400,
-            easing: 'easeOutElastic',
-            complete: () => {
-                modal.style.display = 'none';
-            }
-        });
-        // modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function ({target}) {
-        if (target === modal) {
-            modal.style.display = 'none';
+    function openNextModal() {
+        currentModalIndex++;
+        if (currentModalIndex <= modals.length - 1) {
+            modals[currentModalIndex].style.display = 'flex';
         }
-    });
+        if (currentModalIndex === modals.length - 1) {
+            setTimeout(() => {
+                closeAllModals();
+                currentModalIndex = -1;
+            }, 2000);
+        }
+    }
 
-    function animeModal() {
-        anime({
-            targets: modal,
-            scale: [0, 1],
-            duration: 400,
-            easing: 'easeOutElastic'
+    function closeAllModals() {
+        modals.forEach(modal => {
+            modal.style.display = 'none';
         });
     }
+
+    openModalBtns.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            closeAllModals();
+            openNextModal();
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            const modalIndex = modals.indexOf(modal);
+            if (modalIndex !== -1) {
+                closeAllModals();
+                currentModalIndex = modalIndex - 1;
+            }
+        });
+    });
+
+
+
+
+
+//     const minusBtn = document.querySelector('.counter-minus');
+//     const minusBtns = document.querySelectorAll('.counter-minus');
+//     const plusBtn = document.querySelector('.counter-plus');
+//     const plusBtns = document.querySelectorAll('.counter-plus');
+//     const counterInput = document.querySelector('.counter-input');
+//     const counterInputs = document.querySelectorAll('.counter-input');
+//     const goodsOrderBtn = document.querySelector('.goods-order-btn');
+//     const modal = document.querySelector('.modal');
+//     const modals = document.querySelectorAll('.modal');
+//     const modalItem = document.getElementById('modal-item');
+//     const modalCart = document.getElementById('modal-cart');
+//     const modalContact = document.getElementById('modal-contact');
+//     const modalOrderAccepted = document.getElementById('modal-order-accepted');
+//
+//     const openModalBtns = document.querySelectorAll('.open-modal-btn');
+//     const closeModal = document.querySelectorAll('.close');
+//     const closeModalItem = document.querySelector('#close-item');
+//
+//     // анимация открытия модалки
+//     openModalBtns.forEach(button => {
+//         button.addEventListener('click', function(e) {
+//             e.stopPropagation();
+//             e.preventDefault();
+//             if (button.className === goodsOrderBtn.className) {
+//                 modals.forEach(modal => {
+//                     if (modal.id === 'modal-item') {
+//                         getValueFields(button, modal);
+//                         modal.style.display = 'flex';
+//                         // animeModal();
+//                     }
+//                 });
+//             }
+//             if (button.id === 'btn-modal-item') {
+//                 modalCart.style.display = 'flex';
+//                 closeModales(modalItem);
+//             } else if (button.id === 'btn-modal-cart') {
+//                 modalContact.style.display = 'flex';
+//                 closeModales(modalCart);
+//             } else if (button.id === 'btn-modal-contact') {
+//                 cart = [];
+//                 modalOrderAccepted.style.display = 'flex';
+//                 // updateCart();
+//                 setTimeout(function() {
+//                     modalOrderAccepted.style.display = 'none';
+//                 }, 2000);
+//                 closeModales(modalContact);
+//             }
+//         });
+//     });
+//
+//     closeModalItem.addEventListener('click', function() {
+//         modalItem.style.display = 'none';
+//     });
+    //
+    // closeModal.addEventListener('click', function () {
+    //     anime({
+    //         targets: modal,
+    //         scale: [1, 0],
+    //         duration: 400,
+    //         easing: 'easeOutElastic',
+    //         complete: () => {
+    //             modal.style.display = 'none';
+    //         }
+    //     });
+    //     // modal.style.display = 'none';
+    // });
+    //
+    // window.addEventListener('click', function ({target}) {
+    //     if (target === modal) {
+    //         modal.style.display = 'none';
+    //     }
+    // });
+    //
+    // function animeModal() {
+    //     anime({
+    //         targets: modal,
+    //         scale: [0, 1],
+    //         duration: 400,
+    //         easing: 'easeOutElastic'
+    //     });
+    // }
 
     // anime({
     //     targets: cartModal,
@@ -544,7 +621,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.querySelector('.modal-input').value = itemCount;
         modal.querySelector('.modal-price').textContent = itemPrice;
     }
-});
+
 
 //-----------------------------
 // modal cart

@@ -82,7 +82,9 @@
             <p class="header-info__callback-text">Зворотний дзвінок</p>
         </div>
         <div class="header-info__buy">
-            <button class="header-info__buy-btn">Замовити воду</button>
+            <a href="#order">
+                <button class="header-info__buy-btn">Замовити воду</button>
+            </a>
         </div>
     </div>
     <div class="header-cart hidden-mobile">
@@ -154,14 +156,16 @@
                         <h1 class="general-wrapper__title">Доставка свіжої <br>
                             та чистої води в Одесі</h1>
                         <p class="general-wrapper__description">до будинку чи офісу</p>
-                        <button class="general-wrapper__btn animate__animated animate__bounceIn animate__delay-5s">
-                            Замовити воду зараз
-                        </button>
+                        <a href="#order">
+                            <button class="general-wrapper__btn animate__animated animate__bounceIn animate__delay-5s">
+                                Замовити воду зараз
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sale animate__animated animate__slideInRight animate__delay-4s" id="sale">
+        <div class="sale animate__animated" id="sale">
             <div class="sale-wrapper">
                 <div class="sale-wrapper__description">Доставка свіжої <br>
                     та чистої води в Одесі
@@ -336,7 +340,7 @@
             <div class="goods-content__text">
                 <h2 class="animate__animated">Замовити воду</h2>
                 <div class="goods-content__btn">
-                    <a class="btn btn-light" href="/">Пункт розливу</a>
+                    <a class="btn btn-light" href="#point-link">Пункт розливу</a>
                 </div>
                 <p>19-літрова пляшка з водою є ідеальним джерелом гідратації як
                     вдома, так і в офісі щодня з багатьох
@@ -442,13 +446,19 @@
             <p class="order-info__description">
                 Відправити заявку та наш менеджер передзвонить вам для уточнення
             </p>
-            <form class="order-form">
+            <form class="order-form" id="form-order">
                 <div class="order-form__wrapper">
-                    <input class="order__input-name" type="text" placeholder="Ваше Имя">
-                    <input class="order__input-tel" type="text" placeholder="Телефон">
+                    <input class="order__input-name" type="text" required placeholder="Ваше Имя"
+                           data-parsley-error-message="Обов'язкове поле"
+                    >
+                    <input class="order__input-tel" type="text" required placeholder="Телефон"
+                           data-parsley-error-message="Обов'язкове поле"
+                    >
 
                     <div class="order-form__label-wrapper order-form__label-wrapper--mobile">
-                        <input type="checkbox" id="order-checkboxMobile">
+                        <input type="checkbox" id="order-checkboxMobile" required
+                               data-parsley-error-message="Обов'язкове поле"
+                        >
                         <label for="order-checkboxMobile">
                             Я приймаю умови користувальницької угоди,
                             дозволяю їх обробку і зв'язатися зі мною якнайшвидше
@@ -460,7 +470,9 @@
                     </button>
                 </div>
                 <div class="order-form__label-wrapper">
-                    <input type="checkbox" id="order-checkbox">
+                    <input type="checkbox" id="order-checkbox" required
+                           data-parsley-error-message="Обов'язкове поле"
+                    >
                     <label for="order-checkbox">
                         Я приймаю умови користувальницької угоди,
                         дозволяю їх обробку і зв'язатися зі мною якнайшвидше
@@ -627,7 +639,7 @@
     <!--    Section. ORDER CONTACT. -->
     <!--    _________________________-->
 
-    <section class="order-contact">
+    <section class="order-contact" id="order">
         <div class="container-1540" id="order-contact">
             <div class="order-contact-content">
 
@@ -652,13 +664,20 @@
                     <div class="form-section">
                         <div class="form-col">
                             <div class="form-row">
-                                <input type="text" placeholder="Ваше ім'я" name="name" required>
-                                <input type="text" placeholder="Адреса" name="address" required>
+                                <input type="text" placeholder="Ваше ім'я" name="name" required
+                                       data-parsley-error-message="Обов'язкове поле"
+                                >
+                                <input type="text" placeholder="Адреса" name="address" required
+                                       data-parsley-error-message="Обов'язкове поле"
+                                >
                             </div>
                             <div class="form-row">
-                                <input type="text" placeholder="Телефон" name="phone" required>
+                                <input type="tel" placeholder="Телефон" name="phone" id="order-input-tel" required
+                                       data-parsley-type="phone"
+                                       data-parsley-error-message="Обов'язкове поле"
+                                >
                                 <div class="date-input">
-                                    <input type="text" placeholder="На коли" name="date" required>
+                                    <input type="text" placeholder="На коли" name="date">
                                     <i class="calendar-icon"></i>
                                 </div>
                             </div>
@@ -668,7 +687,9 @@
                         </div>
                         <div class="form-col checkbox-btn-col">
                             <div class="form-row checkbox-row">
-                                <input type="checkbox" name="agree" required>
+                                <input type="checkbox" name="agree" required
+                                       data-parsley-error-message="Обов'язкове поле"
+                                >
                                 <label class="checkbox-label">
                                     Я приймаю умови користувальницької угоди,
                                     дозволяю їх обробку і зв'язатися зі мною якнайшвидше
@@ -865,7 +886,7 @@
         </div>
     </div>
 
-    <div class="modal" id="modal-item">
+    <div class="modal modal-item" id="modal-item">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modal__wrapper">
@@ -996,7 +1017,6 @@
     </div>
 
     <!--Модалка. Контакты пользователя-->
-<div class="modal__container">
     <div class="modal" id="modal-contact">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -1021,9 +1041,14 @@
                     </label>
                 </div>
                 <div class="form-section">
+
                     <div class="form-row">
-                        <input class="item" type="text" placeholder="Ваше ім'я" name="name" required>
-                        <input class="item" type="text" placeholder="Телефон" name="phone" required>
+                        <div class="form-row__box">
+                            <input class="item" type="text" placeholder="Ваше ім'я" name="name" required>
+                        </div>
+                        <div class="form-row__box">
+                            <input class="item" type="text" placeholder="Телефон" name="phone" required>
+                        </div>
                     </div>
                     <div class="form-row">
                         <input class="item" type="text" placeholder="Адреса" name="address" required>
@@ -1065,7 +1090,6 @@
             </form>
         </div>
     </div>
-</div>
 
     <!--Модалка Заказ принят-->
     <div class="modal" id="modal-order-accepted">
@@ -1119,6 +1143,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script defer src="node_modules/parsleyjs/dist/parsley.min.js"></script>
 <script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
+<script defer src="https://unpkg.com/imask"></script>
 <script defer src="assets/js/index.js"></script>
 </body>
 </html>
