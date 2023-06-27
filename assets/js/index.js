@@ -389,6 +389,7 @@ handleOrientationChange();
 // goods order & all modal
     const openModalBtns = document.querySelectorAll('.open-modal-btn');
     const closeButtons = document.querySelectorAll('.close');
+    const headerCartBtn = document.querySelector('.header-cart__btn');
 
     const modals = [
         document.getElementById('modal-item'),
@@ -425,6 +426,14 @@ handleOrientationChange();
             closeAllModals();
             openNextModal();
         });
+    });
+
+    headerCartBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        closeAllModals();
+        currentModalIndex = 1;
+        modals[currentModalIndex].style.display = 'flex';
     });
 
     closeButtons.forEach((button) => {
