@@ -1,5 +1,24 @@
 @use "../../presets/index" as *;
 
+
+.modal__container {
+  position: absolute;
+  padding: 300px 200px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.80);
+  border: 1px solid $color-black;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  //  overflow-y: auto;
+  //  overflow-x: hidden;
+  //  width: 100vw;
+  //  height: 100vh;
+  //  opacity: 1;
+  //  animation: open 0.5s ease-in-out;
+}
+
 .modal {
   z-index: 1000;
   display: none;
@@ -33,6 +52,10 @@
     right: vm(5);
     padding: vm(25) vm(22) vm(19) vm(22);
   }
+  //
+  //&__wrapper {
+
+  //}
 
   &-content {
     width: 100%;
@@ -567,6 +590,7 @@
     //align-items: center;
 
     .modal-title {
+      color: $color-red;
       margin-bottom: vw(46);
       @include lg {
         margin-bottom: vp(46);
@@ -578,7 +602,7 @@
   }
 
   #contact-form {
-    //display: flex;
+    display: flex;
     flex-wrap: wrap;
     overflow: auto;
 
@@ -626,11 +650,11 @@
     .checkbox-label {
       display: block;
       font-weight: 400;
-      @include lg {
-        input {
-          width: auto;
-        }
+
+      input {
+        width: auto;
       }
+
       @include sm {
         padding-bottom: vm(10);
       }
@@ -672,10 +696,16 @@
     }
 
     .textarea-row textarea {
-      height: 100px;
+      height: vw(100);
       overflow-y: auto;
       resize: none;
       width: 100%;
+      @include lg {
+        height: vp(100);
+      }
+      @include sm {
+        height: vm(100);
+      }
     }
 
     .flex-between-row {
@@ -684,8 +714,45 @@
     }
 
     .payment-selection {
+      display: flex;
+      gap: vw(20);
+      align-items: center;
+      margin-left: auto;
+
       @include sm {
+        margin-left: 0;
         margin-bottom: vm(10);
+      }
+
+      span {
+        display: block;
+        margin-left: vw(5);
+        padding-bottom: vw(6);
+      }
+
+      .payment_wrap {
+        position: relative;
+
+        svg {
+          position: absolute;
+          right: vw(20);
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+        }
+
+        select {
+          font-weight: bold;
+        }
+
+        select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+
+        select::-ms-expand {
+          display: none;
+        }
       }
     }
 

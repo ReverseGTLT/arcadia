@@ -1017,10 +1017,12 @@
     </div>
 
     <!--Модалка. Контакты пользователя-->
+<div class="modal__container">
     <div class="modal" id="modal-contact">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 class="modal-title">Оформлення</h2>
+            <h2 class="modal-title">Замовити воду прямо зараз
+                до себе!</h2>
             <form id="contact-form" data-parsley-validate>
                 <div class="payment-amount">
                     <p>Сума до сплати: <span>300</span> грн</p>
@@ -1061,13 +1063,17 @@
                     </div>
                     <div class="form-row">
                         <div class="payment-selection">
-                            <span>Вибір оплати</span>
-                            <select name="payment" required>
-                                <option value="">Сплатити онлайн на сайті</option>
-                                <option>Оплата при доставці на місці</option>
-                                <option>На місці карткою</option>
-                            </select>
-                            <i class="down-arrow-icon"></i>
+                            <span>Вибір оплати: </span>
+                            <div class="payment_wrap">
+                                <select name="payment" required>
+                                    <option value="">Сплатити онлайн на сайті</option>
+                                    <option>Оплата при доставці на місці</option>
+                                    <option>На місці карткою</option>
+                                </select>
+                                <svg width="16" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.29289 22.7071C7.68342 23.0976 8.31658 23.0976 8.70711 22.7071L15.0711 16.3431C15.4616 15.9526 15.4616 15.3195 15.0711 14.9289C14.6805 14.5384 14.0474 14.5384 13.6569 14.9289L8 20.5858L2.34315 14.9289C1.95262 14.5384 1.31946 14.5384 0.928933 14.9289C0.538408 15.3195 0.538408 15.9526 0.928933 16.3431L7.29289 22.7071ZM7 4.37113e-08L7 22L9 22L9 -4.37113e-08L7 4.37113e-08Z" fill="#F80505"/>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
@@ -1085,6 +1091,7 @@
             </form>
         </div>
     </div>
+</div>
 
     <!--Модалка Заказ принят-->
     <div class="modal" id="modal-order-accepted">
