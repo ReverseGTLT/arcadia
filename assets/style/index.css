@@ -4578,8 +4578,8 @@ footer .container .attribution a {
   }
 }
 #modal-contact #contact-form {
-  display: flex;
   flex-wrap: wrap;
+  overflow: auto;
   /* Дополнительные стили для размещения полей */
 }
 #modal-contact #contact-form input,
