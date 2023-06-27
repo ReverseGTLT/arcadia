@@ -29,8 +29,9 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 15vh;
-  left: 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   background-color: $background-light;
   box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
@@ -43,15 +44,15 @@
     margin-inline: auto;
     width: 90%;
     height: auto;
-    left: vp(25);
-    right: vp(25);
+    //left: vp(25);
+    //right: vp(25);
     padding: vp(73) vp(68) vp(43) vp(71);
   }
   @include sm {
     max-width: vm(350);
-    top: 5vh;
-    left: vm(5);
-    right: vm(5);
+    //top: 5vh;
+    //left: vm(5);
+    //right: vm(5);
     padding: vm(25) vm(22) vm(19) vm(22);
   }
   //
@@ -70,6 +71,7 @@
 
     @include lg() {
       padding: vp(15);
+      height: auto;
     }
 
     @include sm {
@@ -142,6 +144,7 @@
     justify-content: center;
     align-items: center;
 
+
     .modal-image {
       padding-bottom: vw(38.66);
       width: vw(147);
@@ -165,12 +168,15 @@
       flex-wrap: nowrap;
       color: $color-green;
       padding-bottom: vw(35);
+      font-size: vw(32);
       @include lg {
         text-align: center;
         padding-bottom: vp(35);
+        font-size: vp(32);
       }
       @include sm {
         padding-bottom: vm(20);
+        font-size: vm(32);
       }
     }
 
@@ -641,6 +647,7 @@
 
     .form-row {
       margin-bottom: vw(12);
+      flex-wrap: nowrap;
       @include lg {
         margin-bottom: vp(12);
       }
@@ -765,9 +772,12 @@
 
       .form-row {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-basis: 100%;
         justify-content: space-between;
+        @include lg {
+          flex-wrap: wrap;
+        }
 
         .item {
           flex-basis: 50%;
@@ -788,4 +798,19 @@
       }
     }
   }
+}
+
+.modal-content {
+  @include lg {
+    width: 100%;
+  }
+}
+
+.form-row__box {
+  width: 100%;
+}
+
+.form-row {
+  flex-wrap: nowrap;
+  gap: vw(20);
 }

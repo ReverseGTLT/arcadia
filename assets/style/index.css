@@ -3999,8 +3999,9 @@ footer .container .attribution a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 15vh;
-  left: 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #F2F9FF;
   box-shadow: 0.7291666667vw 0.8854166667vw 2.03125vw rgba(216, 225, 236, 0.94);
   border-radius: 1.5625vw;
@@ -4013,17 +4014,12 @@ footer .container .attribution a {
     margin-inline: auto;
     width: 90%;
     height: auto;
-    left: 2.5201612903vw;
-    right: 2.5201612903vw;
     padding: 7.3588709677vw 6.8548387097vw 4.3346774194vw 7.1572580645vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal {
     max-width: 93.3333333333vw;
-    top: 5vh;
-    left: 1.3333333333vw;
-    right: 1.3333333333vw;
     padding: 6.6666666667vw 5.8666666667vw 5.0666666667vw 5.8666666667vw;
   }
 }
@@ -4039,6 +4035,7 @@ footer .container .attribution a {
 @media (max-width: 991.8px) {
   .modal-content {
     padding: 1.5120967742vw;
+    height: auto;
   }
 }
 @media (max-width: 575.8px) {
@@ -4133,16 +4130,19 @@ footer .container .attribution a {
   flex-wrap: nowrap;
   color: #30A23C;
   padding-bottom: 1.8229166667vw;
+  font-size: 1.6666666667vw;
 }
 @media (max-width: 991.8px) {
   #modal-order-accepted .modal-content .modal-title {
     text-align: center;
     padding-bottom: 3.5282258065vw;
+    font-size: 3.2258064516vw;
   }
 }
 @media (max-width: 575.8px) {
   #modal-order-accepted .modal-content .modal-title {
     padding-bottom: 5.3333333333vw;
+    font-size: 8.5333333333vw;
   }
 }
 #modal-order-accepted .modal-content p {
@@ -4643,6 +4643,7 @@ footer .container .attribution a {
 }
 #modal-contact #contact-form .form-row {
   margin-bottom: 0.625vw;
+  flex-wrap: nowrap;
 }
 @media (max-width: 991.8px) {
   #modal-contact #contact-form .form-row {
@@ -4759,9 +4760,14 @@ footer .container .attribution a {
 }
 #modal-contact #contact-form .form-section .form-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-basis: 100%;
   justify-content: space-between;
+}
+@media (max-width: 991.8px) {
+  #modal-contact #contact-form .form-section .form-row {
+    flex-wrap: wrap;
+  }
 }
 #modal-contact #contact-form .form-section .form-row .item {
   flex-basis: 50%;
@@ -4781,6 +4787,21 @@ footer .container .attribution a {
   #modal-contact #contact-form .form-section .btn {
     width: 100%;
   }
+}
+
+@media (max-width: 991.8px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.form-row__box {
+  width: 100%;
+}
+
+.form-row {
+  flex-wrap: nowrap;
+  gap: 1.0416666667vw;
 }
 
 .modal-menu {
