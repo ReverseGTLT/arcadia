@@ -578,8 +578,9 @@
   }
 
   #contact-form {
-    display: flex;
+    //display: flex;
     flex-wrap: wrap;
+    overflow: auto;
 
     input,
     textarea,
