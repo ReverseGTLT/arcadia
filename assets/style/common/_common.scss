@@ -46,6 +46,10 @@ body {
   }
 }
 
+.body-scroll-lock {
+  overflow: hidden;
+}
+
 input {
   font-family: 'Inter', sans-serif;
   font-size: vw(20);
