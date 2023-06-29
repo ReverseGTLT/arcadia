@@ -82,12 +82,12 @@
           text-align: center;
           font-style: normal;
           @include lg {
-            font-size: vp(40);
-            line-height: vp(48);
+            font-size: vp(35);
+            line-height: vp(35);
           }
           @include sm {
-            font-size: vm(24);
-            line-height: vm(29);
+            font-size: vm(18);
+            line-height: vm(15);
           }
         }
       }
@@ -255,7 +255,8 @@
 //}
 
 .circle-rotate {
-  animation: rotate 20s linear infinite;
+  transform: translateX(-50%);
+  animation: rotate 10s linear;
 }
 
 .height {
