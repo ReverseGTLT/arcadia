@@ -4674,7 +4674,10 @@ footer .container .attribution a {
   margin-left: 4.4270833333vw;
 }
 .modal-cart .cart-items .btn {
+  text-align: center;
+  align-items: center;
   margin-bottom: 1.8229166667vw;
+  padding-bottom: 1.5625vw;
 }
 @media (max-width: 991.8px) {
   .modal-cart .cart-items .btn {

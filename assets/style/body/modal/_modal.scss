@@ -579,7 +579,10 @@
     }
 
     .btn {
+      text-align: center;
+      align-items: center;
       margin-bottom: vw(35);
+      padding-bottom: vw(30);
       @include lg {
         width: 50%;
         margin-right: 0;
