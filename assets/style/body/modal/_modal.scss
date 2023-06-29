@@ -5,7 +5,7 @@
 }
 
 .modal__container {
-  position: absolute;
+  position: fixed;
   padding: 300px 200px;
   top: 0;
   left: 0;
@@ -135,7 +135,8 @@
 }
 
 
-#modal-order-accepted {
+.modal-order-accepted,
+.modal-order-in-cart {
   //display: flex;
 
   .modal-content {
@@ -327,7 +328,7 @@
             }
           }
 
-          .counter-input {
+          .counter-value {
             font-size: vw(20);
             display: block;
             flex: 1;
@@ -349,10 +350,10 @@
             }
           }
 
-          .counter-input::-webkit-outer-spin-button,
-          .counter-input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-          }
+          //.counter-input::-webkit-outer-spin-button,
+          //.counter-input::-webkit-inner-spin-button {
+          //  -webkit-appearance: none;
+          //}
         }
 
         .modal-price {
@@ -410,7 +411,7 @@
   }
 }
 
-#modal-cart {
+.modal-cart {
   //display: flex;
 
   .modal-content {
@@ -590,7 +591,7 @@
   }
 }
 
-#modal-contact {
+.modal-contact {
   //display: flex;
 
   .modal-content {
