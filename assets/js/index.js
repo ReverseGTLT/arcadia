@@ -392,8 +392,8 @@ const headerCartBtn = document.querySelector('.header-cart__btn');
 
 const modals = [
     document.getElementById('modal-item'),
-    document.getElementById('modal-cart'),
     document.getElementById('modal-order-in-cart'),
+    document.getElementById('modal-cart'),
     document.getElementById('modal-contact'),
     document.getElementById('modal-order-accepted'),
 ];
@@ -404,9 +404,15 @@ function openNextModal(e) {
     currentModalIndex++;
     if (currentModalIndex <= modals.length - 1) {
         const currentModal = modals[currentModalIndex];
+            console.log(currentModal);
         if (currentModal.id === 'modal-item') {
-            console.log(e);
             getValueGoodFields(e, currentModal);
+        }
+        if (currentModal.id === 'modal-order-in-cart') {
+            console.log(currentModal);
+            setTimeout(() => {
+                closeAllModals();
+            }, 2000);
         }
         modals[currentModalIndex].style.display = 'flex';
     }
@@ -437,7 +443,7 @@ headerCartBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
     closeAllModals();
-    currentModalIndex = 1;
+    currentModalIndex = 2;
     modals[currentModalIndex].style.display = 'flex';
 });
 
