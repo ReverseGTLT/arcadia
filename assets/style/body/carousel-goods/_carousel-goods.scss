@@ -154,15 +154,15 @@
 
       &:hover {
         background: $background-light;
-        box-shadow: vw(11) vw(12) vw(20) rgba(216, 225, 236, 0.94);
+        box-shadow: vw(8) vw(11) vw(15) rgba(216, 225, 236, 0.94);
         border-radius: vw(30);
 
         @include lg {
-          box-shadow: vp(10) vp(10) vp(20) rgba(216, 225, 236, 0.94);
+          box-shadow: vp(8) vp(10) vp(15) rgba(216, 225, 236, 0.94);
           border-radius: vp(30);
         }
         @include sm {
-          box-shadow: vm(4) vm(5) vm(5) rgba(216, 225, 236, 0.94);
+          box-shadow: vm(3) vm(4) vm(8) rgba(216, 225, 236, 0.94);
           border-radius: vm(10);
         }
       }
@@ -356,7 +356,7 @@
 
   .goods-carousel {
     .owl-stage-outer {
-      width: vw(1384);
+      width: vw(1383);
       padding: vw(40) 0;
 
       @include lg {
