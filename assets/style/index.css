@@ -339,6 +339,23 @@ ul, ol, li {
   scrollbar-color: #888 #f0f0f0; /* Задаем цвет ползунка и цвет фона скролл-бара */
 }
 
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 300;
+  display: none;
+}
+
+.blur-visible {
+  display: block;
+}
+
 .header {
   z-index: 100;
   background-color: transparent;
@@ -914,7 +931,8 @@ ul, ol, li {
   }
 }
 .circle-rotate {
-  animation: rotate 20s linear infinite;
+  transform: translateX(-50%);
+  animation: rotate 10s linear;
 }
 
 .height {
@@ -1326,17 +1344,17 @@ ul, ol, li {
 }
 @media (max-width: 575.8px) and (max-width: 991.8px) {
   .benefits-carts .order-1,
-.benefits-carts .order-2,
-.benefits-carts .order-3,
-.benefits-carts .order-4 {
+  .benefits-carts .order-2,
+  .benefits-carts .order-3,
+  .benefits-carts .order-4 {
     flex: 1 1 50%;
   }
 }
 @media (max-width: 575.8px) and (max-width: 991.8px) and (max-width: 575.8px) {
   .benefits-carts .order-1,
-.benefits-carts .order-2,
-.benefits-carts .order-3,
-.benefits-carts .order-4 {
+  .benefits-carts .order-2,
+  .benefits-carts .order-3,
+  .benefits-carts .order-4 {
     flex: 1;
   }
 }
@@ -2128,14 +2146,14 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 3.4274193548vw;
     width: 1.6129032258vw;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 5.6vw;
     width: 2.6666666667vw;
   }
@@ -3418,8 +3436,8 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .form-section input,
-.order-contact #order-contact-form .form-section textarea,
-.order-contact #order-contact-form .form-section select {
+  .order-contact #order-contact-form .form-section textarea,
+  .order-contact #order-contact-form .form-section select {
     width: 100%;
   }
 }
@@ -3747,7 +3765,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .water-content h2,
-.water-content p {
+  .water-content p {
     margin-bottom: 4.5333333333vw;
   }
 }
@@ -3892,7 +3910,7 @@ footer .container .attribution {
 }
 @media (max-width: 767.8px) {
   footer .container .social-media,
-footer .container .payment {
+  footer .container .payment {
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -4124,14 +4142,14 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-order-accepted .modal-content .modal-image,
-.modal-order-in-cart .modal-content .modal-image {
+  .modal-order-in-cart .modal-content .modal-image {
     padding-bottom: 3.8971774194vw;
     width: 14.8185483871vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-order-accepted .modal-content .modal-image,
-.modal-order-in-cart .modal-content .modal-image {
+  .modal-order-in-cart .modal-content .modal-image {
     padding-bottom: 5.0666666667vw;
     width: 13.3333333333vw;
   }
@@ -4151,7 +4169,7 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-order-accepted .modal-content .modal-title,
-.modal-order-in-cart .modal-content .modal-title {
+  .modal-order-in-cart .modal-content .modal-title {
     text-align: center;
     padding-bottom: 3.5282258065vw;
     font-size: 3.2258064516vw;
@@ -4159,7 +4177,7 @@ footer .container .attribution a {
 }
 @media (max-width: 575.8px) {
   .modal-order-accepted .modal-content .modal-title,
-.modal-order-in-cart .modal-content .modal-title {
+  .modal-order-in-cart .modal-content .modal-title {
     padding-bottom: 5.3333333333vw;
     font-size: 8.5333333333vw;
   }
@@ -4171,13 +4189,13 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-order-accepted .modal-content p,
-.modal-order-in-cart .modal-content p {
+  .modal-order-in-cart .modal-content p {
     padding-bottom: 7.560483871vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-order-accepted .modal-content p,
-.modal-order-in-cart .modal-content p {
+  .modal-order-in-cart .modal-content p {
     padding-bottom: 9.3333333333vw;
   }
 }
@@ -4312,14 +4330,14 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-.modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 3.4274193548vw;
     width: 1.6129032258vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-.modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 5.6vw;
     width: 2.6666666667vw;
   }
@@ -4627,16 +4645,16 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-contact #contact-form input,
-.modal-contact #contact-form textarea,
-.modal-contact #contact-form select {
+  .modal-contact #contact-form textarea,
+  .modal-contact #contact-form select {
     border-radius: 3.0241935484vw;
     padding: 2.8225806452vw 2.8225806452vw 2.7217741935vw 3.9314516129vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-contact #contact-form input,
-.modal-contact #contact-form textarea,
-.modal-contact #contact-form select {
+  .modal-contact #contact-form textarea,
+  .modal-contact #contact-form select {
     border-radius: 2.6666666667vw;
     padding: 3.7333333333vw 0.7291666667vw 0.6770833333vw 0.9895833333vw;
   }
@@ -4648,14 +4666,14 @@ footer .container .attribution a {
 }
 @media (max-width: 575.8px) {
   .modal-contact #contact-form .payment-amount,
-.modal-contact #contact-form .delivery-options {
+  .modal-contact #contact-form .delivery-options {
     flex-basis: 100%;
     margin-bottom: 4.3346774194vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-contact #contact-form .payment-amount,
-.modal-contact #contact-form .delivery-options {
+  .modal-contact #contact-form .delivery-options {
     margin-bottom: 4vw;
   }
 }

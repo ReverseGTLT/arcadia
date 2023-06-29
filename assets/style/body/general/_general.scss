@@ -221,7 +221,8 @@
 //}
 
 .circle-rotate {
-  animation: rotate 20s linear infinite;
+  transform: translateX(-50%);
+  animation: rotate 10s linear;
 }
 
 .height {

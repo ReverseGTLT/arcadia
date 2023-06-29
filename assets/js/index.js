@@ -258,7 +258,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none';
-    }, 2000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
+    }, 1500); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
 });
 
 
@@ -416,6 +416,7 @@ function openNextModal(e) {
             console.log(currentModal);
             setTimeout(() => {
                 closeAllModals();
+                currentModalIndex = -1;
             }, 2000);
         }
         modals[currentModalIndex].style.display = 'flex';
@@ -432,13 +433,26 @@ function closeAllModals() {
     modals.forEach(modal => {
         modal.style.display = 'none';
     });
+    blurModalOClose();
 }
 
+// openModalBtns.forEach((button) => {
+//     button.addEventListener('click', (e) => {
+//         e.stopPropagation();
+//         e.preventDefault();
+//         closeAllModals();
+//         openNextModal(e);
+//     });
+// });
 openModalBtns.forEach((button) => {
     button.addEventListener('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
         closeAllModals();
+        blurModalOpen();
+        if (button.classList.contains('item-btn')) {
+            currentModalIndex = -1;
+        }
         openNextModal(e);
     });
 });
@@ -447,6 +461,7 @@ headerCartBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
     closeAllModals();
+    blurModalOpen();
     currentModalIndex = 2;
     modals[currentModalIndex].style.display = 'flex';
 });
@@ -459,9 +474,16 @@ closeButtons.forEach((button) => {
             closeAllModals();
             currentModalIndex = modalIndex - 1;
         }
+        blurModalOClose();
     });
 });
-
+const blur = document.querySelector('.blur');
+function blurModalOpen() {
+    blur.classList.add('blur-visible');
+}
+function blurModalOClose() {
+    blur.classList.remove('blur-visible');
+}
 
 // ______________________________________________
 // Counter (value, plus, minus)
