@@ -149,6 +149,7 @@
       &:hover {
         background-color: lighten($color-green, 30%);
         border: vw(1) solid $color-green;
+        color: $color-green;
       }
     }
 

@@ -180,6 +180,11 @@
           background: url("../../assets/images/arrow_red.png") no-repeat;
           background-size: cover;
 
+          pointer-events: none;
+          translate: 50% 0;
+          rotate: 0deg;
+          transition: all 0.4s ease;
+
           @include lg {
             height: vp(16);
             width: vp(12);
