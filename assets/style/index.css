@@ -1969,16 +1969,15 @@ ul, ol, li {
   position: relative;
   max-width: 71.0416666667vw;
   margin-inline: auto;
-  height: 29.375vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 991.8px) {
   .goods-carousel {
     max-width: 45.3629032258vw;
     justify-content: center;
-    margin-inline: 1.0080645161vw;
+    margin-inline: 2.0161290323vw;
     height: auto;
   }
 }
@@ -2018,18 +2017,18 @@ ul, ol, li {
 }
 .goods-carousel__item:hover {
   background: #F2F9FF;
-  box-shadow: 0.7291666667vw 0.8854166667vw 2.03125vw rgba(216, 225, 236, 0.94);
+  box-shadow: 0.5729166667vw 0.625vw 1.0416666667vw rgba(216, 225, 236, 0.94);
   border-radius: 1.5625vw;
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item:hover {
-    box-shadow: 1.4112903226vw 1.7137096774vw 3.9314516129vw rgba(216, 225, 236, 0.94);
+    box-shadow: 1.0080645161vw 1.0080645161vw 2.0161290323vw rgba(216, 225, 236, 0.94);
     border-radius: 3.0241935484vw;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item:hover {
-    box-shadow: 1.8666666667vw 2.1333333333vw 5.3333333333vw rgba(216, 225, 236, 0.94);
+    box-shadow: 1.0666666667vw 1.3333333333vw 1.3333333333vw rgba(216, 225, 236, 0.94);
     border-radius: 2.6666666667vw;
   }
 }
@@ -2222,6 +2221,22 @@ ul, ol, li {
     padding: 4vw 7.4666666667vw 4vw 5.0666666667vw;
   }
 }
+.goods .goods-carousel .owl-stage-outer {
+  width: 72.0833333333vw;
+  padding: 2.0833333333vw 0;
+}
+@media (max-width: 991.8px) {
+  .goods .goods-carousel .owl-stage-outer {
+    width: 46.875vw;
+    padding: 3.5282258065vw 0;
+  }
+}
+@media (max-width: 575.8px) {
+  .goods .goods-carousel .owl-stage-outer {
+    width: 57.8666666667vw;
+    padding: 2.6666666667vw 0;
+  }
+}
 .goods .goods-carousel .owl-nav {
   display: flex;
   justify-content: space-between;
@@ -2236,7 +2251,7 @@ ul, ol, li {
   cursor: pointer;
 }
 .goods .goods-carousel .owl-prev {
-  left: -5.2083333333vw;
+  left: -6.25vw;
   top: 30%;
   width: 4.2708333333vw;
   height: 4.2708333333vw;
@@ -2264,7 +2279,7 @@ ul, ol, li {
   transform: scale(1.05);
 }
 .goods .goods-carousel .owl-next {
-  right: -5.2083333333vw;
+  right: -6.25vw;
   top: 30%;
   width: 4.2708333333vw;
   height: 4.2708333333vw;
