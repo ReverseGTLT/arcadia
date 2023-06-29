@@ -8,15 +8,17 @@ $(document).ready(function () {
     $('#myForm').parsley();
 });
 
-var element = document.getElementById('order-input-tel');
-var maskOptions = {
+const element = document.getElementById('order-input-tel');
+const maskOptions = {
     mask: '+{38}(000)000-00-00'
 };
-var mask = IMask(element, maskOptions);
+const mask = IMask(element, maskOptions);
 
 //____________________________________________________________________
 // VARIABLES
 //____________________________________________________________________
+
+const currencySymbol = 'грн';
 
 let orders = [
     {
@@ -386,6 +388,8 @@ handleOrientationChange();
 // ------------------------------------------------------
 // MODAL
 // goods order & all modal
+
+const cartPriceValue = document.querySelector('.cart-price');
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
 const closeButtons = document.querySelectorAll('.close');
 const headerCartBtn = document.querySelector('.header-cart__btn');
@@ -404,7 +408,7 @@ function openNextModal(e) {
     currentModalIndex++;
     if (currentModalIndex <= modals.length - 1) {
         const currentModal = modals[currentModalIndex];
-            console.log(currentModal);
+        console.log(currentModal);
         if (currentModal.id === 'modal-item') {
             getValueGoodFields(e, currentModal);
         }
@@ -418,6 +422,7 @@ function openNextModal(e) {
     }
     if (currentModalIndex === modals.length - 1) {
         setTimeout(() => {
+            cartPriceValue.textContent = 0;
             closeAllModals();
             currentModalIndex = -1;
         }, 2000);
@@ -495,20 +500,29 @@ function updateCounterBtns() {
 }
 
 function getValueGoodFields({target}, modal) {
-    const itemTitle = target.parentElement.querySelector('.good-title').textContent;
-    const itemImage = target.parentElement.querySelector('.good-image img').src;
-    const itemCount = target.parentElement.querySelector('.good-value').textContent;
-    const itemPrice = target.parentElement.querySelector('.good-price').textContent;
+    if (modal.id === 'modal-item') {
+        const itemTitle = target.parentElement.querySelector('.good-title').textContent;
+        const itemImage = target.parentElement.querySelector('.good-image img').src;
+        const itemCount = target.parentElement.querySelector('.good-value').textContent;
+        const itemPrice = parseFloat(target.parentElement.querySelector('.good-price').textContent);
+        console.log(itemPrice);
 
-    const imageName = itemImage.split('/').pop();
-    const imagePath = `../../assets/images/${imageName}`;
-    console.log(imagePath);
+        const imageName = itemImage.split('/').pop();
+        const imagePath = `../../assets/images/${imageName}`;
+        console.log(imagePath);
 
-    modal.querySelector('.modal-title').textContent = itemTitle;
-    modal.querySelector('.modal-image').src = imagePath;
-    console.log(itemImage);
-    modal.querySelector('.modal-value').textContent = itemCount;
-    modal.querySelector('.modal-price').textContent = itemPrice;
+        modal.querySelector('.modal-title').textContent = itemTitle;
+        modal.querySelector('.modal-image').src = imagePath;
+        modal.querySelector('.modal-value').textContent = itemCount;
+        console.log(itemPrice);
+        modal.querySelector('.modal-price').textContent = `${itemPrice} ${currencySymbol}`;
+        console.log(itemPrice);
+        cartPriceValue.textContent = itemPrice;
+        console.log(itemPrice);
+    }
+    // if (modal.id === 'modal-order-in-cart') {
+    //     const itemPrice = target.parentElement.querySelector('.modal-price').textContent;
+    // }
 }
 
 // __________________________________________________________
@@ -613,60 +627,6 @@ function getValueGoodFields({target}, modal) {
 //     modal.classList.remove('open');
 // });
 
-// minusBtn.addEventListener('click', function () {
-//     const currentValue = parseInt(counterInput.value);
-//     if (currentValue > 0) {
-//         counterInput.value = currentValue - 1;
-//     }
-//     updateCounterBtns();
-// });
-
-// Потрібно налагодити логіку, не те отримує
-
-// minusBtns.forEach(button => {
-//     button.addEventListener('click', function () {
-//         const input = button.nextElementSibling;
-//         console.log(input + 'inp');
-//         const currentValue = parseInt(input.value);
-//         console.log(currentValue + 'curr');
-//
-//         if (currentValue > 0) {
-//             input.value = currentValue - 1;
-//             if (input.value === 0) {
-//                 // button.disabled = true;
-//             }
-//         }
-//         updateCounterBtns();
-//     });
-// });
-
-// plusBtns.forEach(button => {
-//     button.addEventListener('click', function () {
-//         const input = button.previousElementSibling;
-//         const currentValue = parseInt(input.value);
-//         input.value = currentValue + 1;
-//         if (input.value > 0) {
-//             input.previousElementSibling.disabled = false;
-//         }
-//         updateCounterBtns();
-//     });
-// });
-
-// counterInputs.forEach(input => {
-//     input.addEventListener('change', function () {
-//         if (parseInt(input.value) < 0) {
-//             input.value = 0;
-//         }
-//         updateCounterBtns();
-//     })
-// })
-
-// counterInput.addEventListener('change', function () {
-//     if (parseInt(counterInput.value) < 0) {
-//         counterInput.value = 0;
-//     }
-//     updateCounterBtns();
-// })
 
 
 //-----------------------------
