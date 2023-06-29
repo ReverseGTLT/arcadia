@@ -227,18 +227,21 @@ ul, ol, li {
 }
 
 .btn {
+  position: relative;
   cursor: pointer;
-  transition: 0.2s all;
   background: #F80505;
   border-radius: 5.2083333333vw;
-  border: 0.0520833333vw solid #ffffff;
+  border: 0.0520833333vw solid #F80505;
   color: #ffffff;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 1.0416666667vw;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.1em;
   padding: 1.5625vw 2.6041666667vw;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 @media (max-width: 991.8px) {
   .btn {
@@ -254,22 +257,53 @@ ul, ol, li {
     border-radius: 26.6666666667vw;
   }
 }
+.btn::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 20%;
+  background-color: #ffffff;
+  translate: -100% 0;
+  rotate: 45deg;
+  transition: all 0.4s ease;
+}
 .btn:hover {
-  background: #FFBBBB;
   color: #F80505;
+  background: #FFBBBB;
   border: 0.0520833333vw solid #F80505;
   border-radius: 5.2083333333vw;
+  box-shadow: 0 0 1.25vw 0.4166666667vw rgba(255, 187, 187, 0.4);
 }
 @media (max-width: 991.8px) {
   .btn:hover {
     border: 0.1008064516vw solid #F80505;
     border-radius: 10.0806451613vw;
+    box-shadow: 0 0 2.4193548387vw 0.8064516129vw rgba(255, 187, 187, 0.4);
   }
 }
 @media (max-width: 575.8px) {
   .btn:hover {
     border: 0.2666666667vw solid #F80505;
     border-radius: 26.6666666667vw;
+    box-shadow: 0 0 3.2vw 1.0666666667vw rgba(255, 187, 187, 0.4);
+  }
+}
+.btn:hover::before {
+  translate: 100%;
+}
+.btn:active {
+  scale: 0.95;
+  box-shadow: 0 0 0.8333333333vw 0.2083333333vw rgba(148, 156, 190, 0.6);
+}
+@media (max-width: 991.8px) {
+  .btn:active {
+    box-shadow: 0 0 1.6129032258vw 0.4032258065vw rgba(148, 156, 190, 0.6);
+  }
+}
+@media (max-width: 575.8px) {
+  .btn:active {
+    box-shadow: 0 0 2.1333333333vw 1.0666666667vw rgba(148, 156, 190, 0.6);
   }
 }
 
@@ -847,6 +881,7 @@ ul, ol, li {
   }
 }
 .general-wrapper__btn {
+  position: relative;
   background: #F80505;
   border-radius: 5.2083333333vw;
   color: #ffffff;
@@ -855,14 +890,17 @@ ul, ol, li {
   line-height: 100%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: none;
+  border: 0.0520833333vw solid #F80505;
   padding: 1.5625vw 2.6041666667vw;
   margin-top: 3.3854166667vw;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 @media (max-width: 991.8px) {
   .general-wrapper__btn {
     width: 42.3387096774vw;
     height: 8.064516129vw;
+    border: 0.1008064516vw solid #F80505;
     font-size: 2.0161290323vw;
     margin-inline: auto;
     margin-top: 6.0483870968vw;
@@ -872,9 +910,34 @@ ul, ol, li {
   .general-wrapper__btn {
     width: 80vw;
     height: 15.4666666667vw;
+    border: 0.2666666667vw solid #F80505;
     font-size: 4.2666666667vw;
     margin-inline: auto;
   }
+}
+.general-wrapper__btn::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 20%;
+  background-color: #FFBBBB;
+  translate: -100% 0;
+  rotate: 45deg;
+  transition: all 0.4s ease;
+}
+.general-wrapper__btn:hover {
+  color: red;
+  background-color: #ffbbbb;
+  border: 1px solid #FFBBBB;
+  box-shadow: 0 0 24px 8px rgba(255, 187, 187, 0.4);
+}
+.general-wrapper__btn:hover::before {
+  translate: 100%;
+}
+.general-wrapper__btn:hover:active {
+  scale: 0.95;
+  box-shadow: 0 0 16px 4px rgba(255, 187, 187, 0.6);
 }
 
 .circle-text {
@@ -1241,6 +1304,10 @@ ul, ol, li {
   left: 1.5104166667vw;
   background: url("../../assets/images/arrow_red.png") no-repeat;
   background-size: cover;
+  pointer-events: none;
+  translate: 50% 0;
+  rotate: 0deg;
+  transition: all 0.4s ease;
 }
 @media (max-width: 991.8px) {
   .benefits-content__btn .btn::before {
@@ -1950,6 +2017,10 @@ ul, ol, li {
   left: 1.0416666667vw;
   background: url("../../assets/images/punkt.svg") no-repeat;
   background-size: cover;
+  pointer-events: none;
+  translate: 0 0;
+  rotate: 0deg;
+  transition: all 0.4s ease;
 }
 @media (max-width: 991.8px) {
   .goods-content__btn .btn::before {
@@ -2458,6 +2529,7 @@ ul, ol, li {
 .point-btns__btn:hover {
   background-color: #8edd96;
   border: 0.0520833333vw solid #30A23C;
+  color: #30A23C;
 }
 .point-btns__link {
   font-weight: 700;
@@ -2575,7 +2647,7 @@ ul, ol, li {
   }
 }
 .order-form button:hover {
-  color: #ffffff;
+  color: #F80505;
   background-color: #fd9999;
 }
 .order-form__wrapper {

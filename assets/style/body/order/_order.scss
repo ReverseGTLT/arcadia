@@ -110,7 +110,7 @@
         padding-inline: vm(51);
       }
       &:hover {
-        color: $color-white;
+        color: $color-red;
         background-color: lighten($color-red, 30);
       }
     }

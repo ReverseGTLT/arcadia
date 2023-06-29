@@ -92,6 +92,11 @@
           background: url("../../assets/images/punkt.svg") no-repeat;
           background-size: cover;
 
+          pointer-events: none;
+          translate: 0 0;
+          rotate: 0deg;
+          transition: all 0.4s ease;
+
           @include lg {
             height: vp(29);
             width: vp(29);
