@@ -357,9 +357,7 @@
                 <div class="good-counter-price-wrapper">
                     <div class="good-counter btn-light">
                         <button class="counter-btn counter-minus">-</button>
-                        <label for="counter-input"></label>
-                        <input type="number" class="counter-input good-input" id="counter-input" value="0" min="0"
-                               max="999">
+                        <span class="good-value counter-value">1</span>
                         <button class="counter-btn counter-plus">+</button>
                     </div>
                     <div class="good-price">
@@ -377,9 +375,7 @@
                 <div class="good-counter-price-wrapper">
                     <div class="good-counter btn-light">
                         <button class="counter-btn counter-minus">-</button>
-                        <label for="counter-input"></label>
-                        <input type="number" class="counter-input good-input" id="counter-input" value="0" min="0"
-                               max="999">
+                        <span class="good-value counter-value">1</span>
                         <button class="counter-btn counter-plus">+</button>
                     </div>
                     <div class="good-price">
@@ -783,6 +779,7 @@
     <!--    MODALS-->
     <!--    _________________________-->
 
+    <!--Модалка. Моб.меню-->
     <div class="modal-menu">
         <div class="modal-menu__wrapper">
             <div class="modal-menu__close">
@@ -886,6 +883,7 @@
         </div>
     </div>
 
+    <!--Модалка. Товар item-->
     <div class="modal modal-item" id="modal-item">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -906,10 +904,7 @@
                     <div class="modal-counter-price-wrapper">
                         <div class="modal-counter btn-light">
                             <button class="counter-btn counter-minus">-</button>
-                            <label for="counter-input"></label>
-                            <input type="number" class="counter-input modal-input" id="modal-counter-input" value="0"
-                                   min="0"
-                                   max="999">
+                            <span class="modal-value counter-value">1</span>
                             <button class="counter-btn counter-plus">+</button>
                         </div>
                         <div class="modal-price">
@@ -928,7 +923,7 @@
     </div>
 
     <!--Модалка. Корзина-->
-    <div class="modal" id="modal-cart">
+    <div class="modal modal-cart" id="modal-cart">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="modal-title">Ваша корзина (3)</h2>
@@ -1017,7 +1012,7 @@
     </div>
 
     <!--Модалка. Контакты пользователя-->
-    <div class="modal" id="modal-contact">
+    <div class="modal modal-contact" id="modal-contact">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="modal-title">Замовити воду прямо зараз
@@ -1091,8 +1086,18 @@
         </div>
     </div>
 
+
+    <!--Модалка Заказ в корзине-->
+    <div class="modal modal-order-in-cart" id="modal-order-in-cart">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
+            <h2 class="modal-title">Ваше замовлення додано до кошику</h2>
+        </div>
+    </div>
+
     <!--Модалка Заказ принят-->
-    <div class="modal" id="modal-order-accepted">
+    <div class="modal modal-order-accepted" id="modal-order-accepted">
         <div class="modal-content">
             <span class="close">&times;</span>
             <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">

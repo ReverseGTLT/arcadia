@@ -4,8 +4,7 @@
 // import parsley from "parsleyjs/dist/parsley";
 
 
-
-$(document).ready(function() {
+$(document).ready(function () {
     $('#myForm').parsley();
 });
 
@@ -101,7 +100,7 @@ $(document).ready(function () {
     $('.stages-carousel').owlCarousel({
         loop: true,
         items: 1,
-        // autoplay: 1000,
+        autoplay: 1000,
         margin: 10,
         dots: true,
         // dotsEach: 4,
@@ -384,78 +383,134 @@ handleOrientationChange();
 // });
 
 //
-// ------------------------------------
+// ------------------------------------------------------
 // MODAL
 // goods order & all modal
-    const openModalBtns = document.querySelectorAll('.open-modal-btn');
-    const closeButtons = document.querySelectorAll('.close');
-    const headerCartBtn = document.querySelector('.header-cart__btn');
+const openModalBtns = document.querySelectorAll('.open-modal-btn');
+const closeButtons = document.querySelectorAll('.close');
+const headerCartBtn = document.querySelector('.header-cart__btn');
 
-    const modals = [
-        document.getElementById('modal-item'),
-        document.getElementById('modal-cart'),
-        document.getElementById('modal-contact'),
-        document.getElementById('modal-order-accepted')
-    ];
+const modals = [
+    document.getElementById('modal-item'),
+    document.getElementById('modal-cart'),
+    document.getElementById('modal-order-in-cart'),
+    document.getElementById('modal-contact'),
+    document.getElementById('modal-order-accepted'),
+];
 
-    let currentModalIndex = -1;
+let currentModalIndex = -1;
 
-    function openNextModal() {
-        currentModalIndex++;
-        if (currentModalIndex <= modals.length - 1) {
-            modals[currentModalIndex].style.display = 'flex';
+function openNextModal(e) {
+    currentModalIndex++;
+    if (currentModalIndex <= modals.length - 1) {
+        const currentModal = modals[currentModalIndex];
+        if (currentModal.id === 'modal-item') {
+            console.log(e);
+            getValueGoodFields(e, currentModal);
         }
-        if (currentModalIndex === modals.length - 1) {
-            setTimeout(() => {
-                closeAllModals();
-                currentModalIndex = -1;
-            }, 2000);
-        }
+        modals[currentModalIndex].style.display = 'flex';
     }
-
-    function closeAllModals() {
-        modals.forEach(modal => {
-            modal.style.display = 'none';
-        });
-    }
-
-    openModalBtns.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            e.stopPropagation();
-            e.preventDefault();
+    if (currentModalIndex === modals.length - 1) {
+        setTimeout(() => {
             closeAllModals();
-            openNextModal();
-        });
-    });
+            currentModalIndex = -1;
+        }, 2000);
+    }
+}
 
-    headerCartBtn.addEventListener('click', (e) => {
+function closeAllModals() {
+    modals.forEach(modal => {
+        modal.style.display = 'none';
+    });
+}
+
+openModalBtns.forEach((button) => {
+    button.addEventListener('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
         closeAllModals();
-        currentModalIndex = 1;
-        modals[currentModalIndex].style.display = 'flex';
+        openNextModal(e);
     });
+});
 
-    closeButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            const modalIndex = modals.indexOf(modal);
-            if (modalIndex !== -1) {
-                closeAllModals();
-                currentModalIndex = modalIndex - 1;
-            }
-        });
+headerCartBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    closeAllModals();
+    currentModalIndex = 1;
+    modals[currentModalIndex].style.display = 'flex';
+});
+
+closeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        const modalIndex = modals.indexOf(modal);
+        if (modalIndex !== -1) {
+            closeAllModals();
+            currentModalIndex = modalIndex - 1;
+        }
     });
+});
 
 
+// ______________________________________________
+// Counter (value, plus, minus)
+const minValue = 0;
+const maxValue = 999;
+const counterMinusButtons = document.querySelectorAll('.counter-minus');
+const counterPlusButtons = document.querySelectorAll('.counter-plus');
+
+counterMinusButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const counterValue = button.parentNode.querySelector('.counter-value');
+        let currentValue = parseInt(counterValue.textContent);
+        if (currentValue > minValue) {
+            counterValue.textContent = (currentValue - 1).toString();
+            // updateCounterBtns();
+        }
+    });
+});
+
+counterPlusButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const counterValue = button.parentNode.querySelector('.counter-value');
+        let currentValue = parseInt(counterValue.textContent);
+        if (currentValue < maxValue) {
+            counterValue.textContent = (currentValue + 1).toString();
+            // updateCounterBtns();
+        }
+    });
+});
+
+function updateCounterBtns() {
+    // const currentValue = parseInt(counterInput.value);
+    // minusBtn.style.color = currentValue > 0 ? '#949CBE' : '#D4D8EB';
+    // plusBtn.style.color = '#949CBE';
+}
+
+function getValueGoodFields({target}, modal) {
+    const itemTitle = target.parentElement.querySelector('.good-title').textContent;
+    const itemImage = target.parentElement.querySelector('.good-image img').src;
+    const itemCount = target.parentElement.querySelector('.good-value').textContent;
+    const itemPrice = target.parentElement.querySelector('.good-price').textContent;
+
+    const imageName = itemImage.split('/').pop();
+    const imagePath = `../../assets/images/${imageName}`;
+    console.log(imagePath);
+
+    modal.querySelector('.modal-title').textContent = itemTitle;
+    modal.querySelector('.modal-image').src = imagePath;
+    console.log(itemImage);
+    modal.querySelector('.modal-value').textContent = itemCount;
+    modal.querySelector('.modal-price').textContent = itemPrice;
+}
+
+// __________________________________________________________
 
 
-
+// const counterInput = document.querySelector('.counter-input');
 //     const minusBtn = document.querySelector('.counter-minus');
-//     const minusBtns = document.querySelectorAll('.counter-minus');
 //     const plusBtn = document.querySelector('.counter-plus');
-//     const plusBtns = document.querySelectorAll('.counter-plus');
-//     const counterInput = document.querySelector('.counter-input');
 //     const counterInputs = document.querySelectorAll('.counter-input');
 //     const goodsOrderBtn = document.querySelector('.goods-order-btn');
 //     const modal = document.querySelector('.modal');
@@ -504,132 +559,108 @@ handleOrientationChange();
 //     closeModalItem.addEventListener('click', function() {
 //         modalItem.style.display = 'none';
 //     });
-    //
-    // closeModal.addEventListener('click', function () {
-    //     anime({
-    //         targets: modal,
-    //         scale: [1, 0],
-    //         duration: 400,
-    //         easing: 'easeOutElastic',
-    //         complete: () => {
-    //             modal.style.display = 'none';
-    //         }
-    //     });
-    //     // modal.style.display = 'none';
-    // });
-    //
-    // window.addEventListener('click', function ({target}) {
-    //     if (target === modal) {
-    //         modal.style.display = 'none';
-    //     }
-    // });
-    //
-    // function animeModal() {
-    //     anime({
-    //         targets: modal,
-    //         scale: [0, 1],
-    //         duration: 400,
-    //         easing: 'easeOutElastic'
-    //     });
-    // }
+//
+// closeModal.addEventListener('click', function () {
+//     anime({
+//         targets: modal,
+//         scale: [1, 0],
+//         duration: 400,
+//         easing: 'easeOutElastic',
+//         complete: () => {
+//             modal.style.display = 'none';
+//         }
+//     });
+//     // modal.style.display = 'none';
+// });
+//
+// window.addEventListener('click', function ({target}) {
+//     if (target === modal) {
+//         modal.style.display = 'none';
+//     }
+// });
+//
+// function animeModal() {
+//     anime({
+//         targets: modal,
+//         scale: [0, 1],
+//         duration: 400,
+//         easing: 'easeOutElastic'
+//     });
+// }
 
-    // anime({
-    //     targets: cartModal,
-    //     translateY: [-500, 0],
-    //     opacity: [0, 1],
-    //     duration: 300,
-    //     easing: 'easeOutQuad'
-    // });
+// anime({
+//     targets: cartModal,
+//     translateY: [-500, 0],
+//     opacity: [0, 1],
+//     duration: 300,
+//     easing: 'easeOutQuad'
+// });
 
-    // closeModal.addEventListener('click', () => {
-    //     anime({
-    //         targets: cartModal,
-    //         translateY: 500,
-    //         opacity: 0,
-    //         duration: 300,
-    //         easing: 'easeOutQuad'
-    //     });
-    //     modal.classList.remove('open');
-    // });
+// closeModal.addEventListener('click', () => {
+//     anime({
+//         targets: cartModal,
+//         translateY: 500,
+//         opacity: 0,
+//         duration: 300,
+//         easing: 'easeOutQuad'
+//     });
+//     modal.classList.remove('open');
+// });
 
-    minusBtn.addEventListener('click', function () {
-        const currentValue = parseInt(counterInput.value);
-        if (currentValue > 0) {
-            counterInput.value = currentValue - 1;
-        }
-        updateCounterBtns();
-    });
+// minusBtn.addEventListener('click', function () {
+//     const currentValue = parseInt(counterInput.value);
+//     if (currentValue > 0) {
+//         counterInput.value = currentValue - 1;
+//     }
+//     updateCounterBtns();
+// });
 
-    // Потрібно налагодити логіку, не те отримує
+// Потрібно налагодити логіку, не те отримує
 
-    // minusBtns.forEach(button => {
-    //     button.addEventListener('click', function () {
-    //         const input = button.nextElementSibling;
-    //         console.log(input + 'inp');
-    //         const currentValue = parseInt(input.value);
-    //         console.log(currentValue + 'curr');
-    //
-    //         if (currentValue > 0) {
-    //             input.value = currentValue - 1;
-    //             if (input.value === 0) {
-    //                 // button.disabled = true;
-    //             }
-    //         }
-    //         updateCounterBtns();
-    //     });
-    // });
+// minusBtns.forEach(button => {
+//     button.addEventListener('click', function () {
+//         const input = button.nextElementSibling;
+//         console.log(input + 'inp');
+//         const currentValue = parseInt(input.value);
+//         console.log(currentValue + 'curr');
+//
+//         if (currentValue > 0) {
+//             input.value = currentValue - 1;
+//             if (input.value === 0) {
+//                 // button.disabled = true;
+//             }
+//         }
+//         updateCounterBtns();
+//     });
+// });
 
-    plusBtns.forEach(button => {
-        button.addEventListener('click', function () {
-            const input = button.previousElementSibling;
-            const currentValue = parseInt(input.value);
-            input.value = currentValue + 1;
-            if (input.value > 0) {
-                input.previousElementSibling.disabled = false;
-            }
-            updateCounterBtns();
-        });
-    });
+// plusBtns.forEach(button => {
+//     button.addEventListener('click', function () {
+//         const input = button.previousElementSibling;
+//         const currentValue = parseInt(input.value);
+//         input.value = currentValue + 1;
+//         if (input.value > 0) {
+//             input.previousElementSibling.disabled = false;
+//         }
+//         updateCounterBtns();
+//     });
+// });
 
-    counterInputs.forEach(input => {
-        input.addEventListener('change', function () {
-            if (parseInt(input.value) < 0) {
-                input.value = 0;
-            }
-            updateCounterBtns();
-        })
-    })
+// counterInputs.forEach(input => {
+//     input.addEventListener('change', function () {
+//         if (parseInt(input.value) < 0) {
+//             input.value = 0;
+//         }
+//         updateCounterBtns();
+//     })
+// })
 
-    // counterInput.addEventListener('change', function () {
-    //     if (parseInt(counterInput.value) < 0) {
-    //         counterInput.value = 0;
-    //     }
-    //     updateCounterBtns();
-    // })
-
-
-    function updateCounterBtns() {
-        const currentValue = parseInt(counterInput.value);
-        minusBtn.style.color = currentValue > 0 ? '#949CBE' : '#D4D8EB';
-        plusBtn.style.color = '#949CBE';
-    }
-
-    function getValueFields(button, modal) {
-        const itemTitle = button.parentElement.querySelector('.good-title').textContent;
-        const itemImage = button.parentElement.querySelector('.good-image img').src;
-        const itemCount = button.parentElement.querySelector('.good-input').value;
-        const itemPrice = button.parentElement.querySelector('.good-price').textContent;
-
-        const imageName = itemImage.split('/').pop();
-        const imagePath = `../../assets/images/${imageName}`;
-        console.log(imagePath);
-
-        modal.querySelector('.modal-title').textContent = itemTitle;
-        modal.querySelector('.modal-image').src = imagePath;
-        console.log(itemImage);
-        modal.querySelector('.modal-input').value = itemCount;
-        modal.querySelector('.modal-price').textContent = itemPrice;
-    }
+// counterInput.addEventListener('change', function () {
+//     if (parseInt(counterInput.value) < 0) {
+//         counterInput.value = 0;
+//     }
+//     updateCounterBtns();
+// })
 
 
 //-----------------------------
@@ -640,18 +671,18 @@ const cartOrderBtn = document.getElementById('btn-modal-contact');
 const cartItems = document.querySelector('.cart-items');
 
 let cart = [];
+// НЕ НУЖНО. Будет на беке
+// function addToCart(product) {
+//     cart.push(product);
+//     updateCart();
+// }
+//
+// function deleteFromCart(product) {
+//     cart = cart.filter(item => item !== product);
+//     updateCart();
+// }
 
-function addToCart(product) {
-    cart.push(product);
-    updateCart();
-}
-
-function deleteFromCart(product) {
-    cart = cart.filter(item => item !== product);
-    updateCart();
-}
-
-
+//__________________________________
 // НЕ полностью реализовано
 
 // function updateCart() {

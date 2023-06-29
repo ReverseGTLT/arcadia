@@ -270,7 +270,7 @@
             }
           }
 
-          .counter-input {
+          .counter-value {
             font-size: vw(20);
             display: block;
             flex: 1;
@@ -291,10 +291,10 @@
               height: vm(21);
             }
           }
-          .counter-input::-webkit-outer-spin-button,
-          .counter-input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-          }
+          //.counter-input::-webkit-outer-spin-button,
+          //.counter-input::-webkit-inner-spin-button {
+          //  -webkit-appearance: none;
+          //}
         }
 
         .good-price {
