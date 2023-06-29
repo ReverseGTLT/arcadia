@@ -309,13 +309,29 @@ menuOpen.addEventListener('click', onMenuOpen);
 menuClose.addEventListener('click', onMenuClose)
 
 function onMenuOpen() {
-    menuWindow.classList.add('visible')
+    menuWindow.classList.add('visible');
+    toggleBodyScrollLock(true);
 }
+
 
 function onMenuClose() {
-    menuWindow.classList.remove('visible')
+    menuWindow.classList.remove('visible');
+    toggleBodyScrollLock(false);
 }
-
+const modalMenu = document.querySelector('.modal-menu');
+modalMenu.addEventListener('click', (e) => {
+    if (e.target === modalMenu) {
+        onMenuClose();
+    }
+});
+function toggleBodyScrollLock(lock) {
+    const body = document.querySelector('body');
+    if (lock) {
+        body.classList.add('body-scroll-lock');
+    } else {
+        body.classList.remove('body-scroll-lock');
+    }
+}
 
 // ______________________________________________
 // Скролл ап
@@ -453,6 +469,9 @@ openModalBtns.forEach((button) => {
         if (button.classList.contains('item-btn')) {
             currentModalIndex = -1;
         }
+        if (button.classList.contains('general-wrapper__btn')) {
+            currentModalIndex = 2;
+        }
         openNextModal(e);
     });
 });
@@ -484,6 +503,10 @@ function blurModalOpen() {
 function blurModalOClose() {
     blur.classList.remove('blur-visible');
 }
+blur.addEventListener('click', () => {
+    closeAllModals();
+    currentModalIndex = -1;
+});
 
 // ______________________________________________
 // Counter (value, plus, minus)
