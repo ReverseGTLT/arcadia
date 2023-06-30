@@ -95,6 +95,20 @@ input {
   }
 }
 
+h1 {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.05;
+
+  @include lg {
+    font-size: vp(55);
+  }
+
+  @include sm {
+    font-size: vm(32);
+  }
+}
+
 h2 {
   font-size: 40px;
   font-weight: 700;
