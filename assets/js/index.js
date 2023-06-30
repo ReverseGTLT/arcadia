@@ -305,6 +305,7 @@ window.addEventListener('load', function () {
 const menuOpen = document.querySelector('.header-menu__btn');
 const menuWindow = document.querySelector('.modal-menu');
 const menuClose = document.querySelector('.modal-menu__close');
+const gotoMenu = document.querySelectorAll('.goto-menu');
 menuOpen.addEventListener('click', onMenuOpen);
 menuClose.addEventListener('click', onMenuClose)
 
@@ -332,6 +333,10 @@ function toggleBodyScrollLock(lock) {
         body.classList.remove('body-scroll-lock');
     }
 }
+
+gotoMenu.forEach((btn) => {
+    btn.addEventListener('click', onMenuClose)
+})
 
 // ______________________________________________
 // Скролл ап
