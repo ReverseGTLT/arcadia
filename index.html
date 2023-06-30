@@ -212,7 +212,7 @@
     <!--    Section 2. BENEFITS-->
     <!--    _________________________-->
 
-    <section class="benefits container-1540">
+    <section class="benefits container-1540" id="benefits">
         <div class="benefits-content">
             <div class="benefits-content__img">
                 <img src="../arcadia/assets/images/butl_benefits.png"
@@ -262,7 +262,7 @@
     <!--    Section 3. STAGES. Carousel -->
     <!--    _________________________-->
 
-    <section class="stages container-1540">
+    <section class="stages container-1540" id="stages">
         <div class="stages-content">
             <div class="stages-content__text">
                 <h2 class="animate__animated">Очищення води від “Acradia”<br>
@@ -482,7 +482,7 @@
     <!--    Section 7. CERTIFICATES. Carousel -->
     <!--    _________________________-->
 
-    <section class="certificates container-1540">
+    <section class="certificates container-1540" id="certificates">
         <div class="certificates-content">
             <div class="certificates-content__text">
                 <h2 class="animate__animated">Дещо важливе, Сертіфікати</h2>
@@ -574,7 +574,7 @@
     <!--    Section. CONTACTS. -->
     <!--    _________________________-->
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container-1540">
             <div class="contacts-content">
                 <div class="contacts-content__text">
@@ -801,11 +801,11 @@
                 <img class="modal-menu__circle-center" src="assets/images/kapla.svg" alt="circle">
             </div>
             <ul class="modal-menu__list">
-                <li class="modal-menu__item"><a href="">Про компанію</a></li>
-                <li class="modal-menu__item"><a href="">Процес очистки</a></li>
-                <li class="modal-menu__item"><a href="">Сертифікати</a></li>
-                <li class="modal-menu__item"><a href="">Доставка та оплата</a></li>
-                <li class="modal-menu__item"><a href="">Контакти</a></li>
+                <li class="modal-menu__item"><a class="goto-menu" href="#benefits">Про компанію</a></li>
+                <li class="modal-menu__item"><a class="goto-menu" href="#stages">Процес очистки</a></li>
+                <li class="modal-menu__item"><a class="goto-menu" href="#certificates">Сертифікати</a></li>
+                <li class="modal-menu__item"><a class="goto-menu" href="delivery.html">Доставка та оплата</a></li>
+                <li class="modal-menu__item"><a class="goto-menu" href="#contacts">Контакти</a></li>
             </ul>
             <div class="header-info header-info--modal-menu">
                 <div class="header-info__tel">
@@ -838,7 +838,9 @@
                     <p class="header-info__callback-text">Зворотний дзвінок</p>
                 </div>
                 <div class="header-info__buy header-info__buy--modal-menu">
-                    <button class="header-info__buy-btn">Замовити воду</button>
+                    <a href="#goods">
+                        <button class="btn header-info__buy-btn goto-menu">Замовити воду</button>
+                    </a>
                 </div>
             </div>
             <ul class="modal-menu__data">
