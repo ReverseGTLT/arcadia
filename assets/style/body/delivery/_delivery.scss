@@ -2,14 +2,14 @@
 
 .delivery {
   padding-top: vw(232);
-  padding-bottom: vw(312);
+  padding-bottom: vw(207);
   @include lg {
-    padding-top: vp(232);
-    padding-bottom: vp(312);
+    padding-top: vp(200);
+    padding-bottom: vp(100);
   }
   @include sm {
-    padding-top: vm(115);
-    padding-bottom: vm(150);
+    padding-top: vm(100);
+    padding-bottom: vm(50);
   }
 
   .container-1108 {
@@ -17,10 +17,10 @@
     max-width: vw(1108);
     margin: 0 auto;
     @include lg {
-      max-width: vp(800);
+      max-width: vp(950);
     }
     @include sm {
-      max-width: vm(300);
+      max-width: vm(350);
     }
   }
 
@@ -158,27 +158,157 @@
 }
 
 .delivery-tg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: $background-light;
   border-radius: vw(30);
   padding: vw(48) vw(59) vw(48) vw(56);
+  margin-bottom: vw(78);
   @include lg {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     border-radius: vp(30);
-    padding: vp(48) vp(59) vp(48) vp(56);
+    padding: vp(20) vp(25);
+    margin-bottom: vp(78);
   }
   @include sm {
     border-radius: vm(10);
-    padding: vm(48) vm(59) vm(48) vm(56);
+    padding: vm(15) vm(10);
+    margin-bottom: vm(35);
+  }
+
+  &__content {
+    order: 2;
+    padding-left: vw(45);
+    padding-right: vw(115);
+    @include lg {
+      order: 1;
+      flex-basis: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: vp(20);
+    }
+    @include sm {
+      padding-bottom: vm(15);
+    }
+
+    h3 {
+      padding-bottom: vw(14);
+      @include lg {
+
+      }
+      @include sm {
+      }
+    }
+
+    p {
+      font-weight: normal;
+    }
+  }
+
+  &__link {
+    order: 3;
+    @include lg {
+      order: 3;
+      flex: 1 1 50%;
+    }
+
+    a {
+      color: $background-blue;
+    }
+  }
+
+}
+
+.delivery-tel {
+  @include lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    display: inline-block;
+    padding-bottom: vw(8);
+    @include lg {
+      text-align: center;
+      padding-bottom: vp(8);
+    }
+    @include sm {
+      padding-bottom: vm(5);
+    }
+  }
+
+  &-link__box {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include lg {
+      width: 50%;
+      justify-content: center;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &__tel {
+    padding-right: vw(15);
+    @include lg {
+      padding-right: vp(15);
+    }
+    @include sm {
+      padding-right: vm(8);
+    }
+
+    &-link {
+      padding-block: vw(10);
+      font-weight: bold;
+    }
+  }
+
+  &__telegram {
+    width: vw(38);
+    @include lg {
+      width: vp(30);
+    }
+    @include sm {
+      width: vm(24);
+    }
+
+    &-link {
+      svg {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+.delivery-tg__svg {
+  order: 1;
+  width: vw(82);
+  @include lg {
+    order: 2;
+    flex: 1 1 50%;
+    width: vp(44);
+  }
+  @include sm {
+    width: vm(24);
+  }
+
+  svg {
+    display: block;
+    width: 100%;
   }
 }
 
-@include lg {
-  .delivery-info,
-  .delivery-pay,
-  .delivery-svg,
-  .delivery-info__content,
-  .delivery-pay__content {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+footer {
+  margin-bottom: 0;
 }
