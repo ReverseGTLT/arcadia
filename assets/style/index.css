@@ -3509,13 +3509,13 @@ ul, ol, li {
   border: 0.0520833333vw solid #D4D8EB;
   border-radius: 1.5625vw;
   padding: 1.4583333333vw 1.4583333333vw 1.40625vw 2.03125vw;
-  margin-bottom: 1.40625vw;
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .form-section input,
   .order-contact #order-contact-form .form-section textarea,
   .order-contact #order-contact-form .form-section select {
     width: 100%;
+    margin-bottom: 1.40625vw;
   }
 }
 .order-contact #order-contact-form .form-section input {
