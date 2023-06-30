@@ -95,8 +95,22 @@ input {
   }
 }
 
+h1 {
+  font-size: vw(55);
+  font-weight: 700;
+  line-height: 1.05;
+
+  @include lg {
+    font-size: vp(55);
+  }
+
+  @include sm {
+    font-size: vm(35);
+  }
+}
+
 h2 {
-  font-size: 40px;
+  font-size: vw(40);
   font-weight: 700;
   line-height: 1.05;
 
@@ -110,7 +124,7 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
+  font-size: vw(32);
   font-weight: 700;
   line-height: 1.05;
 
@@ -222,7 +236,14 @@ a, button {
 
 .a-link {
   text-decoration: underline;
-  text-underline-offset: 7px;
+  text-underline-offset: vw(7);
+
+  @include lg {
+    text-underline-offset: vp(7);
+  }
+  @include sm {
+    text-underline-offset: vm(3);
+  }
 
   //&::after {
   //  position: absolute;
