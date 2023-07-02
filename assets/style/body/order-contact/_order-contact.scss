@@ -119,9 +119,10 @@
         border: vw(1) solid $color-grey-border;
         border-radius: vw(30);
         padding: vw(28) vw(28) vw(27) vw(39);
-        margin-bottom: vw(27);
+        //margin-bottom: vw(27);
         @include lg {
           width: 100%;
+          margin-bottom: vw(27);
         }
       }
 
