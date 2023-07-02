@@ -29,3 +29,43 @@
     height: vm(44);
   }
 }
+
+.scroll-button--tg-bot {
+  position: fixed;
+  bottom: vw(175);
+  right: vw(100);
+  width: vw(82);
+  height: vw(82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+
+  svg {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    path {
+      transition: 0.2s;
+    }
+    &:hover {
+      path {
+        fill: #1377ED;
+      }
+    }
+  }
+
+
+  @include lg {
+    width: vp(82);
+    height: vp(82);
+    bottom: vp(159);
+  }
+
+  @include sm {
+    width: vm(44);
+    height: vm(44);
+    bottom: vm(70);
+  }
+}

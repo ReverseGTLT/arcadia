@@ -337,17 +337,20 @@ function toggleBodyScrollLock(lock) {
 gotoMenu.forEach((btn) => {
     btn.addEventListener('click', onMenuClose)
 })
-
+console.log('Hello')
 // ______________________________________________
 // Скролл ап
 document.addEventListener("DOMContentLoaded", function () {
     const scrollToTopButton = document.getElementById("scroll-to-top");
+    const scrollTgBot = document.getElementById("tg-bot");
 
     window.addEventListener("scroll", function () {
         if (window.pageYOffset > 100) {
             scrollToTopButton.style.display = "block";
+            scrollTgBot.style.display = "block";
         } else {
             scrollToTopButton.style.display = "none";
+            scrollTgBot.style.display = "none";
         }
     });
 
