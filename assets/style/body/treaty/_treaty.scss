@@ -1,0 +1,70 @@
+
+@use "../../presets/index" as *;
+
+.treaty {
+  &-wrapper {
+    margin-inline: vw(366);
+    margin-bottom: vw(170);
+    margin-top: vw(232);
+    @include lg {
+      margin-inline: vp(30);
+      margin-top: vp(232);
+    }
+    @include sm {
+      margin-inline: vm(15);
+      margin-top: vm(132);
+    }
+  }
+  &__main {
+    color: #0A0E20;
+    font-size: vw(55);
+    font-weight: 700;
+    line-height: normal;
+    @include lg {
+      font-size: vp(55);
+    }
+  }
+  &__description {
+    color: #000;
+    font-size: vw(20);
+    line-height: 150%;
+    padding-top: vw(36);
+    @include lg {
+      font-size: vp(20);
+    }
+    i {
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+  &__title {
+    color: #0A0E20;
+    font-size: vw(36);
+    font-weight: 700;
+    line-height: normal;
+    padding-top: vw(79);
+    @include lg {
+      font-size: vp(36);
+    }
+  }
+  &-list {
+    padding-top: vw(25);
+    padding-left: vw(40);
+    @include lg {
+      padding-left: vp(40);
+    }
+    li {
+      color: #000;
+      font-size: vw(20);
+      line-height: 185.5%;
+      list-style-type: disc;
+      @include lg {
+        font-size: vp(20);
+      }
+    }
+  }
+}
+
+.footer--treaty {
+  margin-bottom: 0;
+}
