@@ -1,0 +1,59 @@
+
+@use "../../presets/index" as *;
+
+.error {
+  height: 100vh;
+  padding-top: vw(230);
+  padding-inline: vw(70);
+  &-container {
+    margin-inline: auto;
+    width: vw(800);
+    background-image:url('../../assets/images/404.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include lg {
+      width: 100%;
+      background-position: center;
+    }
+  }
+  &__title {
+    color: #000;
+    font-size: vw(20);
+    line-height: 150%;
+    padding-bottom: vw(10);
+    @include lg {
+      font-size: vp(22);
+    }
+    @include sm {
+      font-size: vm(9);
+    }
+  }
+  &__description {
+    color: #0879E0;
+    font-size: vw(24);
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration-line: underline;
+    @include lg {
+      font-size: vp(26);
+    }
+    @include sm {
+      font-size: vm(10);
+    }
+  }
+}
+
+.footer-error {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  @include lg {
+    position: static;
+  }
+}
