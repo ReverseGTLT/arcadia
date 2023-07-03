@@ -5884,7 +5884,7 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .treaty__description {
-    font-size: 2.0161290323vw;
+    font-size: 2.5201612903vw;
   }
 }
 .treaty__description i {
@@ -5922,6 +5922,26 @@ footer .container .attribution a {
   .treaty-list li {
     font-size: 2.0161290323vw;
   }
+}
+.treaty__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2.0833333333vw;
+}
+.treaty__table th, .treaty__table td {
+  border: 0.0520833333vw solid black;
+  padding: 0.4166666667vw;
+}
+@media (max-width: 575.8px) {
+  .treaty__table th, .treaty__table td {
+    font-size: 2.6666666667vw;
+  }
+}
+.treaty__table th {
+  background-color: #f2f2f2;
+}
+.treaty__table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 .footer--treaty {

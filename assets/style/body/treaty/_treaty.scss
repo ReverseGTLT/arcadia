@@ -30,7 +30,7 @@
     line-height: 150%;
     padding-top: vw(36);
     @include lg {
-      font-size: vp(20);
+      font-size: vp(25);
     }
     i {
       font-weight: bold;
@@ -61,6 +61,25 @@
       @include lg {
         font-size: vp(20);
       }
+    }
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: vw(40);
+    th, td {
+      border: vw(1) solid black;
+      padding: vw(8);
+      @include sm {
+        font-size: vm(10);
+      }
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
     }
   }
 }
