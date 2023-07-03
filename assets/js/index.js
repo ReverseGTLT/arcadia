@@ -280,6 +280,16 @@ window.addEventListener('scroll', onScrollWindow);
 function onScrollWindow() {
     const header = document.querySelector('.header');
     const scrollPosition = window.scrollY;
+    const headerLink = document.querySelector('.header-link');
+
+    if (scrollPosition >= 151) {
+        headerLink.classList.remove('hidden-mobile');
+        headerLink.classList.add('hidden-mobile--delay');
+    }
+    if (scrollPosition <= 151) {
+        headerLink.classList.add('hidden-mobile');
+        headerLink.classList.remove('hidden-mobile--delay');
+    }
 
     if (scrollPosition >= 101) {
         header.classList.add('bgcolor-white');
@@ -289,7 +299,7 @@ function onScrollWindow() {
         localStorage.removeItem('scrollPresent'); // Удаляем информацию о наличии скролла из Local Storage
     }
 }
-
+87
 // Проверяем наличие скролла после обновления страницы
 window.addEventListener('load', function () {
     const header = document.querySelector('.header');
