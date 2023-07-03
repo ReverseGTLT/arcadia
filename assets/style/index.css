@@ -5848,4 +5848,84 @@ footer .container .attribution a {
   }
 }
 
+.treaty-wrapper {
+  margin-inline: 19.0625vw;
+  margin-bottom: 8.8541666667vw;
+  margin-top: 12.0833333333vw;
+}
+@media (max-width: 991.8px) {
+  .treaty-wrapper {
+    margin-inline: 3.0241935484vw;
+    margin-top: 23.3870967742vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .treaty-wrapper {
+    margin-inline: 4vw;
+    margin-top: 35.2vw;
+  }
+}
+.treaty__main {
+  color: #0A0E20;
+  font-size: 2.8645833333vw;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 991.8px) {
+  .treaty__main {
+    font-size: 5.5443548387vw;
+  }
+}
+.treaty__description {
+  color: #000;
+  font-size: 1.0416666667vw;
+  line-height: 150%;
+  padding-top: 1.875vw;
+}
+@media (max-width: 991.8px) {
+  .treaty__description {
+    font-size: 2.0161290323vw;
+  }
+}
+.treaty__description i {
+  font-weight: bold;
+  font-style: normal;
+}
+.treaty__title {
+  color: #0A0E20;
+  font-size: 1.875vw;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 4.1145833333vw;
+}
+@media (max-width: 991.8px) {
+  .treaty__title {
+    font-size: 3.6290322581vw;
+  }
+}
+.treaty-list {
+  padding-top: 1.3020833333vw;
+  padding-left: 2.0833333333vw;
+}
+@media (max-width: 991.8px) {
+  .treaty-list {
+    padding-left: 4.0322580645vw;
+  }
+}
+.treaty-list li {
+  color: #000;
+  font-size: 1.0416666667vw;
+  line-height: 185.5%;
+  list-style-type: disc;
+}
+@media (max-width: 991.8px) {
+  .treaty-list li {
+    font-size: 2.0161290323vw;
+  }
+}
+
+.footer--treaty {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=index.css.map */
