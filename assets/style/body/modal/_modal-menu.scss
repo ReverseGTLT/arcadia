@@ -170,6 +170,18 @@
       }
     }
   }
+  &__language {
+    a {
+      text-align: center;
+      font-weight: 500;
+      font-size: vw(16);
+      line-height: 218.1%;
+      color: $color-h-txt-link;
+      @include lg {
+        font-size: vm(16);
+      }
+    }
+  }
 }
 
 .visible {
