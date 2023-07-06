@@ -37,12 +37,11 @@
       @include sm {
         flex-direction: column;
         gap: vm(12);
-        padding-left: vm(10);
       }
       img:first-child {
         width: vw(113);
         @include lg {
-          margin-inline: auto;
+          margin-inline: 0;
           width: vp(132);
         }
         @include sm {
@@ -53,7 +52,7 @@
       img:last-child {
         width: vw(205);
         @include lg {
-          margin-inline: auto;
+          margin-inline: 0;
           width: vp(132);
         }
         @include sm {
@@ -73,6 +72,7 @@
         line-height: vm(8);
         text-align: center;
         padding-top: vp(10);
+        display: none;
       }
       @include sm {
         font-size: 0;
@@ -243,6 +243,11 @@
     cursor: pointer;
     @include lg {
       order: -1;
+      padding-right: vp(90);
+    }
+    @include sm {
+      order: -1;
+      padding-right: vm(10);
     }
   }
   &__language-list {
