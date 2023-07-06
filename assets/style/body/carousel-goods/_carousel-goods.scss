@@ -201,10 +201,12 @@
         font-weight: $font-weight-accent;
         line-height: 1.3;
         text-align: left;
-        white-space: nowrap;
+        //white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
         padding-bottom: vw(17);
+
+        min-height: vw(150);
 
         @include lg {
           font-size: vp(22);

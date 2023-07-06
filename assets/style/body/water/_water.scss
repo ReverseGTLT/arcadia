@@ -74,3 +74,31 @@
 
   }
 }
+
+.read-more {
+  color: #0879E0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.read-box {
+  height: vw(100);
+  overflow-y: hidden;
+  transition: 0.3s;
+  @include lg {
+    height: vp(150);
+  }
+  @include sm {
+    height: vm(75);
+  }
+}
+
+.read-height {
+  height: vw(350);
+  @include lg {
+    height: vp(530);
+  }
+  @include sm {
+    height: vm(590);
+  }
+}
