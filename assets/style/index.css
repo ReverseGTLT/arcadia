@@ -462,7 +462,6 @@ ul, ol, li {
   .header-logo__images {
     flex-direction: column;
     gap: 3.2vw;
-    padding-left: 2.6666666667vw;
   }
 }
 .header-logo__images img:first-child {
@@ -470,7 +469,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .header-logo__images img:first-child {
-    margin-inline: auto;
+    margin-inline: 0;
     width: 13.3064516129vw;
   }
 }
@@ -485,7 +484,7 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .header-logo__images img:last-child {
-    margin-inline: auto;
+    margin-inline: 0;
     width: 13.3064516129vw;
   }
 }
@@ -508,6 +507,7 @@ ul, ol, li {
     line-height: 2.1333333333vw;
     text-align: center;
     padding-top: 1.0080645161vw;
+    display: none;
   }
 }
 @media (max-width: 575.8px) {
@@ -701,6 +701,13 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .header-box {
     order: -1;
+    padding-right: 9.0725806452vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .header-box {
+    order: -1;
+    padding-right: 2.6666666667vw;
   }
 }
 .header__language-list {
