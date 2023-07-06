@@ -701,7 +701,7 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .header-box {
     order: -1;
-    padding-right: 9.0725806452vw;
+    padding-right: 10.0806451613vw;
   }
 }
 @media (max-width: 575.8px) {
@@ -855,6 +855,27 @@ ul, ol, li {
     opacity: 1;
   }
 }
+@media (max-width: 991.8px) {
+  .header-logo__images--general img:first-child {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 575.8px) {
+  .header-logo__images--general img:first-child {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 991.8px) {
+  .header-logo__images--general img:last-child {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 575.8px) {
+  .header-logo__images--general img:last-child {
+    margin-inline: auto;
+  }
+}
+
 .scroll-button {
   position: fixed;
   bottom: 3.90625vw;
