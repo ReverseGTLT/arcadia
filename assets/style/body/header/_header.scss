@@ -243,7 +243,7 @@
     cursor: pointer;
     @include lg {
       order: -1;
-      padding-right: vp(90);
+      padding-right: vp(100);
     }
     @include sm {
       order: -1;
@@ -381,5 +381,24 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+.header-logo__images--general {
+  img:first-child {
+    @include lg {
+      margin-inline: auto;
+    }
+    @include sm {
+      margin-inline: auto;
+    }
+  }
+  img:last-child {
+    @include lg {
+      margin-inline: auto;
+    }
+    @include sm {
+      margin-inline: auto;
+    }
   }
 }
