@@ -17,9 +17,11 @@
     position: relative;
     background-color: $background-light;
     border-radius: vw(30);
-    height: vw(652);
+    //height: vw(652);
     display: flex;
     align-items: center;
+
+    padding-bottom: vw(100);
 
     @include lg {
       display: flex;

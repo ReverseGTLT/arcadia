@@ -579,3 +579,11 @@ function getValueGoodFields({target}, modal) {
         modal.querySelector('.modal-price').textContent = `${itemPrice} ${currencySymbol}`;
     }
 }
+
+const readMore = document.querySelector('.read-more');
+const readBox = document.querySelector('.read-box');
+
+readMore.addEventListener('click', onReadMoreClick);
+function onReadMoreClick() {
+    readBox.classList.toggle('read-height');
+}
