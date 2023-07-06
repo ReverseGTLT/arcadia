@@ -37,6 +37,7 @@
       @include sm {
         flex-direction: column;
         gap: vm(12);
+        padding-left: vm(10);
       }
       img:first-child {
         width: vw(113);
@@ -45,8 +46,8 @@
           width: vp(132);
         }
         @include sm {
-          margin-inline: auto;
-          width: vm(132);
+          margin-inline: 0;
+          width: vm(80);
         }
       }
       img:last-child {
@@ -56,8 +57,8 @@
           width: vp(132);
         }
         @include sm {
-          margin-inline: auto;
-          width: vm(132);
+          margin-inline: 0;
+          width: vm(80);
         }
       }
     }
@@ -75,6 +76,7 @@
       }
       @include sm {
         font-size: 0;
+        display: none;
       }
     }
   }
@@ -159,8 +161,9 @@
   }
   &-cart {
     @include lg {
-      order: -1;
+      order: -2;
       padding-left: vp(42);
+      margin-right: vm(10);
     }
     @include sm {
       padding-left: vm(10);
@@ -226,6 +229,9 @@
       font-size: vw(14);
       line-height: vw(15);
       color: $color-h-txt-link;
+      @include lg {
+        font-size: vm(10);
+      }
     }
   }
   &-box {
@@ -235,6 +241,9 @@
     flex-direction: column;
     gap: vw(10);
     cursor: pointer;
+    @include lg {
+      order: -1;
+    }
   }
   &__language-list {
     padding: vw(10);
@@ -243,6 +252,12 @@
     top: vw(40);
     right: 0;
     left: 0;
+    @include lg {
+      padding-top: vm(15);
+    }
+    @include sm {
+      padding-top: vm(20);
+    }
   }
   &-menu {
     padding-left: vw(25);
