@@ -177,46 +177,25 @@ $(document).ready(function () {
     $('.facts-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
-        autoplayHoverPause: true,
-        margin: 0,
-        nav: false,
-        dots: false,
-        mouseDrag: true,
-        touchDrag: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1.5,
-            },
-            768: {
-                items: 1.5,
-            },
-            992: {
-                items: 3,
-            }
-        },
-        dotsContainer: '.facts-carousel-dots',
-        onInitialized: updateDots,
-        onTranslated: updateDots,
-    });
-
-    function updateDots(event) {
-        const currentIndex = event.item.index; // Получаем индекс текущего слайда
-        $('.facts-carousel-dots .owl-dot').removeClass('active'); // Удаляем класс active у всех dots
-        $('.facts-carousel-dots .owl-dot').eq(currentIndex).addClass('active'); // Добавляем класс active к соответствующему dots
-    }
-
-
-    $('.facts-carousel-dots').owlCarousel({
-        items: 1,
         nav: false,
         dots: true,
-        // dotsEach: 3,
-        dotClass: 'owl-dot',
-        dotContainerClass: 'owl-dots',
-        dotClassActive: 'active',
-        startPosition: 0,
+        dotsEach: 1,
+        margin: 0,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 1.5
+            },
+            992: {
+                items: 3
+            }
+        }
     });
+
 
 //Parsley
     $('#contact-form').parsley();
@@ -299,6 +278,7 @@ function onScrollWindow() {
         localStorage.removeItem('scrollPresent'); // Удаляем информацию о наличии скролла из Local Storage
     }
 }
+
 87
 // Проверяем наличие скролла после обновления страницы
 window.addEventListener('load', function () {
@@ -329,12 +309,14 @@ function onMenuClose() {
     menuWindow.classList.remove('visible');
     toggleBodyScrollLock(false);
 }
+
 const modalMenu = document.querySelector('.modal-menu');
 modalMenu.addEventListener('click', (e) => {
     if (e.target === modalMenu) {
         onMenuClose();
     }
 });
+
 function toggleBodyScrollLock(lock) {
     const body = document.querySelector('body');
     if (lock) {
@@ -515,12 +497,15 @@ closeButtons.forEach((button) => {
     });
 });
 const blur = document.querySelector('.blur');
+
 function blurModalOpen() {
     blur.classList.add('blur-visible');
 }
+
 function blurModalOClose() {
     blur.classList.remove('blur-visible');
 }
+
 blur.addEventListener('click', () => {
     closeAllModals();
     currentModalIndex = -1;
@@ -584,6 +569,7 @@ const readMore = document.querySelector('.read-more');
 const readBox = document.querySelector('.read-box');
 
 readMore.addEventListener('click', onReadMoreClick);
+
 function onReadMoreClick() {
     readBox.classList.toggle('read-height');
 }
