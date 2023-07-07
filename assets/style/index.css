@@ -3975,53 +3975,62 @@ ul, ol, li {
   display: block;
   width: 100%;
 }
-.facts .facts-carousel-dots {
-  z-index: 1;
-  position: relative;
+.facts .owl-carousel .owl-dots {
   display: flex;
-  margin-left: 9.53125vw;
-  align-items: center;
   justify-content: start;
+  margin-top: 1.0416666667vw;
   width: 51.5625vw;
-  height: 0.15625vw;
+  height: 0.2083333333vw;
   background-color: #D4D8EB;
-  left: 0;
-  bottom: -2.8645833333vw;
+  border-radius: 1.5625vw;
 }
 @media (max-width: 991.8px) {
-  .facts .facts-carousel-dots {
+  .facts .owl-carousel .owl-dots {
+    height: 0.4032258065vw;
     width: 100%;
-    left: initial;
-    margin-left: 0;
-    bottom: -3.0241935484vw;
-  }
-}
-.facts .facts-carousel-dots .owl-dot {
-  bottom: 0;
-  z-index: 1;
-  margin: 0;
-  height: 0.1041666667vw;
-  width: 14.3229166667vw;
-  align-items: center;
-  justify-content: start;
-  transition: 0.3s ease;
-}
-@media (max-width: 991.8px) {
-  .facts .facts-carousel-dots .owl-dot {
-    height: 0.2016129032vw;
+    border-radius: 3.0241935484vw;
   }
 }
 @media (max-width: 575.8px) {
-  .facts .facts-carousel-dots .owl-dot {
-    height: 0.5333333333vw;
+  .facts .owl-carousel .owl-dots {
+    height: 0.8vw;
+    border-radius: 8vw;
   }
 }
-.facts .facts-carousel-dots .owl-dot.active {
-  background-color: #949CBE;
-  width: 14.3229166667vw;
+.facts .owl-carousel .owl-dots .disabled {
+  display: flex;
+  justify-content: start;
 }
-.facts .owl-nav {
-  display: none;
+.facts .owl-carousel .owl-dot {
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+  height: 0.2083333333vw;
+  width: 14.3229166667vw;
+  justify-content: start;
+  transition: 0.3s ease;
+  background-color: #D4D8EB;
+  border-radius: 1.5625vw;
+}
+@media (max-width: 991.8px) {
+  .facts .owl-carousel .owl-dot {
+    height: 0.4032258065vw;
+    width: 37.8024193548vw;
+    border-radius: 3.0241935484vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .facts .owl-carousel .owl-dot {
+    height: 0.8vw;
+    width: 26.4vw;
+    border-radius: 8vw;
+  }
+}
+.facts .owl-carousel .owl-dot:last-child {
+  margin-right: 0;
+}
+.facts .owl-carousel .owl-dot.active {
+  background-color: #949CBE;
 }
 
 .water {

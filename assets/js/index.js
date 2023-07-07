@@ -177,45 +177,24 @@ $(document).ready(function () {
     $('.facts-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
-        autoplayHoverPause: true,
-        margin: 0,
         nav: false,
         dots: true,
-        dotsEach: 2,
-        mouseDrag: true,
-        touchDrag: true,
-        responsiveClass: true,
+        dotsEach: 1,
+        margin: 0,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
         responsive: {
             0: {
-                items: 1.5,
+                items: 1
             },
             768: {
-                items: 1.5,
+                items: 1.5
             },
             992: {
-                items: 3,
+                items: 3
             }
-        },
-        dotsContainer: '.facts-carousel-dots',
-        onInitialized: updateDots,
-        onTranslated: updateDots,
+        }
     });
-
-    function updateDots(event) {
-        const currentIndex = event.item.index;
-        $('.facts-carousel-dots .owl-dot').removeClass('active');
-        $('.facts-carousel-dots .owl-dot').eq(currentIndex).addClass('active');
-    }
-
-    // $('.facts-carousel-dots').owlCarousel({
-    //     items: 1,
-    //     nav: false,
-    //     dots: true,
-    //     dotClass: 'owl-dot',
-    //     dotContainerClass: 'owl-dots',
-    //     dotClassActive: 'active',
-    //     startPosition: 0,
-    // });
 
 
 //Parsley
