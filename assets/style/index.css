@@ -4006,7 +4006,7 @@ ul, ol, li {
   cursor: pointer;
   margin: 0;
   height: 0.2083333333vw;
-  width: 14.3229166667vw;
+  width: 17.1875vw;
   justify-content: start;
   transition: 0.3s ease;
   background-color: #D4D8EB;
@@ -4015,14 +4015,13 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .facts .owl-carousel .owl-dot {
     height: 0.4032258065vw;
-    width: 37.8024193548vw;
+    width: 50%;
     border-radius: 3.0241935484vw;
   }
 }
 @media (max-width: 575.8px) {
   .facts .owl-carousel .owl-dot {
     height: 0.8vw;
-    width: 26.4vw;
     border-radius: 8vw;
   }
 }
