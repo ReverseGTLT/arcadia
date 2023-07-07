@@ -171,7 +171,7 @@
       cursor: pointer;
       margin: 0;
       height: vw(4);
-      width: vw(275);
+      width: vw(330);
       justify-content: start;
       transition: 0.3s ease;
       background-color: $color-grey-border;
@@ -179,12 +179,12 @@
 
       @include lg {
         height: vp(4);
-        width: vp(375);
+        width: 50%;
         border-radius: vp(30);
       }
       @include sm {
         height: vm(3);
-        width: vm(99);
+        //width: vm(99);
         border-radius: vm(30);
       }
     }
