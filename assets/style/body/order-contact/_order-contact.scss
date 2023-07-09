@@ -212,10 +212,10 @@
 }
 
 .order-contact-title {
-  font-size: vw(40);
+  //font-size: vw(40);
   margin-inline: auto;
   @include lg {
-    font-size: vm(32);
+    //font-size: vm(32);
     text-align: center;
   }
 }

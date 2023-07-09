@@ -2,15 +2,25 @@
 
 .contacts {
   padding-top: vw(195);
-
-  .container-1540 {
-  padding: vw(76) vw(44) vw(88);
-  border-radius: vw(30) vw(30) 0 0;
-  background-color: $background-light;
+  @include lg {
+    padding-top: vp(100);
+  }
+  @include lg {
+    padding-top: vm(46);
   }
 
-  @include lg {
-    padding-bottom: vm(54);
+  .container-1540 {
+    padding: vw(76) vw(44) vw(88);
+    border-radius: vw(30) vw(30) 0 0;
+    background-color: $background-light;
+    @include lg {
+      padding-top: vp(76);
+      padding-bottom: vp(78);
+    }
+    @include sm {
+      padding-top: vm(52);
+      padding-bottom: vm(54);
+    }
   }
 
   &-content {
@@ -35,7 +45,10 @@
         padding-bottom: vw(42);
         @include lg {
           text-align: center;
-          font-size: vm(32);
+          padding-bottom: vp(42);
+        }
+        @include sm {
+          padding-bottom: vm(19);
         }
       }
 
@@ -43,7 +56,6 @@
         width: 100%;
         @include lg {
           text-align: center;
-          font-size: vm(16);
         }
       }
     }
@@ -75,7 +87,7 @@
         margin-right: 0;
       }
       //@include sm {
-        //border-radius: vm(20);
+      //border-radius: vm(20);
       //}
       iframe {
         width: 100%;
@@ -91,11 +103,16 @@
           border-radius: vm(20);
         }
       }
+
       &-link {
         flex: 1;
-        font-weight: bold;
+        font-weight: $font-weight-500;
         color: #1377ED;
         @include lg {
+          margin-inline: auto;
+          padding-top: vp(20);
+          padding-bottom: vp(30);
+        }@include sm {
           margin-inline: auto;
           padding-top: vm(20);
           padding-bottom: vm(30);
@@ -106,12 +123,17 @@
     &__tel {
       padding-top: vw(60);
       @include lg {
-        padding-bottom: vm(20);
+        padding-bottom: vp(20);
         padding-top: 0;
+      }@include sm {
+        padding-bottom: vm(20);
       }
+
       &-link {
         font-weight: bold;
         @include lg {
+          padding-bottom: vp(40);
+        }@include sm {
           padding-bottom: vm(40);
         }
       }
@@ -152,6 +174,12 @@
           background-repeat: no-repeat;
           background-size: cover;
           @include lg {
+            width: vp(27);
+            height: vp(40);
+            top: vp(-25);
+            transform: translate(-50%, -50%);
+            left: 50%;
+          }@include sm {
             width: vm(27);
             height: vm(40);
             top: vm(-25);
@@ -163,10 +191,16 @@
     }
 
     &__address {
+      @include lg {
+        padding-top: vp(86);
+      } @include sm {
+          padding-top: vm(86);
+        }
       &-title {
         padding-bottom: vw(13.65);
-        font-weight: bold;
+        font-weight: $font-weight-500;
       }
+
       .contact-info__map-link {
         padding-bottom: vw(45);
         color: $color-blue-link;
@@ -186,6 +220,7 @@
           }
         }
       }
+
       .contact-info__tel {
         padding-bottom: vw(21);
       }
@@ -194,14 +229,18 @@
     &__time {
       //padding-right: vw(5);
       @include lg {
-        padding-top: vm(60);
+        padding-top: vp(70);
+      } @include sm {
+        padding-top: vm(70);
       }
+
       &-title {
         padding-bottom: vw(2);
         @include lg {
           text-align: center;
           margin-inline: auto;
         }
+
         span {
           font-weight: bold;
         }
@@ -215,6 +254,12 @@
           background-repeat: no-repeat;
           background-size: cover;
           @include lg {
+            width: vp(34);
+            height: vp(40);
+            top: vp(-25);
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }@include sm {
             width: vm(34);
             height: vm(40);
             top: vm(-25);
@@ -223,12 +268,14 @@
           }
         }
       }
+
       &-description {
         padding-bottom: vw(2);
         @include lg {
           text-align: center;
           margin-inline: auto;
         }
+
         span {
           font-weight: bold;
         }
