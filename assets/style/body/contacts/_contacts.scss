@@ -64,24 +64,31 @@
       flex-basis: calc(40% - 60px);
       //align-items: start;
       margin-right: vw(60);
-      border: vw(1) solid #D4D8EB;
-      border-radius: vw(20);
+      //border: vw(1) solid #D4D8EB;
+      //border-radius: vw(20);
       @include lg {
         flex-basis: auto;
         width: vm(325);
         height: vm(238);
         padding-right: 0;
-        border-radius: vm(20);
+        //border-radius: vp(20);
         margin-right: 0;
       }
+      //@include sm {
+        //border-radius: vm(20);
+      //}
       iframe {
         width: 100%;
         height: 100%;
         border-radius: vw(20);
+        border: vw(1) solid #D4D8EB;
         @include lg {
           width: 100%;
-          border-radius: vm(20);
+          border-radius: vp(20);
           height: 100%;
+        }
+        @include sm {
+          border-radius: vm(20);
         }
       }
       &-link {
@@ -158,6 +165,7 @@
     &__address {
       &-title {
         padding-bottom: vw(13.65);
+        font-weight: bold;
       }
       .contact-info__map-link {
         padding-bottom: vw(45);

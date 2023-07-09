@@ -15,6 +15,10 @@
   top: 0;
   left: 0;
   right: 0;
+
+  @include sm {
+    padding: vm(2) vm(10);
+  }
   &-link {
     flex: 1;
   }
@@ -46,7 +50,7 @@
         }
         @include sm {
           margin-inline: 0;
-          width: vm(80);
+          width: vm(130);
         }
       }
       img:last-child {
@@ -57,7 +61,7 @@
         }
         @include sm {
           margin-inline: 0;
-          width: vm(80);
+          width: vm(130);
         }
       }
     }
@@ -166,7 +170,7 @@
       margin-right: vm(10);
     }
     @include sm {
-      padding-left: vm(10);
+      padding-left: 0;
     }
     &__btn {
       cursor: pointer;
@@ -275,6 +279,9 @@
       padding-top: vm(13);
       padding-bottom: vm(13);
       padding-right: vm(10);
+    }
+    @include sm {
+      padding-right: 0;
     }
     &__btn {
       cursor: pointer;
