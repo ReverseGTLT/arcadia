@@ -9,12 +9,14 @@
   background-position: bottom right;
 
   @include lg {
-    padding-bottom: vm(170);
-
+    padding-bottom: vp(151);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  @include sm {
+    padding-bottom: vm(170);
   }
 
   &-content {
@@ -25,60 +27,68 @@
     width: vw(996);
     @include lg {
       width: 100%;
-      margin-left: 0;
+      margin: 0;
     }
 
     h2,
     p {
       padding-bottom: vw(21);
       @include lg {
+        margin-bottom: vp(21);
+      }
+      @include sm {
         margin-bottom: vm(17);
       }
     }
 
     h2 {
       @include lg {
-        font-size: vm(24);
+        display: block;
+        width: 100%;
         text-align: center;
-        max-width: vm(300);
-        margin-inline: auto;
+        padding-inline: vp(25);
+      }
+      @include sm {
+        padding-inline: vm(20);
       }
     }
 
     p {
-      line-height: 1.05;
+      line-height: 150%;
       @include lg {
         font-size: vp(20);
         text-align: center;
         padding-inline: vm(15);
       }
       @include sm {
+        line-height: 130%;
         font-size: vm(14);
       }
     }
 
     a {
-      color: $color-blue-link;
-      font-weight: $font-weight-accent;
-      text-decoration: underline;
-      text-underline-offset: vw(2);
-      @include lg {
-        text-align: center;
-      }
-
-
       &:hover {
         color: $color-red-border;
       }
     }
-
   }
 }
 
 .read-more {
-  color: #0879E0;
+  color: $color-blue-link;
+  font-weight: $font-weight-accent;
   text-decoration: underline;
+  text-underline-offset: vw(2);
   cursor: pointer;
+
+  @include lg {
+    text-underline-offset: vp(2);
+    text-align: center;
+
+  }
+  @include sm {
+    text-underline-offset: vm(2);
+  }
 }
 
 .read-box {

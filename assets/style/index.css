@@ -3513,13 +3513,30 @@ ul, ol, li {
 .contacts {
   padding-top: 10.15625vw;
 }
+@media (max-width: 991.8px) {
+  .contacts {
+    padding-top: 10.0806451613vw;
+  }
+}
+@media (max-width: 991.8px) {
+  .contacts {
+    padding-top: 12.2666666667vw;
+  }
+}
 .contacts .container-1540 {
   padding: 3.9583333333vw 2.2916666667vw 4.5833333333vw;
   border-radius: 1.5625vw 1.5625vw 0 0;
   background-color: #F2F9FF;
 }
 @media (max-width: 991.8px) {
-  .contacts {
+  .contacts .container-1540 {
+    padding-top: 7.6612903226vw;
+    padding-bottom: 7.8629032258vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .contacts .container-1540 {
+    padding-top: 13.8666666667vw;
     padding-bottom: 14.4vw;
   }
 }
@@ -3550,7 +3567,12 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .contacts-content__text h2 {
     text-align: center;
-    font-size: 8.5333333333vw;
+    padding-bottom: 4.2338709677vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .contacts-content__text h2 {
+    padding-bottom: 5.0666666667vw;
   }
 }
 .contacts-content__text p {
@@ -3559,7 +3581,6 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .contacts-content__text p {
     text-align: center;
-    font-size: 4.2666666667vw;
   }
 }
 .contacts-info {
@@ -3605,10 +3626,17 @@ ul, ol, li {
 }
 .contacts-info__map-link {
   flex: 1;
-  font-weight: bold;
+  font-weight: 500;
   color: #1377ED;
 }
 @media (max-width: 991.8px) {
+  .contacts-info__map-link {
+    margin-inline: auto;
+    padding-top: 2.0161290323vw;
+    padding-bottom: 3.0241935484vw;
+  }
+}
+@media (max-width: 575.8px) {
   .contacts-info__map-link {
     margin-inline: auto;
     padding-top: 5.3333333333vw;
@@ -3620,14 +3648,24 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .contacts-info__tel {
-    padding-bottom: 5.3333333333vw;
+    padding-bottom: 2.0161290323vw;
     padding-top: 0;
+  }
+}
+@media (max-width: 575.8px) {
+  .contacts-info__tel {
+    padding-bottom: 5.3333333333vw;
   }
 }
 .contacts-info__tel-link {
   font-weight: bold;
 }
 @media (max-width: 991.8px) {
+  .contacts-info__tel-link {
+    padding-bottom: 4.0322580645vw;
+  }
+}
+@media (max-width: 575.8px) {
   .contacts-info__tel-link {
     padding-bottom: 10.6666666667vw;
   }
@@ -3670,6 +3708,15 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .contacts-info__address-title::before, .contacts-info__time-title::before {
+    width: 2.7217741935vw;
+    height: 4.0322580645vw;
+    top: -2.5201612903vw;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+@media (max-width: 575.8px) {
+  .contacts-info__address-title::before, .contacts-info__time-title::before {
     width: 7.2vw;
     height: 10.6666666667vw;
     top: -6.6666666667vw;
@@ -3677,9 +3724,19 @@ ul, ol, li {
     left: 50%;
   }
 }
+@media (max-width: 991.8px) {
+  .contacts-info__address {
+    padding-top: 8.6693548387vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .contacts-info__address {
+    padding-top: 22.9333333333vw;
+  }
+}
 .contacts-info__address-title {
   padding-bottom: 0.7109375vw;
-  font-weight: bold;
+  font-weight: 500;
 }
 .contacts-info__address .contact-info__map-link {
   padding-bottom: 2.34375vw;
@@ -3702,7 +3759,12 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .contacts-info__time {
-    padding-top: 16vw;
+    padding-top: 7.0564516129vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .contacts-info__time {
+    padding-top: 18.6666666667vw;
   }
 }
 .contacts-info__time-title {
@@ -3727,6 +3789,15 @@ ul, ol, li {
   background-size: cover;
 }
 @media (max-width: 991.8px) {
+  .contacts-info__time-title::before {
+    width: 3.4274193548vw;
+    height: 4.0322580645vw;
+    top: -2.5201612903vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 575.8px) {
   .contacts-info__time-title::before {
     width: 9.0666666667vw;
     height: 10.6666666667vw;
@@ -3969,12 +4040,10 @@ ul, ol, li {
 }
 
 .order-contact-title {
-  font-size: 2.0833333333vw;
   margin-inline: auto;
 }
 @media (max-width: 991.8px) {
   .order-contact-title {
-    font-size: 8.5333333333vw;
     text-align: center;
   }
 }
@@ -4196,11 +4265,16 @@ ul, ol, li {
 }
 @media (max-width: 991.8px) {
   .water {
-    padding-bottom: 45.3333333333vw;
+    padding-bottom: 15.2217741935vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (max-width: 575.8px) {
+  .water {
+    padding-bottom: 45.3333333333vw;
   }
 }
 .water-content {
@@ -4213,7 +4287,7 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .water-content {
     width: 100%;
-    margin-left: 0;
+    margin: 0;
   }
 }
 .water-content h2,
@@ -4223,19 +4297,30 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .water-content h2,
 .water-content p {
+    margin-bottom: 2.1169354839vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .water-content h2,
+.water-content p {
     margin-bottom: 4.5333333333vw;
   }
 }
 @media (max-width: 991.8px) {
   .water-content h2 {
-    font-size: 6.4vw;
+    display: block;
+    width: 100%;
     text-align: center;
-    max-width: 80vw;
-    margin-inline: auto;
+    padding-inline: 2.5201612903vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .water-content h2 {
+    padding-inline: 5.3333333333vw;
   }
 }
 .water-content p {
-  line-height: 1.05;
+  line-height: 150%;
 }
 @media (max-width: 991.8px) {
   .water-content p {
@@ -4246,18 +4331,8 @@ ul, ol, li {
 }
 @media (max-width: 575.8px) {
   .water-content p {
+    line-height: 130%;
     font-size: 3.7333333333vw;
-  }
-}
-.water-content a {
-  color: #0879E0;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.1041666667vw;
-}
-@media (max-width: 991.8px) {
-  .water-content a {
-    text-align: center;
   }
 }
 .water-content a:hover {
@@ -4266,8 +4341,21 @@ ul, ol, li {
 
 .read-more {
   color: #0879E0;
+  font-weight: 700;
   text-decoration: underline;
+  text-underline-offset: 0.1041666667vw;
   cursor: pointer;
+}
+@media (max-width: 991.8px) {
+  .read-more {
+    text-underline-offset: 0.2016129032vw;
+    text-align: center;
+  }
+}
+@media (max-width: 575.8px) {
+  .read-more {
+    text-underline-offset: 0.5333333333vw;
+  }
 }
 
 .read-box {
