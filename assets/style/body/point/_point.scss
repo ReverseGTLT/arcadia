@@ -19,7 +19,6 @@
       margin-right: vm(10);
       margin-left: vm(10);
       margin-bottom: vm(100);
-      font-size: vm(32);
     }
   }
 
@@ -48,9 +47,14 @@
       width: 100%;
       height: auto;
       flex-direction: column;
-      gap: vm(20);
+      gap: vp(20);
+      border-radius: vp(20);
+      padding-bottom: vp(80);
+    }
+    @include sm {
       border-radius: vm(20);
       padding-bottom: vm(50);
+      gap: vm(20);
     }
   }
 
@@ -64,8 +68,9 @@
       width: vm(204);
       top: -10%;
       left: 50%;
-      transform:translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
+
     img {
       display: block;
       width: 100%;
@@ -79,13 +84,26 @@
     @include lg {
       flex-direction: column;
       width: 100%;
+      gap: vp(30);
+      padding-top: vp(290);
+      padding-bottom: vp(48);
+    }
+    @include sm {
+      gap: vm(25);
       padding-top: vm(119);
-      gap: vm(30);
+      padding-bottom: vm(48);
     }
 
     &__wrapper {
       display: flex;
       gap: vw(20);
+
+      @include lg {
+        gap: vp(15);
+      }
+      @include sm {
+        gap: vm(10);
+      }
     }
 
     &__num {
@@ -93,7 +111,6 @@
       width: vw(82);
       height: vw(82);
       font-weight: $font-weight-accent;
-      //font-size: vw(20);
       line-height: 150%;
       color: $color-green;
       border-radius: 50%;
@@ -102,6 +119,10 @@
       align-items: center;
 
       @include lg {
+        width: vp(54);
+        height: vp(54);
+      }
+      @include sm {
         width: vm(54);
         height: vm(54);
       }
@@ -115,7 +136,10 @@
       @include lg {
         max-width: 80%;
         text-align: start;
-        padding-bottom: vm(25);
+        padding-bottom: 0;
+        padding-left: vp(20);
+      }
+      @include sm {
         padding-left: vm(20);
       }
     }
@@ -129,21 +153,27 @@
 
     @include lg {
       flex-direction: column;
+      gap: vp(20);
+    }
+    @include sm {
       gap: vm(20);
     }
 
     &__btn {
       color: $color-white;
-      font-size: vw(18);
       background-color: $color-green;
-      border-radius: 100px;
+      border-radius: vw(100);
       border: vw(1) solid $color-green;
       transition: 0.2s;
 
 
       @include lg {
-        font-size: vm(16);
-        margin-top: vm(20);
+        border-radius: vp(100);
+        border: vp(1) solid $color-green;
+      }
+      @include sm {
+        border-radius: vm(100);
+        border: vm(1) solid $color-green;
       }
 
       &:hover {

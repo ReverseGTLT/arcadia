@@ -6,16 +6,18 @@
   gap: vw(100);
   width: 100%;
   border: vw(1) solid #949CBE;
-  border-radius: 30px;
+  border-radius: vw(30);
 
   @include lg {
     flex-direction: column;
     border-radius: vp(30);
+    border: vp(1) solid #949CBE;
     width: auto;
   }
 
   @include sm {
     border-radius: vm(10);
+    border: vm(1) solid #949CBE;
   }
 
   &__img {
@@ -23,7 +25,7 @@
     border-top-left-radius: vw(30);
     border-bottom-left-radius: vw(30);
     overflow: hidden;
-    //height: vw(441);
+    height: 100%;
 
     @include lg {
       width: 100%;
@@ -35,15 +37,16 @@
       border-radius: vm(10) vm(10) 0 0;
     }
 
-    //img {
-    //  width: 100%;
-    //  height: 100%;
-    //}
+    img {
+      width: 100%;
+    }
+
     img:first-child {
       @include lg {
         display: none;
       }
     }
+
     img:last-child {
       display: none;
       @include lg {
@@ -54,8 +57,7 @@
   }
 
   &-info {
-    padding-top: vw(80);
-    padding-right: vw(50);
+    padding: vw(84) vw(56) vw(61) vw(0);
     flex: 1;
 
     @include lg {
@@ -68,14 +70,19 @@
     }
 
     &__title {
+      display: block;
       color: $color-red;
       padding-bottom: vw(29);
 
       @include lg {
+        width: 100%;
+        align-items: center;
         text-align: center;
         padding-right: 0;
-        //width: 80%;
-        font-size: vm(32);
+        margin: 0;
+      }
+      @include sm {
+        padding-bottom: vm(13);
       }
     }
 
@@ -85,8 +92,12 @@
 
       @include lg {
         text-align: center;
-        //width: 80%;
-        padding-block: vm(20);
+
+        padding-bottom: vp(21);
+      }
+      @include sm {
+        padding-top: 0;
+        padding-bottom: vm(21);
       }
     }
   }
@@ -96,6 +107,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+      justify-content: center;
     }
 
     button {
@@ -105,10 +117,14 @@
       @include lg {
         padding-inline: vp(20);
         margin-top: vp(50);
+        width: 50%;
       }
       @include sm {
+        width: auto;
         padding-inline: vm(51);
+        margin-inline: vm(25);
       }
+
       &:hover {
         color: $color-red;
         background-color: lighten($color-red, 30);
@@ -138,7 +154,12 @@
         border: vw(1) solid $color-grey-border;
         border-radius: vw(30);
         @include lg {
-          padding: vm(28) vm(20);
+          padding: vp(25) vp(50);
+          border-radius: vp(20);
+          margin-bottom: vp(8);
+        }
+        @include sm {
+          padding: vm(25) vm(19);
           border-radius: vm(20);
           margin-bottom: vm(8);
         }
@@ -147,11 +168,13 @@
 
     &__label-wrapper {
       display: flex;
-      align-items: baseline;
+      align-items: flex-start;
       gap: vw(7);
       @include lg {
+        gap: vp(10);
+      }
+      @include sm {
         gap: vm(10);
-        align-items: flex-start;
       }
     }
 
@@ -163,9 +186,14 @@
       color: $color-h-txt-link;
       max-width: vw(520);
       @include lg {
-        font-size: vm(12);
-        line-height: vm(17);
+        font-size: vp(16);
+        line-height: normal;
+        max-width: 80%;
+      }
+      @include sm {
         max-width: 100%;
+        font-size: vm(12);
+        line-height: normal;
       }
     }
   }
@@ -179,25 +207,82 @@
   }
 }
 
-.order-form__label-wrapper > input {
-  @include lg {
-    width: vm(22);
-    height: vm(22);
-    border-radius: vm(6);
+.order-form__label-wrapper {
+  input {
+    //appearance: none;
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //display: inline-block;
+    width: vw(22);
+    height: vw(22);
+    border-radius: vw(6);
+    border: vw(1) solid #D4D8EB;
+    background: $color-white;
+  }
+
+  //input[type="checkbox"]:checked {
+  //  background-color: $color-blue;
+  //}
+
+  label {
+    display: inline-block;
   }
 }
 
 .order-form__label-wrapper {
-   @include lg {
-     display: none;
-   }
- }
+  @include lg {
+    display: none;
+  }
+}
 
 .order-form__label-wrapper--mobile {
   display: none;
   @include lg {
     display: flex;
   }
+
+  input {
+    display: block;
+    @include lg {
+    width: vp(22);
+    height: vp(22);
+    }@include sm {
+    width: vm(22);
+    height: vm(22);
+    }
+  }
+
+  label {
+    display: block;
+  }
+
+  //input[type="checkbox"] {
+    //display: block;
+    //width: vw(22);
+    //height: vw(22);
+    //border-radius: vw(6);
+    //border: vw(1) solid #D4D8EB;
+    //background: $color-white;
+    //appearance: none;
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //@include lg {
+    //  width: vp(22);
+    //  height: vp(22);
+    //  border: vp(1) solid #D4D8EB;
+    //  border-radius: vp(6);
+    //}
+    //@include sm {
+    //  width: vm(22);
+    //  height: vm(22);
+    //  border: vm(1) solid #D4D8EB;
+    //  border-radius: vm(6);
+    //}
+  //}
+
+  //input[type="checkbox"]:checked {
+  //  background-color: $color-blue;
+  //}
 }
 
 .new-mobile {
@@ -207,6 +292,7 @@
   @include lg {
     display: block;
   }
+
   img {
     width: 100%;
   }

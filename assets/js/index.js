@@ -573,3 +573,27 @@ readMore.addEventListener('click', onReadMoreClick);
 function onReadMoreClick() {
     readBox.classList.toggle('read-height');
 }
+
+// ________________________________________________
+// Add scroll to section Point
+const buttonToPointLink = document.getElementById('btn_to-point');
+const sectionPointLink = document.getElementById('point-link');
+
+buttonToPointLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    const sectionTop = sectionPointLink.offsetTop;
+    let headerHeight = 170;
+
+    if (window.innerWidth >= 992) {
+        headerHeight = 200;
+    } else if (window.innerWidth >= 375) {
+        headerHeight = 120;
+    } else {
+        headerHeight = 100;
+    }
+
+    window.scrollTo({
+        top: sectionTop - headerHeight,
+        behavior: 'smooth'
+    });
+});

@@ -16,6 +16,10 @@
     background-position: center, center;
 
     animation: opacity2 3.5s linear;
+
+    @include sm{
+      background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
+    }
   }
   &-container {
     display: flex;
@@ -35,7 +39,7 @@
       background-position: center bottom;
     }
     @include sm {
-      background-size: contain;
+      background-size: 85%;
       background-position: center bottom;
     }
     &__price {
@@ -49,6 +53,9 @@
       color: $color-white;
       background-color: $color-red;
       border-radius: 50%;
+      display: flex;
+      align-items: center;
+      rotate: (-10deg);
       @include lg {
         width: vp(145);
         height: vp(145);
@@ -58,36 +65,43 @@
       @include sm {
         width: vm(75);
         height: vm(75);
-        bottom: vm(175);
+        bottom: vm(140);
         left: vm(70);
       }
       p {
         line-height: vw(24);
         color: $color-white;
-        display: block;
+        display: inline-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         font-size: vw(20);
+        text-align: center;
         @include lg {
           font-size: vp(20);
           line-height: vp(24);
-          padding-left: vp(14);
+          //padding-left: vp(14);
         }
         @include sm {
           font-size: vm(12);
           line-height: vm(15);
-          padding-left: vm(9);
+          //padding-left: vm(9);
         }
         i {
           font-weight: 700;
           font-size: vw(30);
           text-align: center;
           font-style: normal;
+          padding-right: vw(3);
           @include lg {
             font-size: vp(35);
             line-height: vp(35);
+            padding-right: vp(2);
           }
           @include sm {
             font-size: vm(18);
             line-height: vm(15);
+            padding-right: vm(2);
           }
         }
       }
@@ -126,6 +140,7 @@
         line-height: vm(34);
         text-align: center;
         max-width: 100%;
+        margin-bottom: vm(6);
       }
     }
     &__description {
@@ -174,6 +189,7 @@
         width: vm(300);
         height: vm(58);
         border: vm(1) solid $color-red;
+        border-radius: vm(100);
         font-size: vm(16);
         margin-inline: auto;
       }
@@ -225,7 +241,7 @@
   @include sm {
     width: vm(145);
     height: vm(145);
-    top: vm(-80);
+    top: vm(-70);
     left: vm(5);
   }
   img {
