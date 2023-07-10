@@ -597,3 +597,38 @@ buttonToPointLink.addEventListener('click', function (e) {
         behavior: 'smooth'
     });
 });
+
+// ______________________________________________________________
+// Calendar (section Order)
+const inputCalendar = document.querySelector('.date-input__order-contact input[name="date"]');
+const calendarIcon = document.querySelector('.calendar-icon__order-contact');
+
+calendarIcon.addEventListener('click', function() {
+    $(inputCalendar).datepicker({
+        onSelect: function(dateText, inst) {
+            const selectedDate = $(this).datepicker('getDate');
+            // Дальнейшая обработка выбранной даты
+            console.log(selectedDate); // Вывод выбранной даты в консоль
+
+            // Отправка выбранной даты на бэкенд
+            // Дополнительный код для отправки данных на бэкенд
+        }
+    });
+});
+// ______________________________________________________________
+// Calendar (modal Order)
+const modalInputCalendar = document.querySelector('.date-input__modal-contact input[name="date"]');
+const modalCalendarIcon = document.querySelector('.calendar-icon__modal-contact');
+
+modalCalendarIcon.addEventListener('click', function() {
+    $(modalInputCalendar).datepicker({
+        onSelect: function(dateText, inst) {
+            const selectedDate = $(this).datepicker('getDate');
+            // Дальнейшая обработка выбранной даты
+            console.log(selectedDate); // Вывод выбранной даты в консоль
+
+            // Отправка выбранной даты на бэкенд
+            // Дополнительный код для отправки данных на бэкенд
+        }
+    });
+});

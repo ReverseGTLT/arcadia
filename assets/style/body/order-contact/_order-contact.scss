@@ -57,7 +57,7 @@
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      @include  lg {
+      @include lg {
         padding-right: 0;
         flex-direction: column;
       }
@@ -69,10 +69,27 @@
         align-items: center;
         @include lg {
           width: 100%;
+          justify-content: space-around;
           padding: vm(15);
+        }
+
+        input[type='radio'] {
+          margin-right: vw(5);
+          @include lg {
+            margin-right: vp(5);
+          }
+          @include sm {
+            margin-right: vm(5);
+          }
+        }
+
+        input:checked {
+          font-weight: $font-weight-accent;
         }
       }
     }
+
+
 
     .checkbox-label {
       display: block;
@@ -87,21 +104,36 @@
 
     .date-input {
       position: relative;
+      display: inline-flex;
+      align-items: center;
       @include lg {
         width: 100%;
+      }
+
+      input {
+        display: inline-block;
       }
     }
 
     .calendar-icon {
+      display: inline-block;
       position: absolute;
       top: 50%;
-      right: 10px;
+      right: vw(40);
       transform: translateY(-50%);
-      /* Стили для иконки календаря */
-    }
+      width: vw(30);
+      height: vw(30);
 
-    .down-arrow-icon {
-      /* Стили для иконки стрелки вниз */
+      @include lg {
+        right: vp(40);
+        width: vp(30);
+        height: vp(30);
+      }
+      @include sm {
+        right: vm(20);
+        width: vm(30);
+        height: vm(30);
+      }
     }
 
     .form-section {
@@ -134,8 +166,8 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
-        
-        @include  lg {
+
+        @include lg {
           display: flex;
           flex-direction: column;
         }
@@ -151,6 +183,7 @@
           width: 100%;
           margin-bottom: 0;
         }
+
         input {
           @include lg {
             border-radius: vm(20);
@@ -167,7 +200,6 @@
           height: vw(195);
           resize: none;
           overflow-y: scroll;
-          //scrollbar-gutter: auto;
           padding: vw(28) vw(28) vw(27) vw(39);
           @include lg {
             border-radius: vm(20);
@@ -187,7 +219,6 @@
         }
 
         .checkbox-row {
-          //width: vw(580);
           display: flex;
           flex-direction: row;
           align-items: baseline;
@@ -205,6 +236,33 @@
               width: vm(22);
             }
           }
+          input[type="checkbox"] {
+          display: block;
+          width: vw(22);
+          height: vw(22);
+          border-radius: vw(6);
+          border: vw(1) solid #D4D8EB;
+          background: $color-white;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          @include lg {
+            width: vp(22);
+            height: vp(22);
+            border: vp(1) solid #D4D8EB;
+            border-radius: vp(6);
+          }
+          @include sm {
+            width: vm(22);
+            height: vm(22);
+            border: vm(1) solid #D4D8EB;
+            border-radius: vm(6);
+          }
+          }
+
+          input[type="checkbox"]:checked {
+            background-color: $color-blue;
+          }
         }
       }
     }
@@ -212,10 +270,8 @@
 }
 
 .order-contact-title {
-  //font-size: vw(40);
   margin-inline: auto;
   @include lg {
-    //font-size: vm(32);
     text-align: center;
   }
 }

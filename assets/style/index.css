@@ -3897,8 +3897,25 @@ ul, ol, li {
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .delivery-options-col .delivery-options {
     width: 100%;
+    justify-content: space-around;
     padding: 4vw;
   }
+}
+.order-contact #order-contact-form .delivery-options-col .delivery-options input[type=radio] {
+  margin-right: 0.2604166667vw;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .delivery-options-col .delivery-options input[type=radio] {
+    margin-right: 0.5040322581vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .order-contact #order-contact-form .delivery-options-col .delivery-options input[type=radio] {
+    margin-right: 1.3333333333vw;
+  }
+}
+.order-contact #order-contact-form .delivery-options-col .delivery-options input:checked {
+  font-weight: 700;
 }
 .order-contact #order-contact-form .checkbox-label {
   display: block;
@@ -3914,21 +3931,39 @@ ul, ol, li {
 }
 .order-contact #order-contact-form .date-input {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .date-input {
     width: 100%;
   }
 }
+.order-contact #order-contact-form .date-input input {
+  display: inline-block;
+}
 .order-contact #order-contact-form .calendar-icon {
+  display: inline-block;
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 2.0833333333vw;
   transform: translateY(-50%);
-  /* Стили для иконки календаря */
+  width: 1.5625vw;
+  height: 1.5625vw;
 }
-.order-contact #order-contact-form .down-arrow-icon {
-  /* Стили для иконки стрелки вниз */
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .calendar-icon {
+    right: 4.0322580645vw;
+    width: 3.0241935484vw;
+    height: 3.0241935484vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .order-contact #order-contact-form .calendar-icon {
+    right: 5.3333333333vw;
+    width: 8vw;
+    height: 8vw;
+  }
 }
 .order-contact #order-contact-form .form-section {
   display: flex;
@@ -4037,6 +4072,36 @@ ul, ol, li {
   .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input {
     width: 5.8666666667vw;
   }
+}
+.order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input[type=checkbox] {
+  display: block;
+  width: 1.1458333333vw;
+  height: 1.1458333333vw;
+  border-radius: 0.3125vw;
+  border: 0.0520833333vw solid #D4D8EB;
+  background: #ffffff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+@media (max-width: 991.8px) {
+  .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input[type=checkbox] {
+    width: 2.2177419355vw;
+    height: 2.2177419355vw;
+    border: 0.1008064516vw solid #D4D8EB;
+    border-radius: 0.6048387097vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input[type=checkbox] {
+    width: 5.8666666667vw;
+    height: 5.8666666667vw;
+    border: 0.2666666667vw solid #D4D8EB;
+    border-radius: 1.6vw;
+  }
+}
+.order-contact #order-contact-form .form-section .checkbox-btn-col .checkbox-row input[type=checkbox]:checked {
+  background-color: #1377ED;
 }
 
 .order-contact-title {
@@ -5261,6 +5326,33 @@ footer .container .attribution a {
     margin-bottom: 4vw;
   }
 }
+.modal-contact #contact-form .delivery-options {
+  display: flex;
+}
+@media (max-width: 991.8px) {
+  .modal-contact #contact-form .delivery-options {
+    width: 100%;
+    justify-content: space-around;
+    padding: 4vw;
+  }
+}
+.modal-contact #contact-form .delivery-options input[type=radio] {
+  margin-right: 0.2604166667vw;
+  display: inline-flex;
+}
+@media (max-width: 991.8px) {
+  .modal-contact #contact-form .delivery-options input[type=radio] {
+    margin-right: 0.5040322581vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .modal-contact #contact-form .delivery-options input[type=radio] {
+    margin-right: 1.3333333333vw;
+  }
+}
+.modal-contact #contact-form .delivery-options input:checked {
+  font-weight: 700;
+}
 .modal-contact #contact-form .form-row {
   margin-bottom: 0.625vw;
   flex-wrap: nowrap;
@@ -5293,9 +5385,22 @@ footer .container .attribution a {
 .modal-contact #contact-form .calendar-icon {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 2.0833333333vw;
   transform: translateY(-50%);
-  /* Стили для иконки календаря */
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+@media (max-width: 991.8px) {
+  .modal-contact #contact-form .calendar-icon {
+    width: 3.0241935484vw;
+    height: 3.0241935484vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .modal-contact #contact-form .calendar-icon {
+    width: 8vw;
+    height: 8vw;
+  }
 }
 .modal-contact #contact-form .down-arrow-icon {
   /* Стили для иконки стрелки вниз */
@@ -5304,6 +5409,50 @@ footer .container .attribution a {
 .modal-contact #contact-form .delivery-options {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 991.8px) {
+  .modal-contact #contact-form .form-row__checkbox label {
+    display: flex;
+    gap: 0.5040322581vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .modal-contact #contact-form .form-row__checkbox label {
+    gap: 1.3333333333vw;
+  }
+}
+.modal-contact #contact-form input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-flex;
+  width: 1.1458333333vw;
+  height: 1.1458333333vw;
+  border-radius: 0.3125vw;
+  border: 0.0520833333vw solid #D4D8EB;
+  background: #ffffff;
+  padding-right: 0.2604166667vw;
+}
+@media (max-width: 991.8px) {
+  .modal-contact #contact-form input[type=checkbox] {
+    width: 2.2177419355vw;
+    height: 2.2177419355vw;
+    border: 0.1008064516vw solid #D4D8EB;
+    border-radius: 0.6048387097vw;
+    padding-right: 0.5040322581vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .modal-contact #contact-form input[type=checkbox] {
+    width: 5.8666666667vw;
+    height: 5.8666666667vw;
+    border: 0.2666666667vw solid #D4D8EB;
+    border-radius: 1.6vw;
+    padding-right: 5.3333333333vw;
+  }
+}
+.modal-contact #contact-form input[type=checkbox]:checked {
+  background-color: #1377ED;
 }
 .modal-contact #contact-form .full-width-row {
   width: 100%;

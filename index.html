@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">
     <!--        <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/style/index.css">
 
@@ -775,9 +776,9 @@
                                        data-parsley-type="phone"
                                        data-parsley-error-message="Обов'язкове поле"
                                 >
-                                <div class="date-input">
+                                <div class="date-input date-input__order-contact">
                                     <input type="text" placeholder="На коли" name="date">
-                                    <i class="calendar-icon"></i>
+                                    <img class="calendar-icon calendar-icon__order-contact" src="assets/images/calendar.svg" alt="Calendar">
                                 </div>
                             </div>
                             <div class="form-row text-area-row">
@@ -1170,9 +1171,9 @@
                     </div>
                     <div class="form-row">
                         <input class="item" type="text" placeholder="Адреса" name="address" required>
-                        <div class="item date-input">
+                        <div class="item date-input date-input__modal-contact">
                             <input type="text" placeholder="На коли" name="date" required>
-                            <i class="calendar-icon"></i>
+                            <img class="calendar-icon calendar-icon__modal-contact" src="assets/images/calendar.svg" alt="Calendar">
                         </div>
                     </div>
                     <div class="form-row full-width-row">
@@ -1195,7 +1196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row form-row__checkbox">
                         <label class="checkbox-label">
                             <input class="text-little" type="checkbox" name="agree" required>
                             Я приймаю умови користувальницької угоди,
@@ -1268,6 +1269,7 @@
 </footer>
 
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script defer src="assets/js/owl.carousel.min.js"></script>
 <script defer src="assets/js/scrollflow.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
