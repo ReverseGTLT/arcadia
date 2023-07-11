@@ -454,3 +454,54 @@ ul, ol, li {
 .air-datepicker-global-container {
   z-index: 1001;
 }
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label[class="checkbox-label"] {
+  display: flex;
+  align-items: start;
+  position: relative;
+  padding-left: vw(29);
+  @include lg {
+    padding-left: vp(29);
+  }
+  @include sm {
+    padding-left: vm(29);
+  }
+}
+
+label[class="checkbox-label"]::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: inline-block;
+  width: vw(22);
+  height: vw(22);
+  border-radius: vw(6);
+  border: vw(1) solid #D4D8EB;
+  background: #fff;
+  vertical-align: middle;
+  margin-right: vw(7);
+  transition: 0.2s;
+  @include lg {
+    width: vp(22);
+    height: vp(22);
+    border: vp(1) solid #D4D8EB;
+    border-radius: vp(6);
+    margin-right: vp(7);
+  }
+  @include sm {
+    width: vm(22);
+    height: vm(22);
+    border: vm(1) solid #D4D8EB;
+    border-radius: vm(6);
+    margin-right: vm(7);
+  }
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: $color-blue;
+}
