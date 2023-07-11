@@ -439,12 +439,6 @@ ul, ol, li {
   display: block;
 }
 
-#datepicker_order-contact,
-#datepicker_modal-contact,
-.air-datepicker-global-container {
-  z-index: 1001;
-}
-
 input[type=checkbox] {
   display: none;
 }

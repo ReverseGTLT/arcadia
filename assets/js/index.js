@@ -625,6 +625,12 @@ const calendarOrderContact = new AirDatepicker('#datepicker_order-contact', {
 
         // Отправка выбранной даты на бэкенд
         // Дополнительный код для отправки данных на бэкенд
+    },
+    onShow: () => {
+        $('.air-datepicker-global-container').css('z-index', '1001');
+    },
+    onHide: () => {
+        $('.air-datepicker-global-container').css('z-index', '');
     }
 });
 
@@ -655,5 +661,20 @@ const calendarModalContact = new AirDatepicker('#datepicker_modal-contact', {
 
         // Отправка выбранной даты на бэкенд
         // Дополнительный код для отправки данных на бэкенд
+    },
+    onShow: () => {
+        $('.air-datepicker-global-container').css('z-index', '1001');
+    },
+    onHide: () => {
+        $('.air-datepicker-global-container').css('z-index', '');
     }
 });
+
+$('datepicker_modal-contact').on('click', function() {
+    $('.air-datepicker-global-container').css('z-index', '1001');
+});
+
+$('datepicker_modal-contact').on('focusout', function() {
+    $('.air-datepicker-global-container').css('z-index', '');
+});
+
