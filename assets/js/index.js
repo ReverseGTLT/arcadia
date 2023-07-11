@@ -19,6 +19,7 @@ const mask = IMask(element, maskOptions);
 //____________________________________________________________________
 
 const currencySymbol = 'грн';
+let selectedDate;
 
 let orders = [
     {
@@ -600,35 +601,59 @@ buttonToPointLink.addEventListener('click', function (e) {
 
 // ______________________________________________________________
 // Calendar (section Order)
-const inputCalendar = document.querySelector('.date-input__order-contact input[name="date"]');
-const calendarIcon = document.querySelector('.calendar-icon__order-contact');
+const calendarOrderContact = new AirDatepicker('#datepicker_order-contact', {
+    isMobile: true,
+    autoClose: true,
 
-calendarIcon.addEventListener('click', function() {
-    $(inputCalendar).datepicker({
-        onSelect: function(dateText, inst) {
-            const selectedDate = $(this).datepicker('getDate');
-            // Дальнейшая обработка выбранной даты
-            console.log(selectedDate); // Вывод выбранной даты в консоль
+    buttons: ['today', 'clear'],
+    locale: {
+        days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        daysShort: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        daysMin: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        today: 'Today',
+        clear: 'Clear',
+        dateFormat: 'dd.MM.yyyy',
+        timeFormat: 'hh:mm aa',
+        firstDay: 0
+    },
+    onSelect: function(formattedDate, date, inst) {
+        // Какие нужны действия при выборе даты
+        console.log(formattedDate);
+        selectedDate = formattedDate;
 
-            // Отправка выбранной даты на бэкенд
-            // Дополнительный код для отправки данных на бэкенд
-        }
-    });
+        // Отправка выбранной даты на бэкенд
+        // Дополнительный код для отправки данных на бэкенд
+    }
 });
+
 // ______________________________________________________________
 // Calendar (modal Order)
-const modalInputCalendar = document.querySelector('.date-input__modal-contact input[name="date"]');
-const modalCalendarIcon = document.querySelector('.calendar-icon__modal-contact');
 
-modalCalendarIcon.addEventListener('click', function() {
-    $(modalInputCalendar).datepicker({
-        onSelect: function(dateText, inst) {
-            const selectedDate = $(this).datepicker('getDate');
-            // Дальнейшая обработка выбранной даты
-            console.log(selectedDate); // Вывод выбранной даты в консоль
+const calendarModalContact = new AirDatepicker('#datepicker_modal-contact', {
+    isMobile: true,
+    autoClose: true,
 
-            // Отправка выбранной даты на бэкенд
-            // Дополнительный код для отправки данных на бэкенд
-        }
-    });
+    buttons: ['today', 'clear'],
+    locale: {
+        days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        daysShort: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        daysMin: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        today: 'Today',
+        clear: 'Clear',
+        dateFormat: 'dd.MM.yyyy',
+        timeFormat: 'hh:mm aa',
+        firstDay: 0
+    },
+    onSelect: function(formattedDate, date, inst) {
+        // Какие нужны действия при выборе даты
+        console.log(formattedDate);
+        selectedDate = formattedDate;
+
+        // Отправка выбранной даты на бэкенд
+        // Дополнительный код для отправки данных на бэкенд
+    }
 });

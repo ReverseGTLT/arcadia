@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="assets/style/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="node_modules/parsleyjs/src/parsley.css">
-    <!--        <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/air-datepicker/air-datepicker.css">
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/style/index.css">
-
 
     <title>Arcadia</title>
 </head>
@@ -777,7 +776,7 @@
                                        data-parsley-error-message="Обов'язкове поле"
                                 >
                                 <div class="date-input date-input__order-contact">
-                                    <input type="text" placeholder="На коли" name="date">
+                                    <input id="datepicker_order-contact" type="text" placeholder="На коли" name="date">
                                     <img class="calendar-icon calendar-icon__order-contact" src="assets/images/calendar.svg" alt="Calendar">
                                 </div>
                             </div>
@@ -1172,7 +1171,7 @@
                     <div class="form-row">
                         <input class="item" type="text" placeholder="Адреса" name="address" required>
                         <div class="item date-input date-input__modal-contact">
-                            <input type="text" placeholder="На коли" name="date" required>
+                            <input id="datepicker_modal-contact" type="text" placeholder="На коли" name="date" required>
                             <img class="calendar-icon calendar-icon__modal-contact" src="assets/images/calendar.svg" alt="Calendar">
                         </div>
                     </div>
@@ -1273,6 +1272,7 @@
 <script defer src="assets/js/owl.carousel.min.js"></script>
 <script defer src="assets/js/scrollflow.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script defer src="assets/air-datepicker/air-datepicker.js"></script>
 <script defer src="node_modules/parsleyjs/dist/parsley.min.js"></script>
 <script defer src="https://kit.fontawesome.com/9bb7cecad3.js" crossorigin="anonymous"></script>
 <script defer src="https://unpkg.com/imask"></script>
