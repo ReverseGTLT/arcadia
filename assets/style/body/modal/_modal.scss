@@ -663,7 +663,7 @@
 
       input[type='radio'] {
         margin-right: vw(5);
-        display: inline-flex;
+        display: inline-block;
 
         @include lg {
           margin-right: vp(5);
@@ -736,43 +736,13 @@
     }
 
     .form-row__checkbox label {
-      @include lg {
         display: flex;
+        align-items: start;
+      @include lg {
         gap: vp(5);
       }@include sm {
         gap: vm(5);
       }
-    }
-
-    input[type="checkbox"] {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      display: inline-flex;
-      width: vw(22);
-      height: vw(22);
-      border-radius: vw(6);
-      border: vw(1) solid #D4D8EB;
-      background: $color-white;
-      padding-right: vw(5);
-      @include lg {
-        width: vp(22);
-        height: vp(22);
-        border: vp(1) solid #D4D8EB;
-        border-radius: vp(6);
-        padding-right: vp(5);
-      }
-      @include sm {
-        width: vm(22);
-        height: vm(22);
-        border: vm(1) solid #D4D8EB;
-        border-radius: vm(6);
-        padding-right: vm(20);
-      }
-    }
-
-    input[type="checkbox"]:checked {
-      background-color: $color-blue;
     }
 
     .full-width-row {

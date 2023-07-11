@@ -89,8 +89,6 @@
       }
     }
 
-
-
     .checkbox-label {
       display: block;
       font-weight: 400;
@@ -195,7 +193,6 @@
       .text-area-row {
         box-sizing: content-box;
 
-
         textarea {
           height: vw(195);
           resize: none;
@@ -235,33 +232,6 @@
             @include lg {
               width: vm(22);
             }
-          }
-          input[type="checkbox"] {
-          display: block;
-          width: vw(22);
-          height: vw(22);
-          border-radius: vw(6);
-          border: vw(1) solid #D4D8EB;
-          background: $color-white;
-          appearance: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          @include lg {
-            width: vp(22);
-            height: vp(22);
-            border: vp(1) solid #D4D8EB;
-            border-radius: vp(6);
-          }
-          @include sm {
-            width: vm(22);
-            height: vm(22);
-            border: vm(1) solid #D4D8EB;
-            border-radius: vm(6);
-          }
-          }
-
-          input[type="checkbox"]:checked {
-            background-color: $color-blue;
           }
         }
       }
