@@ -213,7 +213,7 @@
     .modal-image {
       width: vw(169);
       height: vw(262);
-      max-width: vw(169);
+      //max-width: vw(169);
       margin: auto;
       display: flex;
       align-items: center;
@@ -266,15 +266,17 @@
         display: none;
         @include lg {
           display: flex;
-          width: vp(169);
-          height: vp(262);
+          align-items: center;
+          justify-content: center;
+          width: vp(164);
+          height: vp(257);
           margin: auto;
-          padding-bottom: vp(10);
+          //padding-bottom: vp(10);
         }
         @include sm {
-          width: vm(169);
-          height: vm(262);
-          padding-bottom: vm(10);
+          width: vm(160);
+          height: vm(249);
+          //padding-bottom: vm(10);
         }
 
         img {
@@ -288,11 +290,14 @@
         height: vw(150);
         padding-bottom: vw(40);
         @include lg {
-          height: vp(150);
+          overflow-y: scroll;
+          margin: vp(5);
+          height: vp(100);
           padding-bottom: vp(30);
         }
         @include sm {
-          height: vm(190);
+          height: vm(80);
+          margin: vm(5);
           padding-bottom: vm(10);
         }
       }
@@ -425,7 +430,7 @@
 
     &__text-little {
       align-items: start;
-      @include lg{
+      @include lg {
         justify-content: center;
       }
 
@@ -688,11 +693,15 @@
       @include lg {
         width: 100%;
         justify-content: space-around;
-        padding: vm(15);
+        padding: vm(15) 0;
       }
 
-      input {
+      label {
+        white-space: nowrap;
+      }
 
+      input[name="delivery"] {
+        width: 20px;
       }
 
       input[type='radio'] {
@@ -868,7 +877,7 @@
 
         .item {
           flex-basis: 50%;
-          @include sm {
+          @include lg {
             margin-bottom: vm(5);
             flex-basis: 100%;
           }

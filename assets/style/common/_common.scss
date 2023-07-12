@@ -132,11 +132,11 @@ h2 {
   line-height: 1.05;
 
   @include lg {
-    font-size: vp(40);
+    font-size: vp(35);
   }
 
   @include sm {
-    font-size: vm(32);
+    font-size: vm(27);
   }
 }
 
