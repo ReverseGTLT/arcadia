@@ -40,6 +40,7 @@
   padding: vw(73) vw(68) vw(43) vw(71);
 
   @include lg {
+    justify-content: center;
     max-width: vp(980);
     margin-inline: auto;
     width: 90%;
@@ -202,26 +203,25 @@
     .modal__wrapper {
       display: flex;
       justify-content: space-between;
-      margin-inline: auto;
+      //margin-inline: auto;
+      @include lg {
+        width: 100%;
+        justify-content: center;
+      }
     }
 
     .modal-image {
-      width: 40%;
-      max-width: vw(169);
+      width: vw(169);
       height: vw(262);
+      max-width: vw(169);
       margin: auto;
       display: flex;
       align-items: center;
+      justify-content: center;
       overflow: hidden;
 
       @include lg {
-        width: initial;
-        margin: auto;
-        height: auto;
-        padding-bottom: vp(10);
-      }
-      @include sm {
-        padding-bottom: vm(10);
+        display: none;
       }
 
       img {
@@ -240,6 +240,8 @@
       padding-bottom: vw(30);
 
       @include lg {
+        width: 100%;
+        justify-content: center;
         padding-bottom: vp(20);
       }
       @include sm {
@@ -252,6 +254,7 @@
         padding-bottom: vw(25);
 
         @include lg {
+          text-align: center;
           padding-bottom: vp(25);
         }
         @include sm {
@@ -259,12 +262,37 @@
         }
       }
 
+      .modal-image__mobile {
+        display: none;
+        @include lg {
+          display: flex;
+          width: vp(169);
+          height: vp(262);
+          margin: auto;
+          padding-bottom: vp(10);
+        }
+        @include sm {
+          width: vm(169);
+          height: vm(262);
+          padding-bottom: vm(10);
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
       p {
+        height: vw(150);
         padding-bottom: vw(40);
         @include lg {
+          height: vp(150);
           padding-bottom: vp(30);
         }
         @include sm {
+          height: vm(190);
           padding-bottom: vm(10);
         }
       }
@@ -277,7 +305,7 @@
         padding-bottom: vw(18);
 
         @include lg {
-          justify-content: start;
+          justify-content: center;
           gap: vp(10);
           padding-bottom: vp(17);
         }
@@ -386,6 +414,7 @@
         width: 60%;
 
         @include lg {
+          justify-content: center;
           margin-left: 0;
         }
         @include sm {
@@ -396,6 +425,9 @@
 
     &__text-little {
       align-items: start;
+      @include lg{
+        justify-content: center;
+      }
 
       p {
         display: block;
@@ -404,7 +436,9 @@
         color: red;
 
         @include lg {
-          width: 80%;
+          width: 100%;
+          text-align: center;
+
         }
       }
     }
@@ -736,11 +770,12 @@
     }
 
     .form-row__checkbox label {
-        display: flex;
-        align-items: start;
+      display: flex;
+      align-items: start;
       @include lg {
         gap: vp(5);
-      }@include sm {
+      }
+      @include sm {
         gap: vm(5);
       }
     }
