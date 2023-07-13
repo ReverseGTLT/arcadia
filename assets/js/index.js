@@ -711,4 +711,27 @@ $('datepicker_modal-contact').on('focusout', function() {
     $('.air-datepicker-global-container').css('z-index', '');
 });
 
+const videoOpen = document.querySelector('.video-open');
+const videoClose = document.querySelector('.video-close');
+const video = document.querySelector('.video');
+const iframe = document.querySelector('.video iframe');
+
+videoOpen.addEventListener('click', onVideoOpen);
+videoClose.addEventListener('click', onVideoClose);
+video.addEventListener('click', function(event) {
+    if (!event.target.closest('iframe')) {
+        this.classList.remove('video-visible');
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    }
+});
+
+function onVideoOpen() {
+    video.classList.add('video-visible')
+}
+
+function onVideoClose() {
+    video.classList.remove('video-visible');
+    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}
+
 
