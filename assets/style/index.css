@@ -483,10 +483,6 @@ input[type=checkbox]:checked + label::before {
   background-color: #1377ED;
 }
 
-input:required:invalid {
-  border-color: red;
-}
-
 @keyframes shake {
   0% {
     margin-left: 0;
