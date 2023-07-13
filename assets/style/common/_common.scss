@@ -334,18 +334,18 @@ ul, ol, li {
     background: $color-red-border;
     border: vw(1) solid $color-red;
     border-radius: vw(100);
-    box-shadow: 0 0 vw(24) vw(8) rgba(255, 187, 187, 0.4);
+    //box-shadow: 0 0 vw(24) vw(8) rgba(255, 187, 187, 0.4);
 
     @include lg {
       border: vp(1) solid $color-red;
       border-radius: vp(100);
-      box-shadow: 0 0 vp(24) vp(8) rgba(255, 187, 187, 0.4);
+      //box-shadow: 0 0 vp(24) vp(8) rgba(255, 187, 187, 0.4);
     }
 
     @include sm {
       border: vm(1) solid $color-red;
       border-radius: vm(100);
-      box-shadow: 0 0 vm(12) vm(4) rgba(255, 187, 187, 0.4);
+      //box-shadow: 0 0 vm(12) vm(4) rgba(255, 187, 187, 0.4);
     }
 
     &::before {
@@ -355,12 +355,12 @@ ul, ol, li {
 
   &:active {
     scale: 0.95;
-    box-shadow: 0 0 vw(16) vw(4) rgba(148, 156, 190, 0.6);
+    //box-shadow: 0 0 vw(16) vw(4) rgba(148, 156, 190, 0.6);
     @include lg {
-      box-shadow: 0 0 vp(16) vp(4) rgba(148, 156, 190, 0.6);
+      //box-shadow: 0 0 vp(16) vp(4) rgba(148, 156, 190, 0.6);
     }
     @include sm {
-      box-shadow: 0 0 vm(8) vm(4) rgba(148, 156, 190, 0.6);
+      //box-shadow: 0 0 vm(8) vm(4) rgba(148, 156, 190, 0.6);
     }
   }
 }
@@ -418,18 +418,18 @@ ul, ol, li {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Задаем цвет ползунка скролл-бара */
+  background-color: $color-grey-increase; /* Задаем цвет ползунка скролл-бара */
   border-radius: 2px; /* Задаем скругление углов ползунка */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Задаем цвет ползунка при наведении курсора */
+  background-color: $color-opacity; /* Задаем цвет ползунка при наведении курсора */
 }
 
 /* Для Firefox */
 * {
   scrollbar-width: thin; /* Задаем тонкий скролл-бар */
-  scrollbar-color: #888 #f0f0f0; /* Задаем цвет ползунка и цвет фона скролл-бара */
+  scrollbar-color: $color-grey-increase $color-grey-border; /* Задаем цвет ползунка и цвет фона скролл-бара */
 }
 
 .blur {
@@ -554,16 +554,16 @@ input:required:invalid {
   width: vw(32);
   height: vw(32);
   position: fixed;
-  top: vw(150);
+  top: vw(50);
   right: vw(50);
   @include lg {
     width: vp(30);
-    top: vp(182);
+    top: vp(32);
     right: vp(32);
   }
   @include sm {
     width: vm(20);
-    top: vm(80);
+    top: vm(30);
     right: vm(30);
 
   }

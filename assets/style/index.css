@@ -322,20 +322,17 @@ ul, ol, li {
   background: #FFBBBB;
   border: 0.0520833333vw solid #F80505;
   border-radius: 5.2083333333vw;
-  box-shadow: 0 0 1.25vw 0.4166666667vw rgba(255, 187, 187, 0.4);
 }
 @media (max-width: 991.8px) {
   .btn:hover {
     border: 0.1008064516vw solid #F80505;
     border-radius: 10.0806451613vw;
-    box-shadow: 0 0 2.4193548387vw 0.8064516129vw rgba(255, 187, 187, 0.4);
   }
 }
 @media (max-width: 575.8px) {
   .btn:hover {
     border: 0.2666666667vw solid #F80505;
     border-radius: 26.6666666667vw;
-    box-shadow: 0 0 3.2vw 1.0666666667vw rgba(255, 187, 187, 0.4);
   }
 }
 .btn:hover::before {
@@ -343,19 +340,7 @@ ul, ol, li {
 }
 .btn:active {
   scale: 0.95;
-  box-shadow: 0 0 0.8333333333vw 0.2083333333vw rgba(148, 156, 190, 0.6);
 }
-@media (max-width: 991.8px) {
-  .btn:active {
-    box-shadow: 0 0 1.6129032258vw 0.4032258065vw rgba(148, 156, 190, 0.6);
-  }
-}
-@media (max-width: 575.8px) {
-  .btn:active {
-    box-shadow: 0 0 2.1333333333vw 1.0666666667vw rgba(148, 156, 190, 0.6);
-  }
-}
-
 .btn-light {
   cursor: pointer;
   transition: 0.2s all;
@@ -408,18 +393,18 @@ ul, ol, li {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Задаем цвет ползунка скролл-бара */
+  background-color: #949CBE; /* Задаем цвет ползунка скролл-бара */
   border-radius: 2px; /* Задаем скругление углов ползунка */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Задаем цвет ползунка при наведении курсора */
+  background-color: #5A5B63; /* Задаем цвет ползунка при наведении курсора */
 }
 
 /* Для Firefox */
 * {
   scrollbar-width: thin; /* Задаем тонкий скролл-бар */
-  scrollbar-color: #888 #f0f0f0; /* Задаем цвет ползунка и цвет фона скролл-бара */
+  scrollbar-color: #949CBE #D4D8EB; /* Задаем цвет ползунка и цвет фона скролл-бара */
 }
 
 .blur {
@@ -554,20 +539,20 @@ input:required:invalid {
   width: 1.6666666667vw;
   height: 1.6666666667vw;
   position: fixed;
-  top: 7.8125vw;
+  top: 2.6041666667vw;
   right: 2.6041666667vw;
 }
 @media (max-width: 991.8px) {
   .video-close {
     width: 3.0241935484vw;
-    top: 18.3467741935vw;
+    top: 3.2258064516vw;
     right: 3.2258064516vw;
   }
 }
 @media (max-width: 575.8px) {
   .video-close {
     width: 5.3333333333vw;
-    top: 21.3333333333vw;
+    top: 8vw;
     right: 8vw;
   }
 }
@@ -1351,14 +1336,12 @@ input:required:invalid {
   color: red;
   background-color: #ffbbbb;
   border: 1px solid #FFBBBB;
-  box-shadow: 0 0 24px 8px rgba(255, 187, 187, 0.4);
 }
 .general-wrapper__btn:hover::before {
   translate: 100%;
 }
 .general-wrapper__btn:hover:active {
   scale: 0.95;
-  box-shadow: 0 0 16px 4px rgba(255, 187, 187, 0.6);
 }
 
 .circle-text {
@@ -4783,16 +4766,16 @@ footer .container .attribution a {
   background-color: #F2F9FF;
   box-shadow: 0.7291666667vw 0.8854166667vw 2.03125vw rgba(216, 225, 236, 0.94);
   border-radius: 1.5625vw;
-  overflow: hidden;
   padding: 3.8020833333vw 3.5416666667vw 2.2395833333vw 3.6979166667vw;
 }
 @media (max-width: 991.8px) {
   .modal {
+    overflow-y: scroll;
+    height: 90vh;
     justify-content: center;
     max-width: 98.7903225806vw;
     margin-inline: auto;
     width: 90%;
-    height: auto;
     padding: 7.3588709677vw 6.8548387097vw 4.3346774194vw 7.1572580645vw;
   }
 }
