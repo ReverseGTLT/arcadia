@@ -523,3 +523,61 @@ input:required:invalid {
   animation: shake 0.2s ease-in-out 0s 2;
   box-shadow: 0 0 0.6rem #ff0000;
 }
+
+.video {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(black, 0.8);
+
+  iframe {
+    width: vw(1000);
+    height: vw(700);
+    @include lg {
+      width: vp(900);
+      height: vp(600);
+    }
+    @include sm {
+      width: vm(320);
+      height: vm(250);
+    }
+  }
+}
+
+.video-close {
+  width: vw(32);
+  height: vw(32);
+  position: fixed;
+  top: vw(150);
+  right: vw(50);
+  @include lg {
+    width: vp(30);
+    top: vp(182);
+    right: vp(32);
+  }
+  @include sm {
+    width: vm(20);
+    top: vm(80);
+    right: vm(30);
+  }
+
+  svg {
+    width: 100%;
+    transition: 0.1s;
+    &:hover {
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+.video-visible {
+  display: flex;
+}

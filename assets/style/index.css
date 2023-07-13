@@ -521,6 +521,68 @@ input:required:invalid {
   box-shadow: 0 0 0.6rem #ff0000;
 }
 
+.video {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.video iframe {
+  width: 52.0833333333vw;
+  height: 36.4583333333vw;
+}
+@media (max-width: 991.8px) {
+  .video iframe {
+    width: 90.7258064516vw;
+    height: 60.4838709677vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .video iframe {
+    width: 85.3333333333vw;
+    height: 66.6666666667vw;
+  }
+}
+
+.video-close {
+  width: 1.6666666667vw;
+  height: 1.6666666667vw;
+  position: fixed;
+  top: 7.8125vw;
+  right: 2.6041666667vw;
+}
+@media (max-width: 991.8px) {
+  .video-close {
+    width: 3.0241935484vw;
+    top: 18.3467741935vw;
+    right: 3.2258064516vw;
+  }
+}
+@media (max-width: 575.8px) {
+  .video-close {
+    width: 5.3333333333vw;
+    top: 21.3333333333vw;
+    right: 8vw;
+  }
+}
+.video-close svg {
+  width: 100%;
+  transition: 0.1s;
+}
+.video-close svg:hover path {
+  fill: white;
+}
+
+.video-visible {
+  display: flex;
+}
+
 .header {
   z-index: 100;
   background-color: transparent;
@@ -997,7 +1059,7 @@ input:required:invalid {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 997;
 }
 .scroll-button svg {
   display: block;
@@ -1026,7 +1088,7 @@ input:required:invalid {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 997;
 }
 .scroll-button--tg-bot svg {
   display: block;
