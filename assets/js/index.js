@@ -421,11 +421,32 @@ const modals = [
 
 let currentModalIndex = -1;
 
+const inputs = document.querySelectorAll("input:required");
+
+document.querySelector("form").addEventListener("submit", function(event) {
+
+    for (let i = 0; i < inputs.length; i++) {
+        const input = inputs[i];
+
+        if (input.value.trim() === "") {
+            input.classList.add("invalid");
+        } else {
+            input.classList.remove("invalid");
+        }
+    }
+
+    // Если хотя бы один обязательный и пустой input найден, предотвращаем отправку формы
+    const invalidInputs = document.querySelectorAll("input:required.invalid");
+    if (invalidInputs.length > 0) {
+        event.preventDefault();
+    }
+});
+
 function openNextModal(e) {
     currentModalIndex++;
     if (currentModalIndex <= modals.length - 1) {
         const currentModal = modals[currentModalIndex];
-        console.log(currentModal);
+
         if (currentModal.id === 'modal-item') {
             getValueGoodFields(e, currentModal);
         }
@@ -689,4 +710,5 @@ $('datepicker_modal-contact').on('click', function() {
 $('datepicker_modal-contact').on('focusout', function() {
     $('.air-datepicker-global-container').css('z-index', '');
 });
+
 
