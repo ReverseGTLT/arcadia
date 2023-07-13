@@ -554,17 +554,18 @@ input:required:invalid {
   width: vw(32);
   height: vw(32);
   position: fixed;
-  top: vw(150);
+  top: vw(50);
   right: vw(50);
   @include lg {
     width: vp(30);
-    top: vp(182);
+    top: vp(32);
     right: vp(32);
   }
   @include sm {
     width: vm(20);
-    top: vm(80);
+    top: vm(30);
     right: vm(30);
+
   }
 
   svg {

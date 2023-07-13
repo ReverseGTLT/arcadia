@@ -539,20 +539,20 @@ input:required:invalid {
   width: 1.6666666667vw;
   height: 1.6666666667vw;
   position: fixed;
-  top: 7.8125vw;
+  top: 2.6041666667vw;
   right: 2.6041666667vw;
 }
 @media (max-width: 991.8px) {
   .video-close {
     width: 3.0241935484vw;
-    top: 18.3467741935vw;
+    top: 3.2258064516vw;
     right: 3.2258064516vw;
   }
 }
 @media (max-width: 575.8px) {
   .video-close {
     width: 5.3333333333vw;
-    top: 21.3333333333vw;
+    top: 8vw;
     right: 8vw;
   }
 }
@@ -1813,17 +1813,17 @@ input:required:invalid {
 }
 @media (max-width: 575.8px) and (max-width: 991.8px) {
   .benefits-carts .order-1,
-.benefits-carts .order-2,
-.benefits-carts .order-3,
-.benefits-carts .order-4 {
+  .benefits-carts .order-2,
+  .benefits-carts .order-3,
+  .benefits-carts .order-4 {
     flex: 1 1 50%;
   }
 }
 @media (max-width: 575.8px) and (max-width: 991.8px) and (max-width: 575.8px) {
   .benefits-carts .order-1,
-.benefits-carts .order-2,
-.benefits-carts .order-3,
-.benefits-carts .order-4 {
+  .benefits-carts .order-2,
+  .benefits-carts .order-3,
+  .benefits-carts .order-4 {
     flex: 1;
   }
 }
@@ -2624,14 +2624,14 @@ input:required:invalid {
 }
 @media (max-width: 991.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 3.4274193548vw;
     width: 1.6129032258vw;
   }
 }
 @media (max-width: 575.8px) {
   .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-minus,
-.goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
+  .goods-carousel__item .good-counter-price-wrapper .good-counter .counter-plus {
     height: 5.6vw;
     width: 2.6666666667vw;
   }
@@ -4103,8 +4103,8 @@ input:required:invalid {
 }
 @media (max-width: 991.8px) {
   .order-contact #order-contact-form .form-section input,
-.order-contact #order-contact-form .form-section textarea,
-.order-contact #order-contact-form .form-section select {
+  .order-contact #order-contact-form .form-section textarea,
+  .order-contact #order-contact-form .form-section select {
     width: 100%;
     margin-bottom: 1.40625vw;
   }
@@ -4448,14 +4448,14 @@ input:required:invalid {
 }
 @media (max-width: 991.8px) {
   .water-content h2,
-.water-content p {
+  .water-content p {
     margin-left: 0;
     margin-bottom: 2.1169354839vw;
   }
 }
 @media (max-width: 575.8px) {
   .water-content h2,
-.water-content p {
+  .water-content p {
     margin-bottom: 4.5333333333vw;
   }
 }
@@ -4636,7 +4636,7 @@ footer .container .attribution {
 }
 @media (max-width: 767.8px) {
   footer .container .social-media,
-footer .container .payment {
+  footer .container .payment {
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -4892,14 +4892,14 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-order-accepted .modal-content .modal-image,
-.modal-order-in-cart .modal-content .modal-image {
+  .modal-order-in-cart .modal-content .modal-image {
     padding-bottom: 3.8971774194vw;
     width: 14.8185483871vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-order-accepted .modal-content .modal-image,
-.modal-order-in-cart .modal-content .modal-image {
+  .modal-order-in-cart .modal-content .modal-image {
     padding-bottom: 5.0666666667vw;
     width: 13.3333333333vw;
   }
@@ -4919,7 +4919,7 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-order-accepted .modal-content .modal-title,
-.modal-order-in-cart .modal-content .modal-title {
+  .modal-order-in-cart .modal-content .modal-title {
     text-align: center;
     padding-bottom: 3.5282258065vw;
     font-size: 3.2258064516vw;
@@ -4927,7 +4927,7 @@ footer .container .attribution a {
 }
 @media (max-width: 575.8px) {
   .modal-order-accepted .modal-content .modal-title,
-.modal-order-in-cart .modal-content .modal-title {
+  .modal-order-in-cart .modal-content .modal-title {
     padding-bottom: 5.3333333333vw;
     font-size: 8.5333333333vw;
   }
@@ -4939,13 +4939,13 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-order-accepted .modal-content p,
-.modal-order-in-cart .modal-content p {
+  .modal-order-in-cart .modal-content p {
     padding-bottom: 7.560483871vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-order-accepted .modal-content p,
-.modal-order-in-cart .modal-content p {
+  .modal-order-in-cart .modal-content p {
     padding-bottom: 9.3333333333vw;
   }
 }
@@ -5110,14 +5110,14 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-.modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 3.4274193548vw;
     width: 1.6129032258vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-minus,
-.modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
+  .modal-item .modal-content .modal-content__wrap .modal-counter-price-wrapper .modal-counter .counter-plus {
     height: 5.6vw;
     width: 2.6666666667vw;
   }
@@ -5441,8 +5441,8 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .modal-contact #contact-form input,
-.modal-contact #contact-form textarea,
-.modal-contact #contact-form select {
+  .modal-contact #contact-form textarea,
+  .modal-contact #contact-form select {
     border-radius: 3.0241935484vw;
     padding: 2.8225806452vw 2.8225806452vw 2.7217741935vw 3.9314516129vw;
   }
@@ -5459,14 +5459,14 @@ footer .container .attribution a {
 }
 @media (max-width: 575.8px) {
   .modal-contact #contact-form .payment-amount,
-.modal-contact #contact-form .delivery-options {
+  .modal-contact #contact-form .delivery-options {
     flex-basis: 100%;
     margin-bottom: 4.3346774194vw;
   }
 }
 @media (max-width: 575.8px) {
   .modal-contact #contact-form .payment-amount,
-.modal-contact #contact-form .delivery-options {
+  .modal-contact #contact-form .delivery-options {
     margin-bottom: 4vw;
   }
 }
@@ -6225,13 +6225,13 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .delivery-info__content,
-.delivery-pay__content {
+  .delivery-pay__content {
     padding-bottom: 6.25vw;
   }
 }
 @media (max-width: 575.8px) {
   .delivery-info__content,
-.delivery-pay__content {
+  .delivery-pay__content {
     padding-bottom: 7.4666666667vw;
   }
 }
@@ -6244,9 +6244,9 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .delivery-info__content-1, .delivery-info__content-2, .delivery-info__content-3,
-.delivery-pay__content-1,
-.delivery-pay__content-2,
-.delivery-pay__content-3 {
+  .delivery-pay__content-1,
+  .delivery-pay__content-2,
+  .delivery-pay__content-3 {
     flex-basis: 100%;
     width: 45.3629032258vw;
     text-align: center;
@@ -6255,9 +6255,9 @@ footer .container .attribution a {
 }
 @media (max-width: 575.8px) {
   .delivery-info__content-1, .delivery-info__content-2, .delivery-info__content-3,
-.delivery-pay__content-1,
-.delivery-pay__content-2,
-.delivery-pay__content-3 {
+  .delivery-pay__content-1,
+  .delivery-pay__content-2,
+  .delivery-pay__content-3 {
     width: 93.3333333333vw;
     padding-bottom: 5.3333333333vw;
   }
@@ -6268,7 +6268,7 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .delivery-info__content-3,
-.delivery-pay__content-3 {
+  .delivery-pay__content-3 {
     padding-top: 0;
   }
 }
@@ -6285,13 +6285,13 @@ footer .container .attribution a {
 }
 @media (max-width: 991.8px) {
   .delivery-info__content svg,
-.delivery-pay__content svg {
+  .delivery-pay__content svg {
     padding-bottom: 1.5120967742vw;
   }
 }
 @media (max-width: 575.8px) {
   .delivery-info__content svg,
-.delivery-pay__content svg {
+  .delivery-pay__content svg {
     padding-bottom: 0.3645833333vw;
   }
 }
