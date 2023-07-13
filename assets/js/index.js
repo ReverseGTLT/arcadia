@@ -603,9 +603,17 @@ const readMore = document.querySelector('.read-more');
 const readBox = document.querySelector('.read-box');
 
 readMore.addEventListener('click', onReadMoreClick);
+let bool = true;
 
 function onReadMoreClick() {
     readBox.classList.toggle('read-height');
+    bool = !bool;
+    if (bool === false) {
+        readMore.textContent = "Читати менше"
+    }
+    if (bool === true) {
+        readMore.textContent = "Читати бiльше"
+    }
 }
 
 // ________________________________________________
