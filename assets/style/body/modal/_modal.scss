@@ -114,6 +114,21 @@
     right: 0;
     margin-top: vw(2);
     margin-right: vw(25);
+    svg {
+      width: vw(32);
+      transition: 0.1s;
+      &:hover {
+        path {
+          fill: black;
+        }
+      }
+      @include lg {
+        width: vp(30);
+      }
+      @include sm {
+        width: vm(20);
+      }
+    }
 
     @include lg {
       font-size: vp(40);
@@ -393,6 +408,7 @@
           width: 25%;
           display: flex;
           align-items: center;
+          font-weight: bold;
           @include lg {
             width: 30%;
           }
@@ -515,6 +531,7 @@
           width: vw(61);
           height: vw(95);
           padding-right: vw(24);
+          position: relative;
           @include lg {
             width: vp(61);
             height: vp(95);
@@ -527,8 +544,13 @@
           }
 
           img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
             display: block;
             width: 100%;
+            transform: translate(-50%, -50%);
+            //margin-top: 50%;
           }
         }
 
@@ -669,12 +691,17 @@
         border-radius: vp(30);
         padding: vp(28) vp(28) vp(27) vp(39);
       }
-      @include sm {
-        border-radius: vm(10);
-        padding: vm(14) vw(14) vw(13) vw(19);
-      }
+      //@include sm {
+      //  border-radius: vm(10);
+      //  padding: vm(14) vw(14) vw(13) vw(19);
+      //}
     }
 
+    input[type="radio"] {
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
     .payment-amount,
     .delivery-options {
       flex-basis: 50%;
@@ -691,6 +718,7 @@
     .delivery-options {
       display: flex;
       @include lg {
+        flex-basis: 100%;
         width: 100%;
         justify-content: space-around;
         padding: vm(15) 0;
@@ -701,7 +729,14 @@
       }
 
       input[name="delivery"] {
-        width: 20px;
+        width: vw(20);
+        //height: vw(20);
+        background: transparent;
+        border: none;
+        @include lg {
+          width: vm(22);
+          //height: vm(22);
+        }
       }
 
       input[type='radio'] {
@@ -822,21 +857,32 @@
       display: flex;
       gap: vw(20);
       align-items: center;
-      margin-left: auto;
+      width: 100%;
 
       @include sm {
         margin-left: 0;
         margin-bottom: vm(10);
+        flex-direction: column;
       }
 
       span {
         display: block;
-        margin-left: vw(5);
         padding-bottom: vw(6);
+        margin-left: auto;
+        @include sm {
+          margin-left: 0;
+          text-align: left;
+          width: 100%;
+          padding-block: vm(5);
+        }
       }
 
       .payment_wrap {
         position: relative;
+        width: 50%;
+        @include sm {
+          width: 100%;
+        }
 
         svg {
           position: absolute;
@@ -909,4 +955,26 @@
 .form-row {
   flex-wrap: nowrap;
   gap: vw(20);
+}
+
+.form-row__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: vw(20);
+
+  @include lg {
+    flex-direction: column;
+  }
+}
+
+#btn-modal-contact {
+  width: 100% !important;
+}
+
+.basis2 {
+  flex: 2;
+}
+.basis1 {
+  flex: 1;
 }

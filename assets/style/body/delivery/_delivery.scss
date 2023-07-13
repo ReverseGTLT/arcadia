@@ -312,3 +312,71 @@
 .footer--delivery {
   margin-bottom: 0;
 }
+
+.delivery-options {
+  input[type='radio'],
+  label {
+    cursor: pointer;
+  }
+
+  input[type='radio'] {
+    position: relative;
+    height: vw(22);
+    width: vw(22);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    @include lg {
+      height: vm(22);
+      width: vm(22);
+    }
+  }
+
+  input[type='radio']::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: vw(22);
+    height: vw(22);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: vw(2) solid rgba(232, 77, 34, 0.20);
+    @include lg {
+      height: vm(22);
+      width: vm(22);
+      border: vm(2) solid rgba(232, 77, 34, 0.20);
+    }
+  }
+
+  input[type='radio']:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: vw(12);
+    height: vw(12);
+    border-radius: 50%;
+    background-color: #30A23C;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    @include lg {
+      height: vm(12);
+      width: vm(12);
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    font-weight: bold;
+  }
+
+}
+
+.delivery-options__wrapper {
+  display: flex;
+  gap: vw(10);
+  justify-content: center;
+  align-items: center;
+}

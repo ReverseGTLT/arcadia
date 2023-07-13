@@ -261,6 +261,10 @@
             text-align: center;
             border: none;
             background: none;
+            transition: 0.2s;
+            &:hover {
+              color: black;
+            }
 
             @include lg {
               height: vp(34);
@@ -396,8 +400,8 @@
       top: 30%;
       width: vw(82);
       height: vw(82);
-      content: url("../../assets/images/arrow_light1.png");
-      transition: 0.2s;
+      content: url("../../assets/images/right.svg");
+      transform: rotate(180deg);
 
       @include lg {
         left: vp(-175);
@@ -411,11 +415,11 @@
       }
 
       &:hover {
-        content: url("../../assets/images/arrow_active.png");
+        content: url("../../assets/images/leftr.svg");
       }
 
       &:active {
-        transform: scale(1.05);
+        transform: scale(1.05) rotate(180deg);
       }
     }
 
@@ -424,9 +428,7 @@
       top: 30%;
       width: vw(82);
       height: vw(82);
-      content: url("../../assets/images/arrow_light1.png");
-      transform: rotate(180deg);
-      transition: 0.2s;
+      content: url("../../assets/images/right.svg");
 
 
       @include lg {
@@ -441,7 +443,8 @@
       }
 
       &:hover {
-        content: url("../../assets/images/arrow_active.png");
+        content: url("../../assets/images/left.svg");
+        transform: rotate(180deg);
       }
 
       &:active {

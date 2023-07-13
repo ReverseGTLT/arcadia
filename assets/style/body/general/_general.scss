@@ -230,31 +230,28 @@
   height: vw(224);
   position: absolute;
   top: vw(-130);
-  left: vw(-50);
+  left: vw(-150);
   animation: opacity2 6s ease-in-out;
   @include lg {
     width: vp(224);
     height: vp(224);
-    top: vp(-100);
-    left: vp(180);
+    top: vp(-140);
+    left: vp(100);
   }
   @include sm {
     width: vm(145);
     height: vm(145);
     top: vm(-70);
-    left: vm(5);
-  }
-  img {
-    width: 100%;
+    left: vm(-60);
   }
 }
 
 @keyframes rotate {
   0% {
-    transform: translateX(-50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateX(-50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -271,8 +268,9 @@
 //}
 
 .circle-rotate {
-  transform: translateX(-50%);
+  //transform: translateX(-50%);
   animation: rotate 10s linear;
+  width: 100%;
 }
 
 .height {
@@ -303,6 +301,20 @@
   @include sm {
     bottom: vm(105);
     left: vm(85);
+  }
+}
+
+.circle-drop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: vw(40);
+  @include lg {
+    width: vp(30);
+  }
+  @include sm {
+    width: vm(20);
   }
 }
 

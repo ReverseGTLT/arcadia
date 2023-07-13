@@ -39,6 +39,12 @@
       width: 100%;
       height: 100%;
       display: block;
+      transition: 0.1s;
+      &:hover {
+        path {
+          fill: black;
+        }
+      }
     }
   }
   &__logo {
@@ -80,13 +86,13 @@
   }
   &__circle {
     position: absolute;
-    right: vw(-220);
+    right: vw(-100);
     top: vw(160);
     width: vw(229);
     @include lg {
       width: vm(169);
       top: vm(80);
-      right: vm(-160);
+      right: vm(-75);
     }
     &-center {
       position: absolute;
@@ -118,6 +124,11 @@
       line-height: 218.1%;
       text-align: center;
       color: $color-h-txt-link;
+      transition: 0.2s;
+      &:hover {
+        color: #3274DE;
+        text-decoration: underline;
+      }
       @include lg {
         font-size: vm(20);
       }
@@ -206,6 +217,7 @@
 .header-info__buy--modal-menu {
   padding-left: 0;
 }
+
 
 @keyframes open {
   0% {

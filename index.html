@@ -36,7 +36,10 @@
 <!--scroll-to-top-->
 <a href="#" id="scroll-to-top">
     <div class="scroll-button">
-        <img src="assets/images/arrow_up_green.png" alt="arrow up">
+        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="41" cy="41" r="41" transform="rotate(-90 41 41)" fill="#30A23C"/>
+            <path d="M41.7071 19.2929C41.3166 18.9024 40.6834 18.9024 40.2929 19.2929L33.9289 25.6569C33.5384 26.0474 33.5384 26.6805 33.9289 27.0711C34.3195 27.4616 34.9526 27.4616 35.3431 27.0711L41 21.4142L46.6569 27.0711C47.0474 27.4616 47.6805 27.4616 48.0711 27.0711C48.4616 26.6805 48.4616 26.0474 48.0711 25.6569L41.7071 19.2929ZM42 62L42 20H40L40 62H42Z" fill="white"/>
+        </svg>
     </div>
 </a>
 <div id="tg-bot">
@@ -177,7 +180,8 @@
                     <div class="general-wrapper__info animate__animated animate__fadeInLeft animate__delay-4s"
                          id="generalWrapperInfo">
                         <div class="circle-text">
-                            <img class="circle-rotate" src="assets/images/circle.svg" alt="">
+                            <img class="circle-rotate" src="assets/images/circle-text.svg" alt="">
+                            <img class="circle-drop" src="assets/images/kapla.svg" alt="circle">
                         </div>
                         <h1 class="general-wrapper__title">Доставка свіжої <br>
                             та чистої води в Одесі</h1>
@@ -745,18 +749,20 @@
                     <div class="delivery-options-col">
                         <h2 class="order-contact-title animate__animated">Відправити заявку на воду</h2>
                         <div class="delivery-options">
-                            <label>
-                                <input type="radio" name="delivery" value="home" checked required>
-                                До дому
-                            </label>
-                            <label>
-                                <input type="radio" name="delivery" value="office" required>
-                                У офіс
-                            </label>
-                            <label>
-                                <input type="radio" name="delivery" value="other" required>
-                                Інше
-                            </label>
+                            <div class="delivery-options__wrapper">
+                                <input type="radio" name="delivery" id="delivery-home" value="home" checked required>
+                                <label for="delivery-home">До дому</label>
+                            </div>
+
+                            <div class="delivery-options__wrapper">
+                                <input type="radio" name="delivery" id="delivery-office" value="office" required>
+                                <label for="delivery-office">У офіс</label>
+                            </div>
+
+                            <div class="delivery-options__wrapper">
+                                <input type="radio" name="delivery" id="delivery-other" value="other" required>
+                                <label for="delivery-other">Інше</label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-section">
@@ -858,7 +864,7 @@
     <!--    _________________________-->
 
     <section class="water">
-        <div class="water-content container-1540">
+        <div class="container-1540 water-content">
             <h2 class="animate__animated">Вода від “Acradia” - це користь яку дарує Одеса</h2>
             <p class="text-little read-box">Вам не потрібно хвилюватися за якість водопровідних комунікацій, за
                 неекологічність покупки води у маленьких пляшках, за смак чаю або ранкової кави. Замовляйте воду та
@@ -1008,7 +1014,12 @@
     <!--Модалка. Товар item-->
     <div class="modal modal-item" id="modal-item">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="close">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.53567 0.193336L13.0454 10.703L23.2385 0.509895L25.3278 2.59917L15.1346 12.7923L25.7077 23.3653L23.4918 25.5812L12.9187 15.0082L2.59898 25.328L0.5097 23.2387L10.8295 12.9189L0.319767 2.40924L2.53567 0.193336Z"
+                          fill="#949CBE"/>
+                </svg>
+            </div>
             <div class="modal__wrapper">
                 <div class="modal-image">
                     <img src="./assets/images/bult_18.png" alt="Product Image">
@@ -1051,7 +1062,12 @@
     <!--Модалка. Корзина-->
     <div class="modal modal-cart" id="modal-cart">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="close">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.53567 0.193336L13.0454 10.703L23.2385 0.509895L25.3278 2.59917L15.1346 12.7923L25.7077 23.3653L23.4918 25.5812L12.9187 15.0082L2.59898 25.328L0.5097 23.2387L10.8295 12.9189L0.319767 2.40924L2.53567 0.193336Z"
+                          fill="#949CBE"/>
+                </svg>
+            </div>
             <h2 class="modal-title">Ваша корзина (3)</h2>
             <p class="text-little">Найменування</p>
             <div class="cart-items">
@@ -1059,7 +1075,7 @@
                     <div class="cart-item">
                         <div class="cart-item__info">
                             <div class="for-img">
-                                <img src="..." alt="Product Image">
+                                <img src="assets/images/butl.png" alt="Product Image">
                             </div>
                             <p class="icon">x</p>
                             <p class="cart-item__quantity">123</p>
@@ -1140,25 +1156,32 @@
     <!--Модалка. Контакты пользователя-->
     <div class="modal modal-contact" id="modal-contact">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="close">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.53567 0.193336L13.0454 10.703L23.2385 0.509895L25.3278 2.59917L15.1346 12.7923L25.7077 23.3653L23.4918 25.5812L12.9187 15.0082L2.59898 25.328L0.5097 23.2387L10.8295 12.9189L0.319767 2.40924L2.53567 0.193336Z"
+                          fill="#949CBE"/>
+                </svg>
+            </div>
             <h2 class="modal-title">Замовити до себе воду прямо зараз!</h2>
             <form id="contact-form" data-parsley-validate>
                 <div class="payment-amount">
                     <p>Сума до сплати: <span>300</span><i class="currency"> грн</i></p>
                 </div>
                 <div class="delivery-options">
-                    <label>
-                        <input type="radio" name="delivery" value="home" checked required>
-                        До дому
-                    </label>
-                    <label>
-                        <input type="radio" name="delivery" value="office" required>
-                        У офіс
-                    </label>
-                    <label>
-                        <input type="radio" name="delivery" value="other" required>
-                        Інше
-                    </label>
+                    <div class="delivery-options__wrapper">
+                        <input type="radio" name="delivery" id="deliveryHome" value="home" checked required>
+                        <label for="deliveryHome">До дому</label>
+                    </div>
+
+                    <div class="delivery-options__wrapper">
+                        <input type="radio" name="delivery" id="deliveryOffice" value="office" required>
+                        <label for="deliveryOffice">У офіс</label>
+                    </div>
+
+                    <div class="delivery-options__wrapper">
+                        <input type="radio" name="delivery" id="deliveryOther" value="other" required>
+                        <label for="deliveryOther">Інше</label>
+                    </div>
                 </div>
                 <div class="form-section">
 
@@ -1201,17 +1224,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-row form-row__checkbox">
+                    <div class="form-row__wrapper">
+                        <div class="basis2">
                             <input class="text-little" type="checkbox" id="agree__modal-contact" name="agree" required
                                    data-parsley-error-message="Обов'язкове поле">
-                        <label for="agree__modal-contact" class="checkbox-label">
-                            Я приймаю умови користувальницької угоди,
-                            дозволяю їх обробку і зв'язатися зі мною якнайшвидше
-                        </label>
-                    </div>
-                    <div class="form-row">
-                        <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформити доставку
-                        </button>
+                            <label for="agree__modal-contact" class="checkbox-label">
+                                Я приймаю умови користувальницької угоди,
+                                дозволяю їх обробку і зв'язатися зі мною якнайшвидше
+                            </label>
+                        </div>
+                        <div class="basis1">
+                            <button type="submit" class="btn open-modal-btn" id="btn-modal-contact">Оформити доставку
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -1222,7 +1247,12 @@
     <!--Модалка Заказ в корзине-->
     <div class="modal modal-order-in-cart" id="modal-order-in-cart">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="close">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.53567 0.193336L13.0454 10.703L23.2385 0.509895L25.3278 2.59917L15.1346 12.7923L25.7077 23.3653L23.4918 25.5812L12.9187 15.0082L2.59898 25.328L0.5097 23.2387L10.8295 12.9189L0.319767 2.40924L2.53567 0.193336Z"
+                          fill="#949CBE"/>
+                </svg>
+            </div>
             <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
             <h2 class="modal-title">Ваше замовлення додано до кошику</h2>
         </div>
@@ -1231,7 +1261,12 @@
     <!--Модалка Заказ принят-->
     <div class="modal modal-order-accepted" id="modal-order-accepted">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="close">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.53567 0.193336L13.0454 10.703L23.2385 0.509895L25.3278 2.59917L15.1346 12.7923L25.7077 23.3653L23.4918 25.5812L12.9187 15.0082L2.59898 25.328L0.5097 23.2387L10.8295 12.9189L0.319767 2.40924L2.53567 0.193336Z"
+                          fill="#949CBE"/>
+                </svg>
+            </div>
             <img class="modal-image" src="assets/images/order-accept.png" alt="Order accepted">
             <h2 class="modal-title">Ваше замовлення прийнято</h2>
             <p class="text-little">Для уточнення замовлення<br>
