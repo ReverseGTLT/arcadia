@@ -527,6 +527,12 @@ counterMinusButtons.forEach(button => {
             counterValue.textContent = (currentValue - 1).toString();
             // updateCounterBtns();
         }
+        if (Number(counterValue.textContent) > 0) {
+            counterValue.style.color = 'black'
+        }
+        if (Number(counterValue.textContent) < 1) {
+            counterValue.style.color = '#949CBE'
+        }
     });
 });
 
@@ -537,6 +543,12 @@ counterPlusButtons.forEach(button => {
         if (currentValue < maxValue) {
             counterValue.textContent = (currentValue + 1).toString();
             // updateCounterBtns();
+        }
+        if (Number(counterValue.textContent) > 0) {
+            counterValue.style.color = 'black'
+        }
+        if (Number(counterValue.textContent) < 1) {
+            counterValue.style.color = '#949CBE'
         }
     });
 });

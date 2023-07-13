@@ -20,11 +20,10 @@
   }
 
   &-content {
-    margin-left: vw(183);
     display: flex;
     text-align: start;
     flex-direction: column;
-    width: vw(996);
+    //width: vw(996);
     @include lg {
       width: 100%;
       margin: 0;
@@ -32,8 +31,10 @@
 
     h2,
     p {
+      margin-left: vw(183);
       padding-bottom: vw(21);
       @include lg {
+        margin-left: 0;
         margin-bottom: vp(21);
       }
       @include sm {
@@ -104,11 +105,12 @@
 }
 
 .read-height {
-  height: vw(350);
-  @include lg {
-    height: vp(530);
-  }
-  @include sm {
-    height: vm(590);
-  }
+  //height: vw(350);
+  height: auto;
+  //@include lg {
+  //  height: vp(530);
+  //}
+  //@include sm {
+  //  height: vm(590);
+  //}
 }

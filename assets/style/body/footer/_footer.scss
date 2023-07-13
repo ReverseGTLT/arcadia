@@ -68,6 +68,8 @@ footer {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-size: vw(14);
+        color: $color-white;
 
         @include lg {
           font-size: vm(12);
@@ -116,6 +118,8 @@ footer {
 
       p {
         padding-right: vw(20);
+        font-size: vw(14);
+        color: $color-white;
 
         @include lg {
           margin-top: vp(8);
@@ -151,6 +155,8 @@ footer {
 
       p {
         padding-right: vw(18);
+        font-size: vw(14);
+        color: $color-white;
         @include lg {
           text-align: center;
           padding-right: 0;
@@ -175,6 +181,8 @@ footer {
       }
       p {
         padding-right: vw(5);
+        font-size: vw(14);
+        color: $color-white;
         @include lg {
           font-size: vm(12);
         }

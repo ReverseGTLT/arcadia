@@ -33,8 +33,8 @@
     }
 
     &__text {
-      width: vw(723);
-      padding-bottom: vw(33);
+      width: vw(800);
+      padding-bottom: vw(50);
 
       @include lg {
         width: 100%;
@@ -64,7 +64,7 @@
   &-info {
     display: flex;
     //margin: auto;
-    justify-content: space-between;
+    //justify-content: space-between;
     //align-items: start;
     //padding-bottom: vw(88);
     @include lg {
@@ -73,7 +73,8 @@
 
     &__map {
       display: flex;
-      flex-basis: calc(40% - 60px);
+      //flex-basis: calc(40% - 60px);
+      width: vw(450);
       //align-items: start;
       margin-right: vw(60);
       //border: vw(1) solid #D4D8EB;
@@ -142,7 +143,7 @@
     &__address,
     &__time {
       display: flex;
-      flex-basis: calc(60% - 143px);
+      //flex-basis: calc(60% - 143px);
       flex-direction: column;
       align-items: flex-start;
       //padding-right: vw(143);
@@ -191,14 +192,16 @@
     }
 
     &__address {
+      padding-right: vw(170);
       @include lg {
+        padding-right: 0;
         padding-top: vp(86);
       } @include sm {
           padding-top: vm(86);
         }
       &-title {
         padding-bottom: vw(13.65);
-        font-weight: $font-weight-500;
+        font-weight: bold;
       }
 
       .contact-info__map-link {
