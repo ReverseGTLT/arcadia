@@ -210,7 +210,7 @@
         color: red;
         background-color: #ffbbbb;
         border: 1px solid #FFBBBB;
-        box-shadow: 0 0 24px 8px rgba(255, 187, 187, 0.4);
+        //box-shadow: 0 0 24px 8px rgba(255, 187, 187, 0.4);
 
         &::before {
           translate: 100%;
@@ -218,7 +218,7 @@
 
         &:active {
           scale: 0.95;
-          box-shadow: 0 0 16px 4px rgba(255, 187, 187, 0.6);
+          //box-shadow: 0 0 16px 4px rgba(255, 187, 187, 0.6);
         }
       }
     }
