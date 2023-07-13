@@ -608,11 +608,28 @@ let bool = true;
 function onReadMoreClick() {
     readBox.classList.toggle('read-height');
     bool = !bool;
-    if (bool === false) {
-        readMore.textContent = "Читати менше"
-    }
-    if (bool === true) {
-        readMore.textContent = "Читати бiльше"
+    if (readMore.textContent === "Читати більше" || "Читати менше") {
+        console.log('укр')
+        if (bool === false) {
+            readMore.textContent = "Читати менше";
+            console.log(bool)
+            return;
+        }
+        if (bool === true) {
+            readMore.textContent = "Читати бiльше";
+            console.log(bool)
+        }
+    } else {
+        console.log('рус')
+        if (bool === false) {
+            readMore.textContent = "Читать меньше";
+            console.log(bool)
+            return;
+        }
+        if (bool === true) {
+            readMore.textContent = "Читать больше";
+            console.log(bool)
+        }
     }
 }
 
