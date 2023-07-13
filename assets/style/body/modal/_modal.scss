@@ -36,30 +36,23 @@
   background-color: $background-light;
   box-shadow: vw(14) vw(17) vw(39) rgba(216, 225, 236, 0.94);
   border-radius: vw(30);
-  overflow: hidden;
   padding: vw(73) vw(68) vw(43) vw(71);
 
   @include lg {
+    overflow-y: scroll;
+    height: 90vh;
     justify-content: center;
     max-width: vp(980);
     margin-inline: auto;
     width: 90%;
-    height: auto;
-    //left: vp(25);
-    //right: vp(25);
+
     padding: vp(73) vp(68) vp(43) vp(71);
   }
   @include sm {
     max-width: vm(350);
-    //top: 5vh;
-    //left: vm(5);
-    //right: vm(5);
+
     padding: vm(25) vm(22) vm(19) vm(22);
   }
-  //
-  //&__wrapper {
-
-  //}
 
   &-content {
     width: vw(1047);
