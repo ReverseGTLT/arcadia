@@ -28,27 +28,30 @@
                   fill="#949CBE"/>
         </svg>
     </div>
-    <iframe src="https://www.youtube.com/embed/QM6SsKdHKyc?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/QM6SsKdHKyc?enablejsapi=1" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
 </div>
 
-<div id="preloader">
-    <div class="loader">
-        <div class="loader-box">
-            <div class="header-logo__images header-logo__images--preloader">
-                <img src="assets/images/logo2.svg" alt="logo">
-                <img src="assets/images/logo1.svg" alt="logo">
-            </div>
-        </div>
-    </div>
-    <div class="white-block"></div>
-</div>
+<!--<div id="preloader">-->
+<!--    <div class="loader">-->
+<!--        <div class="loader-box">-->
+<!--            <div class="header-logo__images header-logo__images&#45;&#45;preloader">-->
+<!--                <img src="assets/images/logo2.svg" alt="logo">-->
+<!--                <img src="assets/images/logo1.svg" alt="logo">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="white-block"></div>-->
+<!--</div>-->
 
 <!--scroll-to-top-->
 <a href="#" id="scroll-to-top">
     <div class="scroll-button">
         <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="41" cy="41" r="41" transform="rotate(-90 41 41)" fill="#30A23C"/>
-            <path d="M41.7071 19.2929C41.3166 18.9024 40.6834 18.9024 40.2929 19.2929L33.9289 25.6569C33.5384 26.0474 33.5384 26.6805 33.9289 27.0711C34.3195 27.4616 34.9526 27.4616 35.3431 27.0711L41 21.4142L46.6569 27.0711C47.0474 27.4616 47.6805 27.4616 48.0711 27.0711C48.4616 26.6805 48.4616 26.0474 48.0711 25.6569L41.7071 19.2929ZM42 62L42 20H40L40 62H42Z" fill="white"/>
+            <path d="M41.7071 19.2929C41.3166 18.9024 40.6834 18.9024 40.2929 19.2929L33.9289 25.6569C33.5384 26.0474 33.5384 26.6805 33.9289 27.0711C34.3195 27.4616 34.9526 27.4616 35.3431 27.0711L41 21.4142L46.6569 27.0711C47.0474 27.4616 47.6805 27.4616 48.0711 27.0711C48.4616 26.6805 48.4616 26.0474 48.0711 25.6569L41.7071 19.2929ZM42 62L42 20H40L40 62H42Z"
+                  fill="white"/>
         </svg>
     </div>
 </a>
@@ -168,15 +171,18 @@
 </header>
 
 <main class="main">
+    <!--    <canvas id="canvas"></canvas>-->
 
     <!--    _________________________-->
     <!--    Section 1. GENERAL. MAIN-->
     <!--    _________________________-->
 
+
     <section class="general height" id="general">
-        <div class="general-bg">
+        <div class="general-bg ripple-image">
             <div class="general-container">
-                <div class="general-wrapper animate__animated animate__fadeIn animate__delay-4s">
+                <!--                <div class="general-wrapper animate__animated animate__fadeIn animate__delay-4s">-->
+                <div class="general-wrapper">
                     <div class="header-logo header-logo--modal-menu">
                         <div class="header-logo__images header-logo__images--general">
                             <img src="assets/images/logo2.svg" alt="logo">
@@ -184,10 +190,13 @@
                         </div>
                         <p class="header-logo__text hidden-mobile">Доставка чистої води в Одесі до будинку чи офісу</p>
                     </div>
+
                     <div class="general-wrapper__price animate__animated animate__bounceIn animate__delay-5s">
                         <p><i>80</i> <span class="currency">  грн </span>за бутиль</p>
                     </div>
-                    <div class="general-wrapper__info animate__animated animate__fadeInLeft animate__delay-4s"
+                    <!--                    <div class="general-wrapper__info animate__animated animate__fadeInLeft animate__delay-4s"-->
+                    <!--                         id="generalWrapperInfo">-->
+                    <div class="general-wrapper__info"
                          id="generalWrapperInfo">
                         <div class="circle-text">
                             <img class="circle-rotate" src="assets/images/circle-text.svg" alt="">
@@ -201,8 +210,10 @@
                         </button>
                     </div>
                 </div>
+                <div class="animation-container"></div>
             </div>
         </div>
+
         <div class="sale animate__animated" id="sale">
             <div class="sale-wrapper">
                 <div class="sale-wrapper__description">Доставка свіжої <br>
@@ -526,9 +537,9 @@
                         <div class="point-text__num">2</div>
                         <div class="point-text__description text-little">
                             <p>Набираєш скільки
-                            тобі треба, а ще подивишся
-                            як все відбувається,
-                            звісно якщо цікаво .)</p>
+                                тобі треба, а ще подивишся
+                                як все відбувається,
+                                звісно якщо цікаво .)</p>
                         </div>
                     </div>
                 </div>
@@ -792,7 +803,8 @@
                                 >
                                 <div class="date-input date-input__order-contact">
                                     <input id="datepicker_order-contact" type="text" placeholder="На коли" name="date">
-                                    <img class="calendar-icon calendar-icon__order-contact" src="assets/images/calendar.svg" alt="Calendar">
+                                    <img class="calendar-icon calendar-icon__order-contact"
+                                         src="assets/images/calendar.svg" alt="Calendar">
                                 </div>
                             </div>
                             <div class="form-row text-area-row">
@@ -1207,7 +1219,8 @@
                         <input class="item" type="text" placeholder="Адреса" name="address" required>
                         <div class="item date-input date-input__modal-contact">
                             <input id="datepicker_modal-contact" type="text" placeholder="На коли" name="date" required>
-                            <img class="calendar-icon calendar-icon__modal-contact" src="assets/images/calendar.svg" alt="Calendar">
+                            <img class="calendar-icon calendar-icon__modal-contact" src="assets/images/calendar.svg"
+                                 alt="Calendar">
                         </div>
                     </div>
                     <div class="form-row full-width-row">
@@ -1317,6 +1330,9 @@
 
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/pixi-filters@latest/dist/pixi-filters.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script defer src="assets/js/owl.carousel.min.js"></script>
 <script defer src="assets/js/scrollflow.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>

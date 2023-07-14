@@ -1,4 +1,3 @@
-
 @use "../../presets/index" as *;
 
 .general {
@@ -8,6 +7,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
   &-bg {
     background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
     height: 100%;
@@ -17,10 +17,11 @@
 
     animation: opacity2 3.5s linear;
 
-    @include sm{
+    @include sm {
       background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
     }
   }
+
   &-container {
     display: flex;
     //flex: 1;
@@ -42,6 +43,7 @@
       background-size: 85%;
       background-position: center bottom;
     }
+
     &__price {
       position: absolute;
       bottom: vw(420);
@@ -68,6 +70,7 @@
         bottom: vm(140);
         left: vm(70);
       }
+
       p {
         line-height: vw(24);
         color: $color-white;
@@ -87,6 +90,7 @@
           line-height: vm(15);
           //padding-left: vm(9);
         }
+
         i {
           font-weight: 700;
           font-size: vw(30);
@@ -106,6 +110,7 @@
         }
       }
     }
+
     &__info {
       position: relative;
       margin-top: vw(302);
@@ -121,6 +126,7 @@
         padding-inline: vm(15);
       }
     }
+
     &__title {
       font-weight: 700;
       font-size: vw(55);
@@ -143,6 +149,7 @@
         margin-bottom: vm(6);
       }
     }
+
     &__description {
       font-weight: 500;
       font-size: vw(36);
@@ -161,6 +168,7 @@
         text-align: center;
       }
     }
+
     &__btn {
       position: relative;
       background: $color-red;
@@ -330,3 +338,14 @@
   }
 }
 
+.general {
+  .animation-container {
+    display: none;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //width: 100%;
+    //height: 100%;
+    //pointer-events: none;
+  }
+}
