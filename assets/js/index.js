@@ -73,6 +73,13 @@ let good = {
 // });
 
 $(document).ready(function () {
+    $('.general').ripples({
+        resolution: 512,
+        dropRadius: 20,
+        interactive: true,
+        perturbance: 0.02,
+    });
+
     // Owl Goods
     $('.goods-carousel').owlCarousel({
         loop: true,
@@ -234,354 +241,181 @@ $(document).ready(function () {
 
 
 // Preloader
-// window.addEventListener('load', function () {
-//     setTimeout(function () {
-//         const preloader = document.getElementById('preloader');
-//         preloader.style.display = 'none';
-//     }, 1500); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
-// });
-
-// _____________________________________
-
-// Анимация главного экрана
-const Application = PIXI.Application;
-
-const app = new Application({
-    // width: window.innerWidth,
-    // height: window.innerHeight,
-    resizeTo: window,
-    transparent: true
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    }, 1000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
 });
-document.body.appendChild(app.view);
 
-const loader = PIXI.Loader.shared;
-loader.add('backgroundImage', 'assets/images/main.png').load(setup);
+// _____________________
+//
+const canvasContainer = document.getElementById('canvas-container');
+const generalWrapper = document.querySelector('.general-wrapper');
+const title = document.querySelector('.general-wrapper__title');
+const description = document.querySelector('.general-wrapper__description');
 
-function setup(loader, resources) {
-    const backgroundImage = PIXI.Sprite.from(resources.backgroundImage.texture);
+gsap.set([generalWrapper, title, description], {opacity: 0, y: 20});
+
+const tl = gsap.timeline({onComplete: startAnimation});
+
+tl.to(canvasContainer, {opacity: 1, duration: 1});
+
+function startAnimation() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    PIXI.utils.skipHello();
+
+    const app = new PIXI.Application({
+        width: windowWidth,
+        height: windowHeight,
+        transparent: true,
+        resolution: 1,
+        autoResize: true,
+    });
+
+    $('#canvas-container').append(app.view);
+
+    const backgroundImage = PIXI.Sprite.from('assets/images/main.png');
     backgroundImage.anchor.set(0.5);
     const container = new PIXI.Container();
-    backgroundImage.x = app.renderer.width /2;
-    backgroundImage.y = app.renderer.height /2;
+    backgroundImage.x = app.renderer.width / 2;
+    backgroundImage.y = app.renderer.height / 2;
     backgroundImage.alpha = 0;
 
     container.addChild(backgroundImage);
     app.stage.addChild(container);
 
-    // const style = new PIXI.TextStyle({
-    //     fontFamily: "Segoe UI",
-    //     fontSize: 20 + window.innerWidth * 0.06,
-    //     fill: "#ffffff",
-    //     dropShadow: true,
-    //     dropShadowDistance: 2,
-    //     dropShadowAngle: Math.PI / 2,
-    //     dropShadowBlur: 3,
-    //     dropShadowColor: "#000000"
-    // });
+    let bg = PIXI.Sprite.from('assets/images/main.png');
 
-    // window.addEventListener("resize", function () {
-    //     style.fontSize = 20 + window.innerWidth * 0.06;
-    // });
-    //
-    // const myText = new PIXI.Text("ARCADIA", style);
-    //
-    // container.addChild(myText);
-    // myText.anchor.set(0.5);
-    // myText.x = app.screen.width / 2;
-    // myText.y = app.screen.height / 2;
+    if (window.innerWidth <= 576) {
+        bg = PIXI.Sprite.from('assets/images/main_mob.png');
+    }
 
-    const displacementSprite = PIXI.Sprite.from("assets/images/waterTemp.jpg");
-    const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
-
-    displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-    displacementSprite.scale.set(0.5);
-    app.stage.addChild(displacementSprite);
-    // container.addChild(displacementSprite);
-
-    const options1 = {
-        amplitude: 40, //300
-        wavelength: 30, //160
-        speed: 100, //500
-        radius: 80
-    };
-
-    const shockwaveFilter1 = new PIXI.filters.ShockwaveFilter(
-        [Math.random() * app.screen.width, Math.random() * app.screen.height],
-        options1,
-        0
-    );
-
-    const options2 = {
-        amplitude: 80, //300
-        wavelength: 45, //160
-        speed: 140, //500
-        radius: 160
-    };
-
-    const shockwaveFilter2 = new PIXI.filters.ShockwaveFilter(
-        [Math.random() * app.screen.width, Math.random() * app.screen.height],
-        options2,
-        0
-    );
-
-    const options3 = {
-        amplitude: 100, //300
-        wavelength: 100, //160
-        speed: 400, //500
-        radius: 600
-    };
-
-    const shockwaveFilter3 = new PIXI.filters.ShockwaveFilter(
-        [Math.random() * app.screen.width, Math.random() * app.screen.height],
-        options3,
-        0
-    );
-
-    container.filters = [
-        displacementFilter,
-        shockwaveFilter1,
-        shockwaveFilter2,
-        shockwaveFilter3
-    ];
-
-    app.ticker.add(function () {
-        displacementSprite.x++;
-        if (displacementSprite.x > displacementSprite.width)
-            displacementSprite.x = 0;
-
-        createRaindrops(shockwaveFilter1, 1.6);
-        createRaindrops(shockwaveFilter2, 1.8);
-        createRaindrops(shockwaveFilter3, 3);
-    });
-
-
-    displacementFilter.scale.x = 40;
-    displacementFilter.scale.y = 40;
-    displacementSprite.anchor.set(0.5);
-
-    const bg = PIXI.Sprite.from('assets/images/main.png');
     bg.width = app.renderer.width;
     bg.height = app.renderer.height;
-    bg.alpha = 0.5;
+    bg.alpha = 0; //1
     container.addChild(bg);
 
-    app.stage.on('mousemove', onPointerMove)
-        .on('touchmove', onPointerMove);
-
-    app.ticker.add(function(delta) {
-        displacementSprite.rotation += 0.001 * delta;
+    const bgTween = gsap.timeline({onComplete: showContent});
+    bgTween.to(bg, {
+        alpha: 1,
+        duration: 1,
+        ease: 'power3.out',
     });
-    function onPointerMove(eventData){
-        displacementSprite.position.set(eventData.data.global.x , eventData.data.global.y);
+
+    function showContent() {
+        gsap.to([generalWrapper, title, description], {opacity: 1, y: 0, duration: 1});
+        startWaterAnimation();
     }
 
-    function createRaindrops(filter, resetTime) {
-        filter.time += 0.01;
-        if (filter.time > resetTime) {
-            filter.time = 0;
-            filter.center = [
-                Math.random() * app.screen.width,
-                Math.random() * app.screen.height
-            ];
+    function startWaterAnimation() {
+        const displacementSprite = PIXI.Sprite.from("assets/images/waterTemp.jpg");
+        const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+
+        displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+        displacementSprite.scale.set(0.5);
+        app.stage.addChild(displacementSprite);
+
+        const options1 = {
+            amplitude: 40, //300
+            wavelength: 30, //160
+            speed: 100, //500
+            radius: 80
+        };
+
+        const shockwaveFilter1 = new PIXI.filters.ShockwaveFilter(
+            [Math.random() * app.screen.width, Math.random() * app.screen.height],
+            options1,
+            0
+        );
+
+        const options2 = {
+            amplitude: 80, //300
+            wavelength: 45, //160
+            speed: 140, //500
+            radius: 160
+        };
+
+        const shockwaveFilter2 = new PIXI.filters.ShockwaveFilter(
+            [Math.random() * app.screen.width, Math.random() * app.screen.height],
+            options2,
+            0
+        );
+
+        const options3 = {
+            amplitude: 100, //300
+            wavelength: 100, //160
+            speed: 400, //500
+            radius: 600
+        };
+
+        const shockwaveFilter3 = new PIXI.filters.ShockwaveFilter(
+            [Math.random() * app.screen.width, Math.random() * app.screen.height],
+            options3,
+            0
+        );
+
+        container.filters = [
+            displacementFilter,
+            shockwaveFilter1,
+            shockwaveFilter2,
+            shockwaveFilter3
+        ];
+
+        app.ticker.add(function () {
+            displacementSprite.x++;
+            if (displacementSprite.x > displacementSprite.width)
+                displacementSprite.x = 0;
+
+            createRaindrops(shockwaveFilter1, 1.6);
+            createRaindrops(shockwaveFilter2, 1.8);
+            createRaindrops(shockwaveFilter3, 3);
+        });
+
+        displacementFilter.scale.x = 40;
+        displacementFilter.scale.y = 40;
+        displacementSprite.anchor.set(0.5);
+
+
+        app.stage.interactive = true;
+        app.stage.on('pointermove', onPointerMove);
+        // app.stage.on('touchmove', onPointerMove);
+        app.stage.on('pointerdown', onPointerDown);
+        // app.stage.on('touchstart', onPointerDown);
+
+        app.ticker.add(function (delta) {
+            displacementSprite.rotation += 0.001 * delta;
+        });
+
+        function onPointerMove(event) {
+            const {x, y} = event.data.global;
+            const displacementX = (x / window.innerWidth) * app.screen.width;
+            const displacementY = (y / window.innerHeight) * app.screen.height;
+            displacementSprite.position.set(displacementX, displacementY);
+
+        }
+
+        function onPointerDown(eventData) {
+            const pointerX = eventData.data.global.x;
+            const pointerY = eventData.data.global.y;
+            createRaindrops(shockwaveFilter3, 3, pointerX, pointerY);
+
+        }
+
+        function createRaindrops(filter, resetTime) {
+            filter.time += 0.01;
+            if (filter.time > resetTime) {
+                filter.time = 0;
+                filter.center = [
+                    Math.random() * app.screen.width,
+                    Math.random() * app.screen.height
+                ];
+            }
         }
     }
-
 }
-
-
-// const canvas = document.querySelector("#canvas")
-//
-// const app = new PIXI.Application({
-//     view: canvas,
-//     width: window.innerWidth,
-//     height: window.innerHeight,
-//     transparent: true
-// });
-// document.body.appendChild(app.view);
-//
-// // var container = new PIXI.Container();
-// // app.stage.addChild(container);
-//
-//
-//
-// const bg = PIXI.Sprite.from('assets/images/main.png');
-// app.stage.addChild(bg);
-//
-// var renderer = new PIXI.autoDetectRenderer();
-// var ripples = [];
-//
-//
-// const displacementSprite = PIXI.Sprite.fromImage('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1600187/waterTemp.jpg');
-//
-//
-//
-// displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-// displacementSprite.scale.set(1);
-// displacementSprite.anchor.set(0);
-//
-// const loadSprite = PIXI.Sprite.fromImage('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1600187/waterTemp.jpg');
-// loadSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-// loadSprite.scale.set(0.99);
-// loadSprite.anchor.set(0.2);
-//
-// const loadFilter = new PIXI.filters.DisplacementFilter(loadSprite)
-// loadFilter.scale.x = 0;
-// loadFilter.scale.y = 0;
-//
-// container.filters = [loadFilter]
-//
-//
-// var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
-// displacementFilter.scale.x = 10;
-// displacementFilter.scale.y = 10;
-// const filters = []
-//
-// filters.push(displacementFilter);
-//
-// for (let i = 0; i < 10; i++) {
-//
-//     const ripple = new PIXI.Sprite.fromImage('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1600187/ripple.png');
-//
-//     ripple.anchor.set(0.5);
-//
-//     ripple.scale.set(0);
-//
-//     app.stage.addChild(ripple);
-//
-//     const filter = new PIXI.filters.DisplacementFilter(ripple)
-//     filters.push(filter)
-//     ripples.push(ripple)
-// }
-//
-// app.stage.filters = filters;
-//
-// bg.anchor.set(0.5);
-// bg.position.set(200, 356.5);
-// bg.width = app.renderer.width;
-// bg.height = app.renderer.height;
-//
-// container.addChild(bg);
-//
-//
-// const waves = TweenMax.to(displacementSprite.anchor, 44, {
-//     y: "-2",
-//     x: "-1",
-//     ease: Power0.easeNone,
-//     repeat: -1,
-//     paused: true
-// })
-//
-//
-// let i = -1;
-// app.view.addEventListener('mouseover', function(ev) {
-//     i++
-//     if (i > 9) {
-//         i = 0;
-//     }
-//     MakeWaves((ev.clientX - canvas.offsetLeft), (ev.clientY - canvas.offsetTop), i);
-// }, false)
-//
-//
-// function MakeWaves(x, y, i) {
-//
-//     console.log(ripples)
-//     ripples[i].position.set(x, y);
-//     runTweens(ripples[i], filters[i + 1]);
-// }
-//
-// runTweens = (ripple, filter) => {
-//     TweenMax.fromTo(ripple.scale, 4,{ x: .1, y: .1 }, { x: 1.5, y: 1.5 })
-//     TweenMax.fromTo(filter.scale, 4, { x: 50, y: 50 },{ x: 0, y: 0 })
-// }
-//
-// TweenMax.from(container, 1, {
-//     alpha: 0,
-//     repeatDelay: 4,
-//     ease: Power3.easeOut,
-//     yoyo: true,
-//     delay: 2,
-// })
-//
-// TweenMax.from(loadSprite.anchor, 1, {
-//     y: 0.35,
-//     x: 0.25,
-//     ease: Power1.easeOut,
-//     repeatDelay: 4,
-//     yoyo: true,
-//     delay: 2,
-//     onComplete: () => {waves.play()}
-// })
-// TweenMax.from(loadFilter.scale, 1, {
-//     x: 900,
-//     y: 9500,
-//     ease: Power1.easeOut,
-//     delay: 2,
-// })
-
-
-// gsap.from('.general-bg', {
-//     opacity: 0,
-//     scale: 1.1,
-//     duration: 2,
-//     ease: 'power3.out',
-//     onComplete: function() {
-//         // Запуск анимации капель и ряби
-//         startDropsAnimation();
-//         startRipplesAnimation();
-//     }
-// });
-// Капли
-function startDropsAnimation() {
-    // const dropsTimeline = gsap.timeline({ repeat: -1 });
-    // dropsTimeline.set('.drop', { scale: 0, opacity: 0 });
-    // dropsTimeline.to('.drop', {
-    //     opacity: 1,
-    //     scale: 1,
-    //     duration: 0.8,
-    //     stagger: 0.1
-    // });
-    // dropsTimeline.to('.drop', {
-    //     opacity: 0,
-    //     scale: 0,
-    //     duration: 0.8,
-    //     stagger: 0.1
-    // });
-}
-
-// Рябь
-function startRipplesAnimation() {
-    // gsap.to('.general-bg', {
-    //     backgroundPosition: '0px -10px',
-    //     ease: 'sine.inOut',
-    //     duration: 2,
-    //     repeat: -1,
-    //     yoyo: true
-    // });
-}
-
-
-// Движение воды при движении курсора
-// document.addEventListener('mousemove', function(e) {
-//     const mouseX = e.clientX;
-//     const mouseY = e.clientY;
-//
-//     gsap.to('.general-bg', {
-//         x: (window.innerWidth / 2 - mouseX) * 0.03,
-//         y: (window.innerHeight / 2 - mouseY) * 0.03,
-//         duration: 0.5,
-//         ease: 'power2.out'
-//     });
-// });
-
-//
-// const circleDrop = document.querySelector(".circle-drop");
-// document.addEventListener("mousemove", function(e) {
-//     gsap.to(circleDrop, {
-//         x: e.clientX,
-//         y: e.clientY,
-//         duration: 0.5
-//     });
-// });
 
 
 // Header
@@ -1099,5 +933,3 @@ function onVideoClose() {
     video.classList.remove('video-visible');
     iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 }
-
-

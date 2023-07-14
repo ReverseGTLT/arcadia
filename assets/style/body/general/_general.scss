@@ -2,15 +2,14 @@
 
 .general {
   width: 100vw;
-
-
   display: flex;
   flex-direction: column;
   position: relative;
 
   &-bg {
-    background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
+    //background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
     height: 100%;
+    overflow: hidden;
     background-size: cover, cover;
     background-repeat: no-repeat;
     background-position: center, center;
@@ -18,12 +17,13 @@
     animation: opacity2 3.5s linear;
 
     @include sm {
-      background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
+      //background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
     }
   }
 
   &-container {
     display: flex;
+    position: relative;
     //flex: 1;
     height: 100%;
   }
@@ -339,13 +339,27 @@
 }
 
 .general {
-  .animation-container {
-    display: none;
-    //position: absolute;
-    //top: 0;
-    //left: 0;
-    //width: 100%;
-    //height: 100%;
+  #canvas-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    overflow: hidden;
     //pointer-events: none;
+    background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
+    background-size: 100% auto, cover;
+    background-repeat: no-repeat;
+    background-position: center, center;
+
+    animation: opacity2 3.5s linear;
+
+    @include sm {
+      background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
+    }
   }
 }

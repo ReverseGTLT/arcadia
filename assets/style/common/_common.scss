@@ -8,7 +8,7 @@
 //}
 
 :root {
-  //--animate-duration: 4s;
+  --animate-duration: 2s;
   //--animate-delay: 2s;
   //.fancybox-custom .fancybox-inner {
   //  background-color: $background-blue;
@@ -594,7 +594,7 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  overflow: hidden;
+  //overflow: hidden;
   pointer-events: none;
 
 }
