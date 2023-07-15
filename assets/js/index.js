@@ -73,6 +73,13 @@ let good = {
 // });
 
 $(document).ready(function () {
+    $('.general').ripples({
+        resolution: 512,
+        dropRadius: 20,
+        interactive: true,
+        perturbance: 0.02,
+    });
+
     // Owl Goods
     $('.goods-carousel').owlCarousel({
         loop: true,
@@ -238,8 +245,177 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none';
-    }, 1500); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
+    }, 1000); // Задержка в миллисекундах (здесь 2000 мс = 2 секунды)
 });
+
+// _____________________
+//
+const canvasContainer = document.getElementById('canvas-container');
+const generalWrapper = document.querySelector('.general-wrapper');
+const title = document.querySelector('.general-wrapper__title');
+const description = document.querySelector('.general-wrapper__description');
+
+gsap.set([generalWrapper, title, description], {opacity: 0, y: 20});
+
+const tl = gsap.timeline({onComplete: startAnimation});
+
+tl.to(canvasContainer, {opacity: 1, duration: 1});
+
+function startAnimation() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    PIXI.utils.skipHello();
+
+    const app = new PIXI.Application({
+        width: windowWidth,
+        height: windowHeight,
+        transparent: true,
+        resolution: 1,
+        autoResize: true,
+    });
+
+    $('#canvas-container').append(app.view);
+
+    const backgroundImage = PIXI.Sprite.from('assets/images/main.png');
+    backgroundImage.anchor.set(0.5);
+    const container = new PIXI.Container();
+    backgroundImage.x = app.renderer.width / 2;
+    backgroundImage.y = app.renderer.height / 2;
+    backgroundImage.alpha = 0;
+
+    container.addChild(backgroundImage);
+    app.stage.addChild(container);
+
+    let bg = PIXI.Sprite.from('assets/images/main.png');
+
+    if (window.innerWidth <= 576) {
+        bg = PIXI.Sprite.from('assets/images/main_mob.png');
+    }
+
+    bg.width = app.renderer.width;
+    bg.height = app.renderer.height;
+    bg.alpha = 0; //1
+    container.addChild(bg);
+
+    const bgTween = gsap.timeline({onComplete: showContent});
+    bgTween.to(bg, {
+        alpha: 1,
+        duration: 1,
+        ease: 'power3.out',
+    });
+
+    function showContent() {
+        gsap.to([generalWrapper, title, description], {opacity: 1, y: 0, duration: 1});
+        startWaterAnimation();
+    }
+
+    function startWaterAnimation() {
+        const displacementSprite = PIXI.Sprite.from("assets/images/waterTemp.jpg");
+        const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+
+        displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+        displacementSprite.scale.set(0.5);
+        app.stage.addChild(displacementSprite);
+
+        const options1 = {
+            amplitude: 40, //300
+            wavelength: 30, //160
+            speed: 100, //500
+            radius: 80
+        };
+
+        const shockwaveFilter1 = new PIXI.filters.ShockwaveFilter(
+            [Math.random() * app.screen.width, Math.random() * app.screen.height],
+            options1,
+            0
+        );
+
+        const options2 = {
+            amplitude: 80, //300
+            wavelength: 45, //160
+            speed: 140, //500
+            radius: 160
+        };
+
+        const shockwaveFilter2 = new PIXI.filters.ShockwaveFilter(
+            [Math.random() * app.screen.width, Math.random() * app.screen.height],
+            options2,
+            0
+        );
+
+        const options3 = {
+            amplitude: 100, //300
+            wavelength: 100, //160
+            speed: 400, //500
+            radius: 600
+        };
+
+        const shockwaveFilter3 = new PIXI.filters.ShockwaveFilter(
+            [Math.random() * app.screen.width, Math.random() * app.screen.height],
+            options3,
+            0
+        );
+
+        container.filters = [
+            displacementFilter,
+            shockwaveFilter1,
+            shockwaveFilter2,
+            shockwaveFilter3
+        ];
+
+        app.ticker.add(function () {
+            displacementSprite.x++;
+            if (displacementSprite.x > displacementSprite.width)
+                displacementSprite.x = 0;
+
+            createRaindrops(shockwaveFilter1, 1.6);
+            createRaindrops(shockwaveFilter2, 1.8);
+            createRaindrops(shockwaveFilter3, 3);
+        });
+
+        displacementFilter.scale.x = 40;
+        displacementFilter.scale.y = 40;
+        displacementSprite.anchor.set(0.5);
+
+
+        app.stage.interactive = true;
+        app.stage.on('pointermove', onPointerMove);
+        // app.stage.on('touchmove', onPointerMove);
+        app.stage.on('pointerdown', onPointerDown);
+        // app.stage.on('touchstart', onPointerDown);
+
+        app.ticker.add(function (delta) {
+            displacementSprite.rotation += 0.001 * delta;
+        });
+
+        function onPointerMove(event) {
+            const {x, y} = event.data.global;
+            const displacementX = (x / window.innerWidth) * app.screen.width;
+            const displacementY = (y / window.innerHeight) * app.screen.height;
+            displacementSprite.position.set(displacementX, displacementY);
+
+        }
+
+        function onPointerDown(eventData) {
+            const pointerX = eventData.data.global.x;
+            const pointerY = eventData.data.global.y;
+            createRaindrops(shockwaveFilter3, 3, pointerX, pointerY);
+
+        }
+
+        function createRaindrops(filter, resetTime) {
+            filter.time += 0.01;
+            if (filter.time > resetTime) {
+                filter.time = 0;
+                filter.center = [
+                    Math.random() * app.screen.width,
+                    Math.random() * app.screen.height
+                ];
+            }
+        }
+    }
+}
 
 
 // Header
@@ -280,7 +456,7 @@ function onScrollWindow() {
     }
 }
 
-87
+
 // Проверяем наличие скролла после обновления страницы
 window.addEventListener('load', function () {
     const header = document.querySelector('.header');
@@ -423,7 +599,7 @@ let currentModalIndex = -1;
 
 const inputs = document.querySelectorAll("input:required");
 
-document.querySelector("form").addEventListener("submit", function(event) {
+document.querySelector("form").addEventListener("submit", function (event) {
 
     for (let i = 0; i < inputs.length; i++) {
         const input = inputs[i];
@@ -676,7 +852,7 @@ const calendarOrderContact = new AirDatepicker('#datepicker_order-contact', {
         timeFormat: 'hh:mm aa',
         firstDay: 0
     },
-    onSelect: function(formattedDate, date, inst) {
+    onSelect: function (formattedDate, date, inst) {
         // Какие нужны действия при выборе даты
         console.log(formattedDate);
         selectedDate = formattedDate;
@@ -712,7 +888,7 @@ const calendarModalContact = new AirDatepicker('#datepicker_modal-contact', {
         timeFormat: 'hh:mm aa',
         firstDay: 0
     },
-    onSelect: function(formattedDate, date, inst) {
+    onSelect: function (formattedDate, date, inst) {
         // Какие нужны действия при выборе даты
         console.log(formattedDate);
         selectedDate = formattedDate;
@@ -728,14 +904,13 @@ const calendarModalContact = new AirDatepicker('#datepicker_modal-contact', {
     }
 });
 
-$('datepicker_modal-contact').on('click', function() {
+$('datepicker_modal-contact').on('click', function () {
     $('.air-datepicker-global-container').css('z-index', '1001');
 });
 
-$('datepicker_modal-contact').on('focusout', function() {
+$('datepicker_modal-contact').on('focusout', function () {
     $('.air-datepicker-global-container').css('z-index', '');
 });
-
 const videoOpen = document.querySelector('.video-open');
 const videoClose = document.querySelector('.video-close');
 const video = document.querySelector('.video');
@@ -743,7 +918,7 @@ const iframe = document.querySelector('.video iframe');
 
 videoOpen.addEventListener('click', onVideoOpen);
 videoClose.addEventListener('click', onVideoClose);
-video.addEventListener('click', function(event) {
+video.addEventListener('click', function (event) {
     if (!event.target.closest('iframe')) {
         this.classList.remove('video-visible');
         iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
@@ -758,5 +933,3 @@ function onVideoClose() {
     video.classList.remove('video-visible');
     iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 }
-
-
