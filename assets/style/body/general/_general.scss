@@ -7,8 +7,9 @@
   position: relative;
 
   &-bg {
-    //background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
+    background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main.png');
     height: 100%;
+    z-index: -2;
     overflow: hidden;
     background-size: cover, cover;
     background-repeat: no-repeat;
@@ -17,7 +18,7 @@
     animation: opacity2 3.5s linear;
 
     @include sm {
-      //background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
+      background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url('../images/main_mob.png');
     }
   }
 

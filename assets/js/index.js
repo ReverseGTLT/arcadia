@@ -73,12 +73,6 @@ let good = {
 // });
 
 $(document).ready(function () {
-    $('.general').ripples({
-        resolution: 512,
-        dropRadius: 20,
-        interactive: true,
-        perturbance: 0.02,
-    });
 
     // Owl Goods
     $('.goods-carousel').owlCarousel({
@@ -254,6 +248,7 @@ const canvasContainer = document.getElementById('canvas-container');
 const generalWrapper = document.querySelector('.general-wrapper');
 const title = document.querySelector('.general-wrapper__title');
 const description = document.querySelector('.general-wrapper__description');
+const bgImage = document.querySelector('.general-bg');
 
 gsap.set([generalWrapper, title, description], {opacity: 0, y: 20});
 
@@ -307,7 +302,21 @@ function startAnimation() {
 
     function showContent() {
         gsap.to([generalWrapper, title, description], {opacity: 1, y: 0, duration: 1});
+
         startWaterAnimation();
+        setTimeout(stopAnimation, 12000);
+    }
+
+    function stopAnimation() {
+        const fadeOutTimeline = gsap.timeline({ onComplete: hideCanvas });
+        fadeOutTimeline.to(canvasContainer, { opacity: 0, duration: 1 });
+
+        function hideCanvas() {
+            container.filters = [];
+            app.ticker.stop();
+            canvasContainer.style.display = 'none';
+            bgImage.style.opacity = '1';
+        }
     }
 
     function startWaterAnimation() {
@@ -378,32 +387,6 @@ function startAnimation() {
         displacementFilter.scale.y = 40;
         displacementSprite.anchor.set(0.5);
 
-
-        app.stage.interactive = true;
-        app.stage.on('pointermove', onPointerMove);
-        // app.stage.on('touchmove', onPointerMove);
-        app.stage.on('pointerdown', onPointerDown);
-        // app.stage.on('touchstart', onPointerDown);
-
-        app.ticker.add(function (delta) {
-            displacementSprite.rotation += 0.001 * delta;
-        });
-
-        function onPointerMove(event) {
-            const {x, y} = event.data.global;
-            const displacementX = (x / window.innerWidth) * app.screen.width;
-            const displacementY = (y / window.innerHeight) * app.screen.height;
-            displacementSprite.position.set(displacementX, displacementY);
-
-        }
-
-        function onPointerDown(eventData) {
-            const pointerX = eventData.data.global.x;
-            const pointerY = eventData.data.global.y;
-            createRaindrops(shockwaveFilter3, 3, pointerX, pointerY);
-
-        }
-
         function createRaindrops(filter, resetTime) {
             filter.time += 0.01;
             if (filter.time > resetTime) {
@@ -417,6 +400,7 @@ function startAnimation() {
     }
 }
 
+// __________________________________
 
 // Header
 const headerLanguageBtn = document.querySelector('.header-language');
