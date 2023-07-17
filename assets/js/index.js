@@ -250,7 +250,7 @@ const title = document.querySelector('.general-wrapper__title');
 const description = document.querySelector('.general-wrapper__description');
 const bgImage = document.querySelector('.general-bg');
 
-gsap.set([generalWrapper, title, description], {opacity: 0, y: 20});
+gsap.set([generalWrapper], {opacity: 1, y: 20});
 
 const tl = gsap.timeline({onComplete: startAnimation});
 
@@ -305,18 +305,20 @@ function startAnimation() {
 
         startWaterAnimation();
         setTimeout(stopAnimation, 12000);
+        // setTimeout(hideCanvas, 13000);
     }
 
     function stopAnimation() {
-        const fadeOutTimeline = gsap.timeline({ onComplete: hideCanvas });
-        fadeOutTimeline.to(canvasContainer, { opacity: 0, duration: 1 });
+        const fadeOutTimeline = gsap.timeline({onComplete: hideCanvas});
+        fadeOutTimeline.to(canvasContainer, {opacity: 0, duration: 1});
 
-        function hideCanvas() {
-            container.filters = [];
-            app.ticker.stop();
-            canvasContainer.style.display = 'none';
-            bgImage.style.opacity = '1';
-        }
+    }
+
+    function hideCanvas() {
+        container.filters = [];
+        app.ticker.stop();
+        canvasContainer.style.display = 'none';
+        bgImage.style.opacity = '1';
     }
 
     function startWaterAnimation() {

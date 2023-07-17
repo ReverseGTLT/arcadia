@@ -51,6 +51,7 @@
   }
 
   &-carousel {
+    z-index: 0;
     position: relative;
     max-width: vw(1304);
     margin-left: vw(183);

@@ -1114,6 +1114,7 @@ canvas {
 }
 
 .general {
+  z-index: 1;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -1122,7 +1123,7 @@ canvas {
 .general-bg {
   background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url("../images/main.png");
   height: 100%;
-  z-index: -2;
+  z-index: -3;
   overflow: hidden;
   background-size: cover, cover;
   background-repeat: no-repeat;
@@ -1140,12 +1141,14 @@ canvas {
   height: 100%;
 }
 .general-wrapper {
+  z-index: 5;
   flex-basis: 100%;
   position: relative;
   background-image: url("../images/butl.png");
   background-size: 41.6666666667vw 33.3333333333vw;
   background-repeat: no-repeat;
   background-position: left bottom;
+  pointer-events: none;
 }
 @media (max-width: 991.8px) {
   .general-wrapper {
@@ -1161,6 +1164,7 @@ canvas {
 }
 .general-wrapper__price {
   position: absolute;
+  pointer-events: auto;
   bottom: 21.875vw;
   left: 8.8541666667vw;
   padding: 1.3020833333vw 1.5625vw 1.8229166667vw 1.8229166667vw;
@@ -1237,6 +1241,7 @@ canvas {
   position: relative;
   margin-top: 15.7291666667vw;
   margin-left: 42.96875vw;
+  pointer-events: auto;
 }
 @media (max-width: 991.8px) {
   .general-wrapper__info {
@@ -1301,7 +1306,9 @@ canvas {
   }
 }
 .general-wrapper__btn {
+  z-index: 5;
   position: relative;
+  pointer-events: auto;
   background: #F80505;
   border-radius: 5.2083333333vw;
   color: #ffffff;
@@ -1466,12 +1473,12 @@ canvas {
   height: 100%;
   display: block;
   position: absolute;
-  z-index: -1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
   overflow: hidden;
+  pointer-events: none;
   background-image: linear-gradient(343.87deg, rgba(45, 50, 44, 0.3) 14.59%, rgba(26, 138, 241, 0) 86.71%), url("../images/main.png");
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
@@ -1570,6 +1577,7 @@ canvas {
   }
 }
 .benefits {
+  z-index: 0;
   padding-bottom: 7.2395833333vw;
 }
 @media (max-width: 991.8px) {
@@ -1866,7 +1874,7 @@ canvas {
   }
 }
 .benefits-carts__item {
-  z-index: 1;
+  z-index: 0;
   width: 17.5520833333vw;
   background: #ffffff;
   border: 1px solid #D8E4EE;
@@ -2111,6 +2119,7 @@ canvas {
   }
 }
 .stages .stages-carousel {
+  z-index: 0;
   position: relative;
   max-width: 56.40625vw;
   display: flex;
@@ -2495,6 +2504,7 @@ canvas {
   }
 }
 .goods-carousel {
+  z-index: 0;
   position: relative;
   max-width: 71.0416666667vw;
   margin-inline: auto;
@@ -3368,6 +3378,7 @@ canvas {
   }
 }
 .certificates-carousel {
+  z-index: 0;
   position: relative;
   max-width: 71.0416666667vw;
   margin-inline: auto;
@@ -4298,6 +4309,7 @@ canvas {
   }
 }
 .facts-carousel {
+  z-index: 0;
   position: relative;
   max-width: 67.9166666667vw;
   margin-left: 9.53125vw;
