@@ -1,0 +1,304 @@
+@use "../../presets/index" as *;
+
+.gallerySpecial {
+  padding-top: vw(111);
+  //padding-bottom: vw(192);
+
+  @include lg {
+    display: flex;
+    //flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  @include lg {
+    padding-top: vp(100);
+    padding-bottom: vp(150);
+  }
+  @include sm {
+    padding-top: vm(55);
+    padding-bottom: vm(46);
+  }
+
+  &-content {
+    margin-left: vw(183);
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      justify-content: center;
+      text-align: center;
+      margin-inline: auto;
+
+    }
+
+    &__text {
+      width: vw(1100);
+      padding-bottom: vw(54);
+
+      @include lg {
+        text-align: center;
+        width: 100%;
+        margin-right: vp(20);
+        margin-left: vp(20);
+        padding-bottom: vp(54);
+
+      }
+      @include sm {
+        padding-bottom: vm(20);
+        margin-inline: vm(5);
+      }
+
+      h2 {
+        padding-bottom: vw(43);
+        @include lg {
+          padding-bottom: vp(43);
+          text-align: center;
+        }
+        @include sm {
+          padding-bottom: vm(20);
+        }
+      }
+
+      p {
+        width: 100%;
+        @include lg {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-carousel {
+    z-index: 0;
+    position: relative;
+    max-width: vw(1364);
+    margin-inline: auto;
+    height: vw(564);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include lg {
+      max-width: vp(450);
+      justify-content: center;
+      margin-inline: vp(10);
+      height: auto;
+    }
+    @include sm {
+      max-width: vm(153);
+      margin-inline: vm(5);
+      height: auto;
+    }
+
+    &__item {
+      position: relative;
+      //width: vw(250);
+      background: $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      border: none;
+      box-shadow: none;
+      padding: vw(10);
+      transition: box-shadow 0.3s;
+      //margin-right: 0;
+      //margin-left: 0;
+
+      @include lg() {
+        //width: vp(250);
+        padding: vp(2);
+        justify-content: center;
+        text-align: center;
+        margin-inline: vp(5);
+      }
+
+      @include sm {
+        padding: vm(2);
+        margin-inline: vm(5);
+      }
+
+      &:hover {
+        box-shadow: vw(7) vw(8) vw(15) rgba(216, 225, 236, 0.94);
+      }
+
+      .gallerySpecial-image {
+        //width: vw(219);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: vw(26);
+        margin-bottom: vw(23);
+
+        @include lg {
+          margin: vp(10);
+          height: auto;
+          padding-bottom: vp(20);
+        }
+        @include sm {
+          padding-bottom: vm(11);
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          max-height: vw(400);
+          max-width: 100%;
+          object-fit: cover;
+          overflow: hidden;
+          text-align: start;
+
+          @include lg {
+            text-align: center;
+            max-height: vm(200);
+          }
+        }
+      }
+
+      a {
+        font-weight: $font-weight-accent;
+      }
+    }
+
+    //Cтили для стрелок навигации карусели
+
+  }
+
+  .gallerySpecial-carousel {
+    .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .owl-prev {
+      left: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+      transition: 0.2s;
+
+      &:hover {
+        content: url("../../assets/images/arrow_active.png");
+      }
+
+      @include lg {
+        left: vp(-175);
+        width: vp(82);
+        height: vp(82);
+      }
+      @include sm {
+        left: vm(-95);
+        width: vm(54);
+        height: vm(54);
+      }
+
+      &:hover {
+        content: url("../../assets/images/arrow_active.png");
+      }
+
+      &:active {
+        transform: scale(1.05);
+      }
+    }
+
+    .owl-next {
+      right: vw(-100);
+      top: 30%;
+      width: vw(82);
+      height: vw(82);
+      content: url("../../assets/images/arrow_light.png");
+      transform: rotate(180deg);
+      transition: 0.2s;
+
+      @include lg {
+        right: vp(-175);
+        width: vp(82);
+        height: vp(82);
+      }
+      @include sm {
+        right: vm(-95);
+        width: vm(54);
+        height: vm(54);
+      }
+
+      &:hover {
+        content: url("../../assets/images/arrow_active.png");
+      }
+
+      &:active {
+        transform: scale(1.05) rotate(180deg);
+      }
+    }
+  }
+}
+
+//Cтили для галереи
+.fancybox-slide--iframe .fancybox-content,
+.fancybox-slide--image .fancybox-content {
+  padding: 0;
+}
+
+.fancybox-slide--image .fancybox-content img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.fancybox-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.fancybox-toolbar button {
+  margin-left: 5px;
+  padding: 5px;
+}
+.fancybox-gallerySpecial {
+  //background-color: $background-blue;
+  background-color: $background-blue;
+  --fancybox-bg: rgba(81, 165, 242, 0.8980392157);
+}
+
+.fancybox-gallerySpecial .fancybox-button svg {
+  fill: #ffffff;
+}
+
+.fancybox-gallerySpecial .fancybox-button:before,
+.fancybox-gallerySpecial .fancybox-button:after {
+  background-color: #ffffff;
+}
+
+.fancybox-gallerySpecial .fancybox-button:hover:before,
+.fancybox-gallerySpecial .fancybox-button:hover:after {
+  background-color: #51A5F2;
+}
+
+.fancybox-gallerySpecial .fancybox-button:hover svg {
+  fill: #51A5F2;
+}
+
+.fancybox-gallerySpecial .fancybox-button:disabled:before,
+.fancybox-gallerySpecial .fancybox-button:disabled:after {
+  background-color: #ccc;
+}
+
+.fancybox-gallerySpecial .fancybox-toolbar {
+  background-color: transparent;
+}

@@ -114,7 +114,7 @@ $(document).ready(function () {
         touchDrag: true,
     });
 
-    // Owl Certificates
+// Owl Certificates
     $('.certificates-carousel').owlCarousel({
         loop: true,
         autoplay: 1000,
@@ -174,6 +174,65 @@ $(document).ready(function () {
         fancybox.open();
     });
 
+    // Owl gallerySpecial
+    $('.gallerySpecial-carousel').owlCarousel({
+        loop: true,
+        autoplay: 1000,
+        autoplayHoverPause: true,
+        margin: 5,
+        nav: true,
+        dots: false,
+        mouseDrag: true,
+        touchDrag: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 1,
+            },
+            992: {
+                items: 4,
+            }
+        }
+    });
+
+    $(".gallerySpecial-carousel__item").click(function (e) {
+        e.preventDefault();
+        const items = $(this).closest(".gallerySpecial-carousel").find(".gallerySpecial-carousel__item");
+        const images = items.map(function () {
+            return {src: $(this).find("img").attr("src"), type: "image"};
+        }).get();
+        const index = items.index(this);
+        console.log(index);
+
+        const fancybox = new Fancybox(images, {
+            // closeButton: "top",
+            mainClass: "fancybox-gallerySpecial",
+            loop: true,
+            animationEffect: "fade",
+            contentClick: "iterateZoom",
+            Images: {
+                Panzoom: {
+                    maxScale: 2,
+                },
+            },
+            Toolbar: {
+                display: {
+                    left: [],
+                    right: ["zoomIn", "zoomOut", "slideshow", "close"],
+                },
+            },
+            caption: function (instance, item) {
+                return $(this).closest(".gallerySpecial-carousel__item").find("a").text();
+            },
+            startIndex: index,
+            Thumbs: false,
+        });
+
+        fancybox.open();
+    });
 
 // Owl Facts
     $('.facts-carousel').owlCarousel({
