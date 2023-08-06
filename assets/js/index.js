@@ -14,6 +14,19 @@ const maskOptions = {
 };
 const mask = IMask(element, maskOptions);
 
+const element1 = document.getElementById('order-input-tel1');
+const maskOptions1 = {
+    mask: '+{38}(000)000-00-00'
+};
+const mask1 = IMask(element1, maskOptions1);
+//06-08 start
+const element2 = document.getElementById('callbackTel');
+const maskOptions2 = {
+    mask: '+{38}(000)000-00-00'
+};
+const mask2 = IMask(element2, maskOptions2);
+//06-08 end
+
 //____________________________________________________________________
 // VARIABLES
 //____________________________________________________________________
@@ -330,7 +343,6 @@ function toggleBodyScrollLock(lock) {
 gotoMenu.forEach((btn) => {
     btn.addEventListener('click', onMenuClose)
 })
-console.log('Hello')
 // ______________________________________________
 // Скролл ап
 document.addEventListener("DOMContentLoaded", function () {
@@ -531,7 +543,25 @@ function blurModalOClose() {
 blur.addEventListener('click', () => {
     closeAllModals();
     currentModalIndex = -1;
+    onModalCallbackCloseClick();//06-08
 });
+//06-08 start
+const modalCallback = document.querySelector('.modal-callback');
+const headerInfoCallbackText = document.querySelectorAll('.header-info__callback-text');
+const modalCallbackClose = document.querySelector('.modal-callback__close');
+headerInfoCallbackText.forEach((item) => {
+    item.addEventListener('click', onHeaderInfoCallbackTextClick);
+})
+modalCallbackClose.addEventListener('click', onModalCallbackCloseClick);
+function onHeaderInfoCallbackTextClick() {
+    blurModalOpen();
+    modalCallback.style.display = 'flex';
+}
+function onModalCallbackCloseClick() {
+    blurModalOClose();
+    modalCallback.style.display = 'none';
+}
+//06-08 end
 
 // ______________________________________________
 // Counter (value, plus, minus)

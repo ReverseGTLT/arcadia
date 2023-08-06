@@ -1,0 +1,80 @@
+@use "../../presets/index" as *;
+
+.opt {
+  margin-bottom: vw(130);
+  background: #FFF2F2;
+  border-radius: vw(30);
+  display: flex;
+  gap: vw(88);
+  align-items: center;
+  padding: vw(63) vw(80);
+  @include lg {
+    flex-direction: column-reverse;
+    padding:vm(40) 0;
+    gap: vm(50);
+    border-radius: vm(20);
+  }
+  &-image {
+    width: vw(440);
+    @include lg {
+      width: vm(278);
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &-info {
+    &__title {
+      color: #F80505;
+      font-size: vw(40);
+      font-weight: bold;
+      line-height: normal;
+      max-width: vw(580);
+      @include lg {
+        max-width: 100%;
+        text-align: center;
+        padding-inline: vm(20);
+        font-size: vp(40);
+      }
+      @include sm {
+        font-size: vm(32);
+      }
+    }
+    &__description {
+      color: #0A0E20;
+      font-size: vw(24);
+      font-weight: bold;
+      line-height: 150%; /* 36px */
+      max-width: vw(710);
+      padding-block: vw(33);
+      @include lg {
+        max-width: 100%;
+        line-height: 130%;
+        text-align: center;
+        padding-top: vm(35);
+        padding-bottom: vm(20);
+        padding-inline: vm(10);
+        font-size: vp(24);
+      }
+      @include sm {
+        font-size: vm(16);
+      }
+    }
+    &__footnote {
+      color: #0A0E20;
+      font-size: vw(20);
+      font-weight: 400;
+      line-height: 130%; /* 26px */
+      max-width: vw(710);
+      @include lg {
+        max-width: 100%;
+        line-height: 130%;
+        text-align: center;
+        font-size: vp(20);
+      }
+      @include sm {
+        font-size: vm(16);
+      }
+    }
+  }
+}

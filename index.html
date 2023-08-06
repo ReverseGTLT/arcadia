@@ -116,9 +116,9 @@
             </a>
         </div>
         <div class="header-info__callback">
-            <a href="#order">
-                <p class="header-info__callback-text">Зворотний дзвінок</p>
-            </a>
+            <!--06-08 start-->
+            <p class="header-info__callback-text">Зворотний дзвінок</p>
+            <!--06-08 end-->
         </div>
         <div class="header-info__buy">
             <a href="#goods">
@@ -661,25 +661,26 @@
     <!--    _________________________-->
 
     <section class="new container-1360 scrollflow -opacity -pop">
-        <div class="new-info">
-            <p class="new-info__header">
-                Математика, яка подобається справжнім одеситам
-            </p>
-            <p class="new-info__title">
-                Вперше?
-            </p>
-            <p class="new-info__description">
-                Замов один бутиль <br>
-                18,9 л та отримай 2 !
-            </p>
-        </div>
-        <img class="new-img__1" src="assets/images/1.png" alt="1">
-        <img class="new-img__2" src="assets/images/bl.png" alt="butl">
-        <img class="new-img__3" src="assets/images/=.png" alt="=">
-        <img class="new-img__4" src="assets/images/new-butl.png" alt="butl">
-        <img class="new-img__5" src="assets/images/2.png" alt="2">
-        <img class="new-img__6" src="assets/images/wave.png" alt="wave">
-        <img class="new-img__7" src="assets/images/bl.png" alt="butl">
+<!--        <div class="new-info">-->
+<!--            <p class="new-info__header">-->
+<!--                Математика, яка подобається справжнім одеситам-->
+<!--            </p>-->
+<!--            <p class="new-info__title">-->
+<!--                Вперше?-->
+<!--            </p>-->
+<!--            <p class="new-info__description">-->
+<!--                Замов один бутиль <br>-->
+<!--                18,9 л та отримай 2 !-->
+<!--            </p>-->
+<!--        </div>-->
+<!--        <img class="new-img__1" src="assets/images/1.png" alt="1">-->
+<!--        <img class="new-img__2" src="assets/images/bl.png" alt="butl">-->
+<!--        <img class="new-img__3" src="assets/images/=.png" alt="=">-->
+<!--        <img class="new-img__4" src="assets/images/new-butl.png" alt="butl">-->
+<!--        <img class="new-img__5" src="assets/images/2.png" alt="2">-->
+<!--        <img class="new-img__6" src="assets/images/wave.png" alt="wave">-->
+<!--        <img class="new-img__7" src="assets/images/bl.png" alt="butl">-->
+        <img src="assets/images/new-desk.png" alt="new">
     </section>
 
     <section class="new-mobile container-1360 scrollflow -opacity -pop">
@@ -820,6 +821,25 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </section>
+
+    <!--    Section OPT-->
+    <section class="container-1540 opt">
+        <div class="opt-image">
+            <img src="assets/images/opt.svg" alt="opt">
+        </div>
+        <div class="opt-info">
+            <p class="opt-info__title">
+                А так же мы предлагаем опт
+                при покупке от 5 бутылей!
+            </p>
+            <p class="opt-info__description">
+                Скидки % при покупке 5 бутылей сразу или же скидки при покупке от 10 бутылей в месяц меньшими партиями
+            </p>
+            <p class="opt-info__footnote">
+                «Аркадия» предлагает офисам, предприятиям и другим организациям организациям или учреждениям, скидки при заказе от 5 бутылей и выше.
+            </p>
         </div>
     </section>
 
@@ -1021,6 +1041,26 @@
         </div>
     </div>
 
+    <!--    Модалка. Обратный звонок-->
+    <div class="modal modal-callback" id="modal-callback">
+        <div class="modal-callback__box">
+            <div class="modal-callback__close">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.53567 0.193336L13.0454 10.703L23.2385 0.509895L25.3278 2.59917L15.1346 12.7923L25.7077 23.3653L23.4918 25.5812L12.9187 15.0082L2.59898 25.328L0.5097 23.2387L10.8295 12.9189L0.319767 2.40924L2.53567 0.193336Z"
+                          fill="#949CBE"/>
+                </svg>
+            </div>
+            <h5 class="modal-callback__title">Оставьте ваш номер</h5>
+            <form class="modal-callback__form">
+                <div class="modal-callback__wrapper">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" id="callbackTel" placeholder="Телефон" required>
+                </div>
+                <button class="btn" type="submit">оформить доставку</button>
+            </form>
+        </div>
+    </div>
+
     <!--Модалка. Товар item-->
     <div class="modal modal-item" id="modal-item">
         <div class="modal-content">
@@ -1200,7 +1240,7 @@
                             <input class="item" type="text" placeholder="Ваше ім'я" name="name" required>
                         </div>
                         <div class="form-row__box">
-                            <input class="item" type="text" placeholder="Телефон" name="phone" required>
+                            <input class="item" type="tel" placeholder="Телефон" id="order-input-tel1" name="phone" required>
                         </div>
                     </div>
                     <div class="form-row">

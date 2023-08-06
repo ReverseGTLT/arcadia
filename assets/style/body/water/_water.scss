@@ -5,7 +5,7 @@
 
   background-image: url('../../assets/images/water-mobile.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: vw(500) vw(200);
   background-position: bottom right;
 
   @include lg {
